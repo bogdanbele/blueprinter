@@ -1,0 +1,56 @@
+.btn {
+    border-radius: 3px;
+    padding: 0.3rem 0.7rem;
+    font-size: 1.1rem;
+    background-color: $themeblue;
+    color: #fff;
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: $bodyfont;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        border-color: $themeblue;
+        color: $themeblue;
+    }
+
+    &.red {
+        background-color: $themered;
+        &:hover {
+            background-color: #fff;
+            border-color: $themered;
+            color: $themered;
+        }
+    }
+    &.purple {
+        background-color: $themepurple;
+        &:hover {
+            background-color: #fff;
+            border-color: $themepurple;
+            color: $themepurple;
+        }
+    }
+    &.gray {
+        background-color: $themegray;
+        &:hover {
+            background-color: #fff;
+            border-color: $themegray;
+            color: $themegray;
+        }
+    }
+    &.yellow {
+        background-color: $themeyellow;
+        &:hover {
+            background-color: #fff;
+            border-color: $themeyellow;
+            color: $themeyellow;
+        }
+    }
+    &:disabled {
+        background-color: #d1d8e0;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}

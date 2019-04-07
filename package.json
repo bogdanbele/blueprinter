@@ -29,7 +29,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "create-components":"node src/scripts/bundle-scss.js",
+    "create-components": "node src/scripts/bundle-scss.js",
     "build": "npm run create-components && gatsby build",
     "develop": "npm run create-components && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
