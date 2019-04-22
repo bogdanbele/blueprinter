@@ -1,0 +1,19 @@
+.menu {
+    display: flex;
+    padding-top: 10px;
+    background: #c3c3c3;
+}
+
+.menu > ul {
+    margin-bottom: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.menu > ul > li > a {
+    text-decoration: none;
+    font-family: $bodyfont;
+    color: white;
+}
