@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./layout.scss"
 
-import Header from "./Header/header"
+import Header from "../components/Header/header"
 
 const Layout = ({ children }) => (
   <StaticQuery
