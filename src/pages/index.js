@@ -19,7 +19,7 @@ const IndexPage = () => (
     <button class="btn red">red</button>
     <button class="btn purple">purple</button>
     <button class="btn">default</button>
-    <button class="btn red" disabled>red disabled</button>
+    <button class="btn red" disabled>red disabled test</button>
 </div>
 
     <Button buttonTitle={"Sticker"} />
