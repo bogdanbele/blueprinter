@@ -6,13 +6,17 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Button from "../components/Button/button"
 import ReturnComponent from "../scripts/social-media-type.js"
+import Dog from "../scripts/social-media-menu.js"
+
+
+Dog()
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site
-      <ReturnComponent link={"https://www.instagram.com/albertosings/"}/></p>
+      <ReturnComponent link={"https://www.facebook.com/AlbertoSings/"}/></p> 
     <p>Now go build something great.</p>
 
     <div className="container">

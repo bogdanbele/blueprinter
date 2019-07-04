@@ -7,7 +7,7 @@ function isTwitterLink(string) {
   return regExp.test(string)
 }
 function isFacebookLink(string) {
-  const regExp = /http(s)?:\/\/(www\.)?(facebook|fb)\.com\/[A-z0-9_\-\.]+\/?/gm
+  const regExp = /http(s)?:\/\/(www\.)?(facebook|fb)\.com\/[A-z0-9_]+\/?/gm
   return regExp.test(string)
 }
 
@@ -16,8 +16,7 @@ function isInstagramLink(string) {
   return regExp.test(string)
 }
 
-function random(string) {
-
+function extractType(string) {
   switch (true) {
     case(isTwitterLink(string)):
       {
@@ -36,5 +35,5 @@ function random(string) {
   }
 }
 
-const ReturnComponent = ({link}) => (random(link))
+const ReturnComponent = ({link}) => (extractType(link))
 export default ReturnComponent
