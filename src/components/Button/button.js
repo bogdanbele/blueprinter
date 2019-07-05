@@ -3,9 +3,9 @@ import React from "react"
 import { mapClasses } from "../../scripts/helpers"
 
 const Button = ({buttonTitle,className}) => (
-    <div className={mapClasses(className, "button")}>
+    <button className={mapClasses(className, "button")}>
         {buttonTitle}
-    </div>
+    </button>
 )
 
 Button.prototype = {

@@ -1,4 +1,4 @@
-.btn {
+.button {
     border-radius: 3px;
     padding: 0.3rem 0.7rem;
     font-size: 1.1rem;
@@ -10,57 +10,64 @@
     font-family: $bodyfont;
     user-select: none;
     cursor: pointer;
+
     &:hover {
         background-color: #fff;
         border-color: $themeblue;
         color: $themeblue;
     }
 
-    &.red {
+    &--big {
+        height: 500px;
+    }
+
+    &--gray {
+        background-color: gray;
+    }
+
+    &--red {
         background-color: $themered;
+
         &:hover {
             background-color: #fff;
             border-color: $themered;
             color: $themered;
         }
     }
-    &.purple {
+
+    &:disabled {
+        background-color: #d1d8e0;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    &--purple {
         background-color: $themepurple;
+
         &:hover {
             background-color: #fff;
             border-color: $themepurple;
             color: $themepurple;
         }
     }
-    &.gray {
+
+    &--gray {
         background-color: $themegray;
+
         &:hover {
             background-color: #fff;
             border-color: $themegray;
             color: $themegray;
         }
     }
-    &.yellow {
+
+    &--yellow {
         background-color: $themeyellow;
+
         &:hover {
             background-color: #fff;
             border-color: $themeyellow;
             color: $themeyellow;
         }
     }
-    &:disabled {
-        background-color: #d1d8e0;
-        pointer-events: none;
-        cursor: not-allowed;
-    }
 }
-
-.button {
-    &--big {
-        height: 500px;
-    }
-    &--gray{
-        background-color: gray;
-    }
-}
-

@@ -20,14 +20,14 @@ const IndexPage = () => (
  <SocialMediamenu/> 
     <div className="container">
       <Button>Yellow</Button>
-      <button className="btn gray">gray</button>
-      <button className="btn red">red</button>
-      <button className="btn purple">purple</button>
-      <button className="btn">default</button>
-      <button className="btn red" disabled>red disabled test</button>
+      <Button className="yellow">gray</Button>
+      <Button className="red">red</Button>
+      <Button className="purple">purple</Button>
+      <Button>default</Button>
+      <Button className="red yellow" disabled>red disabled test</Button>
     </div>
 
-    <Button buttonTitle="Click me" className="banana patata legurca" modifiers="big gray" />
+    <Button buttonTitle="Click me" className="banana patata legurca"/>
 
     <div style={{
       maxWidth: `300px`,

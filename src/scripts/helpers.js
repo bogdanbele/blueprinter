@@ -1,10 +1,15 @@
-export function mapClasses(className, itemName){
+export function mapClasses(className, itemName) {
+
     let classes = className.split(" ")
-    return itemName + classes.map(element => {
-        if (element === className) {
-            return null
-        } else {
+
+    if (itemName === className) {
+        return `${itemName}`
+    }
+
+    else if (classes.length === 1) {
+        return `${itemName} ${itemName}--${className}`
+    }
+    else return itemName + classes.map(element => {
             return ` ${itemName}--${element}`
-        }
     }).join("")
 }
