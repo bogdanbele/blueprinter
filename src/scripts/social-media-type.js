@@ -6,6 +6,7 @@ function isTwitterLink(string) {
   const regExp = /http(s)?:\/\/(.*\.)?twitter\.com\/[A-z0-9_]+\/?/gm
   return regExp.test(string)
 }
+
 function isFacebookLink(string) {
   const regExp = /http(s)?:\/\/(www\.)?(facebook|fb)\.com\/[A-z0-9_]+\/?/gm
   return regExp.test(string)

@@ -1,6 +1,5 @@
 import React from "react"
 import Link from "gatsby-link"
-import SocialLinkIcon from "../SocialLinkIcon/social-link-icon"
 
 const Menu = () => (
     <div className="menu">
@@ -15,7 +14,6 @@ const Menu = () => (
                 <Link to="/">Blog</Link>
             </li>
         </ul>
-        <SocialLinkIcon link="https://www.instagram.com/albertosings"/>
     </div>
 )
 

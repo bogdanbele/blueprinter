@@ -54,3 +54,12 @@
         cursor: not-allowed;
     }
 }
+
+.button {
+    &--big {
+        height: 500px;
+    }
+    &--gray{
+        background-color: gray;
+    }
+}
