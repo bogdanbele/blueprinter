@@ -1,34 +1,21 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { mapClasses } from "../../scripts/helpers"
 
-function mapModifiers(...modifiers) {
-    return modifiers.map(item => {
-        return item.modifiers.split(" ").map(element => {
-                if (element === item.modifiers) {
-                    return null
-                } else {
-                    return ` button--${element}`
-                }
-            }
-        ).join(" ")
-    })
-}
-
-
-const Button = ({buttonTitle, ...modifiers}) => (
-    <div className={`button`+ mapModifiers(modifiers)}>
+const Button = ({buttonTitle,className}) => (
+    <div className={mapClasses(className, "button")}>
         {buttonTitle}
     </div>
 )
 
 Button.prototype = {
     buttonTitle: PropTypes.string,
-    modifiers: PropTypes.string
+    className: PropTypes.string
 }
 
 Button.defaultProps = {
     buttonTitle: `Click`,
-    modifiers: 'button'
+    className: "button"
 }
 
 export default Button

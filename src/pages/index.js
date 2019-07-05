@@ -27,7 +27,7 @@ const IndexPage = () => (
       <button className="btn red" disabled>red disabled test</button>
     </div>
 
-    <Button buttonTitle="bruv" modifiers="big gray" />
+    <Button buttonTitle="Click me" className="banana patata legurca" modifiers="big gray" />
 
     <div style={{
       maxWidth: `300px`,
