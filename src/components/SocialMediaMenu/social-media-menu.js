@@ -3,7 +3,7 @@ import {
     StaticQuery,
     graphql
 } from "gatsby"
-import ReturnComponent from "../scripts/social-media-type.js"
+import SocialLinkIcon from "../SocialLinkIcon/social-link-icon.js"
 
 
 const SocialMediaMenu = () => (
@@ -23,7 +23,7 @@ const SocialMediaMenu = () => (
 }
 render={data => (
     <div className="socialMenu">
-    {getSocialLinks(data)}
+      {getSocialLinks(data)}
     </div>
 )}
 />)
@@ -32,7 +32,7 @@ function getSocialLinks(data){
     const linksArray = []
     data.allSocialMediaLinksJson.edges.forEach( item => 
         linksArray.push(
-            <ReturnComponent key={item.node.link} link={item.node.link}> {item.node.link}</ReturnComponent>
+            <SocialLinkIcon key={item.node.link} link={item.node.link}> {item.node.link}</SocialLinkIcon>
         )
     )
     return linksArray    

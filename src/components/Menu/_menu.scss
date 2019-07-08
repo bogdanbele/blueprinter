@@ -1,19 +1,27 @@
 .menu {
+    width: 100vw;
     display: flex;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-top: 10px;
-    background: #c3c3c3;
+    background: $color-primary;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.menu > ul {
-    margin-bottom: 0;
+.menu>ul {
+    margin: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.menu > ul > li > a {
+.menu>ul>li>a {
     text-decoration: none;
+    font-weight: 500;
     font-family: $bodyfont;
+    display: flex;
     color: white;
 }

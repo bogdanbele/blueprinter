@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Blueprint ca in '97`,
+    title: `Albertosings the legend`,
     description: `Before Steve Jobs was the real Big Mac.`,
     author: `@bogdanbele`,
   },

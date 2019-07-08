@@ -70,4 +70,19 @@
             color: $themeyellow;
         }
     }
+
+    &--primary {
+        background-color: $color-primary;
+
+        &:hover {
+            background-color: #fff;
+            border-color: $color-primary;
+            color: $themeyellow;
+        }
+    }
+
+    &--wide {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }

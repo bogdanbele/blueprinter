@@ -1,0 +1,14 @@
+.socialMenu {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    margin: 0 auto;
+
+    >a {
+        color: $color-primary;
+    }
+
+    >a:visited {
+        color: $color-primary;
+    }
+}

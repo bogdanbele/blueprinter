@@ -1,15 +1,30 @@
-export function mapClasses(className, itemName) {
+export function mapClasses(className, baseClass) {
 
     let classes = className.split(" ")
 
-    if (itemName === className) {
-        return `${itemName}`
+    if (containsNoClass()){
+        return baseClass
     }
 
-    else if (classes.length === 1) {
-        return `${itemName} ${itemName}--${className}`
+    else if(containsOneClass()){
+        return `${baseClass} ${baseClass}--${className}`
     }
-    else return itemName + classes.map(element => {
-            return ` ${itemName}--${element}`
+  
+    else return buildClassesString()
+  
+  // Check Functions
+  
+  function containsNoClass(){
+    return (className === baseClass)
+  }
+  
+  function containsOneClass(){
+   return (classes.length === 1)
+  }
+  
+  function buildClassesString(){
+    return baseClass + classes.map(element => {
+            return ` ${baseClass}--${element}`
     }).join("")
+  }
 }

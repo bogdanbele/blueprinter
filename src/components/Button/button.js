@@ -1,14 +1,21 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { Component } from 'react';
 import { mapClasses } from "../../scripts/helpers"
 
-const Button = ({buttonTitle,className}) => (
-    <button className={mapClasses(className, "button")}>
-        {buttonTitle}
-    </button>
-)
+class Button extends Component {
 
-Button.prototype = {
+    render(){
+        const {buttonTitle,className} = this.props;
+        return(
+            <button className={mapClasses(className, "button")}>
+               {buttonTitle}
+            </button>
+        )
+    }
+}
+
+
+Button.prototypes = {
     buttonTitle: PropTypes.string,
     className: PropTypes.string
 }

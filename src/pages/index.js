@@ -6,28 +6,18 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Button from "../components/Button/button"
 
-import SocialMediamenu from "../scripts/social-media-menu.js"
-
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site
-     </p>
+    </p>
     <p>Now go build something great.</p>
 
- <SocialMediamenu/> 
-    <div className="container">
-      <Button>Yellow</Button>
-      <Button className="yellow">gray</Button>
-      <Button className="red">red</Button>
-      <Button className="purple">purple</Button>
-      <Button>default</Button>
-      <Button className="red yellow" disabled>red disabled test</Button>
-    </div>
 
-    <Button buttonTitle="Click me" className="banana patata legurca"/>
+    <div className="container">
+      <Button className="primary wide" buttonTitle="Contact">primary</Button>
+    </div>
 
     <div style={{
       maxWidth: `300px`,
