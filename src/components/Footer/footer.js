@@ -7,7 +7,7 @@ const Footer = () => (
     <div>
       © {new Date().getFullYear()}, Built with
       {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <a href="https://www.gatsbyjs.org">Blueprint</a>
     </div>
   </footer>
 );
