@@ -1,4 +1,12 @@
-.socialLinkIcon {
+.socialMenu > a > .socialLinkIcon {
     width: 30px;
     height: 30px;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+        transition: all 1s ease-in-out;
+        opacity: 0.5;
+        transform: scale opacity 1s;
+        transition: opacity 1s;
+    }
 }
