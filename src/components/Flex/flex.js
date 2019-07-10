@@ -18,4 +18,4 @@ Flex.defaultProps = {
   className: "flex"
 }
 
-export default Flex;
+export default Flex
