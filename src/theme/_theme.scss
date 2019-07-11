@@ -4,9 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
 
-$bodyfont : 'Roboto Slab', serif;
+$bodyfont : 'Roboto', serif;
 
 body {
+    background-color: black;
     font-family: $bodyfont;
 }
+
+* {color:white;}
 

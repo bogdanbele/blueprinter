@@ -51,7 +51,7 @@
         
     }
     &--shadow {
-        @include box_shadow(1);
+        @include box_shadow(6);
     }
     &--shadow:hover {
         @include box_shadow(3);
