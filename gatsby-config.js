@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `React Blueprint Boilerplate`,
+    title: `React Blueprint`,
     description: `Before Steve Jobs was the real Big Mac.`,
     author: `@bogdanbele`,
   },
