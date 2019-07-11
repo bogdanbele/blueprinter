@@ -1,14 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../layouts/layout";
-import Image from "../components/image";
 import SEO from "../components/seo";
-import Button from "../components/Button/button";
 import Flex from "../components/Flex/flex";
 import Row from "../components/Row/row";
 import Item from "../components/Item/item";
-import { FaHeadphones, FaMicrophone, FaCodeBranch } from "react-icons/fa";
 
 const IndexPage = () => (
   <Layout>
@@ -18,60 +14,22 @@ const IndexPage = () => (
     <p>Welcome to your new Alberto site</p>
     <p>Now go build something great.</p>
 
-    <Row>
-      <Flex className="3 shadow">
+    <Row className="centered">
+      <Flex className="1 shadow">
         <Item>
-          <FaHeadphones />
           <div>
-            <h1>Works out of the box</h1>
+            <h1>This website is my official digital visit card. </h1>
             <p>
-              Lightning fast building and running time with the help of the
-              latest technology and libraries
-            </p>
-          </div>
-        </Item>
-      </Flex>
-      <Flex className="3 shadow">
-        <Item>
-          <FaMicrophone />
-          <div>
-            <h1>Built by musicians</h1>
-            <p>
-              We understand your needs, we know how to tailor our website to
-              your needs.
-            </p>
-          </div>
-        </Item>
-      </Flex>
-      <Flex className="3 shadow">
-        <Item>
-          <FaCodeBranch />
-          <div>
-            <h1>Continous Deployment</h1>
-            <p>
-              Push to master, wait for Netlify to build, and poof ! Your website
-              is now live.
+            
+
+I’m a 22 years old ambitious and extremely passionate IT and Communication graduate
+ with a great interest in UX-Research, Qualitative and Quantitative methods and Human computer interaction. I have a wide range of skills and professional experiences in organizational work and IT.
+</p><p> I have 1,5 years of experience in Qualitative research and conducting users-test and experiments. I`m always trying to improve my skills and I’m learning all the time. I find the interaction between humans and technology fascinating, and that’s is my motivation.
             </p>
           </div>
         </Item>
       </Flex>
     </Row>
-    <Row>
-      <div className="container">
-        <Button className="primary wide" buttonTitle="Contact">
-          primary
-        </Button>
-      </div>
-    </Row>
-    <div
-      style={{
-        maxWidth: `300px`,
-        marginBottom: `1.45rem`
-      }}
-    >
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 );
 
