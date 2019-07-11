@@ -1,13 +1,11 @@
 import React from "react";
-import SocialMediamenu from "../SocialMediaMenu/social-media-menu";
 
 const Footer = () => (
   <footer>
-    <SocialMediamenu />
+
     <div>
-      © {new Date().getFullYear()}, Built with
+      © Dhanial Salim {new Date().getFullYear()}
       {` `}
-      <a href="https://www.gatsbyjs.org">Blueprint</a>
     </div>
   </footer>
 );
