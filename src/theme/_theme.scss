@@ -7,8 +7,6 @@
 $bodyfont : monospace;
 
 $theme: $theme-light;
-// changed to 
-$theme: $theme-dark;
 
 @if $theme==$theme-light {
     $font-color : $font-theme-light;

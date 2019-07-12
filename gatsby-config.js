@@ -5,6 +5,7 @@ module.exports = {
     author: `@bogdanbele`,
   },
   plugins: [
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
@@ -23,6 +24,14 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/blog/`,
+      }
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
