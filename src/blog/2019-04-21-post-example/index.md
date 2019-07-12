@@ -1,7 +1,7 @@
 ---
 path: "/blog/post-one"
 date: "2019-04-21"
-title: "Page Example"
+title: "Post one"
 author: "Bogadn Bele"
 ---
 
