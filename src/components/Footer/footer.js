@@ -7,7 +7,7 @@ const Footer = () => (
     <SocialMediaMenu />
 
     <div>
-      © Dhanial Salim {new Date().getFullYear()}
+      © Bogdan Bele {new Date().getFullYear()}
       {` `}
     </div>
   </footer>

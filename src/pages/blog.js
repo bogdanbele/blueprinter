@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
 
-const SecondPage = ({ data }) => (
+const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
 
@@ -13,7 +13,11 @@ const SecondPage = ({ data }) => (
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
         <h3>{post.node.frontmatter.title}</h3>
-        <small> Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
+        <small>
+          {" "}
+          Posted by {post.node.frontmatter.author} on{" "}
+          {post.node.frontmatter.date}
+        </small>
         <br />
         <br />
         <Link to={post.node.frontmatter.path}> Read Mode </Link>
@@ -27,22 +31,20 @@ const SecondPage = ({ data }) => (
 );
 
 export const pageQuery = graphql`
-    query BlogIndexQuery {
-        allMarkdownRemark(sort:{
-          order:DESC, fields:[frontmatter___date]
-        }) {
-          edges {
-            node {
-              frontmatter {
-                path
-                title
-                date(formatString: "DD-MM-YYYY")
-                author
-              }
-            }
+  query BlogIndexQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            date(formatString: "DD-MM-YYYY")
+            author
           }
         }
       }
+    }
+  }
 `;
 
-export default SecondPage;
+export default BlogPage;

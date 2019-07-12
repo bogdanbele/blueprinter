@@ -1,8 +1,8 @@
 ---
-path: "/blog/post-one"
+path: "/post-one"
 date: "2019-04-21"
 title: "Post one"
-author: "Bogadn Bele"
+author: "Bogdan Bele"
 ---
 
 This is a blog post
