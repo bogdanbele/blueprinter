@@ -7,10 +7,28 @@
 //$bodyfont : 'Roboto', serif;
 $bodyfont : monospace;
 
+$theme: $theme-light;
+
+
+$font-color : $font-theme-light;
+$font-color-matching-theme : $theme;
+
+
+@if $theme==$theme-light {
+    $font-color : $font-theme-light;
+}
+
+@else {
+    $font-color : $font-theme-dark
+}
+
 body {
-    background-color: black;
+    background-color: $theme;
     font-family: $bodyfont;
 }
 
-* {color:white;}
 
+
+* {
+    color: $font-color;
+}
