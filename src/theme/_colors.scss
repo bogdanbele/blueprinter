@@ -1,11 +1,17 @@
 $color-primary: #7B68FA;
 $color-secondary-green: #46B041;
 
+// Default Backgrounds colors
 $theme-dark: black;
 $theme-light: white;
 
+// Default fonts colors
 $font-theme-dark : white;
 $font-theme-light : black;
+
+// The actual values we will use when using the colors
+$font-color : white;
+$font-color-matching-theme : black;
 
 $theme-purple: #7B68FA;
 $themered: #ee5253;
