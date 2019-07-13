@@ -5,6 +5,8 @@ import SEO from "../components/seo";
 import Flex from "../components/Flex/flex";
 import Row from "../components/Row/row";
 import Item from "../components/Item/item";
+import Icon from "../components/Icon/icon";
+import {FaGithub} from "react-icons/fa"
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +15,9 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Alberto site</p>
     <p>Now go build something great.</p>
+    <Icon className="primary round">
+  <FaGithub/>
+    </Icon>
 
     <Row className="centered">
       <Flex className="1 shadow">

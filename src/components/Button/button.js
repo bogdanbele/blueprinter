@@ -14,7 +14,7 @@ class Button extends Component {
     }
 }
 
-Button.prototypes = {
+Button.propTypes = {
     buttonTitle: PropTypes.string,
     className: PropTypes.string
 }
