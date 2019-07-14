@@ -1,3 +1,4 @@
+
 .row {
     display: flex;
     flex-direction: column;
@@ -15,9 +16,8 @@
 
     @include breakpoint(md){
         flex-direction: row;
-        margin-top: 3rem;
+        padding-top: 4rem;
         padding-bottom: 4rem;
-        border-bottom: 1px solid gray;
     }
     &--clean{
         margin-top: 0;
@@ -29,15 +29,15 @@
     &--centered{
         justify-content: center;
     }
-}
 
-.row:first-child{
-    margin-top: 2.5rem;
-    @include breakpoint(md){
-        margin-top: 2.5rem;
+    &--full{
+        width: 80vw;
+        @include breakpoint(md){
+            width: 100vw;
+        }
+        background-color: adjust-color($color: $color-primary, $alpha: -0.98 );
+        :last-child{
+            border-bottom: 0px;
+        }
     }
-}
-
-.row:last-child{
-    border-bottom: 1px solid gray;
 }

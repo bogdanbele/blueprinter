@@ -12,15 +12,18 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
+<Row>
     <h1>Hi people</h1>
-    <p>Welcome to your new Alberto site</p>
-    <p>Now go build something great.</p>
+    <p>Welcome to our new headquarters. This website is currently under construction
+      with no clear date of release. If you would like to stay up to date with the
+      current development process we highly suggest heading to the contact page.
+    </p>
     <Icon className="primary round">
   <FaGithub/>
     </Icon>
-
-    <Row className="centered">
-      <Flex className="1 shadow">
+    </Row>
+    <Row className="centered full">
+      <Flex className="2 shadow">
         <Item>
           <div>
             <h1>This website is my official digital visit card. </h1>
