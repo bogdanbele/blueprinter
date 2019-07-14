@@ -6,6 +6,6 @@
     @extend %header;
 
     > div > h1 > a {
-        color: $font-color-matching-theme;
+        color: $font-theme-light;
     }
 }
