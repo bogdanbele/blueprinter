@@ -11,6 +11,10 @@ form {
     flex-direction: column;
 }
 
+.form-group > input {
+    background: $theme;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -21,4 +25,5 @@ form {
 .form-group > textarea {
     max-width: 100%;
     resize: vertical; 
+    background: $theme;
 }
