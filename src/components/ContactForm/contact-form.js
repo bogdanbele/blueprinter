@@ -10,6 +10,7 @@ class ContactForm extends Component {
         name="simple-contact-form"
         acceptCharset="utf-8"
         action={buildFormContact(email)}
+        data-netlify="true"
         method="post"
       >
         <fieldset id="fs-frm-inputs">
