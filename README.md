@@ -8,6 +8,8 @@
   Blueprinter, the coolest kid on the block
 </h1>
 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70af241f-3c0a-44af-8eba-5008ddfcfe34/deploy-status)](https://app.netlify.com/sites/blueprinter/deploys)
 ### Documentation link : 
 
 https://github.com/bogdanbele/blueprinter_documentation
