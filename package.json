@@ -2,7 +2,7 @@
   "name": "blueprinter",
   "private": true,
   "description": "Component based website builder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Bogdan Bele <bogdan.bele.dev@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.18",

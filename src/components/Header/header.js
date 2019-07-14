@@ -6,9 +6,6 @@ import Menu from "../Menu/menu"
 const Header = ({ siteTitle }) => (
   <header
   className="theme"
-    style={{
-      marginBottom: `1.45rem`,
-    }}
   >
     <Menu/>
     <div

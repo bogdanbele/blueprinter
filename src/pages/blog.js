@@ -4,11 +4,12 @@ import { graphql } from "gatsby";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
+import Row from "../components/Row/row";
 
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
-
+    <Row>
     <h1>Latest Posts</h1>
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
@@ -27,6 +28,7 @@ const BlogPage = ({ data }) => (
     ))}
 
     <Link to="/">Go back to the homepage</Link>
+    </Row>
   </Layout>
 );
 

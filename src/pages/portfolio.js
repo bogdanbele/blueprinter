@@ -4,19 +4,18 @@ import Image from "../components/image";
 
 import Layout from "../layouts/layout"
 import SEO from "../components/seo"
+import Row from "../components/Row/row";
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-
- <div id="ll-schedule-embed" data-schedule-id="591237"></div>
-<script type="text/javascript" src="https://scheduler.leaguelobster.com/static/embed_en.js"></script>
-
+<Row>
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
     <div
       style={{
         maxWidth: `300px`,
+        height: `300px`,
         marginBottom: `1.45rem`
       }}
     >
@@ -24,6 +23,7 @@ const SecondPage = () => (
      
     </div>
     <Link to="/">Go back to the homepage</Link>
+    </Row>
   </Layout>
 )
 
