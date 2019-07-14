@@ -1,0 +1,24 @@
+form {
+    font-family: $alt-font;
+    box-sizing: border-box;
+    width: 420px;
+    max-width: 90vw;
+    margin: 100px auto 0;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    padding-bottom: 40px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.form-group > textarea {
+    max-width: 100%;
+    resize: vertical; 
+}
