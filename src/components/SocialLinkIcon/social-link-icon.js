@@ -59,12 +59,12 @@ function extractType(string) {
 }
 
 function createSocialLink(string) {
-  return <a href={string} alt={createAltText(string)}>{extractType(string)}</a>;
+  return <a href={string} aria-label={createAltText(string)}>{extractType(string)}</a>;
 }
 
 function createAltText(string){
   var cleanedText = string.substring('https://www.'.length)
-  return 'social media link to '+ cleanedText
+  return 'social media linkto '+ cleanedText
 } 
 
 const SocialLinkIcon = ({ link }) => createSocialLink(link);
