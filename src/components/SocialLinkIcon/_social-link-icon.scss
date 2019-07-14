@@ -3,6 +3,10 @@
     height: 30px;
     transition: all 1s ease-in-out;
 
+    > path {
+        color: $color-primary;
+    }
+
     &:hover {
         transition: all 1s ease-in-out;
         opacity: 0.5;

@@ -1,11 +1,20 @@
 %header {
     background: $color-primary;
+    display: flex;
+
+    >.header-holder {
+        visibility: hidden;
+
+        @include breakpoint(md) {
+            visibility: visible;
+        }
+
+        a {
+            color: $font-color-matching-theme;
+        }
+    }
 }
 
 .theme {
     @extend %header;
-
-    > div > h1 > a {
-        color: $font-theme-light;
-    }
 }

@@ -5,24 +5,25 @@
     padding-right: 10vw;
     padding-top: 10px;
     background: $color-primary;
-    justify-content: center;
     align-items: center;
-    margin: 0 auto;
-}
 
-.menu>ul {
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
+    >ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
 
-.menu>ul>li>a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: $bodyfont;
-    display: flex;
-    color: $font-color;
+        @include breakpoint(md) {
+            width: 400px;
+        }
+        >li>a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: $bodyfont;
+            display: flex;
+            color: $font-theme-dark;
+        }
+    }
 }
