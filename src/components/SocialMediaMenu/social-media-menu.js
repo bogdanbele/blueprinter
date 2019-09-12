@@ -3,12 +3,11 @@ import {
     StaticQuery,
     graphql
 } from "gatsby"
-import SocialLinkIcon from "../SocialLinkIcon/social-link-icon.js"
-
+import {SocialLinkIcon} from "blueprint-components-react"
 
 const SocialMediaMenu = () => (
-    <StaticQuery 
-    query = {graphql` 
+    <StaticQuery
+        query={graphql` 
         query SocialMediaLinkQuery
         {
             allSocialMediaLinksJson {
@@ -20,22 +19,22 @@ const SocialMediaMenu = () => (
             }
         }
     `
-}
-render={data => (
-    <div className="socialMenu">
-      {getSocialLinks(data)}
-    </div>
-)}
-/>)
+        }
+        render={data => (
+            <div className="socialMenu">
+                {getSocialLinks(data)}
+            </div>
+        )}
+    />)
 
-function getSocialLinks(data){
+function getSocialLinks(data) {
     const linksArray = []
-    data.allSocialMediaLinksJson.edges.forEach( item => 
+    data.allSocialMediaLinksJson.edges.forEach(item =>
         linksArray.push(
             <SocialLinkIcon key={item.node.link} link={item.node.link}> {item.node.link}</SocialLinkIcon>
         )
     )
-    return linksArray    
+    return linksArray
 }
 
 
