@@ -1,8 +1,5 @@
 .menu {
-    width: 100vw;
     display: flex;
-    padding-left: 10vw;
-    padding-right: 10vw;
     padding-top: 10px;
     background: $color-primary;
     align-items: center;
@@ -11,17 +8,17 @@
         margin: 0;
         list-style-type: none;
         display: flex;
-        justify-content: space-evenly;
         width: 100vw;
 
         @include breakpoint(md) {
             width: 400px;
         }
         >li>a {
+            margin-left: $grid_4x;
             text-decoration: none;
             font-size: 1rem;
-            font-weight: 600;
-            font-family: $bodyfont;
+            font-weight: 500;
+            font-family: "Helvetica Neue", sans-serif;
             display: flex;
             color: $font-theme-dark;
         }

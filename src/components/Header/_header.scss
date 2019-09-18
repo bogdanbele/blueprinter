@@ -17,4 +17,13 @@
 
 .theme {
     @extend %header;
+    @include breakpoint(md) {
+        padding: $grid_4x;
+    }
+    .header-holder {
+        display: none;
+        @include breakpoint(md) {
+            display: initial;
+        }
+    }
 }

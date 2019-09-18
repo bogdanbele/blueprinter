@@ -1,41 +1,40 @@
-import { Link } from "gatsby"
+import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Menu from "../Menu/menu"
 
-const Header = ({ siteTitle }) => (
-  <header
-  className="theme"
-  >
-    <Menu/>
-    <div
-    className="header-holder"
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0.45rem 1.0875rem`,
-      }}
+const Header = ({siteTitle}) => (
+    <header
+        className="theme"
     >
-      <h3 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            textDecoration: `none`,
-          }}
+        <div
+            className="header-holder"
+            style={{
+                maxWidth: 960,
+                padding: `0.45rem 1.0875rem`,
+            }}
         >
-          {siteTitle}
-        </Link>
-      </h3>
-    </div>
-  </header>
+            <h3 style={{margin: 0}}>
+                <Link
+                    to="/"
+                    style={{
+                        textDecoration: `none`,
+                    }}
+                >
+                    {siteTitle}
+                </Link>
+            </h3>
+        </div>
+        <Menu/>
+    </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``,
 }
 
 export default Header

@@ -5,3 +5,19 @@ footer {
     align-items: center;
     flex-direction: column;
 }
+
+.socialMenu {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+
+    >a {
+        color: $color-primary;
+    }
+
+    >a:visited {
+        color: $color-primary;
+    }
+}
