@@ -13,7 +13,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
 <Row>
-    <h1>Hi people</h1>
+    <h1>Hello people</h1>
     <p>Welcome to our new headquarters. This website is currently under construction
       with no clear date of release. If you would like to stay up to date with the
       current development process we highly suggest heading to the contact page.
@@ -28,7 +28,7 @@ const IndexPage = () => (
           <div>
             <h1>This website is my official digital visit card. </h1>
             <p>
-            
+
 
 I’m a 22 years old ambitious and extremely passionate IT and Communication graduate
  with a great interest in UX-Research, Qualitative and Quantitative methods and Human computer interaction. I have a wide range of skills and professional experiences in organizational work and IT.
