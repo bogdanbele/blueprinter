@@ -1,11 +1,22 @@
 @import "colors";
+
+@import "colors";
+
+@import "~blueprint-components-react/src/styles/_theme.scss";
+
 @import "dimens";
+
 @import "scss_defaults/box_shadow";
 @import "scss_defaults/screen_sizes";
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
 
-$bodyfont : monospace;
+$font-family-primary: Montserrat, Verdana, serif;
+$font-family-secondary: Roboto, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-family-sans-serif: $font-family-primary;
+$font-family-base: $font-family-secondary;
+
+$bodyfont : $font-family-primary;
 
 $alt-font: Helvetica Neue, sans-serif;
 

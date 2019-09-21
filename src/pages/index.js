@@ -2,17 +2,19 @@ import React from "react";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Flex from "../components/Flex/flex";
 import Row from "../components/Row/row";
 import Item from "../components/Item/item";
 import Icon from "../components/Icon/icon";
 import {FaGithub} from "react-icons/fa"
+import {Button, Flex} from "blueprint-components-react";
+
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-
 <Row>
+
     <h1>Hello people</h1>
     <p>Welcome to our new headquarters. This website is currently under construction
       with no clear date of release. If you would like to stay up to date with the
@@ -23,7 +25,7 @@ const IndexPage = () => (
     </Icon>
     </Row>
     <Row className="centered full">
-      <Flex className="2 shadow">
+      <Flex className="flex--2 shadow">
         <Item>
           <div>
             <h1>This website is my official digital visit card. </h1>

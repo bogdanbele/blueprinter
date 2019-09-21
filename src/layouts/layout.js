@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React from "react";
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import "./layout.scss"
+import "./layout.scss";
+import styles from './Layout.modules.scss'
 
 import Header from "../components/Header/header"
 import Footer from "../components/Footer/footer";
@@ -35,7 +36,7 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <main>{children}</main>
+          <main className={styles.main}>{children}</main>
           <Footer />
         </div>
       </>
