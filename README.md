@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Blueprinter, the coolest kid on the block
+  Blueprint
 </h1>
 
 
