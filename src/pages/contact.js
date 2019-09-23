@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
-import Button from "../components/Button/button";
-import ContactForm from "../components/ContactForm/contact-form";
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
 import Row from "../components/Row/row";
+import {ContactForm} from "blueprint-components-react";
 
 class ContactPage extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Page two" />
+        <SEO title="contact" />
         <Row>
         <ContactForm email="contact.philip.nilsson@gmail.com" />
         </Row>

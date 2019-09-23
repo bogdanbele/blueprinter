@@ -710,7 +710,10 @@ pre tt:after {
 }
 
 :root {
-  --main-color : #{$color-primary};
+  --main-color: #{$color-primary};
+  --font-primary: #{$font-family-primary};
+  --theme-light: #{$theme-light};
+  --theme: #{$theme};
 }
 
 :global(.primary-h1) {
@@ -720,5 +723,5 @@ pre tt:after {
 }
 
 :global(.primary) {
-    color: $color-primary !important;
+  color: $color-primary !important;
 }
