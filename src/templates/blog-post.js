@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../layouts/layout";
 import { graphql } from "gatsby";
-import Row from "../components/Row/row";
+import Row from "../components/Row/Row";
 
 export default function Template({ data }) {
   const post = data.markdownRemark;

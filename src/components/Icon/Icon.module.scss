@@ -1,0 +1,36 @@
+@import '../../theme/theme';
+
+.Icon {
+    display: flex;
+    height: $icon-width;
+    width: $icon-width;
+    justify-content: center;
+    align-items: center;
+
+    > svg {
+        width: $icon-svg-width;
+        height: $icon-svg-width;
+    }
+}
+
+:global .round {
+    border-radius: $icon-width;
+}
+
+:global .primary {
+    background-color: $color-primary;
+
+    > svg > path {
+        color: white;
+    }
+}
+
+:global .big {
+    width: $icon-width-big;
+    height: $icon-width-big;
+
+    > svg {
+        width: $icon-svg-width-big;
+        height: $icon-svg-width-big;
+    }
+}

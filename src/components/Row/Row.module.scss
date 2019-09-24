@@ -1,0 +1,48 @@
+@import '../../theme/theme';
+
+.Row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+    width: 80%;
+        @include breakpoint(md){
+            width: 100%;
+        }
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include breakpoint(md){
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+:global .between{
+    justify-content: space-between;
+}
+:global .around{
+    justify-content: space-around;
+}
+
+:global .clean{
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+:global .centered{
+    justify-content: center;
+}
+
+:global .full{
+    width: 80vw;
+    @include breakpoint(md){
+        width: 100vw;
+    }
+    align-items: center;
+    background-color: adjust-color($color: $color-primary, $alpha: -0.98 );
+}

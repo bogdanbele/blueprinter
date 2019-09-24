@@ -1,4 +1,6 @@
-.item{
+@import '../../theme/theme';
+
+.Item{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -9,17 +11,5 @@
         height:30px;
         width: 30px;
         margin-bottom: 15px;
-    }
-
-    &--review {
-        align-items: center;
-        height: fit-content;
-        img {
-            height:100px;
-            width:100px;    
-        }
-        p {
-            font-size: 0.8rem;
-        }
     }
 }

@@ -1,13 +1,13 @@
 import React, { Component }  from "react";
 import PropTypes from "prop-types";
-import { mapClasses } from "../../scripts/helpers";
+import styles from './Item.module.scss'
 
 class Item extends Component {
 
     render() {
-        const {className, children} = this.props
+        const {children} = this.props
         return (
-            <div className={mapClasses(className, "item")}>{children}</div>
+            <div className={styles.Item}>{children}</div>
         )
     }
 }
@@ -18,7 +18,7 @@ Item.propTypes = {
 }
 
 Item.defaultProps = {
-    className : "item"
+    className : "Item"
 }
 
 export default Item

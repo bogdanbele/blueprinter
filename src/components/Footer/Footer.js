@@ -3,7 +3,7 @@ import {
     graphql, StaticQuery
 } from "gatsby"
 import {SocialLinkIcon} from "blueprint-components-react";
-
+import styles from './Footer.module.scss';
 
 let staticQuery = <StaticQuery
     query={graphql` {
@@ -17,7 +17,7 @@ let staticQuery = <StaticQuery
         }
     `}
     render={data => (
-        <div className="socialMenu">
+        <div className={styles.socialMenu}>
             {getSocialLinks(data)}
         </div>
     )}

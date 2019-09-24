@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Row from "../components/Row/row";
+import Row from "../components/Row/Row";
 
 const BlogPage = ({ data }) => (
   <Layout>

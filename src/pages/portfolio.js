@@ -4,7 +4,7 @@ import Image from "../components/image";
 
 import Layout from "../layouts/layout"
 import SEO from "../components/seo"
-import Row from "../components/Row/row";
+import Row from "../components/Row/Row";
 
 const SecondPage = () => (
   <Layout>
@@ -20,7 +20,7 @@ const SecondPage = () => (
       }}
     >
     <Image />
-     
+
     </div>
     <Link to="/">Go back to the homepage</Link>
     </Row>

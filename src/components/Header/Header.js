@@ -1,25 +1,17 @@
 import {Link} from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Menu from "../Menu/menu"
+import Menu from "../Menu/Menu"
+import style from './Header.module.scss'
 
 const Header = ({siteTitle}) => (
     <header
-        className="theme"
+        className={style.theme}
     >
-        <div
-            className="header-holder"
-            style={{
-                maxWidth: 960,
-                padding: `0.45rem 1.0875rem`,
-            }}
-        >
+        <div className='header-holder'>
             <h3 style={{margin: 0}}>
                 <Link
                     to="/"
-                    style={{
-                        textDecoration: `none`,
-                    }}
                 >
                     {siteTitle}
                 </Link>

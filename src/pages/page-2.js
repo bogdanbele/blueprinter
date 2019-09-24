@@ -4,8 +4,8 @@ import Image from "../components/image";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Row from "../components/Row/row";
-import Item from "../components/Item/item";
+import Row from "../components/Row/Row";
+import Item from "../components/Item/Item";
 
 const SecondPage = () => (
   <Layout>

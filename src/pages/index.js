@@ -2,9 +2,9 @@ import React from "react";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Row from "../components/Row/row";
-import Item from "../components/Item/item";
-import Icon from "../components/Icon/icon";
+import Row from "../components/Row/Row";
+import Item from "../components/Item/Item";
+import Icon from "../components/Icon/Icon";
 import {FaGithub} from "react-icons/fa"
 import {Flex, Button} from "blueprint-components-react";
 

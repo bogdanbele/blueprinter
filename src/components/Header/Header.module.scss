@@ -1,16 +1,21 @@
+@import '../../theme/theme';
+
 %header {
     background: $color-primary;
     display: flex;
 
-    >.header-holder {
+    >  :global(.header-holder) {
+        padding:  0.45rem 1.0875rem;
+        max-width: 960px;
         visibility: hidden;
 
         @include breakpoint(md) {
             visibility: visible;
         }
 
-        a {
+        h3 > a {
             color: $font-color-matching-theme;
+            text-decoration: none;
         }
     }
 }
@@ -20,7 +25,7 @@
     @include breakpoint(md) {
         padding: $grid_4x;
     }
-    .header-holder {
+    > :global(.header-holder) {
         display: none;
         @include breakpoint(md) {
             display: initial;
