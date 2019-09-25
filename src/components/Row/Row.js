@@ -13,10 +13,6 @@ class Row extends Component {
 Row.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string
-}
-
-Row.defaultProps = {
-    className: "row"
-}
+};
 
 export default Row
