@@ -48,10 +48,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "create-components": "node src/scripts/bundle-scss.js",
-    "build": "npm run create-components && gatsby build",
-    "prod-build": "npm run create-components && gatsby build && gatsby serve",
-    "develop": "npm run create-components && gatsby develop",
+    "build": "gatsby build",
+    "prod-build": "gatsby build && gatsby serve",
+    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
