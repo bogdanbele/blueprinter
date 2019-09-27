@@ -2,11 +2,8 @@ import React from "react";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Row from "../components/Row/Row";
-import Item from "../components/Item/Item";
-import Icon from "../components/Icon/Icon";
 import {FaGithub} from "react-icons/fa"
-import {Flex, Button} from "blueprint-components-react";
+import {Flex, Button, Icon, Row, Item} from "blueprint-components-react";
 
 
 const IndexPage = () => (

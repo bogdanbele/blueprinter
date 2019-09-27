@@ -1,18 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
-import Image from "../components/image";
-
+import Image from "../components/Images/image";
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Row from "../components/Row/Row";
-import Item from "../components/Item/Item";
+import {Row} from "blueprint-components-react";
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
     <Row>
-
-
       <h1>Hi from the second page</h1>
       <p>Welcome to page 2</p>
       <div

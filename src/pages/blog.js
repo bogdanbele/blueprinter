@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import Row from "../components/Row/Row";
+import {Row} from "blueprint-components-react";
 
 const BlogPage = ({ data }) => (
   <Layout>

@@ -5,7 +5,6 @@
   "version": "0.2.0",
   "author": "Bogdan Bele <bogdan.bele.dev@gmail.com>",
   "dependencies": {
-    "blueprint-components-react": "0.0.53",
     "gatsby": "^2.13.18",
     "gatsby-image": "^2.0.35",
     "gatsby-plugin-catch-links": "^2.0.13",
@@ -28,6 +27,7 @@
     "react-icons": "^3.7.0"
   },
   "devDependencies": {
+    "blueprint-components-react": "0.0.57",
     "bootstrap": "^4.3.1",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.3.0",
