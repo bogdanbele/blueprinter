@@ -8,6 +8,10 @@
         padding:  0.45rem 1.0875rem;
         max-width: 960px;
         visibility: hidden;
+        display: flex;
+        margin: 0 auto;
+        width: 960px;
+        justify-content: space-between;
 
         @include breakpoint(md) {
             visibility: visible;
@@ -25,7 +29,7 @@
     @include breakpoint(md) {
         padding: $grid_4x;
     }
-    > :global(.header-holder) {
+    > :global(.header-holder) > h3 {
         display: none;
         @include breakpoint(md) {
             display: initial;

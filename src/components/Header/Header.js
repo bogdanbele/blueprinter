@@ -5,19 +5,15 @@ import Menu from "../Menu/Menu"
 import style from './Header.module.scss'
 
 const Header = ({siteTitle}) => (
-    <header
-        className={style.theme}
-    >
-        <div className='header-holder'>
-            <h3 style={{margin: 0}}>
-                <Link
-                    to="/"
-                >
-                    {siteTitle}
-                </Link>
-            </h3>
+    <header className={style.theme}>
+            <div className='header-holder'>
+                <h3 style={{margin: 0}}>
+                    <Link to="/" >
+                        {siteTitle}
+                    </Link>
+                </h3>
+                <Menu/>
         </div>
-        <Menu/>
     </header>
 )
 
