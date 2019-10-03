@@ -2,9 +2,10 @@ import React from "react";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import {FaGithub} from "react-icons/fa"
+import {FaAccessibleIcon} from "react-icons/fa"
 import {Flex, Button, Icon, Row, Item} from "blueprint-components-react";
 import {navigate} from "@reach/router";
+import {FaAnchor} from "react-icons";
 
 
 const IndexPage = () => (
@@ -19,9 +20,28 @@ const IndexPage = () => (
                 If you would like to stay up to date with the current development process
                 we highly recommend heading to the contact page.
             </p>
-            <Button onClick={
-                () => navigate("/contact/")
-            }>Contact</Button>
+        </Row>
+        <Row className='around'>
+            <Flex className='flex--2 flex--fit'>
+                <Item>
+                    <h2> Pick up where you've left</h2>
+                    <p> Good to have you back ! Log in and pick up where you've left off and start building your website
+                        again. </p>
+                    <Button onClick={
+                        () => navigate("/contact/")
+                    }>Contact</Button>
+                </Item>
+            </Flex>
+            <Flex className='flex--2 flex--fit'>
+                <Item>
+                    <h2> Sign up with Blueprint </h2>
+                    <p> Create an account for the ultra fast website builder and bundler. Transpiling, compiling and
+                        writing content has never been easier. </p>
+                    <Button onClick={
+                        () => navigate("/contact/")
+                    }>Contact</Button>
+                </Item>
+            </Flex>
         </Row>
         <Row className="centered full">
             <Flex className="flex--2 shadow">

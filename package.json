@@ -27,7 +27,7 @@
     "react-icons": "^3.7.0"
   },
   "devDependencies": {
-    "blueprint-components-react": "0.0.72",
+    "blueprint-components-react": "0.0.74",
     "bootstrap": "^4.3.1",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.3.0",
