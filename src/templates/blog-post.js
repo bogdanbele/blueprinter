@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../layouts/layout";
 import { graphql } from "gatsby";
-import {Row} from "blueprint-components-react";
+import Row from "../components/base-components/Row";
 
 export default function Template({ data }) {
   const post = data.markdownRemark;

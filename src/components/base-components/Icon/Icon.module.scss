@@ -1,0 +1,26 @@
+@import '../../../theme/theme';
+
+.Icon {
+	align-items: center;
+	display: flex;
+	height: 40px;
+	justify-content: center;
+	width: 40px;
+
+	> svg {
+		height: 25px;
+		width: 25px;
+	}
+}
+
+:global .round {
+	border-radius: 40px;
+}
+
+:global .primary {
+	background-color: $color-primary;
+
+	> svg > path {
+		color: white;
+	}
+}

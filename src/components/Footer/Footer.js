@@ -2,8 +2,8 @@ import React from "react";
 import {
     graphql, StaticQuery
 } from "gatsby"
-import {SocialLinkIcon} from "blueprint-components-react";
 import styles from './Footer.module.scss';
+import SocialLinkIcon from "../base-components/SocialLinkIcon";
 
 let staticQuery = <StaticQuery
     query={graphql` {

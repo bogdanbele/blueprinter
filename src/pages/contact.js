@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import {ContactForm, Row} from "blueprint-components-react";
+import Row from "../components/base-components/Row";
+import ContactForm from "../components/base-components/ContactForm";
 
 class ContactPage extends Component {
   render() {

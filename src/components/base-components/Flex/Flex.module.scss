@@ -1,0 +1,78 @@
+@import '../../../theme/theme';
+
+.Flex {
+	p {
+		font-weight: 500;
+		line-height: 1.4rem;
+		margin-bottom: 1.3rem;
+		margin-top: 0.7rem;
+	}
+
+	@include breakpoint(md) {
+		&:global.flex--1 {
+			width: 80%;
+		}
+		&:global.flex--2 {
+			width: 40%;
+		}
+		&:global.flex--3 {
+			width: 30%;
+		}
+		&:global.flex--4 {
+			width: 22%;
+		}
+		&:global.flex--solo {
+			width: 60%;
+		}
+	}
+	border-radius: 1rem;
+	display: flex;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	padding: 1.5rem;
+	transition: box-shadow 0.3s ease-in-out;
+
+	&:global.flex--text {
+		max-width: 600px;
+
+		p {
+			margin-bottom: 6px;
+			margin-top: 16px;
+		}
+	}
+
+	&:global.flex--centered {
+		align-items: center;
+		justify-content: center;
+	}
+
+	h1 {
+		color: $color-primary;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+	}
+
+	&:global.green {
+		background-color: green;
+	}
+
+	&:global.flex--fit {
+		height: fit-content;
+
+		p {
+			height: 5rem;
+		}
+	}
+
+	&:global.flex--column {
+		flex-direction: column;
+	}
+
+	&:global.shadow {
+		@include box_shadow(6);
+	}
+
+	&:global.shadow:hover {
+		@include box_shadow(3);
+	}
+}

@@ -1,0 +1,16 @@
+@import '../../../theme/theme';
+
+.socialLinkIcon {
+	> path {
+		color: $color-primary;
+	}
+	height: 30px;
+	transition: all 1s ease-in-out;
+	width: 30px;
+
+	&:hover {
+		opacity: 0.5;
+		transition: all 1s ease-in-out;
+	}
+
+}

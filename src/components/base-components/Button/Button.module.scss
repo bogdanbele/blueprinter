@@ -1,0 +1,24 @@
+@import '../../../theme/theme';
+
+.Button {
+	background-color: $color-primary;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	font-family: $font-family-primary;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	min-width: 100px;
+	padding: 0.3rem 0.7rem;
+	text-decoration: none;
+	text-transform: capitalize;
+	user-select: none;
+	width: fit-content;
+
+	&:hover {
+		background-color: #fff;
+		border-color: $color-primary;
+		color: $color-primary;
+	}
+}

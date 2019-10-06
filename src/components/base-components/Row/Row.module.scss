@@ -1,0 +1,47 @@
+@import '../../../theme/theme';
+
+.Row {
+	@include breakpoint(md) {
+		width: 100%;
+	}
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+	width: 80%;
+
+	@include breakpoint(md) {
+		padding-bottom: 4rem;
+		padding-top: 4rem;
+	}
+}
+
+:global .between {
+	justify-content: space-between;
+}
+
+:global .around {
+	justify-content: space-around;
+}
+
+:global .clean {
+	border-bottom: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+}
+
+:global .centered {
+	justify-content: center;
+}
+
+:global .full {
+	@include breakpoint(md) {
+		width: 100vw;
+	}
+	align-items: center;
+	width: 80vw;
+}

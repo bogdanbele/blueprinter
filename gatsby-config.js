@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Blueprint`,
+    title: `ncweb`,
     description: `Before Steve Jobs was the real Big Mac.`,
     author: `@bogdanbele`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

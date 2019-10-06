@@ -14,7 +14,6 @@
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.2.6",
-    "gatsby-plugin-styled-components": "^3.1.8",
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-json": "^2.2.0",
     "gatsby-transformer-remark": "^2.3.8",
@@ -30,7 +29,6 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
-    "blueprint-components-react": "0.0.74",
     "bootstrap": "^4.3.1",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.3.0",

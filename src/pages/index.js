@@ -2,10 +2,11 @@ import React from "react";
 
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
-import {FaAccessibleIcon} from "react-icons/fa"
-import {Flex, Button, Icon, Row, Item} from "blueprint-components-react";
 import {navigate} from "@reach/router";
-import {FaAnchor} from "react-icons";
+import Row from "../components/base-components/Row";
+import Flex from "../components/base-components/Flex";
+import Item from "../components/base-components/Item";
+import Button from "../components/base-components/Button";
 
 
 const IndexPage = () => (
