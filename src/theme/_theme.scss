@@ -42,3 +42,15 @@ body {
 * {
     color: $font-color;
 }
+
+:global .column {
+    flex-direction: column;
+}
+
+:global .row {
+    flex-direction: row;
+}
+
+:global .fill {
+    height: 70vh;
+}
