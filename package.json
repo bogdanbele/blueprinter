@@ -5,6 +5,7 @@
   "version": "0.2.0",
   "author": "Bogdan Bele <bogdan.bele.dev@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.18",
     "gatsby-image": "^2.0.35",
     "gatsby-plugin-catch-links": "^2.0.13",
@@ -13,6 +14,7 @@
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.2.6",
+    "gatsby-plugin-styled-components": "^3.1.8",
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-json": "^2.2.0",
     "gatsby-transformer-remark": "^2.3.8",
@@ -24,7 +26,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.7.0"
+    "react-icons": "^3.7.0",
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "blueprint-components-react": "0.0.74",

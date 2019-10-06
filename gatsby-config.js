@@ -5,6 +5,7 @@ module.exports = {
     author: `@bogdanbele`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
@@ -14,7 +15,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       }
-    },
+    }
     "gatsby-transformer-json",
     {
       resolve: `gatsby-source-filesystem`,
