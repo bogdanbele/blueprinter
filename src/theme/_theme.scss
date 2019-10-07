@@ -8,42 +8,10 @@
 @import "scss_defaults/box_shadow";
 @import "scss_defaults/screen_sizes";
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
-
-/* roboto-regular - latin */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto'), local('Roboto-Regular'),
-    url('/fonts/roboto-v19-latin-regular.woff2') format('woff2'),
-    url('/fonts/roboto-v19-latin-regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Quicksand'), local('Quicksand-Regular'),
-    url('/fonts/Quicksand-Regular.ttf') format('ttf');
-}
-
-@font-face {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Quicksand'), local('Quicksand-Bold'),
-    url('/fonts/Quicksand-Bold.ttf') format('ttf');
-}
-
 $font-family-primary: Quicksand, sans-serif;
 $font-family-secondary: Roboto, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 $font-family-sans-serif: $font-family-primary;
 $font-family-base: $font-family-secondary;
-
-$bodyfont : $font-family-primary;
-
-$alt-font: Helvetica Neue, sans-serif;
 
 $theme: $theme-light;
 
@@ -60,7 +28,7 @@ $theme: $theme-light;
 
 body {
     background-color: $theme;
-    font-family: $bodyfont;
+    font-family: $font-family-primary;
 }
 
 
