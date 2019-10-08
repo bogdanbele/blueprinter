@@ -11,6 +11,7 @@
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.25",
     "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-preload-fonts": "^1.0.11",
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.2.6",
@@ -50,8 +51,9 @@
   ],
   "license": "MIT",
   "scripts": {
+    "preload-fonts": "gatsby-preload-fonts",
     "build": "gatsby build",
-    "prod-build": "gatsby build && gatsby serve",
+    "prod-build": "npm run preload-fonts && gatsby build && gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
