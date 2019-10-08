@@ -27,7 +27,8 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.7.0",
     "styled-components": "^4.4.0",
-    "typeface-quicksand": "0.0.71"
+    "typeface-quicksand": "0.0.71",
+    "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",

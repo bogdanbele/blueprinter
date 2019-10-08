@@ -1,3 +1,6 @@
+$font-family-primary: Quicksand, sans-serif;
+$font-family-secondary: Roboto, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
 @import "colors";
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
@@ -7,11 +10,6 @@
 
 @import "scss_defaults/box_shadow";
 @import "scss_defaults/screen_sizes";
-
-$font-family-primary: Quicksand, sans-serif;
-$font-family-secondary: Roboto, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-$font-family-sans-serif: $font-family-primary;
-$font-family-base: $font-family-secondary;
 
 $theme: $theme-light;
 
