@@ -15,11 +15,9 @@ const IndexPage = () => (
         <Row>
             <Flex className='column'>
                 <h1>Working hard</h1>
-                <p>
-                    The ncweb team is working hard to bring you our official website online.
+                <p>The ncweb team is working hard to bring you our official website online.
                 </p>
-                <p>
-                    If you would like to stay up to date with the current development process
+                <p>If you would like to stay up to date with the current development process
                     we highly recommend heading to the contact page.
                 </p>
             </Flex>
