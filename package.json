@@ -28,7 +28,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.7.0",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "typeface-quicksand": "0.0.71"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
@@ -52,8 +53,8 @@
   "license": "MIT",
   "scripts": {
     "preload-fonts": "gatsby-preload-fonts",
-    "build": "npm run preload-fonts && gatsby build",
-    "prod-build": "npm run preload-fonts && gatsby build && gatsby serve",
+    "build": "gatsby build",
+    "prod-build": "gatsby build && gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
