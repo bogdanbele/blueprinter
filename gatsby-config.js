@@ -5,15 +5,6 @@ module.exports = {
         author: `@bogdanbele`,
     },
     plugins: [
-        `gatsby-plugin-styled-components`,
-        {
-            resolve: 'gatsby-plugin-web-font-loader',
-            options: {
-                google: {
-                    families: ['Quicksand', 'Roboto']
-                }
-            }
-        }
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
