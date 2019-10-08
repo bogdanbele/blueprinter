@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/seo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/seo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +29,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/seo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="398">
-                  <caret line="86" column="3" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
+                <state relative-caret-position="846">
+                  <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
                   <folding>
                     <element signature="e#151#176#0" expanded="true" />
                   </folding>
@@ -43,7 +42,7 @@
             <entry file="file://$PROJECT_DIR$/gatsby-browser.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
-                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
                 </state>
               </provider>
             </entry>
@@ -147,8 +146,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+                <state relative-caret-position="609">
+                  <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -465,12 +464,12 @@
       <workItem from="1570087311315" duration="2704000" />
       <workItem from="1570130115379" duration="992000" />
       <workItem from="1570177253805" duration="531000" />
-      <workItem from="1570217866804" duration="22642000" />
+      <workItem from="1570217866804" duration="22918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120564000" />
+    <option name="totallyTimeSpent" value="120840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2517" y="-1385" width="1444" height="1417" extended-state="0" />
@@ -862,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gatsby-config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -879,14 +871,21 @@
     <entry file="file://$PROJECT_DIR$/gatsby-browser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/seo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="86" column="3" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
+        <state relative-caret-position="846">
+          <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
           <folding>
             <element signature="e#151#176#0" expanded="true" />
           </folding>
