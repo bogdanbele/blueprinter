@@ -81,7 +81,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto&display=swap" rel="stylesheet"/>
+    </Helmet>
   )
 }
 
