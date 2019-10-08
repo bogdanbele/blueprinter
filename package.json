@@ -52,7 +52,7 @@
   "license": "MIT",
   "scripts": {
     "preload-fonts": "gatsby-preload-fonts",
-    "build": "gatsby build",
+    "build": "npm run preload-fonts && gatsby build",
     "prod-build": "npm run preload-fonts && gatsby build && gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",

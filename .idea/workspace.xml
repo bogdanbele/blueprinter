@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -136,10 +134,15 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+                <state relative-caret-position="391">
+                  <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/font-preload-cache.json">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -226,12 +229,12 @@
       <find>blueprint-com</find>
       <find>$body</find>
       <find>--font-primary</find>
-      <find>blue</find>
       <find>body</find>
       <find>$font-family-primary</find>
       <find>$font-family-primary</find>
       <find>/static/fonts/</find>
       <find>h1</find>
+      <find>blue</find>
     </findStrings>
     <replaceStrings>
       <replace>&amp;:global.flex--</replace>
@@ -363,11 +366,6 @@
               <item name="blueprint" type="b2602c69:ProjectViewProjectNode" />
               <item name="blueprint" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="blueprint" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blueprint" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -446,19 +444,19 @@
       <workItem from="1570087311315" duration="2704000" />
       <workItem from="1570130115379" duration="992000" />
       <workItem from="1570177253805" duration="531000" />
-      <workItem from="1570217866804" duration="18871000" />
+      <workItem from="1570217866804" duration="19313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116793000" />
+    <option name="totallyTimeSpent" value="117235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2517" y="-1385" width="1444" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25368938" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49898374" visible="true" weight="0.25368938" />
+      <window_info id="Structure" order="1" sideWeight="0.50101626" side_tool="true" visible="true" weight="0.25368938" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -541,7 +539,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Item/Item.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Icon/Icon.module.scss" />
     <entry file="file://$PROJECT_DIR$/src/components/Icon/Icon.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/blueprint-components-react/dist/index.js">
@@ -852,10 +849,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/font-preload-cache.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+        <state relative-caret-position="391">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
         </state>
       </provider>
     </entry>
