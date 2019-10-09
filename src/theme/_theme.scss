@@ -11,27 +11,19 @@ $font-family-secondary: Quicksand, sans-serif;
 @import "scss_defaults/box_shadow";
 @import "scss_defaults/screen_sizes";
 
-$theme: $theme-light;
-
-@if $theme==$theme-light {
-    $font-color : $font-theme-light;
-    $font-color-matching-theme: $theme-light;
-}
-
-@else {
-    $font-color : $font-theme-dark;
-    $font-color-matching-theme: $theme-dark;
-
-}
+$theme: #EEEEEE;
 
 body {
     background-color: $theme;
     font-family: $font-family-secondary;
 }
 
+$font-color: #3E3E3E;
+
+
 
 * {
-    color: $font-color;
+    color: #3e3e3e;
 }
 
 :global .column {

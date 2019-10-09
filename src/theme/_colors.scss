@@ -1,18 +1,5 @@
 $dark-gray: #353535;
 
-// Default Backgrounds colors
-$theme-dark: black;
-$theme-light: white;
-
-// Default fonts colors
-$font-theme-dark : white;
-$font-theme-light : $dark-gray;
-
-// The actual values we will use when using the colors
-$font-color : white;
-$font-color-matching-theme : black;
-
-
 $theme-purple: #7B68FA;
 $themered: #A71930;
 $themeyellow: #feca57;
@@ -21,5 +8,5 @@ $themegray :#2f3640;
 $themepurple: #6F1E51;
 
 // Primary
-$color-primary: $themered;
+$color-primary: $themegray;
 $color-secondary-green: #46B041;
