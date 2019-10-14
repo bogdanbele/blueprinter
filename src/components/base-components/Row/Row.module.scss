@@ -45,3 +45,7 @@
 	align-items: center;
 	width: 80vw;
 }
+
+:global .row--column {
+	flex-direction: column;
+}
