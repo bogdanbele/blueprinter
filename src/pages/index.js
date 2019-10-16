@@ -13,52 +13,39 @@ const IndexPage = () => (
     <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
         <Row>
-            <Flex className='column'>
-                <h1>Working hard</h1>
-                <p>The ncweb team is working hard to bring you our official website online.
+            <Flex className='column flex---1'>
+                <h1>Why us ?</h1>
+                <p>The customer is in the heart of ncwebs identity. We create non cliché website for our customers.
+                    Unlike other website-builders, we focus on you. We thrive to create a memorable website that
+                    illustrate you, the way you want it.
                 </p>
-                <p>If you would like to stay up to date with the current development process
-                    we highly recommend heading to the contact page.
-                </p>
+                <p>We create opportunities where there aren’t any. We see things from our customers perspective, and we
+                    strive to create innovative websites, the way you like it.</p>
             </Flex>
         </Row>
         <Row className='around'>
-            <Flex className='flex--2 flex--fit'>
+            <Flex className='flex--2'>
                 <Item>
-                    <h2> Pick up where you've left</h2>
-                    <p> Good to have you back ! Log in and pick up where you've left off and start building your website
-                        again. </p>
-                    <Button onClick={
-                        () => navigate("/contact/")
-                    }>Contact</Button>
-                </Item>
-            </Flex>
-            <Flex className='flex--2 flex--fit'>
-                <Item>
-                    <h2> Sign up with Blueprint </h2>
-                    <p> Create an account for the ultra fast website builder and bundler. Transpiling, compiling and
-                        writing content has never been easier. </p>
-                    <Button onClick={
-                        () => navigate("/contact/")
-                    }>Contact</Button>
-                </Item>
-            </Flex>
-        </Row>
-        <Row className="centered full">
-            <Flex className="flex--2 shadow">
-                <Item>
-                    <div>
-                        <h2>This website is my official digital visit card. </h2>
-                        <p>
-                            I’m a 28 years old ambitious and extremely passionate IT and Communication graduate
-                            with a great interest in UX-Research, Qualitative and Quantitative methods and Human
-                            computer interaction. I have a wide range of skills and professional experiences in
-                            organizational work and IT.
-                        </p><p> I have 1,5 years of experience in Qualitative research and conducting users-test and
-                        experiments. I`m always trying to improve my skills and I’m learning all the time. I find the
-                        interaction between humans and technology fascinating, and that’s is my motivation.
+                    <h2>Customers first</h2>
+                    <p>
+                        At ncweb we create value. We seek to create innovation and opportunities. We know how important
+                        it is to be on the internet, and we can help you get connected to the world! We want to you to
+                        be available and accessible to the world wide web.
                     </p>
-                    </div>
+                    <Button onClick={
+                        () => navigate("/contact/")
+                    }>Contact</Button>
+                </Item>
+            </Flex>
+            <Flex className='flex--2'>
+                <Item>
+                    <h2>How we work </h2>
+                    <p>With the state-of-the-art technology we manage, administrate and process each and every website.
+                        With our in-house UX-research, we discover and design the ultimate website that generates
+                        revenue and popularity. In other words, we help you get connected to the world. </p>
+                    <Button onClick={
+                        () => navigate("/contact/")
+                    }>Contact</Button>
                 </Item>
             </Flex>
         </Row>
