@@ -14,7 +14,7 @@ const IndexPage = () => (
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
         <Row>
             <Flex className='column flex---1'>
-                <h1>Why us ?</h1>
+                <h1>Why we do it ?</h1>
                 <p>The customer is in the heart of ncwebs identity. We create non cliché website for our customers.
                     Unlike other website-builders, we focus on you. We thrive to create a memorable website that
                     illustrate you, the way you want it.
