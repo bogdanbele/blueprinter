@@ -18,17 +18,6 @@ const IndexPage = () => (
             <h3>Here at ncweb we build websites and apps that help you engage with people across all devices, platforms, and experiences.</h3>
             </Flex>
             </Row>
-        <Row>
-            <Flex className='column flex---1'>
-                <h1>Why we do it ?</h1>
-                <p>The customer is in the heart of ncwebs identity. We create non cliché websites for our customers.
-                    Unlike other website-builders, we focus on you. We thrive to create a memorable website that
-                    illustrate you, the way you want it.
-                </p>
-                <p>We create opportunities where there aren’t any. We see things from our customers perspective, and we
-                    strive to create innovative websites, the way you like it.</p>
-            </Flex>
-        </Row>
         <Row className='around'>
             <Flex className='flex--2'>
                 <Item>
@@ -40,7 +29,7 @@ const IndexPage = () => (
                     </p>
                     <Button onClick={
                         () => navigate("/contact/")
-                    }>Contact</Button>
+                    }>Read more</Button>
                 </Item>
             </Flex>
             <Flex className='flex--2'>
@@ -51,8 +40,19 @@ const IndexPage = () => (
                         revenue and popularity. In other words, we help you get connected to the world. </p>
                     <Button onClick={
                         () => navigate("/contact/")
-                    }>Contact</Button>
+                    }>Read</Button>
                 </Item>
+            </Flex>
+        </Row>
+        <Row>
+            <Flex className='column flex---1'>
+                <h1>Why we do it ?</h1>
+                <p>The customer is in the heart of ncwebs identity. We create non cliché websites for our customers.
+                    Unlike other website-builders, we focus on you. We thrive to create a memorable website that
+                    illustrate you, the way you want it.
+                </p>
+                <p>We create opportunities where there aren’t any. We see things from our customers perspective, and we
+                    strive to create innovative websites, the way you like it.</p>
             </Flex>
         </Row>
     </Layout>

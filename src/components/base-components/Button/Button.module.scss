@@ -1,28 +1,30 @@
 @import '../../../theme/theme';
 
 .Button {
-	background-color: $color-primary;
-	transition: 0.3s;
 	border: 2px solid transparent;
-	border-radius: $grid_1x;
-	color:  white;
+	border-radius: 4px;
+	background-color: $theme;
+	border-color: $color-primary;
+	color: $color-primary;
+
+	
+	transition: 0.3s;
+	
 	cursor: pointer;
 	font-family: $font-family-primary;
 	font-weight: bold;
 	letter-spacing: 1.5px;
 	margin-bottom: $grid_2x;
 	margin-top: $grid_2x;
-	min-width: 100px;
-	padding: 0.5rem;
+	max-width: 150px;
+	padding: 0.6rem;
 	text-decoration: none;
 	text-transform: capitalize;
 	user-select: none;
-	width: 0px;
 
 	&:hover {
 		font-weight: bold;
-		background-color: $theme;
-		border-color: $color-primary;
-		color: $color-primary;
+		color:  white;
+		border-color: white;
 	}
 }
