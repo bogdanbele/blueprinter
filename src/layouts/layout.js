@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./layout.scss";
 import styles from './Layout.module.scss'
+require('typeface-quicksand');
+require('typeface-roboto');
 
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer";
