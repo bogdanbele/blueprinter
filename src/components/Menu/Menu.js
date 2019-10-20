@@ -9,7 +9,13 @@ const Menu = () => (
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/portfolio">Portfolio</Link>
+                <Link to="/about">Process</Link>
+            </li>
+            <li>
+                <Link to="/get-started">Get Started</Link>
+            </li>
+            <li>
+                <Link to="/meet-the-team">Team</Link>
             </li>
             <li>
                 <Link to="/contact">Contact</Link>

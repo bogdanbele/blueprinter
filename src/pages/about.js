@@ -1,22 +1,20 @@
 import React from "react"
 import {graphql, Link} from "gatsby"
-import Image from "../components/Images/image";
 
 import Layout from "../layouts/layout"
 import SEO from "../components/seo"
 import Row from "../components/base-components/Row";
 
-const SecondPage = () => (
+const AboutPage = () => (
     <Layout>
-        <SEO title="Page two"/>
+        <SEO title="Process"/>
         <Row className='row--column'>
-            <h1>Hi from the second page</h1>
-            <p>Welcome to page 2</p>
-            <Image/>
+            <h1>Hi from the about page</h1>
+            <p>Welcome to the about page</p>
             <Link to="/">Go back to the homepage</Link>
         </Row>
     </Layout>
 );
 
 
-export default SecondPage
+export default AboutPage

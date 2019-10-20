@@ -11,16 +11,18 @@
         width: 100vw;
 
         @include breakpoint(md) {
-            width: 400px;
+            width: auto;
         }
-        >li>a {
-            margin-left: $grid_4x;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            font-family: $font-family-secondary;
-            display: flex;
-            color: $color-primary;
+        >li {
+            margin-left: $grid_3x;
+            >a {
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+                font-family: $font-family-secondary;
+                display: flex;
+                color: $color-primary;
+            }
         }
     }
 }
