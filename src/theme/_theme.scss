@@ -11,17 +11,20 @@ $font-family-secondary: Roboto, sans-serif;
 @import "scss_defaults/box_shadow";
 @import "scss_defaults/screen_sizes";
 
-$theme: #EEEEEE;
+$dark-blue-bg: #0a1527;
+
+$theme: $dark-blue-bg;
 
 body {
     background-color: $theme;
     font-family: $font-family-secondary;
 }
 
-$font-color: #666666;
+$default-font-color:#666666;
+$font-color: white;
 
 * {
-    color: #3e3e3e;
+    color: $font-color;
 }
 
 :global .column {
