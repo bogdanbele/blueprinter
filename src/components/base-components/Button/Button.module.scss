@@ -2,9 +2,10 @@
 
 .Button {
 	background-color: $color-primary;
+	transition: 0.3s;
 	border: 2px solid transparent;
 	border-radius: $grid_1x;
-	color: lighten($color-primary, 70%);
+	color:  white;
 	cursor: pointer;
 	font-family: $font-family-primary;
 	font-weight: bold;
@@ -19,7 +20,8 @@
 	width: 0px;
 
 	&:hover {
-		background-color: #fff;
+		font-weight: bold;
+		background-color: $theme;
 		border-color: $color-primary;
 		color: $color-primary;
 	}
