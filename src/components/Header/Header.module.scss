@@ -1,7 +1,7 @@
 @import '../../theme/theme';
 
 %header {
-    background: $color-primary;
+    background: $theme;
     display: flex;
 
     >  :global(.header-holder) {
@@ -17,7 +17,7 @@
         }
 
         h3 > a {
-            color: white;
+            color: $color-primary;
             text-decoration: none;
         }
     }

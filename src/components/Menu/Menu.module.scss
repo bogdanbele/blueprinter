@@ -2,7 +2,6 @@
 
 .Menu {
     display: flex;
-    background: $color-primary;
     align-items: center;
 
     >ul {
@@ -21,7 +20,7 @@
             font-weight: bold;
             font-family: $font-family-secondary;
             display: flex;
-            color: white;
+            color: $color-primary;
         }
     }
 }

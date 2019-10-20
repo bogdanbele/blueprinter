@@ -39,10 +39,10 @@ export default class Footer extends React.PureComponent {
         return (
             <footer>
                {staticQuery}
-                <div>
-                    © Bogdan Bele {new Date().getFullYear()}
+                <p>
+                    © ncweb {new Date().getFullYear()}
                     {` `}
-                </div>
+                </p>
             </footer>
         )
     }

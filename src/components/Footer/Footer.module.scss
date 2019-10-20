@@ -2,16 +2,22 @@
 
 footer {
     display: flex;
-    margin-top: 2.90rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    p {
+        font-family: $font-family-secondary;
+        margin-bottom: 0px;
+        margin-top: $grid_2x;
+    }
 }
 
 .socialMenu {
     display: flex;
     width: 400px;
     justify-content: space-around;
+    margin-bottom: $grid_4x;
     max-width: 100%;
     margin: 0 auto;
 
