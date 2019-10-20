@@ -40,7 +40,7 @@ const IndexPage = () => (
                         revenue and popularity. In other words, we help you get connected to the world. </p>
                     <Button onClick={
                         () => navigate("/contact/")
-                    }>Read</Button>
+                    }>Read more</Button>
                 </Item>
             </Flex>
         </Row>
