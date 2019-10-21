@@ -36,11 +36,20 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === 'build-html') {
-    config.loader('null', {
-      test: /scroll-to-element/,
-      loader: 'null-loader',
-    });
-  }
-};
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+   module: {
+     rules: stage === 'build-html'
+       ? [
+           {
+             test: /ScrollMagic/,
+             use: loaders.null(),
+           }
+         ]       : []
+   }})};
