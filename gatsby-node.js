@@ -47,7 +47,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             },
             {
               test: /scroll-to/,
-              loader: 'null-loader',
+              loader:  loaders.null(),
             }
           ],
         },
