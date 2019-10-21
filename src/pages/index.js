@@ -1,5 +1,4 @@
 import React from "react";
-
 import Layout from "../layouts/layout";
 import SEO from "../components/seo";
 import {navigate} from "@reach/router";
@@ -7,6 +6,7 @@ import Row from "../components/base-components/Row";
 import Flex from "../components/base-components/Flex";
 import Item from "../components/base-components/Item";
 import Button from "../components/base-components/Button";
+import constants from "../config/constants";
 
 
 const IndexPage = () => (
@@ -28,7 +28,11 @@ const IndexPage = () => (
                         be available and accessible to the world wide web.
                     </p>
                     <Button onClick={
-                        () => navigate("/contact/")
+                        () => navigate("/about/", {
+                            state : {
+                                'scrollTo' : constants.ABOUT_CUSTOMER_FIRST_SECTION
+                            }
+                        })
                     }>Read more</Button>
                 </Item>
             </Flex>
@@ -39,7 +43,11 @@ const IndexPage = () => (
                         With our in-house UX-research, we discover and design the ultimate website that generates
                         revenue and popularity. In other words, we help you get connected to the world. </p>
                     <Button onClick={
-                        () => navigate("/contact/")
+                        () => navigate("/about/", {
+                            state : {
+                                'scrollTo' : constants.ABOUT_HOW_WE_WORK_SECTION
+                            }
+                        })
                     }>Read more</Button>
                 </Item>
             </Flex>
@@ -53,6 +61,13 @@ const IndexPage = () => (
                 </p>
                 <p>We create opportunities where there aren’t any. We see things from our customers perspective, and we
                     strive to create innovative websites, the way you like it.</p>
+                    <Button onClick={
+                        () => navigate("/about/", {
+                            state : {
+                                'scrollTo' : constants.ABOUT_WHY_SECTION
+                            }
+                        })
+                    }>Read more</Button>
             </Flex>
         </Row>
     </Layout>

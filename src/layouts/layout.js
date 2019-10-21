@@ -12,7 +12,6 @@ require('typeface-roboto');
 import { StaticQuery, graphql } from "gatsby"
 import "./layout.scss";
 import styles from './Layout.module.scss'
-
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer";
 

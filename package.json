@@ -26,6 +26,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.7.0",
+    "react-scroll-to-component": "^1.0.2",
     "styled-components": "^4.4.0",
     "typeface-quicksand": "0.0.71",
     "typeface-roboto": "0.0.75"
