@@ -23,8 +23,7 @@ const IndexPage = () => (
                 <Item>
                     <h2>Customers first</h2>
                     <p>
-                        At ncweb we create value. We seek to create innovation and opportunities. We know how important
-                        it is to be on the internet, and we can help you get connected to the world! We want to you to
+                        We can help you get connected to all corners of the world ! We want to you to
                         be available and accessible to the world wide web.
                     </p>
                     <Button onClick={
@@ -39,9 +38,8 @@ const IndexPage = () => (
             <Flex className='flex--2'>
                 <Item>
                     <h2>How we work </h2>
-                    <p>With the state-of-the-art technology we manage, administrate and process each and every website.
-                        With our in-house UX-research, we discover and design the ultimate website that generates
-                        revenue and popularity. In other words, we help you get connected to the world. </p>
+                    <p>With state-of-the-art technology, in-house UX-research, we discover and design the ultimate website that brings you
+                        revenue and popularity. </p>
                     <Button onClick={
                         () => navigate("/about/", {
                             state : {
@@ -55,7 +53,7 @@ const IndexPage = () => (
         <Row>
             <Flex className='column flex---1'>
                 <h1>Why we do it ?</h1>
-                <p>The customer is in the heart of ncwebs identity. We create non cliché websites for our customers.
+                <p> We create non cliché websites for our customers.
                     Unlike other website-builders, we focus on you. We thrive to create a memorable website that
                     illustrate you, the way you want it.
                 </p>
