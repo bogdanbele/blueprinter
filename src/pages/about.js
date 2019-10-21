@@ -24,11 +24,11 @@ class AboutPage extends React.Component {
 				break;
 			}
 			case constants.ABOUT_HOW_WE_WORK_SECTION: {
-				scrollToComponent(this.howRef, { offset: 0, duration: 1000 });
+				scrollToComponent(this.howRef, { offset: 0, duration: 1000, align: 'top'});
 				break;
 			}
 			case constants.ABOUT_WHY_SECTION: {
-				scrollToComponent(this.whyRef, { offset: 0, duration: 1000 });
+				scrollToComponent(this.whyRef, { offset: 0, duration: 1000, align: 'top' });
 				break;
 			}
 			default:
