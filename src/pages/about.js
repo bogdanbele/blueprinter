@@ -6,7 +6,7 @@ import scrollToComponent from 'react-scroll-to-component';
 import Layout from '../layouts/layout';
 import SEO from '../components/seo';
 import Row from '../components/base-components/Row';
-import constants from "../config/constants";
+import constants from '../config/constants';
 
 class AboutPage extends React.Component {
 	constructor(props) {
@@ -19,20 +19,22 @@ class AboutPage extends React.Component {
 	}
 
 	componentDidMount() {
-		switch (this.props.location.state.scrollTo) {
-			case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
-				break;
+		if (this.props.location.state.scrollTo) {
+			switch (this.props.location.state.scrollTo) {
+				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
+					break;
+				}
+				case constants.ABOUT_HOW_WE_WORK_SECTION: {
+					scrollToComponent(this.howRef, { offset: 0, duration: 1000, align: 'top' });
+					break;
+				}
+				case constants.ABOUT_WHY_SECTION: {
+					scrollToComponent(this.whyRef, { offset: 0, duration: 1000, align: 'top' });
+					break;
+				}
+				default:
+					break;
 			}
-			case constants.ABOUT_HOW_WE_WORK_SECTION: {
-				scrollToComponent(this.howRef, { offset: 0, duration: 1000, align: 'top'});
-				break;
-			}
-			case constants.ABOUT_WHY_SECTION: {
-				scrollToComponent(this.whyRef, { offset: 0, duration: 1000, align: 'top' });
-				break;
-			}
-			default:
-				break;
 		}
 	}
 
