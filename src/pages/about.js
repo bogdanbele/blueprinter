@@ -19,7 +19,7 @@ class AboutPage extends React.Component {
 	}
 
 	componentDidMount() {
-		if (this.props.location.state.scrollTo) {
+		if (this.props.location.state) {
 			switch (this.props.location.state.scrollTo) {
 				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
 					break;
