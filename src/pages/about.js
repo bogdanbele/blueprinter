@@ -9,14 +9,10 @@ import Row from '../components/base-components/Row';
 import constants from '../config/constants';
 
 class AboutPage extends React.PureComponent {
-	constructor(props) {
-		super(props);
-
-		//References for each section. We can use those as references for scrolling.
-	}
 
 	componentDidMount() {
 		console.log('test')
+		console.log(this.props.location.state)
 			if (this.props.location.state) {
 				switch (this.props.location.state.scrollTo) {
 					case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
@@ -38,8 +34,6 @@ class AboutPage extends React.PureComponent {
 		this.customerRef = React.createRef();
 		this.whyRef = React.createRef();
 	}
-
-	componentDidUpdate() {}
 
 	render() {
 		return (
