@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 import Row from '../components/base-components/Row';
 import constants from '../config/constants';
 
-class AboutPage extends React.Component {
+class AboutPage extends React.PureComponent {
 	constructor(props) {
 		super(props);
 
