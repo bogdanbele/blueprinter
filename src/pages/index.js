@@ -40,10 +40,7 @@ const IndexPage = () => (
                     <h2>How we work </h2>
                     <p>With state-of-the-art technology, in-house UX-research, we discover and design the ultimate website that brings you
                         revenue and popularity. </p>
-                    <Link
-                        to="/about/"
-                        state={{'scrollTo' : constants.ABOUT_HOW_WE_WORK_SECTION}}>Test</Link>
-                    <Button onClick={
+                   <Button onClick={
                         () => navigate("/about/", {
                             state : {
                                 'scrollTo' : constants.ABOUT_HOW_WE_WORK_SECTION

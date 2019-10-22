@@ -13,29 +13,30 @@ class AboutPage extends React.PureComponent {
 		super(props);
 
 		//References for each section. We can use those as references for scrolling.
-		this.howRef = React.createRef();
-		this.customerRef = React.createRef();
-		this.whyRef = React.createRef();
 	}
 
 	componentDidMount() {
-		if (this.props.location.state) {
-			switch (this.props.location.state.scrollTo) {
-				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
-					break;
+		console.log('test')
+			if (this.props.location.state) {
+				switch (this.props.location.state.scrollTo) {
+					case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
+						break;
+					}
+					case constants.ABOUT_HOW_WE_WORK_SECTION: {
+						scrollToComponent(this.howRef, { offset: 0, duration: 1000, align: 'top' });
+						break;
+					}
+					case constants.ABOUT_WHY_SECTION: {
+						scrollToComponent(this.whyRef, { offset: 0, duration: 1000, align: 'top' });
+						break;
+					}
+					default:
+						break;
 				}
-				case constants.ABOUT_HOW_WE_WORK_SECTION: {
-					scrollToComponent(this.howRef, { offset: 0, duration: 1000, align: 'top' });
-					break;
-				}
-				case constants.ABOUT_WHY_SECTION: {
-					scrollToComponent(this.whyRef, { offset: 0, duration: 1000, align: 'top' });
-					break;
-				}
-				default:
-					break;
-			}
 		}
+		this.howRef = React.createRef();
+		this.customerRef = React.createRef();
+		this.whyRef = React.createRef();
 	}
 
 	componentDidUpdate() {}
