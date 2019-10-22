@@ -12,6 +12,7 @@ class AboutPage extends React.PureComponent {
 
 	componentDidMount() {
 		console.log('test')
+		console.log(windows.history.state)
 		console.log(this.props.location.state)
 			if (this.props.location.state) {
 				switch (this.props.location.state.scrollTo) {
