@@ -60,7 +60,7 @@ function extractType(string) {
 }
 
 function createSocialLink(string) {
-	return <a href={string} aria-label={createAltText(string)}>{extractType(string)}</a>;
+	return <a href={string} target="_blank" rel="noopener noreferrer" aria-label={createAltText(string)}>{extractType(string)}</a>;
 }
 
 function createAltText(string) {
