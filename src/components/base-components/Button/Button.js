@@ -4,9 +4,10 @@ import styles from './Button.module.scss';
 
 export default class Button extends React.PureComponent {
 	render() {
-		const {children, disabled, onClick, className} = this.props;
+		const {children, disabled, onClick, className, ...props} = this.props;
 		return (
 			<button
+				{...props}
 				className={`${styles.Button}${className ? ` ${className}` : ''}`}
 				disabled={disabled}
 				onClick={onClick}
@@ -20,7 +21,7 @@ export default class Button extends React.PureComponent {
 Button.propTypes = {
 	children: PropTypes.string.isRequired,
 	className: PropTypes.string,
-	onClick: PropTypes.func.isRequired,
+	onClick: PropTypes.func,
 	disabled: PropTypes.bool,
 };
 

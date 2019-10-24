@@ -3,54 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Button/Button.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.module.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>&lt;Row</find>
-      <find>&amp;--</find>
-      <find>&lt;Icon</find>
-      <find>2.25</find>
-      <find>h3</find>
-      <find>gatsby-plugin-sty</find>
-      <find>'../../styles/theme'</find>
-      <find>Row</find>
-      <find>blueprint</find>
-      <find>blueprint-com</find>
-      <find>$body</find>
-      <find>--font-primary</find>
-      <find>body</find>
-      <find>$font-family-primary</find>
-      <find>/static/fonts/</find>
-      <find>Helmet</find>
-      <find>&lt;Global</find>
-      <find>blue</find>
-      <find>style</find>
-      <find>p</find>
-      <find>font-size</find>
-      <find>h1</find>
-      <find>p {</find>
-      <find>$font-</find>
-      <find>$font-theme</find>
-      <find>Quicksand</find>
-      <find>h2</find>
-      <find>path</find>
-      <find>glob</find>
-      <find>s</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>&amp;:global.flex--</replace>
-      <replace>:global .</replace>
-      <replace>h3</replace>
-      <replace>h2</replace>
-      <replace>'../../../theme/theme'</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,7 +106,7 @@
       <workItem from="1571423889172" duration="1579000" />
       <workItem from="1571768758406" duration="6796000" />
       <workItem from="1571900723175" duration="7711000" />
-      <workItem from="1571937217983" duration="3515000" />
+      <workItem from="1571937217983" duration="6904000" />
     </task>
     <servers />
   </component>

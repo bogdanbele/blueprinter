@@ -4,6 +4,7 @@ import styles from './ContactForm.module.scss';
 import TextField from '@material-ui/core/TextField';
 import {withStyles} from '@material-ui/core/styles';
 import {navigate} from "gatsby-link";
+import Button from "../Button";
 
 function encode(data) {
     return Object.keys(data)
@@ -14,8 +15,8 @@ function encode(data) {
 export default class ContactForm extends React.Component {
 
     state = {
-        firstName : '',
-        lastName : '',
+        firstName: '',
+        lastName: '',
         email: '',
         message: ''
     };
@@ -24,8 +25,8 @@ export default class ContactForm extends React.Component {
         const form = e.target;
         fetch("/", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": form.getAttribute('name'), ...this.state })
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            body: encode({"form-name": form.getAttribute('name'), ...this.state})
         })
             .then(() => navigate("/"))
             .catch(error => alert(error));
@@ -40,10 +41,10 @@ export default class ContactForm extends React.Component {
 
         this.setState({
             [name]: value,
-        })
+        });
         console.log(this.state)
-    }
-    
+    };
+
 
     render() {
         const {className} = this.props;
@@ -57,66 +58,49 @@ export default class ContactForm extends React.Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
             >
-            <input type="hidden" name="form-name" value="contact" />
-                    <div className="form-group">
-                        <CssTextField
-                            name="firstName"
-                            label="Name"
-                            onChange={this.handleInputChange}
-                            margin="normal"
-                            value={this.state.firstName}
-                        />
-                        <label htmlFor="full-name">Full Name</label>
-                        <span className="span-highlight"/>
-                        <span className="span-bar"/>
-                        <input
-                            type="text"
-                            name="lastName"
-                            onChange={this.handleInputChange}
-                            placeholder="First and Last"
-                            required=""
-                            value={this.state.lastName}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email-address">Email Address</label>
-                        <span className="span-highlight"/>
-                        <span className="span-bar"/>
-                        <input
-                            type="email"
-                            name="email"
-                            onChange={this.handleInputChange}
-                            value={this.state.email}
-                            required=""
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <span className="span-highlight"/>
-                        <span className="span-bar"/>
-                        <textarea
-                            rows="5"
-                            name="message"
-                            onChange={this.handleInputChange}
-                            value={this.state.message}
-                            id="message"
-                            placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
-                            required=""
-                        />
-                    </div>
-                <button type="submit" className="button button--primary button--wide"/>
-            </form>
+                <input type="hidden" name="form-name" value="contact"/>
+                <CssTextField
+                    name="firstName"
+                    label="first name"
+                    onChange={this.handleInputChange}
+                    margin="normal"
+                    value={this.state.firstName}
+                />
+                <CssTextField
+                    name="lastName"
+                    label="last name"
+                    onChange={this.handleInputChange}
+                    margin="normal"
+                    value={this.state.lastName}
+                />
+                <CssTextField
+                    name="email"
+                    label="email"
+                    onChange={this.handleInputChange}
+                    margin="normal"
+                    value={this.state.email}
+                />
+             <div className='form-group'>
+                <CssTextField
+                    aria-label="minimum height"
+                    multiline={true}
+                    rowsMax={10}
+                    name="message"
+                    onChange={this.handleInputChange}
+                    value={this.state.message}
+                    placeholder="message"/>
+             </div>
+                <div className='form-group'>
+
+                    <Button type="submit" className="button Button--wide">Send</Button>
+                </div>
+                </form>
         );
     }
 };
 
-function buildFormContact(email) {
-    return 'https://formspree.io/' + email;
-};
-
 ContactForm.propTypes = {
-    className: PropTypes.string,
-    email: PropTypes.string,
+    className: PropTypes.string
 };
 
 
@@ -127,8 +111,8 @@ const CssTextField = withStyles({
             borderColor: 'white'
         },
 
-        '& .MuiInputBase-input' : {
-            color : 'white'
+        '& .MuiInputBase-input': {
+            color: 'white'
         },
 
         // Default Underline

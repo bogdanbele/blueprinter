@@ -4,9 +4,7 @@
 	@include breakpoint(md) {
 		width: 420px;
 	}
-	border-radius: 3px;
-	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-	box-sizing: border-box;
+    font-size: 1rem;
 	display: flex;
 	flex-direction: column;
 	font-family: $font-family-primary;
@@ -14,12 +12,6 @@
 	max-width: 90vw;
 	padding-bottom: 40px;
 	width: 100%;
-
-	> input {
-		background-color: $color-primary;
-		color: white;
-		font-weight: 700;
-	}
 
 	:global .form-group > input {
 		background: $theme;

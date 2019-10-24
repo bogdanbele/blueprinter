@@ -6,10 +6,7 @@
 	background-color: $theme;
 	border-color: $color-primary;
 	color: $color-primary;
-
-	
 	transition: 0.3s;
-	
 	cursor: pointer;
 	font-family: $font-family-primary;
 	font-weight: bold;
@@ -26,5 +23,9 @@
 		font-weight: bold;
 		color:  white;
 		border-color: white;
+	}
+
+	:global &--wide {
+		max-width: 100%;
 	}
 }
