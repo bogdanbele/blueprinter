@@ -21,10 +21,11 @@ export default class ContactForm extends React.Component {
     };
 
     handleSubmit = e => {
+        const form = e.target;
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
+            body: encode({ "form-name": form.getAttribute('name'), ...this.state })
         })
             .then(() => navigate("/"))
             .catch(error => alert(error));
@@ -49,7 +50,7 @@ export default class ContactForm extends React.Component {
         return (
             <form
                 className={`${styles.ContactForm}${className ? ` ${className}` : ''}`}
-                name="English Contact Form"
+                name="Contact Form"
                 acceptCharset="utf-8"
                 method="POST"
                 data-netlify="true"
