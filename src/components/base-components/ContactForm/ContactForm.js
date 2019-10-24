@@ -21,7 +21,6 @@ export default class ContactForm extends React.PureComponent {
     };
 
     handleSubmit = (e) => {
-        const state = this.state;
         e.preventDefault();
         const form = e.target;
         fetch('/', {
@@ -44,7 +43,6 @@ export default class ContactForm extends React.PureComponent {
         this.setState({
             [name]: value,
         })
-        console.log(this.state)
     }
     
 
@@ -69,6 +67,7 @@ export default class ContactForm extends React.PureComponent {
                             label="Name"
                             onChange={this.handleInputChange}
                             margin="normal"
+                            value={this.state.firstName}
                         />
                         <label htmlFor="full-name">Full Name</label>
                         <span className="span-highlight"/>
@@ -80,6 +79,7 @@ export default class ContactForm extends React.PureComponent {
                             onChange={this.handleInputChange}
                             placeholder="First and Last"
                             required=""
+                            value={this.state.lastName}
                         />
                     </div>
                     <div className="form-group">
@@ -90,6 +90,7 @@ export default class ContactForm extends React.PureComponent {
                             type="email"
                             name="email"
                             onChange={this.handleInputChange}
+                            value={this.state.email}
                             id="email-address"
                             placeholder="email@domain.tld"
                             required=""
@@ -102,6 +103,8 @@ export default class ContactForm extends React.PureComponent {
                         <textarea
                             rows="5"
                             name="message"
+                            onChange={this.handleInputChange}
+                            value={this.state.message}
                             id="message"
                             placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
                             required=""
