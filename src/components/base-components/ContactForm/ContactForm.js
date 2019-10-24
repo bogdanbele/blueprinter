@@ -20,17 +20,15 @@ export default class ContactForm extends React.PureComponent {
         message: ''
     };
 
-    handleSubmit = (e) => {
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': "contact",
-                ...this.state,
-            }),
+    handleSubmit = e => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...this.state })
         })
-            .then(() => navigate('/about'))
-            .catch((error) => alert(error))
+            .then(() => navigate("/"))
+            .catch(error => alert(error));
+
         e.preventDefault();
     };
 
@@ -47,12 +45,11 @@ export default class ContactForm extends React.PureComponent {
     
 
     render() {
-        const {email, className} = this.props;
+        const {className} = this.props;
         return (
             <form
-                id="fs-frm"
                 className={`${styles.ContactForm}${className ? ` ${className}` : ''}`}
-                name="simple-contact-form"
+                name="English Contact Form"
                 acceptCharset="utf-8"
                 method="POST"
                 data-netlify="true"
@@ -63,7 +60,6 @@ export default class ContactForm extends React.PureComponent {
                     <div className="form-group">
                         <CssTextField
                             name="firstName"
-                            id="standard-name"
                             label="Name"
                             onChange={this.handleInputChange}
                             margin="normal"
@@ -75,7 +71,6 @@ export default class ContactForm extends React.PureComponent {
                         <input
                             type="text"
                             name="lastName"
-                            id="full-name"
                             onChange={this.handleInputChange}
                             placeholder="First and Last"
                             required=""
@@ -91,8 +86,6 @@ export default class ContactForm extends React.PureComponent {
                             name="email"
                             onChange={this.handleInputChange}
                             value={this.state.email}
-                            id="email-address"
-                            placeholder="email@domain.tld"
                             required=""
                         />
                     </div>
