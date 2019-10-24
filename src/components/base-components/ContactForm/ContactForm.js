@@ -17,15 +17,22 @@ const CssTextField = withStyles({
 
         },
 
+        // Default Underline Hover
+        '& .MuiInput-root:hover:not($disabled):before': {
+            borderBottom:  '2px solid white'
+        },
+
         // Text Color
         '& .MuiFormLabel-root': {
             color: 'white',
             '&:hover': {
                 borderBottomColor: 'yellow',
             },
+            "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
+                borderColor: 'white'
         },
     }
-})(TextField);
+}})(TextField);
 
 export default class ContactForm extends React.PureComponent {
 
