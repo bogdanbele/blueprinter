@@ -110,7 +110,7 @@ export default class ContactForm extends React.PureComponent {
                             required=""
                         />
                     </div>
-                <input type="submit" className="button button--primary button--wide"/>
+                <button type="submit" className="button button--primary button--wide"/>
             </form>
         );
     }
