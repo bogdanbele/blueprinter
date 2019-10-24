@@ -42,12 +42,14 @@ export default class ContactForm extends React.PureComponent {
                 className={`${styles.ContactForm}${className ? ` ${className}` : ''}`}
                 name="simple-contact-form"
                 acceptCharset="utf-8"
-                method="post"
+                method="POST"
                 data-netlify="true"
             >
+            <input type="hidden" name="form-name" value="contact" />
                 <fieldset id="fs-frm-inputs">
                     <div className="form-group">
                         <CssTextField
+                            name="name test"
                             id="standard-name"
                             label="Name"
                             margin="normal"
@@ -94,7 +96,7 @@ export default class ContactForm extends React.PureComponent {
                         value="Contact Form Submission"
                     />
                 </fieldset>
-                <input type="submit" value="Submit" className="button button--primary button--wide"/>
+                <button type="submit" value="Submit" className="button button--primary button--wide"/>
             </form>
         );
     }
