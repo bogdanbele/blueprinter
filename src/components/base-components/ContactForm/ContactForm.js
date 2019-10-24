@@ -11,7 +11,7 @@ function encode(data) {
         .join('&')
 }
 
-export default class ContactForm extends React.PureComponent {
+export default class ContactForm extends React.Component {
 
     state = {
         firstName : '',
