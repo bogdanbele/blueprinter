@@ -21,8 +21,6 @@ export default class ContactForm extends React.PureComponent {
     };
 
     handleSubmit = (e) => {
-        e.preventDefault();
-        const form = e.target;
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -31,8 +29,9 @@ export default class ContactForm extends React.PureComponent {
                 ...this.state,
             }),
         })
-            .then(() => navigate(form.getAttribute('action')))
+            .then(() => navigate('/about'))
             .catch((error) => alert(error))
+        e.preventDefault();
     };
 
     handleInputChange = event => {
@@ -43,6 +42,7 @@ export default class ContactForm extends React.PureComponent {
         this.setState({
             [name]: value,
         })
+        console.log(this.state)
     }
     
 
@@ -110,7 +110,7 @@ export default class ContactForm extends React.PureComponent {
                             required=""
                         />
                     </div>
-                <button type="submit" value="Submit" className="button button--primary button--wide"/>
+                <input type="submit" className="button button--primary button--wide"/>
             </form>
         );
     }
