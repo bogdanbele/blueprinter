@@ -42,7 +42,6 @@ export default class ContactForm extends React.PureComponent {
                 className={`${styles.ContactForm}${className ? ` ${className}` : ''}`}
                 name="simple-contact-form"
                 acceptCharset="utf-8"
-                action={buildFormContact(email)}
                 method="post"
                 data-netlify="true"
             >
