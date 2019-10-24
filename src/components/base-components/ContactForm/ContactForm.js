@@ -44,7 +44,7 @@ export default class ContactForm extends React.PureComponent {
                 acceptCharset="utf-8"
                 action={buildFormContact(email)}
                 method="post"
-                netlify
+                data-netlify="true"
             >
                 <fieldset id="fs-frm-inputs">
                     <div className="form-group">
