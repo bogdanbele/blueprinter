@@ -95,7 +95,7 @@ export default class ContactForm extends React.Component {
                     <Button
                         type="submit"
                         className="button Button--wide"
-                        onClick={this.handleSubmit}>Send</Button>
+                        >Send</Button>
                 </div>
                 </form>
         );
