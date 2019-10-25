@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,11 +62,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="904">
-                  <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+                <state relative-caret-position="600">
+                  <caret line="44" column="6" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -75,11 +74,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/base-components/Button/Button.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="609">
-                  <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+                <state relative-caret-position="525">
+                  <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
                 </state>
               </provider>
             </entry>
@@ -211,8 +210,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" />
         <option value="$PROJECT_DIR$/src/components/base-components/Button/Button.js" />
+        <option value="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" />
       </list>
     </option>
   </component>
@@ -422,7 +421,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="385000" />
+    <option name="totallyTimeSpent" value="622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1073" y="-1417" width="1720" height="1417" extended-state="0" />
@@ -516,20 +515,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js">
+    <entry file="file://$PROJECT_DIR$/src/components/base-components/Button/Button.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="525">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base-components/Button/Button.js">
+    <entry file="file://$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="600">
+          <caret line="44" column="6" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
