@@ -1,9 +1,6 @@
 @import '../../../theme/theme';
 
 .Row {
-	@include breakpoint(md) {
-		width: 100%;
-	}
 	align-self: center;
 	display: flex;
 	flex-direction: row;
@@ -11,6 +8,7 @@
 	justify-content: space-between;
 	padding-bottom: 3rem;
 	padding-top: 1rem;
+	width: 100%;
 
 	@include breakpoint(md) {
 		padding-bottom: 7rem;

@@ -63,21 +63,21 @@ export default class ContactForm extends React.Component {
                         Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
                     </label>
                 </p>
-                <CssTextField
+                <WhiteInputField
                     name="firstName"
                     label="first name"
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.firstName}
                 />
-                <CssTextField
+                <WhiteInputField
                     name="lastName"
                     label="last name"
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.lastName}
                 />
-                <CssTextField
+                <WhiteInputField
                     name="email"
                     label="email"
                     onChange={this.handleInputChange}
@@ -85,7 +85,7 @@ export default class ContactForm extends React.Component {
                     value={this.state.email}
                 />
                 <div className='form-group'>
-                    <CssTextField
+                    <WhiteInputField
                         aria-label="minimum height"
                         multiline={true}
                         rowsMax={10}
@@ -111,7 +111,7 @@ ContactForm.propTypes = {
 };
 
 
-const CssTextField = withStyles({
+const WhiteInputField = withStyles({
     root: {
         // Underline on Focus
         '& .MuiInput-underline:after': {

@@ -1,7 +1,7 @@
 @import '../../../theme/theme';
 
 .ContactForm {
-	@include breakpoint(md) {
+	@include breakpoint(xs) {
 		width: 420px;
 	}
     font-size: 1rem;
