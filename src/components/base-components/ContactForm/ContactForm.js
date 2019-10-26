@@ -58,6 +58,11 @@ export default class ContactForm extends React.Component {
                 onSubmit={this.handleSubmit}
             >
                 <input type="hidden" name="form-name" value="contact"/>
+                <p hidden>
+                    <label>
+                        Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
+                    </label>
+                </p>
                 <CssTextField
                     name="firstName"
                     label="first name"
@@ -79,24 +84,24 @@ export default class ContactForm extends React.Component {
                     margin="normal"
                     value={this.state.email}
                 />
-             <div className='form-group'>
-                <CssTextField
-                    aria-label="minimum height"
-                    multiline={true}
-                    rowsMax={10}
-                    name="message"
-                    onChange={this.handleInputChange}
-                    value={this.state.message}
-                    placeholder="message"/>
-             </div>
+                <div className='form-group'>
+                    <CssTextField
+                        aria-label="minimum height"
+                        multiline={true}
+                        rowsMax={10}
+                        name="message"
+                        onChange={this.handleInputChange}
+                        value={this.state.message}
+                        placeholder="message"/>
+                </div>
                 <div className='form-group'>
 
                     <Button
                         type="submit"
                         className="button Button--wide"
-                        >Send</Button>
+                    >Send</Button>
                 </div>
-                </form>
+            </form>
         );
     }
 };
