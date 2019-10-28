@@ -3,16 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 import Menu from "../Menu/Menu"
 import style from './Header.module.scss'
+import logoSvg from './logo-text-pinkwhite.svg'
 
-const Header = ({siteTitle}) => (
+const Header = () => (
     <header className={style.theme}>
-            <div className='header-holder'>
-                <h3 style={{margin: 0}}>
-                    <Link to="/" >
-                        {siteTitle}
-                    </Link>
-                </h3>
-                <Menu/>
+        <div className='header-holder'>
+            <Link to="/">
+                 <img src={logoSvg}/>
+            </Link>
+            <Menu/>
         </div>
     </header>
 )

@@ -28,8 +28,10 @@
     @include breakpoint(lg) {
         padding: $grid_4x;
     }
-    > :global(.header-holder) > h3 {
+    > :global(.header-holder) > a > img {
         display: none;
+        width: 120px;
+        padding: $grid_1x;
         @include breakpoint(md) {
             display: initial;
         }
