@@ -20,6 +20,10 @@
             color: $color-primary;
             text-decoration: none;
         }
+
+        > a {
+            width: auto;
+        }
     }
 }
 
@@ -28,10 +32,19 @@
     @include breakpoint(lg) {
         padding: $grid_4x;
     }
-    > :global(.header-holder) > a > img {
+}
+
+.LogoHolder {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 50px;
+    > img {
+        max-height: 100%;
         display: none;
-        width: 120px;
+        max-width: 120px;
         padding: $grid_1x;
+        margin: 0;
         @include breakpoint(md) {
             display: initial;
         }
