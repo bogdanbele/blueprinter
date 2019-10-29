@@ -11,15 +11,6 @@
         margin: 0 auto;
         width: 960px;
         justify-content: space-between;
-
-        @include breakpoint(md) {
-            visibility: visible;
-        }
-
-        h3 > a {
-            color: $color-primary;
-            text-decoration: none;
-        }
     }
 }
 
@@ -28,12 +19,27 @@
     @include breakpoint(lg) {
         padding: $grid_4x;
     }
-    > :global(.header-holder) > a > img {
+}
+
+.LogoHolder {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+
+    > img {
+        max-height: 100%;
         display: none;
-        width: 120px;
+        max-width: 120px;
         padding: $grid_1x;
+        margin: 0;
         @include breakpoint(md) {
             display: initial;
+        }
+
+        &:first-child {
+            position: relative;
+            top: 5px;
         }
     }
 }
