@@ -35,13 +35,39 @@ export default class ContactForm extends React.Component {
     };
 
     handleInputChange = event => {
-        const target = event.target
-        const value = target.value
-        const name = target.name
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+
+        const pattern = RegExp(event.target.pattern);
 
         this.setState({
             [name]: value,
         });
+
+        if ((pattern).test(value)) {
+            target.setCustomValidity('');
+            return
+        }
+
+        switch (name) {
+            case "firstName": {
+                target.setCustomValidity("Your first name should contain at least two characters");
+                break;
+            }
+            case "lastName": {
+                target.setCustomValidity("Your last name should contain at least two characters")
+                break;
+            }
+            case "email": {
+                target.setCustomValidity("Please enter a valid email")
+                break;
+            }
+            case "message": {
+                target.setCustomValidity("Your message has to be at least 20 characters long.")
+                break;
+            }
+        }
     };
 
 
@@ -60,10 +86,14 @@ export default class ContactForm extends React.Component {
                 <input type="hidden" name="form-name" value="contact"/>
                 <p hidden>
                     <label>
-                        Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
+                        Don’t fill this out: <input name="bot-field" onChange={this.handleChange}/>
                     </label>
                 </p>
                 <WhiteInputField
+                    inputProps={{
+                        required: true,
+                        pattern: "[a-zA-Z]{2,20}",
+                    }}
                     name="firstName"
                     label="first name"
                     onChange={this.handleInputChange}
@@ -71,6 +101,10 @@ export default class ContactForm extends React.Component {
                     value={this.state.firstName}
                 />
                 <WhiteInputField
+                    inputProps={{
+                        required: true,
+                        pattern: "[a-zA-Z]{2,20}",
+                    }}
                     name="lastName"
                     label="last name"
                     onChange={this.handleInputChange}
@@ -78,6 +112,10 @@ export default class ContactForm extends React.Component {
                     value={this.state.lastName}
                 />
                 <WhiteInputField
+                    inputProps={{
+                        required: true,
+                        pattern: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$"
+                    }}
                     name="email"
                     label="email"
                     onChange={this.handleInputChange}
@@ -86,13 +124,17 @@ export default class ContactForm extends React.Component {
                 />
                 <div className='form-group'>
                     <WhiteInputField
+                        inputProps={{
+                            required: true,
+                            pattern: "[a-zA-Z]{20,300}",
+                        }}
                         aria-label="minimum height"
                         multiline={true}
                         rowsMax={10}
                         name="message"
                         onChange={this.handleInputChange}
                         value={this.state.message}
-                        placeholder="message"/>
+                        placeholder="Write us a message ( up to 300 characters )"/>
                 </div>
                 <div className='form-group'>
 
