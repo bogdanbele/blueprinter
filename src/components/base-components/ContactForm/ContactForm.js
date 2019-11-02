@@ -31,7 +31,7 @@ export default class ContactForm extends React.Component {
             firstName: "[a-zA-Z]{2,20}",
             lastName: "[a-zA-Z]{2,20}",
             email: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$",
-            message: "[a-zA-Z]{20,300}"
+            message: "^[a-zA-Z\\s.*]{20,300}$"
         }
     };
 
@@ -39,6 +39,7 @@ export default class ContactForm extends React.Component {
     handleSubmit = e => {
         const form = e.target;
         console.log(form)
+        console.log(this.state.values)
         fetch("/", {
             method: "POST",
             headers: {"Content-Type": "application/x-www-form-urlencoded"},
