@@ -16,7 +16,7 @@ class ContactPage extends Component {
                             NCWeb or our website.</h3>
                     </Flex>
                     <ContactForm/>
-                    <Flex className='column flex--2'>
+                    <Flex className='column flex--2 flex--self-centered'>
 
                         <h3>REACH OUT THE TEAM</h3>
                         <p>You can also reach us out directly by email.</p>

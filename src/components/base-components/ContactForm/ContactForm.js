@@ -28,9 +28,9 @@ export default class ContactForm extends React.Component {
             message: false
         },
         validation: {
-            firstName: "[a-zA-Z]{2,20}",
-            lastName: "[a-zA-Z]{2,20}",
-            email: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$",
+            firstName: "^[a-zA-Z]{2,20}$",
+            lastName: "^[a-zA-Z]{2,20}$",
+            email: "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$",
             message: "^[a-zA-Z\\s.*]{20,300}$"
         }
     };
@@ -108,7 +108,7 @@ export default class ContactForm extends React.Component {
                     name="firstName"
                     label="First name"
                     error={this.handleValidation('firstName')}
-                    helperText={this.handleValidation('firstName') ? "Please write up to 20 characters text on your first name" : ''}
+                    helperText={this.handleValidation('firstName') ? "Please write up to 20 characters text on your first name (only letters)" : ''}
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.firstName || ''}
@@ -119,7 +119,7 @@ export default class ContactForm extends React.Component {
                     error={this.handleValidation('lastName')}
                     name="lastName"
                     label="Last name"
-                    helperText={this.handleValidation('lastName') ? "Please write up to 20 characters text on your last name" : ''}
+                    helperText={this.handleValidation('lastName') ? "Please write up to 20 characters text on your last name (only letters)" : ''}
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.lastName || ''}

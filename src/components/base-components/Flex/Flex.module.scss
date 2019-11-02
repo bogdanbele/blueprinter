@@ -55,6 +55,10 @@
 		background-color: green;
 	}
 
+	&:global.flex--self-centered{
+		align-self: center;
+	}
+
 	&:global.flex--fit {
 		height: fit-content;
 
