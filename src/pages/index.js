@@ -14,10 +14,11 @@ const IndexPage = () => (
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
         <Row>
             <Flex className='column flex---1 flex--text-center'>
-            <h1>Websites for humans</h1>
-            <h3>Here at ncweb we build websites and apps that help you engage with people across all devices, platforms, and experiences.</h3>
+                <h1>Websites for humans</h1>
+                <h3>Here at ncweb we build websites and apps that help you engage with people across all devices,
+                    platforms, and experiences.</h3>
             </Flex>
-            </Row>
+        </Row>
         <Row className='around'>
             <Flex className='flex--2'>
                 <Item>
@@ -28,8 +29,8 @@ const IndexPage = () => (
                     </p>
                     <Button onClick={
                         () => navigate("/about/", {
-                            state : {
-                                'scrollTo' : constants.ABOUT_CUSTOMER_FIRST_SECTION
+                            state: {
+                                'scrollTo': constants.ABOUT_CUSTOMER_FIRST_SECTION
                             }
                         })
                     }>Read more</Button>
@@ -38,12 +39,13 @@ const IndexPage = () => (
             <Flex className='flex--2'>
                 <Item>
                     <h2>How we work </h2>
-                    <p>With state-of-the-art technology, in-house UX-research, we discover and design the ultimate website that brings you
+                    <p>With state-of-the-art technology, in-house UX-research, we discover and design the ultimate
+                        website that brings you
                         revenue and popularity. </p>
-                   <Button onClick={
+                    <Button onClick={
                         () => navigate("/about/", {
-                            state : {
-                                'scrollTo' : constants.ABOUT_HOW_WE_WORK_SECTION
+                            state: {
+                                'scrollTo': constants.ABOUT_HOW_WE_WORK_SECTION
                             }
                         })
                     }>Read more</Button>
@@ -59,13 +61,13 @@ const IndexPage = () => (
                 </p>
                 <p>We create opportunities where there aren’t any. We see things from our customers perspective, and we
                     strive to create innovative websites, the way you like it.</p>
-                    <Button onClick={
-                        () => navigate("/about/", {
-                            state : {
-                                'scrollTo' : constants.ABOUT_WHY_SECTION
-                            }
-                        })
-                    }>Read more</Button>
+                <Button onClick={
+                    () => navigate("/about/", {
+                        state: {
+                            'scrollTo': constants.ABOUT_WHY_SECTION
+                        }
+                    })
+                }>Read more</Button>
             </Flex>
         </Row>
     </Layout>

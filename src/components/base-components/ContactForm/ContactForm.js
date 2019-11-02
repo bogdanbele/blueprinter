@@ -106,9 +106,9 @@ export default class ContactForm extends React.Component {
                     required={true}
                     variant="outlined"
                     name="firstName"
-                    label="first name"
+                    label="First name"
                     error={this.handleValidation('firstName')}
-                    helperText={this.handleValidation('firstName') ? "Your first name must be between 2 and 20 characters long ( only letters )" : ''}
+                    helperText={this.handleValidation('firstName') ? "Please write up to 20 characters text on your first name" : ''}
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.firstName || ''}
@@ -118,8 +118,8 @@ export default class ContactForm extends React.Component {
                     variant="outlined"
                     error={this.handleValidation('lastName')}
                     name="lastName"
-                    label="last name"
-                    helperText={this.handleValidation('lastName') ? "Your last name must be between 2 and 20 characters long ( only letters )" : ''}
+                    label="Last name"
+                    helperText={this.handleValidation('lastName') ? "Please write up to 20 characters text on your last name" : ''}
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.lastName || ''}
@@ -130,7 +130,7 @@ export default class ContactForm extends React.Component {
                     error={this.handleValidation('email')}
                     helperText={this.handleValidation('email') ? "You must input a valid email" : ''}
                     name="email"
-                    label="email"
+                    label="Email"
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.email || ''}
@@ -147,7 +147,7 @@ export default class ContactForm extends React.Component {
                         name="message"
                         onChange={this.handleInputChange}
                         value={this.state.values.message}
-                        placeholder="Write us a message ( up to 300 characters )"/>
+                        placeholder="What would you like to contact us about? (Up to 300 words)"/>
                 </div>
                 <div className='form-group'>
 
