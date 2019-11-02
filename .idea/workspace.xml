@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="121" column="139" selection-start-line="121" selection-start-column="139" selection-end-line="121" selection-end-column="139" />
+            <state relative-caret-position="385">
+              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -348,19 +346,19 @@
       <workItem from="1572108595459" duration="4339000" />
       <workItem from="1572333719048" duration="5437000" />
       <workItem from="1572456017133" duration="216000" />
-      <workItem from="1572700754895" duration="17599000" />
+      <workItem from="1572700754895" duration="17876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25010000" />
+    <option name="totallyTimeSpent" value="25287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="944" height="938" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6651719" visible="true" weight="0.38136512" />
-      <window_info id="Structure" order="1" sideWeight="0.3348281" side_tool="true" visible="true" weight="0.38136512" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6651719" visible="true" weight="0.18851571" />
+      <window_info id="Structure" order="1" sideWeight="0.3348281" side_tool="true" visible="true" weight="0.18851571" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -647,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="121" column="139" selection-start-line="121" selection-start-column="139" selection-end-line="121" selection-end-column="139" />
+        <state relative-caret-position="385">
+          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

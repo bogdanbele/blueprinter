@@ -28,10 +28,10 @@ export default class ContactForm extends React.Component {
             message: false
         },
         validation: {
-            firstName: "^[a-zA-Z]{2,20}$",
-            lastName: "^[a-zA-Z]{2,20}$",
-            email: "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$",
-            message: "^[a-zA-Z\\s.*]{20,300}$"
+            firstName: "^[A-Za-zÀ-ÖØ-öø-ÿ]{2,20}$",
+            lastName: "^[A-Za-zÀ-ÖØ-öø-ÿ]{2,20}$",
+            email: "^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$",
+            message: "^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.*]{20,300}$"
         }
     };
 
