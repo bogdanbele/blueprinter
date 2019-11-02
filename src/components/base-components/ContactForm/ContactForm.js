@@ -108,7 +108,7 @@ export default class ContactForm extends React.Component {
                     name="firstName"
                     label="first name"
                     error={this.handleValidation('firstName')}
-                    helperText={this.handleValidation('firstName') ? "Your first name must be between 2 and 20 characters long" : ''}
+                    helperText={this.handleValidation('firstName') ? "Your first name must be between 2 and 20 characters long ( only letters )" : ''}
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.firstName || ''}
@@ -119,7 +119,7 @@ export default class ContactForm extends React.Component {
                     error={this.handleValidation('lastName')}
                     name="lastName"
                     label="last name"
-                    helperText={this.handleValidation('lastName') ? "Your last name must be between 2 and 20 characters long" : ''}
+                    helperText={this.handleValidation('lastName') ? "Your last name must be between 2 and 20 characters long ( only letters )" : ''}
                     onChange={this.handleInputChange}
                     margin="normal"
                     value={this.state.values.lastName || ''}
