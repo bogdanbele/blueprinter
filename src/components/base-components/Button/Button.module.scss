@@ -19,6 +19,11 @@
 	text-transform: capitalize;
 	user-select: none;
 
+	&:disabled {
+		border-color: gray;
+		color: gray;
+	}
+
 	&:hover {
 		font-weight: bold;
 		color:  white;
