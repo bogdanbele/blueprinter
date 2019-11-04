@@ -67,11 +67,19 @@
 		}
 	}
 
+	&:global.flex--0-padding {
+		padding: 0;
+	}
+
 	&:global.flex--text-center {
 		text-align: center;
 	}
 
 	&:global.flex--column {
+		flex-direction: column;
+	}
+
+	&:global.flex--row {
 		flex-direction: column;
 	}
 
@@ -81,5 +89,14 @@
 
 	&:global.shadow:hover {
 		@include box_shadow(3);
+	}
+
+	&:global.flex--row--column {
+		flex-direction: column;
+
+		@include breakpoint(md){
+			flex-direction: row;
+		}
+
 	}
 }

@@ -2,41 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Footer/Footer.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Images/Image.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Images/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Menu/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Menu/Menu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Teammate/Teammate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/ContactForm/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/ContactForm/ContactForm.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/ContactForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/ContactForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/seo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/seo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/teamMembers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/teamMembers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/Layout.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/get-started.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-started.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/meet-the-team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/meet-the-team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/blog-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/blog-post.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,12 +21,6 @@
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1440" />
-    <option name="y" value="-491" />
-    <option name="width" value="720" />
-    <option name="height" value="1269" />
   </component>
   <component name="ProjectId" id="1Sew8cAzsDTH9sfEC7gGpRzCriT" />
   <component name="PropertiesComponent">
