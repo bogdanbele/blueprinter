@@ -1,10 +1,46 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import {graphql, Link, StaticQuery} from 'gatsby';
 
 import Layout from '../layouts/layout';
 import SEO from '../components/seo';
 import Row from '../components/base-components/Row';
 import Image from "../components/base-components/Image/Image";
+import styles from "../components/Footer/Footer.module.scss";
+import SocialLinkIcon from "../components/base-components/SocialLinkIcon";
+
+
+let staticQuery = <StaticQuery
+	query={graphql` {
+            allTeamMembersJson {
+                edges {
+                    node {
+                        name
+                        image
+                        sections {
+                        section_1
+                        section_2
+                        section_3
+                        }
+                        skills
+                    }
+                }
+            }
+        }
+    `}
+	render={data => (
+		<div>
+			{getTeamMember(data)}
+		</div>
+	)}
+/>;
+
+function getTeamMember(data) {
+	const linksArray = []
+	data.allTeamMembersJson.edges.forEach(item =>
+		console.log(item)
+	)
+	return linksArray
+}
 
 class MeetTheTeamPage extends React.Component {
 	render() {
@@ -12,6 +48,7 @@ class MeetTheTeamPage extends React.Component {
 			<Layout>
 				<SEO title="Meet the team" />
 				<Row className="row--column">
+					{staticQuery}
 					<Image imgsrc="gatsby-astronaut.png"/>
 					<h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h1>
 					<p>
