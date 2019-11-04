@@ -13,6 +13,30 @@
 	padding-bottom: 40px;
 	width: 100%;
 
+	input {
+		transition: background-color 50000s, color 50000s, filter 50000s
+	}
+
+	@keyframes onautofillstart { from {} }
+
+	@keyframes onautofillcancel { from {} }
+
+	input:-webkit-autofill {
+
+		animation-duration: 50000s;
+
+		animation-name: onautofillstart;
+
+	}
+
+	input:not(:-webkit-autofill) {
+
+		animation-duration: 50000s;
+
+		animation-name: onautofillcancel;
+
+	}
+
 	input:-webkit-autofill,
 	input:-webkit-autofill:hover,
 	input:-webkit-autofill:focus,
