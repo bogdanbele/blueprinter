@@ -5,6 +5,7 @@ import Layout from '../layouts/layout';
 import SEO from '../components/seo';
 import Row from '../components/base-components/Row';
 import Image from "../components/base-components/Image/Image";
+import Teammate from "../components/Teammate/Teammate";
 
 let staticQuery = <StaticQuery
     query={graphql` {
@@ -36,7 +37,7 @@ function getTeamMember(data) {
     const linksArray = []
     data.allTeamMembersJson.edges.forEach(item =>
         linksArray.push(
-        <Image key={item.node.id} imgsrc={item.node.image}/>
+        <Teammate id={item.node.id} imgsrc={item.node.image}/>
         )
     );
     return linksArray

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/teammate/Teammate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Teammate/Teammate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/bogdanbele.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Teammate/Teammate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Teammate/Teammate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/meet-the-team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/meet-the-team.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,15 +44,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/base-components/ContactForm/ContactForm.module.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="23" selection-start-line="23" selection-end-line="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/gatsby-config.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="504">
@@ -78,13 +69,25 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/Footer/Footer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
-                  <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="24" />
+                <state relative-caret-position="541">
+                  <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/Teammate/Teammate.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -129,14 +132,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/pages/meet-the-team.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-187">
-                  <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+                <state relative-caret-position="167">
+                  <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.cache/page-renderer.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="735">
+                  <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -151,6 +163,8 @@
       <find>CssTextField</find>
       <find>data</find>
       <find>this.state.</find>
+      <find>propT</find>
+      <find>getSocialLinks</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -176,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/theme/scss_defaults/_screen_sizes.scss" />
         <option value="$PROJECT_DIR$/src/config/teamMembers.json" />
         <option value="$PROJECT_DIR$/src/pages/meet-the-team.js" />
+        <option value="$PROJECT_DIR$/src/components/Teammate/Teammate.js" />
       </list>
     </option>
   </component>
@@ -184,9 +199,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1440" />
-    <option name="y" value="-535" />
-    <option name="width" value="1440" />
-    <option name="height" value="1223" />
+    <option name="y" value="-491" />
+    <option name="width" value="720" />
+    <option name="height" value="1269" />
   </component>
   <component name="ProjectId" id="1Sew8cAzsDTH9sfEC7gGpRzCriT" />
   <component name="ProjectView">
@@ -399,7 +414,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13982000" />
+    <option name="totallyTimeSpent" value="16095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,10 +426,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1440" y="-535" width="1440" height="1223" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1440" y="-491" width="720" height="1269" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67286247" visible="true" weight="0.22198732" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67286247" visible="true" weight="0.45064378" />
       <window_info id="Structure" order="1" sideWeight="0.32713756" side_tool="true" visible="true" weight="0.27402702" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -428,7 +442,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.2759036" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19461884" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29888028" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -724,9 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Teammate/Teammate.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/get-started.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -778,8 +789,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Footer/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="541">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -788,10 +799,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/meet-the-team.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="167">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.cache/page-renderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Teammate/Teammate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
