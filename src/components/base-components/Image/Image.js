@@ -1,7 +1,7 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import styles from './Image.module.scss'
+import React from 'react';
+import {StaticQuery, graphql} from 'gatsby';
+import Img from 'gatsby-image';
+import styles from './Image.module.scss';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -15,10 +15,10 @@ import styles from './Image.module.scss'
  */
 
 export default class Image extends React.Component {
-    render(){
-        return (
-            <StaticQuery
-                query={graphql`
+	render() {
+		return (
+			<StaticQuery
+				query={graphql`
           query {
             allImageSharp {
               edges {
@@ -31,15 +31,15 @@ export default class Image extends React.Component {
             }
           }
         `}
-                render={data => {
-                    return (
-                        <Img className={styles.Image} fluid={data.allImageSharp.edges.find((element) => {
-                            // Match string after final slash
-                            return (element.node.fluid.src.split('/').pop() === this.props.imgsrc);
-                        }).node.fluid} />
-                    )
-                }}
-            />
-        )
-    }
+				render={data => {
+					return (
+						<Img className={styles.Image} fluid={data.allImageSharp.edges.find(element => {
+							// Match string after final slash
+							return element.node.fluid.src.split('/').pop() === this.props.imgsrc;
+						}).node.fluid} />
+					);
+				}}
+			/>
+		);
+	}
 }

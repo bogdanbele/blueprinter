@@ -2,11 +2,11 @@
   {
     "name": "test",
     "image": "gatsby-astronaut.png",
-    "sections": {
-      "section_1": "sec 1",
-      "section_2": "sec 2",
-      "section_3": "sec 3"
-    },
+    "sections": [
+      "sec 1",
+      "sec 2",
+      "sec 3"
+    ],
     "skills": [
       "one",
       "two",

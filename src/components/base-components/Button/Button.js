@@ -29,5 +29,5 @@ Button.propTypes = {
 Button.defaultProps = {
 	disabled: false,
 	className: '',
-	type: 'button'
+	type: 'button',
 };
