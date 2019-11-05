@@ -12,7 +12,7 @@ export default class TeamMember extends React.Component {
 
         // Alternate between image on the left and image on the right
         let order = '';
-        (this.props.index%2 !== 0) ? order = 'flex--row--column' : order = 'flex--row--column__reversed';
+        (this.props.index%2 !== 0) ? order = 'flex--row--column__reversed' : order = 'flex--row--column';
 
         return (
             <Flex className='flex-grow-1 column'>
