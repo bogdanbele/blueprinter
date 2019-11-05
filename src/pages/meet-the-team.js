@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql, Link, StaticQuery} from 'gatsby';
 
 import Layout from '../components/layout-components/layouts/layout';
-import SEO from '../components/seo';
+import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import Image from '../components/base-components/Image/Image';
 import TeamMember from '../components/template-components/TeamMember/TeamMember';
@@ -33,10 +33,11 @@ let staticQuery = <StaticQuery
 function getTeamMember(data) {
 	const linksArray = [];
 	// noinspection JSUnresolvedVariable
-	data.allTeamMembersJson.edges.forEach(item =>
+	data.allTeamMembersJson.edges.forEach((item, index) =>
 		linksArray.push(
 			<TeamMember
 				key={item.node.id}
+				index={index}
 				imgsrc={item.node.image}
 				name={item.node.name}
 				sections={item.node.sections}

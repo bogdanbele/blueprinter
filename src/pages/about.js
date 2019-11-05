@@ -4,7 +4,7 @@ import Flex from '../components/base-components/Flex';
 import Item from '../components/base-components/Item';
 import scrollToComponent from 'react-scroll-to-component';
 import Layout from '../components/layout-components/layouts/layout';
-import SEO from '../components/seo';
+import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import constants from '../config/constants';
 

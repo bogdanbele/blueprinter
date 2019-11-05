@@ -97,6 +97,14 @@
 		@include breakpoint(md){
 			flex-direction: row;
 		}
+	}
+
+	&:global.flex--row--column__reversed {
+		flex-direction: column;
+
+		@include breakpoint(md){
+			flex-direction: row-reverse;
+		}
 
 	}
 }

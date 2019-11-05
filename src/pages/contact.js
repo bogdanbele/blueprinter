@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Layout from '../components/layout-components/layouts/layout';
-import SEO from '../components/seo';
+import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import ContactForm from '../components/layout-components/ContactForm';
 import Flex from '../components/base-components/Flex';

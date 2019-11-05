@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql, Link} from 'gatsby';
 
 import Layout from '../components/layout-components/layouts/layout';
-import SEO from '../components/seo';
+import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 
 const GetStartedPage = () => 

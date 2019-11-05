@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout-components/layouts/layout';
-import SEO from '../components/seo';
+import SEO from '../components/base-components/seo';
 import {Link, navigate} from '@reach/router';
 import Row from '../components/base-components/Row';
 import Flex from '../components/base-components/Flex';
