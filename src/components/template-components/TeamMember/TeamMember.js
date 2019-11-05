@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Flex from '../../base-components/Flex';
 import Image from '../../base-components/Image/Image';
+import styles from './TeamMember.module.scss'
 import Item from '../../base-components/Item';
 
 export default class TeamMember extends React.Component {
@@ -27,8 +28,9 @@ export default class TeamMember extends React.Component {
                                 <li key={key}>{item}</li>)}
                         </ul>
                     </Flex>
-                    <Flex className='flex--2 flex-grow-1'>
-                        <Image imgsrc={this.props.imgsrc}/>
+                    <Flex className={styles.TeamMember + ' flex--2 flex-grow-1'}>
+                        <Image
+                            imgsrc={this.props.imgsrc}/>
                     </Flex>
                 </Flex>
             </Flex>

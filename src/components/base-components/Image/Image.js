@@ -23,8 +23,8 @@ export default class Image extends React.Component {
             allImageSharp {
               edges {
                 node {
-                  fixed(width: 300, height: 500) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 750, maxHeight: 750) {
+                    ...GatsbyImageSharpFluid
                   } 
                 }
               }
@@ -33,10 +33,10 @@ export default class Image extends React.Component {
         `}
 				render={data => {
 					return (
-						<Img className={styles.Image} fixed={data.allImageSharp.edges.find(element => {
+						<Img className={styles.Image} fluid={data.allImageSharp.edges.find(element => {
 							// Match string after final slash
-							return element.node.fixed.src.split('/').pop() === this.props.imgsrc;
-						}).node.fixed} />
+							return element.node.fluid.src.split('/').pop() === this.props.imgsrc;
+						}).node.fluid} />
 					);
 				}}
 			/>
