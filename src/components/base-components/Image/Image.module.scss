@@ -1,6 +1,7 @@
 @import '../../../theme/theme';
 
 .Image {
+  width:100% !important;
   min-width: 100%;
   min-height: 400px;
   @include breakpoint(md){
