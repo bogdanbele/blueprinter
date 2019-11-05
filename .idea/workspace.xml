@@ -3,10 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/teamMembers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/teamMembers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/blog-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/blog-post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/gatsby-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/logo/main-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/get-started.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-started.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/meet-the-team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/meet-the-team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_theme.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +58,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\base-components" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\pages" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\layout-components" />
     </key>
   </component>
   <component name="RunDashboard">

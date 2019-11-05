@@ -15,10 +15,10 @@ export default class TeamMember extends React.Component {
         (this.props.index%2 !== 0) ? order = 'flex--row--column' : order = 'flex--row--column__reversed';
 
         return (
-            <Flex className='flex-grow-1 flex--column'>
+            <Flex className='flex-grow-1 column'>
                 <h1>{this.props.name}</h1>
-                <Flex className={'flex--0-padding ' + order}>
-                    <Flex className='flex--row flex--0-padding'>
+                <Flex className={styles.TeamMember + ' ' + order}>
+                    <Flex className='column'>
                         {sections.map((item, key) =>
                             <p key={key}>{item}</p>)}
                         <br/>
@@ -28,7 +28,7 @@ export default class TeamMember extends React.Component {
                                 <li key={key}>{item}</li>)}
                         </ul>
                     </Flex>
-                    <Flex className={styles.TeamMember + ' flex--2 flex-grow-1'}>
+                    <Flex className={'flex--2'}>
                         <Image
                             imgsrc={this.props.imgsrc}/>
                     </Flex>

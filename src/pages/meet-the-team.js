@@ -53,8 +53,8 @@ class MeetTheTeamPage extends React.Component {
 		return (
 			<Layout>
 				<SEO title="Meet the team"/>
-				<Row className="row--column">
-					<Flex className='column flex---1 flex--text-center'>
+				<Row className="row--column centered">
+					<Flex className='column flex---1 text-center'>
 						<h1>Here's us!</h1>
 						<h3>We're a bunch of cool people from across the globe</h3>
 					</Flex>

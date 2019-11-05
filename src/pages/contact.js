@@ -11,7 +11,7 @@ class ContactPage extends Component {
 			<Layout>
 				<SEO title="contact"/>
 				<Row className='centered'>
-					<Flex className='column flex--1 flex--text-center'>
+					<Flex className='column flex--1'>
 						<h3>Use the form below to address any general questions or inquiries you may have pertaining to
                             NCWeb or our website.</h3>
 					</Flex>

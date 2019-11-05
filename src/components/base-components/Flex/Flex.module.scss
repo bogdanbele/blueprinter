@@ -29,7 +29,6 @@
 	display: flex;
 	margin-bottom: 1rem;
 	margin-top: 1rem;
-	padding: 1.5rem;
 	transition: box-shadow 0.3s ease-in-out;
 
 	&:global.flex--text {
@@ -51,10 +50,6 @@
 		margin-bottom: 1.5rem;
 	}
 
-	&:global.green {
-		background-color: green;
-	}
-
 	&:global.flex--self-centered{
 		align-self: center;
 	}
@@ -67,28 +62,8 @@
 		}
 	}
 
-	&:global.flex--0-padding {
-		padding: 0;
-	}
-
 	&:global.flex--text-center {
 		text-align: center;
-	}
-
-	&:global.flex--column {
-		flex-direction: column;
-	}
-
-	&:global.flex--row {
-		flex-direction: column;
-	}
-
-	&:global.shadow {
-		@include box_shadow(6);
-	}
-
-	&:global.shadow:hover {
-		@include box_shadow(3);
 	}
 
 	&:global.flex--row--column {
