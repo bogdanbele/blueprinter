@@ -12,12 +12,12 @@ export default class TeamMember extends React.Component {
 
         // Alternate between image on the left and image on the right
         let order = '';
-        (this.props.index%2 !== 0) ? order = 'flex--row--column__reversed' : order = 'flex--row--column';
+        (this.props.index%2 !== 0) ? order = ' flex--row--column__reversed' : order = ' flex--row--column';
 
         return (
             <Flex className='flex-grow-1 column'>
                 <h1>{this.props.name}</h1>
-                <Flex className={styles.TeamMember + ' ' + order}>
+                <Flex className={styles.TeamMember + order}>
                     <Flex className='column'>
                         {sections.map((item, key) =>
                             <p key={key}>{item}</p>)}
@@ -42,5 +42,6 @@ export default class TeamMember extends React.Component {
 TeamMember.propTypes = {
     imgsrc: PropTypes.string.isRequired,
     sections: PropTypes.array,
+    skills: PropTypes.array
 };
 

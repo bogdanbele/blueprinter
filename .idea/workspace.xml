@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/alberto.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/alberto.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/belinda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/belinda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bogdan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bogdan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/dhanial.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/dhanial.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,19 +46,19 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\base-components" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\pages" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/fonts" />
       <recent name="$PROJECT_DIR$/src/theme/fonts" />
       <recent name="$PROJECT_DIR$/src/components/base-components" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\base-components" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\pages" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -124,6 +131,7 @@
       <workItem from="1572108595459" duration="4572000" />
       <workItem from="1572179513582" duration="470000" />
       <workItem from="1572247942226" duration="557000" />
+      <workItem from="1573159122557" duration="850000" />
     </task>
     <servers />
   </component>
@@ -175,7 +183,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
