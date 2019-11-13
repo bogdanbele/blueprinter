@@ -59,3 +59,30 @@ $font-color: white;
 :global .text-center{
     text-align: center;
 }
+
+:global .between {
+    justify-content: space-between;
+}
+
+:global .around {
+    justify-content: space-around;
+}
+
+:global .clean {
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+:global .centered {
+    justify-content: center;
+}
+
+:global .full {
+    @include breakpoint(md) {
+        width: 100vw;
+    }
+    align-items: center;
+    width: 80vw;
+}

@@ -13,7 +13,7 @@ const IndexPage = () =>
 	<Layout>
 		<SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
 		<Row>
-			<Flex className='column flex---1 flex--text-center'>
+			<Flex className='column flex--text-center'>
 				<h1>Websites for humans</h1>
 				<h3>Here at ncweb we build websites and apps that help you engage with people across all devices,
                     platforms, and experiences.</h3>
@@ -53,7 +53,7 @@ const IndexPage = () =>
 			</Flex>
 		</Row>
 		<Row>
-			<Flex className='column flex---1'>
+			<Flex className='column'>
 				<h1>Why we do it ?</h1>
 				<p> We create non cliché websites for our customers.
                     Unlike other website-builders, we focus on you. We thrive to create a memorable website that

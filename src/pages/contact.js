@@ -11,14 +11,14 @@ class ContactPage extends Component {
 			<Layout>
 				<SEO title="contact"/>
 				<Row className='centered'>
-					<Flex className='column flex--1'>
+					<Flex className='column flex--1 flex--text-center'>
 						<h3>Use the form below to address any general questions or inquiries you may have pertaining to
                             NCWeb or our website.</h3>
 					</Flex>
 					<ContactForm/>
 					<Flex className='column flex--2 flex--self-centered'>
 
-						<h3>REACH OUT THE TEAM</h3>
+						<h3>REACH OUT TO THE TEAM</h3>
 						<p>You can also reach us out directly by email.</p>
 
 						<p>

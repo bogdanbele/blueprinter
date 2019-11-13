@@ -66,6 +66,12 @@
 		text-align: center;
 	}
 
+	&:global.flex--h1-center {
+		> h1  {
+		text-align: center;
+		}
+	}
+
 	&:global.flex--row--column {
 		flex-direction: column;
 

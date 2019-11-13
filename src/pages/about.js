@@ -43,8 +43,8 @@ class AboutPage extends React.PureComponent {
 						this.customerRef = section;
 					}}
 				>
-					<Flex className="flex--1">
-						<Item>
+					<Flex className="column flex--1 flex--h1-center">
+
 							<h1>Customers first</h1>
 							<p>
 								At ncweb we create value. We seek to create innovation and opportunities. We know
@@ -61,7 +61,6 @@ class AboutPage extends React.PureComponent {
 								how important it is to be on the internet, and we can help you get connected to the
 								world! We want to you to be available and accessible to the world wide web.
 							</p>
-						</Item>
 					</Flex>
 				</Row>
 				<Row

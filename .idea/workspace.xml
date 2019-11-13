@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="" />
+    <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Icon/Icon.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Icon/Icon.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Item/Item.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Item/Item.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/SocialLinkIcon/Social-link-icon.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/SocialLinkIcon/Social-link-icon.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/belinda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/belinda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_theme.scss" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +36,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,11 +57,11 @@
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
       <recent name="$PROJECT_DIR$/static/fonts" />
       <recent name="$PROJECT_DIR$/src/theme/fonts" />
       <recent name="$PROJECT_DIR$/src/components/base-components" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,7 +134,8 @@
       <workItem from="1572108595459" duration="4572000" />
       <workItem from="1572179513582" duration="470000" />
       <workItem from="1572247942226" duration="557000" />
-      <workItem from="1573159122557" duration="1138000" />
+      <workItem from="1573159122557" duration="1629000" />
+      <workItem from="1573671717581" duration="3469000" />
     </task>
     <servers />
   </component>

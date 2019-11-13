@@ -574,13 +574,3 @@ pre tt:after {
 
   width: 100%;
 }
-
-:global(.primary-h1) {
-  h1 {
-    color: $color-primary;
-  }
-}
-
-:global(.primary) {
-  color: $color-primary;
-}
