@@ -3,8 +3,15 @@ import React from "react"
 export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
-const initialState = {
-    theme: localStorage.getItem('theme') === null ? setInLocalStorage("light") :  localStorage.getItem('theme'),
+let initialState = {
+    theme: 'light'
+}
+
+// Disabled the code from running on the server
+if (typeof window !== 'undefined') {
+    initialState = {
+        theme: localStorage.getItem('theme') !== null ? setInLocalStorage("light") :  localStorage.getItem('theme'),
+    }
 }
 
 function setInLocalStorage(themeColor) {
@@ -15,8 +22,6 @@ function setInLocalStorage(themeColor) {
 
 function reducer(state, action) {
     localStorage.getItem('theme');
-    console.log(state.theme)
-    console.log(localStorage.getItem('theme'))
 
     switch (action.type) {
         case "TOGGLE_THEME": {
