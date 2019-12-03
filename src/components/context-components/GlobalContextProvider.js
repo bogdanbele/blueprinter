@@ -8,7 +8,6 @@ function setInLocalStorage(themeColor) {
     return themeColor
 }
 
-
 function reducer(state, action) {
 
     switch (action.type) {
@@ -24,17 +23,20 @@ function reducer(state, action) {
 }
 
 const GlobalContextProvider = ({children}) => {
-    const initialState = {
-        theme: localStorage.getItem('theme') === null ? setInLocalStorage("dark") :  localStorage.getItem('theme'),
+    if (window) {
+        const initialState = {
+            theme: localStorage.getItem('theme') === null ? setInLocalStorage("dark") : localStorage.getItem('theme'),
+        };
+
+        const [state, dispatch] = React.useReducer(reducer, initialState)
+        return (
+            <GlobalStateContext.Provider value={state}>
+                <GlobalDispatchContext.Provider value={dispatch}>
+                    {children}
+                </GlobalDispatchContext.Provider>
+            </GlobalStateContext.Provider>
+        )
     }
-    const [state, dispatch] = React.useReducer(reducer, initialState)
-    return (
-        <GlobalStateContext.Provider value={state}>
-            <GlobalDispatchContext.Provider value={dispatch}>
-                {children}
-            </GlobalDispatchContext.Provider>
-        </GlobalStateContext.Provider>
-    )
 }
 
 export default GlobalContextProvider
