@@ -9,7 +9,7 @@ import Button from '../components/base-components/Button';
 import constants from '../config/constants';
 
 
-const IndexPage = () => 
+const IndexPage = () =>
 	<Layout>
 		<SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
 		<Row>
