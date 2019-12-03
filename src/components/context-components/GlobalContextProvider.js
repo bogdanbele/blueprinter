@@ -4,13 +4,13 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 let initialState = {
-    theme: 'light'
+    theme: 'dark'
 }
 
 // Disabled the code from running on the server
 if (typeof window !== 'undefined') {
     initialState = {
-        theme: localStorage.getItem('theme') === null ? setInLocalStorage("light") :  localStorage.getItem('theme'),
+        theme: localStorage.getItem('theme') === null ? setInLocalStorage("dark") :  localStorage.getItem('theme'),
     }
 }
 
@@ -27,7 +27,7 @@ function reducer(state, action) {
         case "TOGGLE_THEME": {
             return {
                 ...state,
-                theme: state.theme === "light" ? setInLocalStorage("dark") : setInLocalStorage("light"),
+                theme: state.theme === "dark" ? setInLocalStorage("light") : setInLocalStorage("dark"),
             }
         }
         default:
