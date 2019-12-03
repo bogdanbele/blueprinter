@@ -14,8 +14,6 @@ import {
 
 const Header = () => {
     const dispatch = useContext(GlobalDispatchContext);
-    const state = useContext(GlobalStateContext);
-    console.log(state)
     return (
         <header className={style.theme}>
             <div className='header-holder'>
@@ -23,14 +21,14 @@ const Header = () => {
                     onClick={() => navigate('/')}
                     className={style.LogoHolder}>
                     <img src={logoIcon}/><img src={logoText}/>
-                    <div>
+                </div>
+                <div>
                     <FaToggleOn
                         onClick={() => {
                             dispatch({ type: "TOGGLE_THEME" })
                         }}
                     />
                     </div>
-                </div>
                 <Menu/>
             </div>
         </header>

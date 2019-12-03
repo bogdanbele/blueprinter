@@ -20,8 +20,7 @@ require('typeface-roboto');
 
 const Layout = ({children}) =>{
     const state = useContext(GlobalStateContext);
-    console.log(state
-    )
+    console.log(state)
     return(
 	<StaticQuery
 		query={graphql`
