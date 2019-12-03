@@ -4,7 +4,7 @@ export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
 
 let initialState = {
-    theme: 'dark'
+    theme: null
 }
 
 // Disabled the code from running on the server
