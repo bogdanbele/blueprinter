@@ -37,6 +37,7 @@ const GlobalContextProvider = ({children}) => {
             </GlobalStateContext.Provider>
         )
     });
+    return null;
 };
 
 export default GlobalContextProvider
