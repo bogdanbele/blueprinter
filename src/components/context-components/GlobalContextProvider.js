@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 
 export const GlobalStateContext = React.createContext()
 export const GlobalDispatchContext = React.createContext()
@@ -23,7 +23,7 @@ function reducer(state, action) {
 }
 
 const GlobalContextProvider = ({children}) => {
-    if (typeof window !== 'undefined') {
+    useEffect(()=>{
         const initialState = {
             theme: localStorage.getItem('theme') === null ? setInLocalStorage("dark") : localStorage.getItem('theme'),
         };
@@ -36,7 +36,7 @@ const GlobalContextProvider = ({children}) => {
                 </GlobalDispatchContext.Provider>
             </GlobalStateContext.Provider>
         )
-    }
+    });
 };
 
 export default GlobalContextProvider
