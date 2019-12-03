@@ -47,13 +47,13 @@
 	input:-webkit-autofill:focus,
 	input:-webkit-autofill:active {
 		transition: background-color 999999s ease-in-out 999999s;
-		background: $theme !important;
-		color: white !important
+		background: var(--bg) !important;
+		color: var(--color) !important
 	}
 
 	input:-webkit-autofill {
-		caret-color: white;
-		-webkit-text-fill-color: white;
+		caret-color: var(--color);
+		-webkit-text-fill-color: var(--color);
 	}
 
 	:global .form-group>input {

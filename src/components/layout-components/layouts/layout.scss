@@ -20,12 +20,15 @@ body {
 
 body.dark {
   --bg: #0a1527;
-  color: white;
+  --color: white;
+  color: var(--color)
 }
 
 body.light {
   --bg:  #DCDCDC;
-  color: black;
+  --color: black;
+  color: var(--color)
+
 }
 
 main {

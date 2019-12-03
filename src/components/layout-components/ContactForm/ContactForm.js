@@ -102,7 +102,7 @@ export default class ContactForm extends React.Component {
                         Don’t fill this out: <input name="bot-field" onChange={this.handleInputChange}/>
     				</label>
     			</p>
-    			<WhiteInputField
+    			<ThemeInputStyle
     				required={true}
     				variant="outlined"
     				name="firstName"
@@ -113,7 +113,7 @@ export default class ContactForm extends React.Component {
     				margin="normal"
     				value={this.state.values.firstName || ''}
     			/>
-    			<WhiteInputField
+    			<ThemeInputStyle
     				required={true}
     				variant="outlined"
     				error={this.handleValidation('lastName')}
@@ -124,7 +124,7 @@ export default class ContactForm extends React.Component {
     				margin="normal"
     				value={this.state.values.lastName || ''}
     			/>
-    			<WhiteInputField
+    			<ThemeInputStyle
     				required={true}
     				variant="outlined"
     				error={this.handleValidation('email')}
@@ -136,7 +136,7 @@ export default class ContactForm extends React.Component {
     				value={this.state.values.email || ''}
     			/>
     			<div className='form-group'>
-    				<WhiteInputField
+    				<ThemeInputStyle
     					required={true}
     					variant="outlined"
     					aria-label="minimum height"
@@ -169,31 +169,32 @@ ContactForm
 
 
 const
-	WhiteInputField = withStyles({
+	ThemeInputStyle = withStyles({
 		root: {
 			// Underline on Focus
 			'& .MuiInput-underline:after': {
-				borderColor: 'white',
+				borderColor: 'var(--color)',
 			},
 
 			'& .MuiOutlinedInput-notchedOutline': {
-				color: 'white',
+				color: 'var(--color)',
 				borderColor: 'gray',
 			},
 
 			'& .MuiOutlinedInput-notchedOutline:hover': {
-				color: 'white',
-				borderColor: 'white',
+				color: 'var(--color)',
+				borderColor: 'var(--color)',
 			},
 
 			'& .MuiOutlinedInput-root:hover': {
-				color: 'white',
-				borderColor: 'white',
+				color: 'var(--color)',
+				borderColor: 'var(--color)',
 			},
 
 			'& .MuiInputBase-input': {
-				color: 'white',
+				color: 'var(--color)',
 			},
+			
 
 			// Default Underline
 			'& .MuiInput-underline:before': {
@@ -207,7 +208,7 @@ const
 
 			// Text Color
 			'& .MuiFormLabel-root': {
-				color: 'white',
+				color: 'var(--color)',
 			},
 		},
 	})(TextField);
