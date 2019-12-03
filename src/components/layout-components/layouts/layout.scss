@@ -6,10 +6,26 @@ html {
 }
 
 body {
+  color: var(--color);
+  background-color: var(--bg);
   overflow: hidden;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+body.dark {
+  --bg: #0a1527;
+  color: white;
+}
+
+body.light {
+  --bg:  #DCDCDC;
+  color: black;
 }
 
 main {

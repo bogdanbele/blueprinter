@@ -6,14 +6,9 @@ import style from './Header.module.scss';
 import logoText from '../../../config/logo/logo-text.svg';
 import logoIcon from '../../../config/logo/logo-icon.svg';
 import {navigate} from '@reach/router';
-import {FaToggleOn} from "react-icons/fa";
-import {
-    GlobalDispatchContext,
-    GlobalStateContext,
-} from "../../context-components/GlobalContextProvider"
+import Checkbox from '../../base-components/Checkbox/Checkbox';
 
 const Header = () => {
-    const dispatch = useContext(GlobalDispatchContext);
     return (
         <header className={style.theme}>
             <div className='header-holder'>
@@ -23,11 +18,7 @@ const Header = () => {
                     <img src={logoIcon}/><img src={logoText}/>
                 </div>
                 <div>
-                    <FaToggleOn
-                        onClick={() => {
-                            dispatch({ type: "TOGGLE_THEME" })
-                        }}
-                    />
+                    <Checkbox/>
                     </div>
                 <Menu/>
             </div>
