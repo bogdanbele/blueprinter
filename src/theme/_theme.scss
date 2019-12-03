@@ -12,20 +12,18 @@ $font-family-secondary: Roboto, sans-serif;
 @import "scss_defaults/screen_sizes";
 
 $dark-blue-bg: #0a1527;
+$light-bg: #DCDCDC;
 
 $theme: $dark-blue-bg;
+$theme-light: $light-bg;
 
 body {
-    background-color: $theme;
     font-family: $font-family-secondary;
 }
 
 $default-font-color:#666666;
 $font-color: white;
-
-* {
-    color: $font-color;
-}
+$font-color-dark: $dark-blue-bg;
 
 // Directional
 

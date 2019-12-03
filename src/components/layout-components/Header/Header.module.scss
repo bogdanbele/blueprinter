@@ -1,7 +1,6 @@
 @import '../../../theme/theme';
 
 %header {
-    background: $theme;
     display: flex;
 
     >  :global(.header-holder) {

@@ -1,3 +1,5 @@
+@import '../../../theme/theme';
+
 .main {
   flex-grow: 1;
 }
@@ -10,4 +12,24 @@
   display: flex;
   min-height: 90vh;
   flex-direction: column;
+}
+
+.mainLight {
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+
+  min-height: 100vh;
+  background-color: $theme;
+  color: white;
+}
+
+.mainDark {
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+
+  min-height: 100vh;
+  background-color: $theme-light;
+  color: $dark-blue-bg;
 }

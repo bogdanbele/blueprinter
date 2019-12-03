@@ -10,7 +10,7 @@ let initialState = {
 // Disabled the code from running on the server
 if (typeof window !== 'undefined') {
     initialState = {
-        theme: localStorage.getItem('theme') !== null ? setInLocalStorage("light") :  localStorage.getItem('theme'),
+        theme: localStorage.getItem('theme') === null ? setInLocalStorage("light") :  localStorage.getItem('theme'),
     }
 }
 

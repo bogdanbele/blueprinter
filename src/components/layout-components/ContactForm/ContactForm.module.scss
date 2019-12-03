@@ -4,7 +4,8 @@
 	@include breakpoint(xs) {
 		width: 420px;
 	}
-    font-size: 1rem;
+
+	font-size: 1rem;
 	display: flex;
 	flex-direction: column;
 	font-family: $font-family-primary;
@@ -17,9 +18,13 @@
 		transition: background-color 50000s, color 50000s, filter 50000s
 	}
 
-	@keyframes onautofillstart { from {} }
+	@keyframes onautofillstart {
+		from {}
+	}
 
-	@keyframes onautofillcancel { from {} }
+	@keyframes onautofillcancel {
+		from {}
+	}
 
 	input:-webkit-autofill {
 
@@ -43,7 +48,7 @@
 	input:-webkit-autofill:active {
 		transition: background-color 999999s ease-in-out 999999s;
 		background: $theme !important;
-		color: white !important;
+		color: white !important
 	}
 
 	input:-webkit-autofill {
@@ -51,7 +56,7 @@
 		-webkit-text-fill-color: white;
 	}
 
-	:global .form-group > input {
+	:global .form-group>input {
 		-webkit-box-shadow: 0 0 0 1000px white inset;
 		background: $theme;
 	}
@@ -63,7 +68,7 @@
 		margin-top: 1.2rem;
 	}
 
-	:global .form-group > textarea {
+	:global .form-group>textarea {
 		background: $theme;
 		max-width: 100%;
 		resize: vertical;
