@@ -23,9 +23,7 @@ function reducer(state, action) {
 }
 
 const GlobalContextProvider = ({children}) => {
-    if (!window) {
-    }
-    else {
+    if (typeof window !== 'undefined') {
         const initialState = {
             theme: localStorage.getItem('theme') === null ? setInLocalStorage("dark") : localStorage.getItem('theme'),
         };
@@ -39,6 +37,6 @@ const GlobalContextProvider = ({children}) => {
             </GlobalStateContext.Provider>
         )
     }
-}
+};
 
 export default GlobalContextProvider
