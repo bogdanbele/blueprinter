@@ -4,6 +4,7 @@ import {
 	FaInstagram,
 	FaYoutube,
 	FaSoundcloud,
+	FaLinkedin,
 } from 'react-icons/fa';
 import {FaFacebook} from 'react-icons/fa';
 import styles from './Social-link-icon.module.scss';
@@ -35,6 +36,12 @@ function isSoundcloudLink(string) {
 	return regExp.test(string);
 }
 
+function isLinkedinLink(string) {
+	const regExp = /http(s)?:\/\/(.*\.)?linkedin\.com\/[A-z0-9_]+\/?/gm;
+	return regExp.test(string);
+}
+
+
 // Returning FontAwesome based on Link type
 
 function extractType(string) {
@@ -53,6 +60,9 @@ function extractType(string) {
 		}
 		case isSoundcloudLink(string): {
 			return <FaSoundcloud className={styles.socialLinkIcon}/>;
+		}
+		case isLinkedinLink(string): {
+			return <FaLinkedin className={styles.socialLinkIcon}/>;
 		}
 		default:
 			return <FaFacebook/>;
