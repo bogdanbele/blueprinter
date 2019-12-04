@@ -21,8 +21,11 @@ $light-bg: #DCDCDC;
 $theme-dark: $dark-blue-bg;
 $theme-light: $light-bg;
 
-$font-color-light: white;
 $font-color-dark: $dark-blue-bg;
+$font-color-light: white;
+
+$theme-dark-highlight: lighten($theme-dark,2%);
+$theme-light-highlight: lighten($theme-dark,92%);
 
 body {
     font-family: $font-family-secondary;
@@ -31,11 +34,13 @@ body {
 body.dark {
     --bg: #{$theme-dark};
     --color: #{$font-color-light};
-    color: var(--color)
+    --bg-highlight: #{lighten($theme-dark,2%)};
+    color: var(--color);
 }
 
 body.light {
     --bg: #{$theme-light};
     --color: #{$font-color-dark};
-    color: var(--color)
+    --bg-highlight: #{lighten($theme-light,2%)};
+    color: var(--color);
 }
