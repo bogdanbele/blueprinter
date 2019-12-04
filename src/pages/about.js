@@ -38,7 +38,7 @@ class AboutPage extends React.PureComponent {
 			<Layout>
 				<SEO title="About" />
 				<Row
-					className="centered"
+					className="centered Row--header"
 					ref={section => {
 						this.customerRef = section;
 					}}
