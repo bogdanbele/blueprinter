@@ -9,7 +9,7 @@ import TeamMember from '../components/template-components/TeamMember/TeamMember'
 import Flex from "../components/base-components/Flex";
 
 let staticQuery = <StaticQuery
-	query={graphql` {
+    query={graphql` {
             allTeamMembersJson {
                 edges {
                     node {
@@ -23,46 +23,47 @@ let staticQuery = <StaticQuery
             }
         }
     `}
-	render={data =>
-			getTeamMember(data)
-	}
+    render={data =>
+        getTeamMember(data)
+    }
 />;
 
 function getTeamMember(data) {
-	const linksArray = [];
-	// noinspection JSUnresolvedVariable
-	data.allTeamMembersJson.edges.forEach((item, index) =>
-		linksArray.push(
-			<Row>
-			<TeamMember
-				key={item.node.id}
-				index={index}
-				imgsrc={item.node.image}
-				name={item.node.name}
-				sections={item.node.sections}
-				skills={item.node.skills}
-			/>
-			</Row>
-		)
-	);
-	return linksArray;
+    const linksArray = [];
+    // noinspection JSUnresolvedVariable
+    data.allTeamMembersJson.edges.forEach((item, index) =>
+        linksArray.push(
+            <Row
+                key={item.node.id}>
+                <TeamMember
+
+                    index={index}
+                    imgsrc={item.node.image}
+                    name={item.node.name}
+                    sections={item.node.sections}
+                    skills={item.node.skills}
+                />
+            </Row>
+        )
+    );
+    return linksArray;
 }
 
 class MeetTheTeamPage extends React.Component {
-	render() {
-		return (
-			<Layout className='alternating-row'>
-				<SEO title="Meet the team"/>
-				<Row className="row--column centered Row--header">
-					<Flex className='column flex---1 text-center'>
-						<h1>Here's us!</h1>
-						<h3>We're a bunch of cool people from across the globe</h3>
-					</Flex>
-				</Row>
-				{staticQuery}
-			</Layout>
-		);
-	}
+    render() {
+        return (
+            <Layout className='alternating-row'>
+                <SEO title="Meet the team"/>
+                <Row className="row--column centered Row--header">
+                    <Flex className='column flex---1 text-center'>
+                        <h1>Here's us!</h1>
+                        <h3>We're a bunch of cool people from across the globe</h3>
+                    </Flex>
+                </Row>
+                {staticQuery}
+            </Layout>
+        );
+    }
 }
 
 export default MeetTheTeamPage;
