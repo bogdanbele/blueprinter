@@ -24,9 +24,7 @@ let staticQuery = <StaticQuery
         }
     `}
 	render={data =>
-		<Row className='centered'>
-			{getTeamMember(data)}
-		</Row>
+			getTeamMember(data)
 	}
 />;
 
@@ -35,6 +33,7 @@ function getTeamMember(data) {
 	// noinspection JSUnresolvedVariable
 	data.allTeamMembersJson.edges.forEach((item, index) =>
 		linksArray.push(
+			<Row>
 			<TeamMember
 				key={item.node.id}
 				index={index}
@@ -43,6 +42,7 @@ function getTeamMember(data) {
 				sections={item.node.sections}
 				skills={item.node.skills}
 			/>
+			</Row>
 		)
 	);
 	return linksArray;
@@ -51,9 +51,9 @@ function getTeamMember(data) {
 class MeetTheTeamPage extends React.Component {
 	render() {
 		return (
-			<Layout>
+			<Layout className='alternating-row'>
 				<SEO title="Meet the team"/>
-				<Row className="row--column centered">
+				<Row className="row--column centered Row--header">
 					<Flex className='column flex---1 text-center'>
 						<h1>Here's us!</h1>
 						<h3>We're a bunch of cool people from across the globe</h3>

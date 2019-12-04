@@ -7,10 +7,10 @@ import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import Flex from "../components/base-components/Flex";
 
-const BlogPage = ({data}) => 
+const BlogPage = ({data}) =>
 	<Layout>
 		<SEO title="Blog" />
-		<Row className='column'>
+		<Row className='column Row--header'>
             <Flex className='column flex---1 flex--text-center'>
             <h1>Latest Posts</h1>
             </Flex>

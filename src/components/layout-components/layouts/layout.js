@@ -15,7 +15,8 @@ import Footer from '../Footer/Footer';
 require('typeface-quicksand');
 require('typeface-roboto');
 
-const Layout = ({children}) =>{
+const Layout = (props) =>{
+    console.log(props)
     return(
 	<StaticQuery
 		query={graphql`
@@ -31,7 +32,7 @@ const Layout = ({children}) =>{
 			<>
           <Header siteTitle={data.site.siteMetadata.title} />
           <div className={styles.Content}>
-            <main >{children}</main>
+                <main className={`${props.className}`}>{props.children}</main>
             <Footer />
           </div>
 			</>
@@ -41,6 +42,7 @@ const Layout = ({children}) =>{
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
+    className: PropTypes.string
 };
 
 export default Layout;

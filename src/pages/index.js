@@ -10,9 +10,9 @@ import constants from '../config/constants';
 
 
 const IndexPage = () =>
-	<Layout>
+	<Layout className='alternating-row'>
 		<SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
-		<Row>
+		<Row className='Row--header'>
 			<Flex className='column flex--text-center'>
 				<h1>Websites for humans</h1>
 				<h3>Here at ncweb we build websites and apps that help you engage with people across all devices,
