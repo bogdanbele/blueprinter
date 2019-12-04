@@ -36,7 +36,6 @@ function getTeamMember(data) {
             <Row
                 key={item.node.id}>
                 <TeamMember
-
                     index={index}
                     imgsrc={item.node.image}
                     name={item.node.name}

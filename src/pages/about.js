@@ -35,7 +35,7 @@ class AboutPage extends React.PureComponent {
 
 	render() {
 		return (
-			<Layout>
+			<Layout className='alternating-row'>
 				<SEO title="About" />
 				<Row
 					className="centered Row--header"
