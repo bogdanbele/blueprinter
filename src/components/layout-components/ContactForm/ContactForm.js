@@ -194,8 +194,11 @@ const
 			'& .MuiInputBase-input': {
 				color: 'var(--color)',
 			},
-			
 
+			
+			'& .MuiInputBase-input': {
+				color: 'var(--color)',
+			},
 			// Default Underline
 			'& .MuiInput-underline:before': {
 				borderColor: 'gray',

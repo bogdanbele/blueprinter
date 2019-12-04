@@ -18,19 +18,6 @@ body {
   transition: background-color 500ms linear;
 }
 
-body.dark {
-  --bg: #0a1527;
-  --color: white;
-  color: var(--color)
-}
-
-body.light {
-  --bg:  #DCDCDC;
-  --color: black;
-  color: var(--color)
-
-}
-
 main {
   display: flex;
   flex-direction: column;

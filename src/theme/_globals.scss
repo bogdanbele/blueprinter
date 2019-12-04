@@ -1,0 +1,50 @@
+
+// Directional
+
+:global .row {
+    flex-direction: row;
+}
+
+:global .column {
+    flex-direction: column;
+}
+
+// Spacing
+
+:global .padding-3-x {
+    padding-left: $grid_3x;
+    padding-right: $grid_3x;
+}
+
+// Arrangement
+
+:global .text-center{
+    text-align: center;
+}
+
+:global .between {
+    justify-content: space-between;
+}
+
+:global .around {
+    justify-content: space-around;
+}
+
+:global .clean {
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+:global .centered {
+    justify-content: center;
+}
+
+:global .full {
+    @include breakpoint(md) {
+        width: 100vw;
+    }
+    align-items: center;
+    width: 80vw;
+}

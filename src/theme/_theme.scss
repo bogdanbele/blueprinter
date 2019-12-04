@@ -11,76 +11,29 @@ $font-family-secondary: Roboto, sans-serif;
 @import "scss_defaults/box_shadow";
 @import "scss_defaults/screen_sizes";
 
+@import "globals";
+
 $dark-blue-bg: #0a1527;
 $light-bg: #DCDCDC;
 
-$theme: $dark-blue-bg;
+$theme-dark: $dark-blue-bg;
 $theme-light: $light-bg;
+
+$font-color-light: white;
+$font-color-dark: $dark-blue-bg;
 
 body {
     font-family: $font-family-secondary;
 }
 
-$default-font-color:#666666;
-$font-color: white;
-$font-color-dark: $dark-blue-bg;
-
-// Directional
-
-:global .row {
-    flex-direction: row;
+body.dark {
+    --bg: #{$theme-dark};
+    --color: #{$font-color-light};
+    color: var(--color)
 }
 
-:global .column {
-    flex-direction: column;
-}
-
-// Shadows
-
-:global .shadow {
-    @include box_shadow(6);
-}
-
-:global .shadow:hover {
-    @include box_shadow(3);
-}
-
-// Spacing
-
-:global .padding-3-x {
-    padding-left: $grid_3x;
-    padding-right: $grid_3x;
-}
-
-// Arrangement
-
-:global .text-center{
-    text-align: center;
-}
-
-:global .between {
-    justify-content: space-between;
-}
-
-:global .around {
-    justify-content: space-around;
-}
-
-:global .clean {
-    border-bottom: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-}
-
-:global .centered {
-    justify-content: center;
-}
-
-:global .full {
-    @include breakpoint(md) {
-        width: 100vw;
-    }
-    align-items: center;
-    width: 80vw;
+body.light {
+    --bg: #{$theme-light};
+    --color: #{$font-color-dark};
+    color: var(--color)
 }
