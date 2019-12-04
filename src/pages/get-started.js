@@ -84,7 +84,7 @@ const GetStartedPage = () =>
         <Row className='column'>
             <Flex className='column'>
                 <h2>Pre-Launch Revision</h2>
-                <h3>review the website modules together.</h3>
+                <h3>We review the website modules together.</h3>
                 <p>Before we get the official launch of your site, we’ll show you a finished version of it through a
                     test site. At this point you can review the final touches and send us, if needed, more content that
                     you would like to add for the site.
