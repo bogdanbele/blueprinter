@@ -104,7 +104,7 @@
             <entry file="file://$PROJECT_DIR$/src/pages/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="161">
-                  <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+                  <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -378,6 +378,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
@@ -485,7 +486,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37160000" />
+    <option name="totallyTimeSpent" value="37185000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,7 +501,7 @@
     <frame x="0" y="23" width="1680" height="938" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.78835976" visible="true" weight="0.12959614" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.78835976" visible="true" weight="0.12959614" />
       <window_info id="Structure" order="1" sideWeight="0.21164021" side_tool="true" visible="true" weight="0.12959614" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -515,7 +516,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.486747" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31686747" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31686747" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -986,7 +987,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
