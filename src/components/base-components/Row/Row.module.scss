@@ -13,6 +13,26 @@
     padding-bottom: 3rem;
     padding-top: 3rem;
   }
+
+  :global &--full-width {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+  }
+
+  :global &--header {
+    @include breakpoint(md) {
+      padding-bottom: 5rem;
+      padding-top: 1rem;
+    }
+  }
+
+  :global &--0-pb {
+    padding-bottom: 0;
+    @include breakpoint(md) {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .RowHolder {
@@ -22,9 +42,4 @@
   width: 100vw;
 }
 
-:global .Row--header {
-  @include breakpoint(md) {
-    padding-bottom: 5rem;
-    padding-top: 1rem;
-  }
-}
+

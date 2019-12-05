@@ -7,6 +7,7 @@ import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import constants from '../config/constants';
+import FluidImage from "../components/base-components/Image/FluidImage";
 
 class AboutPage extends React.PureComponent {
 
@@ -37,6 +38,13 @@ class AboutPage extends React.PureComponent {
 		return (
 			<Layout className='alternating-row'>
 				<SEO title="About" />
+				<Row className='text-center centered Row--0-pb Row--header Row--full-width'>
+					<Flex>
+						<h1>About us</h1>
+					</Flex>
+					<FluidImage
+						imgsrc='us-small-2.jpg'/>
+				</Row>
 				<Row
 					className="centered Row--header"
 					ref={section => {

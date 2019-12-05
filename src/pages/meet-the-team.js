@@ -7,6 +7,7 @@ import Row from '../components/base-components/Row';
 import Image from '../components/base-components/Image/Image';
 import TeamMember from '../components/template-components/TeamMember/TeamMember';
 import Flex from "../components/base-components/Flex";
+import FluidImage from "../components/base-components/Image/FluidImage";
 
 let staticQuery = <StaticQuery
     query={graphql` {
