@@ -12,7 +12,7 @@ export default class FluidImage extends React.Component {
             allImageSharp {
               edges {
                 node {
-                  fluid(maxWidth: 400, maxHeight: 250) {
+                  fluid(maxWidth: 1200, maxHeight: 800) {
                     ...GatsbyImageSharpFluid
                   } 
                 }

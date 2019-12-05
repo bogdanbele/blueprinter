@@ -15,6 +15,7 @@ class AboutPage extends React.PureComponent {
 		if (window.history.state) {
 			switch (window.history.state.scrollTo) {
 				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
+					scrollToComponent(this.customerRef, {offset: 0, duration: 1000, align: 'top'});
 					break;
 				}
 				case constants.ABOUT_HOW_WE_WORK_SECTION: {

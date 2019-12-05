@@ -4,6 +4,8 @@ import {
 } from 'gatsby';
 import styles from './Footer.module.scss';
 import SocialLinkIcon from '../../base-components/SocialLinkIcon';
+import {Link} from "@reach/router";
+import FooterMenu from "../FooterMenu/FooterMenu";
 
 let staticQuery = <StaticQuery
 	query={graphql` {
@@ -16,7 +18,7 @@ let staticQuery = <StaticQuery
             }
         }
     `}
-	render={data => 
+	render={data =>
 		<div className={styles.socialMenu}>
 			{getSocialLinks(data)}
 		</div>
@@ -40,8 +42,9 @@ export default class Footer extends React.PureComponent {
 		return (
 			<footer>
 				{staticQuery}
+				<FooterMenu/>
 				<p>
-                    © ncweb {new Date().getFullYear()}
+					© ncweb {new Date().getFullYear()}
 					{' '}
 				</p>
 			</footer>

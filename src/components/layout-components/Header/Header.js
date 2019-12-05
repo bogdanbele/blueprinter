@@ -1,7 +1,7 @@
 import {Link} from 'gatsby';
 import PropTypes from 'prop-types';
 import React, {useContext} from "react"
-import Menu from '../Menu/Menu';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import style from './Header.module.scss';
 import logoText from '../../../config/logo/logo-text.svg';
 import logoIcon from '../../../config/logo/logo-icon.svg';
@@ -17,7 +17,7 @@ const Header = () => {
                     className={style.LogoHolder}>
                     <img alt='ncweb-logo' src={logoIcon}/><img alt='ncweb-logoText' src={logoText}/>
                 </div>
-                <Menu/>
+                <HeaderMenu/>
             </div>
             <div>
                 <Checkbox/>

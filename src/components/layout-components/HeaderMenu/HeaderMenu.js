@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import style from './Menu.module.scss';
+import style from './HeaderMenu.module.scss';
 
-const Menu = () =>
+const HeaderMenu = () =>
 	<div className={style.Menu}>
 		<ul>
 			<li>
@@ -24,5 +24,5 @@ const Menu = () =>
 	</div>
 ;
 
-export default Menu;
+export default HeaderMenu;
 
