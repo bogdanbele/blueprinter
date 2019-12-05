@@ -19,7 +19,7 @@ const IndexPage = () =>
         <SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
         <Row className='Row--header'>
             <Flex className='column flex--text-center'>
-                <h1>Websites for humans</h1>
+                <h1>Calin Bogdan</h1>
                 <h3>Here at ncweb we build websites and apps that help you engage with people across all devices,
                     platforms, and experiences.</h3>
             </Flex>
