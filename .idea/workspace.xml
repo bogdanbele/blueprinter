@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout-components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout-components/HeaderMenu/HeaderMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/HeaderMenu/HeaderMenu.module.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +23,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+                <state relative-caret-position="189">
+                  <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -38,11 +35,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+                <state relative-caret-position="21">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
             </entry>
@@ -152,8 +149,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/layout-components/HeaderMenu/HeaderMenu.module.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+                <state>
+                  <caret selection-end-line="1" />
                 </state>
               </provider>
             </entry>
@@ -287,10 +284,10 @@
         <option value="$PROJECT_DIR$/src/pages/index.js" />
         <option value="$PROJECT_DIR$/src/pages/contact.js" />
         <option value="$PROJECT_DIR$/src/components/layout-components/Footer/Footer.js" />
-        <option value="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss" />
         <option value="$PROJECT_DIR$/src/components/layout-components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/components/layout-components/HeaderMenu/HeaderMenu.module.scss" />
         <option value="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.js" />
+        <option value="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss" />
       </list>
     </option>
   </component>
@@ -522,7 +519,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39293000" />
+    <option name="totallyTimeSpent" value="39466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,7 +534,7 @@
     <frame x="0" y="23" width="1680" height="938" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.78835976" visible="true" weight="0.12959614" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.78835976" visible="true" weight="0.12959614" />
       <window_info id="Structure" order="1" sideWeight="0.21164021" side_tool="true" visible="true" weight="0.12959614" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -552,7 +549,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.486747" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31686747" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31686747" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -982,24 +979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/teamMembers.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layout-components/HeaderMenu/HeaderMenu.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1015,11 +998,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="189">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/layout-components/HeaderMenu/HeaderMenu.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/Checkbox.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

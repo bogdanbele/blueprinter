@@ -1,4 +1,7 @@
+@import '../../../theme/theme';
+
 .Checkbox {
   top: 0;
   right: 0;
+  margin-left: $grid_2x;
 }
