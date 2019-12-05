@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
-import {Link, navigate} from '@reach/router';
+import {navigate} from '@reach/router';
 import handshakeSVG from '../utils/svgs/029-handshake.svg';
 import handSVG from '../utils/svgs/025-hand.svg';
 import thoughtSVG from '../utils/svgs/005-thought.svg';
@@ -38,11 +38,13 @@ const IndexPage = () =>
                         be available and accessible to the world wide web.
                     </p>
                     <Button onClick={
-                        () => navigate('/about/', {
-                            state: {
-                                'scrollTo': constants.ABOUT_CUSTOMER_FIRST_SECTION,
-                            },
-                        })
+                        () => {
+                            navigate('/about/', {
+                                state: {
+                                    'scrollTo': constants.ABOUT_CUSTOMER_FIRST_SECTION,
+                                },
+                            }).then()
+                        }
                     }>Read more</Button>
                 </Item>
             </Flex>
