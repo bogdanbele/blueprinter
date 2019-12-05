@@ -22,6 +22,7 @@
         >li {
             @include breakpoint(md) {
                 margin-left: $grid_3x;
+                margin-bottom: 0;
             }
             >a {
                 text-decoration: none;

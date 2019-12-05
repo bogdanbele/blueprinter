@@ -7,6 +7,7 @@ import logoText from '../../../config/logo/logo-text.svg';
 import logoIcon from '../../../config/logo/logo-icon.svg';
 import {navigate} from '@reach/router';
 import Checkbox from '../../base-components/ThemeCheckbox/Checkbox';
+import Flex from "../../base-components/Flex";
 
 const Header = () => {
     return (
@@ -17,10 +18,10 @@ const Header = () => {
                     className={style.LogoHolder}>
                     <img alt='ncweb-logo' src={logoIcon}/><img alt='ncweb-logoText' src={logoText}/>
                 </div>
-                <HeaderMenu/>
-            </div>
-            <div>
-                <Checkbox/>
+                <Flex>
+                    <HeaderMenu/>
+                    <Checkbox/>
+                </Flex>
             </div>
         </header>
     )
