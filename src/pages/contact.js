@@ -13,14 +13,12 @@ class ContactPage extends Component {
 				<Row className='centered Row--header'>
 					<Flex className='column flex--1 flex--text-center'>
 						<h3>Use the form below to address any general questions or inquiries you may have pertaining to
-                            NCWeb or our website.</h3>
+							NCWeb or our website.</h3>
 					</Flex>
 					<ContactForm/>
 					<Flex className='column flex--2 flex--self-centered'>
-
 						<h3>REACH OUT TO THE TEAM</h3>
 						<p>You can also reach us out directly by email.</p>
-
 						<p>
                             Alberto Martínez<br/>
                             CEO and Co-Founder<br/>

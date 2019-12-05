@@ -2,7 +2,6 @@ import {Link} from "@reach/router";
 import React from "react";
 import style from './FooterMenu.module.scss';
 
-
 const FooterMenu = () =>
     <div className={style.Menu}>
         <ul>
@@ -10,6 +9,5 @@ const FooterMenu = () =>
         </ul>
     </div>
 ;
-
 
 export default FooterMenu;
