@@ -24,7 +24,6 @@ class ContactPage extends Component {
                             CEO and Co-Founder<br/>
                             alberto@ncweb.eu<br/>
                             +45 53825110</p>
-
 					</Flex>
 				</Row>
 			</Layout>
