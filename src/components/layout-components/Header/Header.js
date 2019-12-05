@@ -18,7 +18,7 @@ const Header = () => {
                     className={style.LogoHolder}>
                     <img alt='ncweb-logo' src={logoIcon}/><img alt='ncweb-logoText' src={logoText}/>
                 </div>
-                <Flex>
+                <Flex className={style.MenuHolder}>
                     <HeaderMenu/>
                     <Checkbox/>
                 </Flex>

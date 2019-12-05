@@ -20,6 +20,13 @@
     }
 }
 
+.MenuHolder{
+    width: 100%;
+    @include breakpoint(md) {
+        width: initial;
+    }
+}
+
 .LogoHolder {
     cursor: pointer;
     display: flex;
