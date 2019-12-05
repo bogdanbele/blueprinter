@@ -42,11 +42,11 @@ export default class Footer extends React.PureComponent {
 		return (
 			<footer>
 				{staticQuery}
-				<FooterMenu/>
 				<p>
 					© ncweb {new Date().getFullYear()}
 					{' '}
 				</p>
+				<FooterMenu/>
 			</footer>
 		);
 	}

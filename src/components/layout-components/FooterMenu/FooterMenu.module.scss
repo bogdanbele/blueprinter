@@ -23,11 +23,11 @@
     >li {
       >a {
         text-decoration: none;
-        font-size: 1rem;
-        font-weight: bold;
+        font-size: 0.8rem;
+        opacity: 0.2;
         font-family: $font-family-secondary;
         display: flex;
-        color: $color-primary;
+        color: var(--color);
       }
     }
   }
