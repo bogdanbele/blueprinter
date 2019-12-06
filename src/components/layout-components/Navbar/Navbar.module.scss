@@ -1,24 +1,32 @@
 @import '../../../theme/theme';
 
 .LogoHolder {
+    width: 180px;
     cursor: pointer;
-    display: flex;
+    display: none;
     flex-direction: row;
     height: 60px;
 
+    @include breakpoint(md) {
+        display: flex;
+    }
+
     > img {
         max-height: 100%;
-        display: none;
         max-width: 120px;
         padding: $grid_1x;
         margin: 0;
-        @include breakpoint(md) {
-            display: initial;
-        }
+
 
         &:first-child {
             position: relative;
             top: 5px;
         }
+    }
+}
+
+.ThemeCheck{
+    @include breakpoint(md) {
+        order: 3;
     }
 }

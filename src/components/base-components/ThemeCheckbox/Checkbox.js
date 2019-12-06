@@ -11,7 +11,7 @@ export default class ThemeCheckbox extends React.Component {
     return (
       <ThemeToggler>
         {({ theme, toggleTheme }) => (
-          <label className={styles.Checkbox}>
+          <label className={`${styles.Checkbox} ${this.props.className}`}>
             <Checkbox
                 onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                 checked={theme === 'dark'}

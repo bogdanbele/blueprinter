@@ -1,6 +1,9 @@
 
 // Directional
 
+:global .primary {
+    color: $color-primary;
+}
 :global .row {
     flex-direction: row;
 }

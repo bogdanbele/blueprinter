@@ -13,33 +13,20 @@ import styles from './Layout.module.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
+
 require('typeface-quicksand');
 require('typeface-roboto');
 
-const Layout = (props) =>{
+const Layout = (props) => {
     console.log(props)
-    return(
-	<StaticQuery
-		query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-		render={data =>
-			<>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <Navbar/>
-          <div className={styles.Content}>
+    return (
+        <>
+            <Navbar/>
+            <div className={styles.Content}>
                 <main className={`${props.className}`}>{props.children}</main>
-            <Footer />
-          </div>
-			</>
-		}
-	/>)
+                <Footer/>
+            </div>
+        </>)
 };
 
 Layout.propTypes = {
