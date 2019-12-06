@@ -28,9 +28,4 @@ const Header = () => {
         ;
 };
 
-Header.propTypes = {
-    siteTitle: PropTypes.string,
-    switch: PropTypes.func
-};
-
 export default Header;

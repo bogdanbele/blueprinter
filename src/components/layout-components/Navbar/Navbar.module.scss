@@ -1,0 +1,24 @@
+@import '../../../theme/theme';
+
+.LogoHolder {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+
+    > img {
+        max-height: 100%;
+        display: none;
+        max-width: 120px;
+        padding: $grid_1x;
+        margin: 0;
+        @include breakpoint(md) {
+            display: initial;
+        }
+
+        &:first-child {
+            position: relative;
+            top: 5px;
+        }
+    }
+}
