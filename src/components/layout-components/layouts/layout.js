@@ -7,10 +7,8 @@
 
 import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
-import {StaticQuery, graphql} from 'gatsby';
 import './layout.scss';
 import styles from './Layout.module.scss';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 
