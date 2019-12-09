@@ -1,122 +1,125 @@
 // Directional
 
 :global .primary {
-    color: $color-primary;
+  color: $color-primary;
 }
 
 :global .row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 :global .column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 // Spacing
 
 :global .padding-3-x {
-    padding-left: $grid_3x;
-    padding-right: $grid_3x;
+  padding-left: $grid_3x;
+  padding-right: $grid_3x;
 }
 
 // Arrangement
 
 :global .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 :global .between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 :global .around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 :global .clean {
-    border-bottom: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
 }
 
 :global .centered {
-    justify-content: center;
+  justify-content: center;
 }
 
 :global .full {
-    @include breakpoint(md) {
-        width: 100vw;
-    }
+  @include breakpoint(md) {
+    width: 100vw;
+  }
 
-    align-items: center;
-    width: 80vw;
+  align-items: center;
+  width: 80vw;
 }
 
 // Alternating rows
 
 @mixin even() {
-    > :nth-child(even) {
-        @content
-    }
+  > :nth-child(even) {
+    @content
+  }
 };
 
 @mixin odd() {
-    > :nth-child(odd) {
-        @content
-    }
+  > :nth-child(odd) {
+    @content
+  }
 };
 
 @mixin default-background($mobileOnly) {
-    @if $mobileOnly {
-        @include breakpoint(md) {
-            background-color: transparent;
-        }
+  @if $mobileOnly {
+    @include breakpoint(md) {
+      background-color: transparent;
     }
+  }
 }
 
 @mixin alternating-row-setup() {
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
-    background-color: var(--bg-highlight);
+  background-color: var(--bg-highlight);
 }
 
 @mixin alternating-row($parity, $mobileOnly: false) {
-    > {
-        -webkit-transition: background-color 500ms linear;
-        -ms-transition: background-color 500ms linear;
-        transition: background-color 500ms linear;
-    }
 
-    @if $parity==odd {
-        @include odd() {
-            @include alternating-row-setup();
-            @include default-background($mobileOnly);
-        }
+  @if $parity==odd {
+    @include odd() {
+      @include default-background($mobileOnly);
+      @include alternating-row-setup();
     }
+  } @else {
+    @include even() {
+      @include default-background($mobileOnly);
+      @include alternating-row-setup();
+    }
+  }
+}
 
-    @else {
-        @include even() {
-            @include alternating-row-setup();
-            @include default-background($mobileOnly);
-        }
-    }
-};
+;
 
 
 :global .alternating-row {
-    @include alternating-row(even)
-};
+  > {
+    background-color: red;
+  }
+  @include alternating-row(even)
+}
+
+;
 
 :global .alternating-row-odd {
-    @include alternating-row(odd)
-};
+  @include alternating-row(odd)
+}
+
+;
 
 :global .alternating-row-md {
-    @include alternating-row(even, true)
-};
+  @include alternating-row(even, true)
+}
+
+;
 
 :global .alternating-row-odd-md {
-    @include alternating-row(odd, true)
-};
+  @include alternating-row(odd, true)
+}
+
+;

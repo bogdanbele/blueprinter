@@ -17,14 +17,14 @@ import Icon from "../components/base-components/Icon";
 const IndexPage = () =>
     <Layout className='alternating-row'>
         <SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
-        <Row className='Row--header'>
+        <Row className='Row--header px-5'>
             <Flex className='column flex--text-center'>
                 <h1>non cliché websites</h1>
                 <h3>We build individually tailored websites and apps that help you engage with people across all devices,
-                    platforms, and experiences.</h3>
+                    and platforms.</h3>
             </Flex>
         </Row>
-        <Row className='around'>
+        <Row className='around px-5'>
             <Flex className='flex--2'>
                 <Item>
                     <Flex className='centered'>
@@ -69,7 +69,7 @@ const IndexPage = () =>
                 </Item>
             </Flex>
         </Row>
-        <Row>
+        <Row className='px-5'>
             <Flex className='flex--1'>
                 <Item>
                     <Flex className='centered'>
@@ -79,12 +79,10 @@ const IndexPage = () =>
                     </Flex>
                     <h2>Why we do it ?</h2>
                     <p> We create non cliché websites for our customers.
-                        Unlike other website-builders, we focus on you. We thrive to create a memorable website that
-                        illustrate you, the way you want it.
+                        Unlike other website-builders, we focus on you. We thrive to create an innovative
+                        website in alignment with your needs.
                     </p>
-                    <p>We create opportunities where there aren’t any. We see things from our customers perspective, and
-                        we
-                        strive to create innovative websites, the way you like it.</p>
+                    <p>We see things from our customers perspective, combining functionality and design.</p>
                     <Button onClick={
                         () => navigate('/about/', {
                             state: {
