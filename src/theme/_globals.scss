@@ -67,10 +67,10 @@
     }
 };
 
-@mixin default-background($mobileOnly){
-    @if $mobileOnly{
-        @include breakpoint(md){
-            background-color: var(--bg);
+@mixin default-background($mobileOnly) {
+    @if $mobileOnly {
+        @include breakpoint(md) {
+            background-color: transparent;
         }
     }
 }
@@ -83,16 +83,23 @@
 }
 
 @mixin alternating-row($parity, $mobileOnly: false) {
+    > {
+        -webkit-transition: background-color 500ms linear;
+        -ms-transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
+    }
+
     @if $parity==odd {
         @include odd() {
-            @include default-background($mobileOnly);
             @include alternating-row-setup();
+            @include default-background($mobileOnly);
         }
     }
+
     @else {
         @include even() {
+            @include alternating-row-setup();
             @include default-background($mobileOnly);
-            @include alternating-row-setup()
         }
     }
 };

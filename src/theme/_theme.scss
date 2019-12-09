@@ -27,9 +27,6 @@ $theme-light: $light-bg;
 $font-color-dark: $dark-blue-bg;
 $font-color-light: white;
 
-$theme-dark-highlight: lighten($theme-dark,2%);
-$theme-light-highlight: lighten($theme-dark,92%);
-
 body {
     font-family: $font-family-secondary;
     background-color: var(--bg);
