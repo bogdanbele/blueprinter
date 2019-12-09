@@ -44,6 +44,7 @@ class AboutPage extends React.PureComponent {
 						<h1>About us</h1>
 					</Flex>
 					<FluidImage
+						className='Image--transparent'
 						imgsrc='us-small-2.jpg'/>
 				</Row>
 				<Row

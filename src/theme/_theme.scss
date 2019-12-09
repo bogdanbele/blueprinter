@@ -40,6 +40,7 @@ body.dark {
     --bg: #{$theme-dark};
     --color: #{$font-color-light};
     --bg-highlight: #{lighten($theme-dark,2%)};
+    --theme-images-opacity: 0.3;
     color: var(--color);
 }
 
@@ -47,5 +48,6 @@ body.light {
     --bg: #{$theme-light};
     --color: #{$font-color-dark};
     --bg-highlight: #{lighten($theme-light,2%)};
+    --theme-images-opacity: 0.6;
     color: var(--color);
 }

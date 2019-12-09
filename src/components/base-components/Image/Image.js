@@ -34,7 +34,7 @@ export default class Image extends React.Component {
 				render={data => {
 					// noinspection JSUnresolvedVariable
 					return (
-						<Img className={styles.Image} fixed={data.allImageSharp.edges.find(element => {
+						<Img className={`${styles.Image} ${this.props.className}`} fixed={data.allImageSharp.edges.find(element => {
 							return element.node.fixed.src.split('/').pop() === this.props.imgsrc;
 						}).node.fixed} />
 					);

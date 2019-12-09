@@ -7,4 +7,11 @@
   @include breakpoint(md){
     min-width: 350px;
   }
+
+  :global &--transparent {
+    opacity: var(--theme-images-opacity);
+    -webkit-transition: opacity 500ms linear;
+    -ms-transition: opacity 500ms linear;
+    transition: opacity 500ms linear;
+  }
 }
