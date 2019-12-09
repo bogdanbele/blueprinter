@@ -7,6 +7,7 @@ import { Link } from 'gatsby';
 import Checkbox from '@material-ui/core';
 import Flex from '../../base-components/Flex';
 import ThemeCheckbox from '../../base-components/ThemeCheckbox/Checkbox';
+import {navigate} from "@reach/router";
 
 export default class Navbar extends Component {
 	state = {
@@ -62,7 +63,7 @@ export default class Navbar extends Component {
 						{this.state.links.map(link => {
 							return (
 								<li key={link.id} className="nav-item mb-0 py-2">
-									<Link to={link.path} className="mx-4 primary av-link text-capitalize">
+									<Link to={link.path} className="mx-md-3 mx-xl-4 primary av-link text-capitalize">
 										{link.linkName}
 									</Link>
 								</li>

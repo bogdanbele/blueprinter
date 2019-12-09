@@ -28,5 +28,8 @@
 .ThemeCheck{
     @include breakpoint(md) {
         order: 3;
+        display: flex;
+        width: 120px;
+        justify-content: flex-end;
     }
 }
