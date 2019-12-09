@@ -19,8 +19,8 @@ const IndexPage = () =>
         <SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
         <Row className='Row--header'>
             <Flex className='column flex--text-center'>
-                <h1>Websites for humans</h1>
-                <h3>Here at ncweb we build websites and apps that help you engage with people across all devices,
+                <h1>non cliché websites</h1>
+                <h3>We build individually tailored websites and apps that help you engage with people across all devices,
                     platforms, and experiences.</h3>
             </Flex>
         </Row>
@@ -34,7 +34,7 @@ const IndexPage = () =>
                     </Flex>
                     <h2>Customers first</h2>
                     <p>
-                        We can help you get connected to all corners of the world ! We want to you to
+                        We can help you get connected to all corners of the world! We want you to
                         be available and accessible to the world wide web.
                     </p>
                     <Button onClick={
@@ -58,7 +58,7 @@ const IndexPage = () =>
                     <h2>How we work </h2>
                     <p>With state-of-the-art technology, in-house UX-research, we discover and design the ultimate
                         website that brings you
-                        revenue and popularity. </p>
+                        traffic and revenue. </p>
                     <Button onClick={
                         () => navigate('/about/', {
                             state: {

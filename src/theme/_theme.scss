@@ -30,7 +30,6 @@ $font-color-light: white;
 body {
     font-family: $font-family-secondary;
     background-color: var(--bg);
-
     -webkit-transition: background-color 500ms linear;
     -ms-transition: background-color 500ms linear;
     transition: background-color 500ms linear;

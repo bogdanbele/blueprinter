@@ -18,7 +18,7 @@ class ContactPage extends Component {
 					<ContactForm/>
 					<Flex className='column flex--2 flex--self-centered'>
 						<h3>REACH OUT TO THE TEAM</h3>
-						<p>You can also reach us out directly by email.</p>
+						<p>You can also reach us directly by sending an email or giving us a call</p>
 						<p>
                             Alberto Martínez<br/>
                             CEO and Co-Founder<br/>

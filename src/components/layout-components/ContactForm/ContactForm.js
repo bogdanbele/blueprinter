@@ -147,7 +147,7 @@ export default class ContactForm extends React.Component {
     					name="message"
     					onChange={this.handleInputChange}
     					value={this.state.values.message}
-    					placeholder="What would you like to contact us about? (Up to 300 words)"/>
+    					placeholder="How can we help you? Write us a message! (max. 300 words)"/>
     			</div>
     			<div className='form-group'>
 
@@ -191,11 +191,6 @@ const
 				borderColor: 'var(--color)',
 			},
 
-			'& .MuiInputBase-input': {
-				color: 'var(--color)',
-			},
-
-			
 			'& .MuiInputBase-input': {
 				color: 'var(--color)',
 			},
