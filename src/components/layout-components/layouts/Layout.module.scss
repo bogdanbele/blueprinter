@@ -16,13 +16,3 @@
 main {
   min-height: 70vh;
 }
-
-$background-color: var(--bg);
-:global .alternating-row {
-  > :nth-child(even){
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
-    background-color: var(--bg-highlight);
-  }
-}
