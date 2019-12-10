@@ -3,3 +3,6 @@
 /public
 .idea/workspace.xml
 .idea
+
+.env.development
+.env
