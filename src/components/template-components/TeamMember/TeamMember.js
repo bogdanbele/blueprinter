@@ -41,6 +41,7 @@ export default class TeamMember extends React.Component {
 
 TeamMember.propTypes = {
     description: PropTypes.string,
+    imgalt: PropTypes.string,
     skills: PropTypes.array
 };
 
