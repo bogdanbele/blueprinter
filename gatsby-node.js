@@ -1,5 +1,5 @@
 const path = require('path');
-
+/**
 exports.createPages = ({actions, graphql}) => {
 	const {createPage} = actions;
 
@@ -29,7 +29,8 @@ exports.createPages = ({actions, graphql}) => {
 
 		res.data.allMarkdownRemark.edges.forEach(({node}) => {
 			createPage({
-				path: node.frontmatter.path,
+				// Set to node.frontmatter.path if relevant. CUrrently no longer needed
+				path: "/",
 				component: postTemplate,
 			});
 		});
@@ -55,3 +56,4 @@ exports.onCreateWebpackConfig = ({stage, loaders, actions}) => {
 		);
 	}
 };
+ */

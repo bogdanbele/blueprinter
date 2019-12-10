@@ -23,7 +23,7 @@ export default class Image extends React.Component {
             allImageSharp {
               edges {
                 node {
-                  fixed(width: 420, height: 600) {
+                  fixed(width: 350, height: 350) {
                     ...GatsbyImageSharpFixed
                   } 
                 }

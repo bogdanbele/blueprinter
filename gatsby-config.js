@@ -12,7 +12,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
-				trackingId: 'UA-153933055-1',
+				trackingId: process.env.GOOGLE_ANALYTICS_KEY,
 			},
 		},
 		'gatsby-plugin-dark-mode',
@@ -42,20 +42,13 @@ module.exports = {
 			},
 		},
 		'gatsby-transformer-sharp',
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: 'pages',
-				path: `${__dirname}/src/blog/`,
-			},
-		},
 		'gatsby-transformer-remark',
 		'gatsby-plugin-sharp',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'gatsby-starter-default',
-				short_name: 'starter',
+				name: 'ncweb',
+				short_name: 'ncweb',
 				start_url: '/',
 				background_color: '#0096ff',
 				theme_color: '#0096ff',

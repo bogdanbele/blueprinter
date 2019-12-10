@@ -4,10 +4,12 @@ import Flex from '../../base-components/Flex';
 import Image from '../../base-components/Image/Image';
 import styles from './TeamMember.module.scss'
 import Item from '../../base-components/Item';
+import Img from 'gatsby-image';
+
 
 export default class TeamMember extends React.Component {
+
     render() {
-        const sections = this.props.sections;
         const skills = this.props.skills;
 
         // Alternate between image on the left and image on the right
@@ -19,8 +21,7 @@ export default class TeamMember extends React.Component {
                 <h1>{this.props.name}</h1>
                 <Flex className={styles.TeamMember + order}>
                     <Flex className='column'>
-                        {sections.map((item, key) =>
-                            <p key={key}>{item}</p>)}
+                        <div dangerouslySetInnerHTML={{ __html: this.props.description }} />
                         <br/>
                         <h2>Area of expertise:</h2>
                         <ul>
@@ -28,10 +29,9 @@ export default class TeamMember extends React.Component {
                                 <li key={key}>{item}</li>)}
                         </ul>
                     </Flex>
-                    <Flex className={'flex--2'}>
-                        <Image
-                            imgsrc={this.props.imgsrc}/>
-                    </Flex>
+                    <Flex className='flex--2'>
+                    <Img fixed={this.props.imgsrc} alt={this.props.imgalt} />
+                </Flex>
                 </Flex>
             </Flex>
 
@@ -40,8 +40,7 @@ export default class TeamMember extends React.Component {
 }
 
 TeamMember.propTypes = {
-    imgsrc: PropTypes.string.isRequired,
-    sections: PropTypes.array,
+    description: PropTypes.string,
     skills: PropTypes.array
 };
 
