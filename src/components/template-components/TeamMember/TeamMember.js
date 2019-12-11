@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Flex from '../../base-components/Flex';
-import Image from '../../base-components/Image/Image';
 import styles from './TeamMember.module.scss'
-import Item from '../../base-components/Item';
 import Img from 'gatsby-image';
-
 
 export default class TeamMember extends React.Component {
 
     render() {
         const skills = this.props.skills;
-
         // Alternate between image on the left and image on the right
         let order = '';
         (this.props.index%2 !== 0) ? order = ' flex--row--column__reversed' : order = ' flex--row--column';
@@ -34,12 +30,12 @@ export default class TeamMember extends React.Component {
                 </Flex>
                 </Flex>
             </Flex>
-
         );
     }
 }
 
 TeamMember.propTypes = {
+    name: PropTypes.string,
     description: PropTypes.string,
     imgalt: PropTypes.string,
     skills: PropTypes.array

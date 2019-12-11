@@ -1,6 +1,6 @@
 import Row from "../../base-components/Row";
 import Flex from "../../base-components/Flex";
-import Layout from "../../layout-components/layouts/layout";
+import PropTypes from 'prop-types';
 import React from "react";
 
 export default class ProcessSection extends React.PureComponent {
@@ -22,5 +22,11 @@ export default class ProcessSection extends React.PureComponent {
             </Row>
         )
     }
+}
+
+ProcessSection.propTypes = {
+    header: PropTypes.string,
+    bigHeader: PropTypes.string,
+    subHeader: PropTypes.string,
 }
 
