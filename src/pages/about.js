@@ -7,7 +7,8 @@ import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import constants from '../config/constants';
-import FluidImage from "../components/base-components/Image/FluidImage";
+import FluidImage from '../components/base-components/Image/FluidImage';
+import wrapWithParagraph from '../utils/helpers/TextWrapper';
 
 export const query = graphql`
 	{
@@ -24,8 +25,8 @@ export const query = graphql`
 						... on Node {
 							... on ContentfulContentSection {
 								header
-								excerpt {
-									excerpt
+								content {
+									content
 								}
 							}
 						}
@@ -36,70 +37,64 @@ export const query = graphql`
 	}
 `;
 
-const AboutPage = ({data }) => {
+const AboutPage = ({ data }) => {
+	const howRef = useRef();
+	const customerRef = useRef();
+	const whyRef = useRef();
 
-	const howRef = useRef()
-	const customerRef = useRef()
-	const whyRef = useRef()
-
-	useEffect(()=>{
+	useEffect(() => {
 		if (window.history.state) {
 			switch (window.history.state.scrollTo) {
 				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
-					scrollToComponent(howRef.current, {offset: 0, duration: 1000, align: 'top'});
+					scrollToComponent(howRef.current, { offset: 0, duration: 1000, align: 'top' });
 					break;
 				}
 				case constants.ABOUT_HOW_WE_WORK_SECTION: {
-					scrollToComponent(customerRef.current, {offset: 0, duration: 1000, align: 'top'});
+					scrollToComponent(customerRef.current, { offset: 0, duration: 1000, align: 'top' });
 					break;
 				}
 				case constants.ABOUT_WHY_SECTION: {
-					scrollToComponent(whyRef.current, {offset: 0, duration: 1000, align: 'top'});
+					scrollToComponent(whyRef.current, { offset: 0, duration: 1000, align: 'top' });
 					break;
 				}
 				default:
 					break;
 			}
 		}
-	})
+	});
+
+	const page = data.allContentfulPage.edges[0].node;
+	const pageSections = page.contentSections;
+
+	const sectionOneformatedExcerpt = wrapWithParagraph(pageSections[0].content.content);
+	const sectionTwoformatedExcerpt = wrapWithParagraph(pageSections[1].content.content);
+	const sectionThreeformatedExcerpt = wrapWithParagraph(pageSections[2].content.content);
 
 	return (
-		<Layout className='alternating-row'>
+		<Layout className="alternating-row">
 			<SEO title="About" />
-			<Row className='text-center centered Row--0-pb Row--header Row--full-width'>
+
+			<Row className="text-center centered Row--0-pb Row--header Row--full-width">
 				<Flex>
-					<h1>About us</h1>
+					<h1>{page.header}</h1>
 				</Flex>
-				<FluidImage
-					className='Image--transparent'
-					imgsrc='us-small-2.jpg'/>
+				<FluidImage className="Image--transparent" imgsrc="us-small-2.jpg" />
 			</Row>
+
 			<Row
 				className="centered Row--header"
 				ref={section => {
 					customerRef.current = section;
 				}}
 			>
-				<Flex className="column flex--1 flex--h1-center">
-
-						<h1>Customers first</h1>
-						<p>
-							At ncweb we create value. We seek to create innovation and opportunities. We know
-							how important it is to be on the internet, and we can help you get connected to the
-							world! We want to you to be available and accessible to the world wide web.
-						</p>
-						<p>
-							At ncweb we create value. We seek to create innovation and opportunities. We know
-							how important it is to be on the internet, and we can help you get connected to the
-							world! We want to you to be available and accessible to the world wide web.
-						</p>
-						<p>
-							At ncweb we create value. We seek to create innovation and opportunities. We know
-							how important it is to be on the internet, and we can help you get connected to the
-							world! We want to you to be available and accessible to the world wide web.
-						</p>
+				<Flex className="flex--1">
+					<Item>
+						<h1>{pageSections[0].header}</h1>
+						{sectionOneformatedExcerpt}
+					</Item>
 				</Flex>
 			</Row>
+
 			<Row
 				className="centered"
 				ref={section => {
@@ -108,28 +103,12 @@ const AboutPage = ({data }) => {
 			>
 				<Flex className="flex--1">
 					<Item>
-						<h1>How we work</h1>
-						<p>
-							With the state-of-the-art technology we manage, administrate and process each and
-							every website. With our in-house UX-research, we discover and design the ultimate
-							website that generates revenue and popularity. In other words, we help you get
-							connected to the world.
-						</p>
-						<p>
-							With the state-of-the-art technology we manage, administrate and process each and
-							every website. With our in-house UX-research, we discover and design the ultimate
-							website that generates revenue and popularity. In other words, we help you get
-							connected to the world.
-						</p>
-						<p>
-							With the state-of-the-art technology we manage, administrate and process each and
-							every website. With our in-house UX-research, we discover and design the ultimate
-							website that generates revenue and popularity. In other words, we help you get
-							connected to the world.
-						</p>
+						<h1>{pageSections[1].header}</h1>
+						{sectionTwoformatedExcerpt}
 					</Item>
 				</Flex>
 			</Row>
+
 			<Row
 				className="centered"
 				ref={section => {
@@ -138,30 +117,13 @@ const AboutPage = ({data }) => {
 			>
 				<Flex className="flex--1">
 					<Item>
-						<h1>Why we do it ?</h1>
-						<p>
-							The customer is in the heart of ncwebs identity. We create non cliché websites for
-							our customers. Unlike other website-builders, we focus on you. We thrive to create a
-							memorable website that illustrate you, the way you want it.
-						</p>
-						<p>
-							We create opportunities where there aren’t any. We see things from our customers
-							perspective, and we strive to create innovative websites, the way you like it.
-						</p>
-						<p>
-							The customer is in the heart of ncwebs identity. We create non cliché websites for
-							our customers. Unlike other website-builders, we focus on you. We thrive to create a
-							memorable website that illustrate you, the way you want it.
-						</p>
-						<p>
-							We create opportunities where there aren’t any. We see things from our customers
-							perspective, and we strive to create innovative websites, the way you like it.
-						</p>
+						<h1>{pageSections[2].header}</h1>
+						{sectionThreeformatedExcerpt}
 					</Item>
 				</Flex>
 			</Row>
 		</Layout>
 	);
-}
+};
 
 export default AboutPage;
