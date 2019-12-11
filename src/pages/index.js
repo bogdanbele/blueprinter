@@ -39,6 +39,7 @@ export const query = graphql`
 	}
 `;
 const IndexPage = ({ data }) => {
+    
 	const page = data.allContentfulPage.edges[0].node;
 	console.log(page);
 	const pageSections = page.contentSections;
