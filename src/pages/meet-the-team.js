@@ -1,13 +1,10 @@
 import React from 'react';
 import { graphql, Link, StaticQuery } from 'gatsby';
-
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
-import Image from '../components/base-components/Image/Image';
 import TeamMember from '../components/template-components/TeamMember/TeamMember';
 import Flex from '../components/base-components/Flex';
-import FluidImage from '../components/base-components/Image/FluidImage';
 
 export const query=graphql` {
         allContentfulTeamMember(sort:{

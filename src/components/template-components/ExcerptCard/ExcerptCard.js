@@ -1,29 +1,9 @@
 import React from 'react';
 import Flex from '../../base-components/Flex';
 import PropTypes from 'prop-types';
-import handshakeSVG from '../../../utils/svgs/029-handshake.svg';
-import handSVG from '../../../utils/svgs/025-hand.svg';
-import thoughtSVG from '../../../utils/svgs/005-thought.svg';
 import Icon from '../../base-components/Icon';
 import Item from '../../base-components/Item';
 import Button from '../../base-components/Button';
-
-function getLocalIcon(string) {
-	switch (string) {
-		case 'handshake': {
-			return handshakeSVG;
-		}
-		case 'hand': {
-			return handSVG;
-		}
-		case 'thought': {
-			return thoughtSVG;
-		}
-		default: {
-			break;
-		}
-	}
-}
 
 function getImageAltText(string) {
 	return string + ' icon';
@@ -31,14 +11,15 @@ function getImageAltText(string) {
 
 export default class ExcerptCard extends React.PureComponent {
 	render() {
+        console.log(this.props.icon)
 		let displayIcon;
-		if (this.props.iconString !== null) {
+		if (typeof this.props.icon !== 'undefined') {
 			displayIcon = (
 				<Flex className="centered">
 					<Icon>
 						<img
-							alt={getImageAltText(this.props.iconString)}
-							src={getLocalIcon(this.props.iconString)}
+							alt={getImageAltText(this.props.icon)}
+							src={this.props.icon}
 						/>
 					</Icon>
 				</Flex>
@@ -64,7 +45,8 @@ export default class ExcerptCard extends React.PureComponent {
 }
 
 ExcerptCard.propTypes = {
-	iconString: PropTypes.string,
+    header: PropTypes.string,
+	icon: PropTypes.string,
 	flexClasses: PropTypes.string,
 	isButtonEnabled: PropTypes.bool,
 	buttonText: PropTypes.string,
@@ -72,5 +54,6 @@ ExcerptCard.propTypes = {
 };
 
 ExcerptCard.defaultProps = {
-	buttonText: 'Read More',
+    buttonText: 'Read More',
+    isButtonEnabled: true
 };

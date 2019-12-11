@@ -2,6 +2,7 @@ import Row from "../../base-components/Row";
 import Flex from "../../base-components/Flex";
 import PropTypes from 'prop-types';
 import React from "react";
+import wrapWithParagraph from "../../../utils/helpers/TextWrapper";
 
 export default class ProcessSection extends React.PureComponent {
     render() {
@@ -11,13 +12,16 @@ export default class ProcessSection extends React.PureComponent {
                 <h1>{this.props.bigHeader}</h1>
             </Flex>
         }
+
+        const formatedContent = wrapWithParagraph(this.props.content)
+
         return (
             <Row className='column'>
                 {bigHeader}
                 <Flex className='column'>
                     <h2>{this.props.header}</h2>
                     <h3>{this.props.subHeader}</h3>
-                    <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
+                    {formatedContent}
                 </Flex>
             </Row>
         )
