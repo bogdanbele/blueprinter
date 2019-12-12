@@ -9,33 +9,7 @@ import Row from '../components/base-components/Row';
 import constants from '../config/constants';
 import FluidImage from '../components/base-components/Image/FluidImage';
 import wrapWithParagraph from '../utils/helpers/TextWrapper';
-
-export const query = graphql`
-	{
-		allContentfulPage(filter: { title: { eq: "About" } }) {
-			edges {
-				node {
-					headerText
-					header
-					createdAt
-					isHeaderTextVisible
-					isHeaderVisible
-					contentSections {
-						__typename
-						... on Node {
-							... on ContentfulContentSection {
-								header
-								content {
-									content
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-`;
+import PageHeader from '../components/template-components/PageHeader';
 
 const AboutPage = ({ data }) => {
 	const customerRef = useRef();
@@ -74,12 +48,15 @@ const AboutPage = ({ data }) => {
 		<Layout className="alternating-row">
 			<SEO title="About" />
 
-			<Row className="text-center centered Row--0-pb Row--header Row--full-width">
-				<Flex>
-					<h1>{page.header}</h1>
-				</Flex>
+			<PageHeader
+				rowClassName={'text-center centered Row--0-pb Row--full-width'}
+				header={page.header}
+				headerText={page.headerText}
+				isHeaderVisible={page.isHeaderVisible}
+				isHeaderTextVisible={page.isHeaderTextVisible}
+			>
 				<FluidImage className="Image--transparent" imgsrc="us-small-2.jpg" />
-			</Row>
+			</PageHeader>
 
 			<Row
 				className="centered Row--header"
@@ -125,5 +102,31 @@ const AboutPage = ({ data }) => {
 		</Layout>
 	);
 };
+
+export const query = graphql`
+	{
+		allContentfulPage(filter: { title: { eq: "About" } }) {
+			edges {
+				node {
+					headerText
+					header
+					isHeaderTextVisible
+					isHeaderVisible
+					contentSections {
+						__typename
+						... on Node {
+							... on ContentfulContentSection {
+								header
+								content {
+									content
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`;
 
 export default AboutPage;
