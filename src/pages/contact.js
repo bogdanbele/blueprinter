@@ -1,34 +1,63 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
-import Row from '../components/base-components/Row';
+import { graphql } from 'gatsby';
 import ContactForm from '../components/layout-components/ContactForm';
-import Flex from '../components/base-components/Flex';
 
-class ContactPage extends Component {
-	render() {
-		return (
-			<Layout>
-				<SEO title="contact"/>
-				<Row className='centered Row--header'>
-					<Flex className='column flex--1 flex--text-center'>
-						<h3>Use the form below to address any general questions or inquiries you may have pertaining to
-							NCWeb or our website.</h3>
-					</Flex>
-					<ContactForm/>
-					<Flex className='column flex--2 flex--self-centered'>
-						<h3>REACH OUT TO THE TEAM</h3>
-						<p>You can also reach us directly by sending an email or giving us a call</p>
-						<p>
-                            Alberto Martínez<br/>
-                            CEO and Co-Founder<br/>
-                            alberto@ncweb.eu<br/>
-                            +45 53825110</p>
-					</Flex>
-				</Row>
-			</Layout>
-		);
+import PageHeader from '../components/template-components/PageHeader';
+import MiniContent from '../components/template-components/MiniContent/MiniContent';
+
+const ContactPage = ({ data }) => {
+	const page = data.allContentfulPage.edges[0].node;
+	const pageSections = page.contentSections;
+
+	console.log(data);
+	return (
+		<Layout>
+			<SEO title="contact" />
+			<PageHeader
+				header={page.header}
+				headerText={page.headerText}
+				isHeaderVisible={page.isHeaderVisible}
+				isHeaderTextVisible={page.isHeaderTextVisible}
+			>
+				<ContactForm />
+				<MiniContent
+					header={pageSections[0].header}
+					description={pageSections[0].description}
+					flexClassName={'centered flex--2'}
+					list={pageSections[0].list}
+				/>
+			</PageHeader>
+		</Layout>
+	);
+};
+
+export const query = graphql`
+	{
+		allContentfulPage(filter: { title: { eq: "Contact" } }) {
+			edges {
+				node {
+					title
+					headerText
+					header
+					isHeaderTextVisible
+					isHeaderVisible
+					contentSections {
+						__typename
+						... on Node {
+							... on ContentfulMiniContent {
+								description
+								title
+								header
+								list
+							}
+						}
+					}
+				}
+			}
+		}
 	}
-}
+`;
 
 export default ContactPage;
