@@ -5,6 +5,7 @@ module.exports = {
 		title: 'ncweb',
 		description: 'Before Steve Jobs was the real Big Mac.',
 		author: '@bogdanbele',
+		googleSiteVerification: '4cc8dQeX-HmctmVYEJBxO4I4M6BS7kE_Db4is7suBQw',
 	},
 	plugins: [
 		{
