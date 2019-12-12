@@ -38,6 +38,7 @@ export const query = graphql`
 		}
 	}
 `;
+
 const IndexPage = ({data}) => {
 
     const scrollToFirstRef = () => {
