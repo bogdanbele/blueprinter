@@ -3,14 +3,23 @@ import Flex from "../../base-components/Flex";
 import PropTypes from 'prop-types';
 import React from "react";
 import wrapWithParagraph from "../../../utils/helpers/TextWrapper";
+import Img from "gatsby-image";
 
 export default class ProcessSection extends React.PureComponent {
     render() {
+
         let bigHeader = () =>
             (this.props.bigHeader !== null) ? (
-            bigHeader = <Flex className='column flex--text-center'>
-                <h1>{this.props.bigHeader}</h1>
-            </Flex>
+                <Flex className='column flex--text-center'>
+                    <h1>{this.props.bigHeader}</h1>
+                </Flex>
+            ) : null;
+
+        let sectionIcon = () =>
+            (typeof this.props.imgSrc  !== 'undefined') ? (
+                <Flex className='flex--100 centered'>
+                    <Img fixed={this.props.imgSrc} alt={this.props.imgAlt}/>
+                </Flex>
             ) : null;
 
         const formattedContent = wrapWithParagraph(this.props.content);
@@ -18,6 +27,7 @@ export default class ProcessSection extends React.PureComponent {
         return (
             <Row className='column'>
                 {bigHeader()}
+                {sectionIcon()}
                 <Flex className='column'>
                     <h2>{this.props.header}</h2>
                     <h3>{this.props.subHeader}</h3>

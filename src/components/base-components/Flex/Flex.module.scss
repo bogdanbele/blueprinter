@@ -9,6 +9,9 @@
 	}
 
 	@include breakpoint(md) {
+		&:global.flex--100 {
+			width: 100%;
+		}
 		&:global.flex--1 {
 			width: 80%;
 		}

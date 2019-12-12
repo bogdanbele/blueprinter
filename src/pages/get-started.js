@@ -5,7 +5,7 @@ import SEO from '../components/base-components/seo';
 import ProcessSection from "../components/template-components/ProcessSection/ProcessSection";
 
 
-export const query=graphql` {
+export const query = graphql` {
         allContentfulProcessStep(sort:{
             fields:order,
             order:ASC
@@ -20,13 +20,20 @@ export const query=graphql` {
                     content {
                         content
                     }
+                    image {
+                      id
+                      description
+                      fixed(width: 200, height: 200) {
+                            ...GatsbyContentfulFixed 
+                      }
+                    }
                 }
             }
         }
     }
 `;
 
-function getProcessSections(data){
+function getProcessSections(data) {
     const sectionsArray = [];
     data.allContentfulProcessStep.edges.forEach((item, index) =>
         sectionsArray.push(
@@ -35,6 +42,8 @@ function getProcessSections(data){
                 content={item.node.content.content}
                 bigHeader={item.node.bigHeader}
                 header={item.node.header}
+                imgSrc={item.node.image.fixed}
+                imgAlt={item.node.image.description}
                 subHeader={item.node.subHeader}
             />
         ));

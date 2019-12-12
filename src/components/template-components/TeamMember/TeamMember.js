@@ -11,16 +11,16 @@ export default class TeamMember extends React.Component {
         const skills = this.props.skills;
         // Alternate between image on the left and image on the right
         let order = () =>
-        (this.props.index%2 !== 0) ? ' flex--row--column__reversed' : ' flex--row--column';
+            (this.props.index % 2 !== 0) ? ' flex--row--column__reversed' : ' flex--row--column';
 
-        const formatedDescription = wrapWithParagraph(this.props.description)
+        const formattedDescription = wrapWithParagraph(this.props.description)
 
         return (
             <Flex className='flex-grow-1 column'>
                 <h1>{this.props.name}</h1>
                 <Flex className={styles.TeamMember + order()}>
                     <Flex className='column'>
-                        {formatedDescription}
+                        {formattedDescription}
                         <br/>
                         <h2>Area of expertise:</h2>
                         <ul>
@@ -29,8 +29,8 @@ export default class TeamMember extends React.Component {
                         </ul>
                     </Flex>
                     <Flex className='flex--2'>
-                    <Img fixed={this.props.imgsrc} alt={this.props.imgalt} />
-                </Flex>
+                        <Img fixed={this.props.imgsrc} alt={this.props.imgalt}/>
+                    </Flex>
                 </Flex>
             </Flex>
         );
