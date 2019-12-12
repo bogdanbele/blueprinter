@@ -7,7 +7,6 @@ import PageHeader from '../components/template-components/PageHeader';
 
 function getProcessSections(data) {
 	const sectionsArray = [];
-	console.log(data);
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
 		sectionsArray.push(
 			<ProcessSection
