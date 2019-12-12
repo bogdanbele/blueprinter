@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, {useContext} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './layout.scss';
 import styles from './Layout.module.scss';
@@ -16,7 +16,6 @@ require('typeface-quicksand');
 require('typeface-roboto');
 
 const Layout = (props) => {
-    console.log(props)
     return (
         <>
             <Navbar/>

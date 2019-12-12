@@ -1,15 +1,15 @@
 @import '../../../theme/theme';
 
 .Item {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-	svg {
-		align-self: center;
-		color: $color-primary;
-		height: 30px;
-		margin-bottom: 15px;
-		width: 30px;
-	}
+  svg {
+    align-self: center;
+    color: $color-primary;
+    height: 30px;
+    margin-bottom: 15px;
+    width: 30px;
+  }
 }

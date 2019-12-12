@@ -2,6 +2,9 @@
   <dictionary name="bogdanbele">
     <words>
       <w>imgsrc</w>
+      <w>navbar</w>
+      <w>ncweb</w>
+      <w>toggler</w>
     </words>
   </dictionary>
 </component>

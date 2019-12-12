@@ -38,19 +38,19 @@ export const query = graphql`
 `;
 
 const AboutPage = ({ data }) => {
-	const howRef = useRef();
 	const customerRef = useRef();
+	const howRef = useRef();
 	const whyRef = useRef();
 
 	useEffect(() => {
 		if (window.history.state) {
 			switch (window.history.state.scrollTo) {
 				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
-					scrollToComponent(howRef.current, { offset: 0, duration: 1000, align: 'top' });
+					scrollToComponent(customerRef.current, { offset: 0, duration: 1000, align: 'top' });
 					break;
 				}
 				case constants.ABOUT_HOW_WE_WORK_SECTION: {
-					scrollToComponent(customerRef.current, { offset: 0, duration: 1000, align: 'top' });
+					scrollToComponent(howRef.current, { offset: 0, duration: 1000, align: 'top' });
 					break;
 				}
 				case constants.ABOUT_WHY_SECTION: {

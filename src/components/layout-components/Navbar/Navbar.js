@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import style from './Navbar.module.scss';
 import logoText from '../../../config/logo/logo-text.svg';
 import logoIcon from '../../../config/logo/logo-icon.svg';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import Checkbox from '@material-ui/core';
-import Flex from '../../base-components/Flex';
-import ThemeCheckbox from '../../base-components/ThemeCheckbox/Checkbox';
+import ThemeCheckbox from '../../base-components/ThemeCheckbox/';
 import {navigate} from "@reach/router";
 
 export default class Navbar extends Component {

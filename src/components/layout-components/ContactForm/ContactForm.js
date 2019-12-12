@@ -36,8 +36,6 @@ export default class ContactForm extends React.Component {
 
 	handleSubmit = e => {
 		const form = e.target;
-		console.log(form);
-		console.log(this.state.values);
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -61,8 +59,6 @@ export default class ContactForm extends React.Component {
 		this.setState({
 			isValid: { ...this.state.isValid, [name]: RegExp(this.state.validation[name]).test(value) },
 		});
-
-		console.log(this.handleFormValidation());
 	};
 
 	handleValidation = name => {

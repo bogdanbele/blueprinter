@@ -34,7 +34,6 @@ export const query=graphql` {
 `;
 
 function getTeamMember(data) {
-    console.log(data)
 	const linksArray = [];
 	// noinspection JSUnresolvedVariable
 	data.allContentfulTeamMember.edges.forEach((item, index) =>

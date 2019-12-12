@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Item.module.scss';
 
 export default class Item extends Component {
-
 	render() {
 		const {children} = this.props;
 		return (

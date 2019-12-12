@@ -13,7 +13,7 @@ export default class ProcessSection extends React.PureComponent {
             </Flex>
         }
 
-        const formatedContent = wrapWithParagraph(this.props.content)
+        const formatedContent = wrapWithParagraph(this.props.content);
 
         return (
             <Row className='column'>
@@ -32,5 +32,5 @@ ProcessSection.propTypes = {
     header: PropTypes.string,
     bigHeader: PropTypes.string,
     subHeader: PropTypes.string,
-}
+};
 

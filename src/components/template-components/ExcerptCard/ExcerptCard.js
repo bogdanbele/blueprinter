@@ -11,7 +11,6 @@ function getImageAltText(string) {
 
 export default class ExcerptCard extends React.PureComponent {
 	render() {
-        console.log(this.props.icon)
 		let displayIcon;
 		if (typeof this.props.icon !== 'undefined') {
 			displayIcon = (

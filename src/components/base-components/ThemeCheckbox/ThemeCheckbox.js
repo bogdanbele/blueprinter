@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Checkbox.module.scss';
+import styles from './ThemeCheckbox.module.scss';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import {Checkbox} from "@material-ui/core";
 import {FaLightbulb,FaRegLightbulb} from "react-icons/fa";
