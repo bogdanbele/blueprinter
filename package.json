@@ -2,7 +2,7 @@
   "name": "blueprinter",
   "private": true,
   "description": "Component based website builder",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "author": "Bogdan Bele <bogdan.bele.dev@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.7.2",
