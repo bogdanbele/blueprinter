@@ -23,7 +23,7 @@ export const query = graphql` {
                     image {
                       id
                       description
-                      fixed(width: 200, height: 200) {
+                      fixed(width: 100, height: 100) {
                             ...GatsbyContentfulFixed 
                       }
                     }
