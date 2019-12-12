@@ -13,7 +13,7 @@ export default class ProcessSection extends React.PureComponent {
             </Flex>
             ) : null;
 
-        const formatedContent = wrapWithParagraph(this.props.content);
+        const formattedContent = wrapWithParagraph(this.props.content);
 
         return (
             <Row className='column'>
@@ -21,7 +21,7 @@ export default class ProcessSection extends React.PureComponent {
                 <Flex className='column'>
                     <h2>{this.props.header}</h2>
                     <h3>{this.props.subHeader}</h3>
-                    {formatedContent}
+                    {formattedContent}
                 </Flex>
             </Row>
         )
