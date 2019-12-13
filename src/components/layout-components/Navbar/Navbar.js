@@ -52,7 +52,7 @@ export default class Navbar extends Component {
 					<img alt="ncweb-logo" src={logoIcon} />
 					<img alt="ncweb-logoText" src={logoText} />
 				</div>
-				<button className="navbar-toggler bg-light" type="button" onClick={this.navbarHandler}>
+				<button className="navbar-toggler bg-light mr-md-0 mr-2" type="button" onClick={this.navbarHandler}>
 					<span className="navbar-toggler-icon" />
 				</button>
 				<div className={this.state.css}>
