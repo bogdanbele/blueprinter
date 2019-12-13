@@ -15,11 +15,13 @@
 	width: 100%;
 
 	input {
-		transition: background-color 50000s, color 50000s, filter 50000s
+		transition: background-color 50000s ease-out, color 50000s ease-out, filter 50000s
 	}
 
 	@keyframes onautofillstart {
-		from {}
+		from {
+
+		}
 	}
 
 	@keyframes onautofillcancel {
@@ -52,7 +54,9 @@
 	input:-webkit-autofill,
 	input:-webkit-autofill:hover,
 	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active {
+	input:-webkit-autofill:active
+	{
+		-webkit-transition-delay: 9999s;
 		-webkit-animation-name: autofill;
 		-webkit-animation-fill-mode: both;
 	}
