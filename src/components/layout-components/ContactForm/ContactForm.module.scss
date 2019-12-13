@@ -42,13 +42,19 @@
 
 	}
 
+	@-webkit-keyframes autofill {
+		to {
+			color: var(--color) !important;
+			background: var(--bg) !important;
+		}
+	}
+
 	input:-webkit-autofill,
 	input:-webkit-autofill:hover,
 	input:-webkit-autofill:focus,
 	input:-webkit-autofill:active {
-		transition: background-color 999999s ease-in-out 999999s;
-		background: var(--bg) !important;
-		color: var(--color) !important
+		-webkit-animation-name: autofill;
+		-webkit-animation-fill-mode: both;
 	}
 
 	input:-webkit-autofill {
