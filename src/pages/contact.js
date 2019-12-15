@@ -10,8 +10,7 @@ const ContactPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
 	return (
-		<Layout>
-			
+		<Layout>		
 			<SEO title="contact" />
 			<PageHeader
 				header={page.header}
@@ -19,7 +18,6 @@ const ContactPage = ({ data }) => {
 				isHeaderVisible={page.isHeaderVisible}
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			>
-
 				<ContactForm />
 				<MiniContent
 					header={pageSections[0].header}

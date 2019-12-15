@@ -19,7 +19,7 @@ export default class TeamMember extends React.Component {
             <Flex className='flex-grow-1 column'>
                 <h1>{this.props.name}</h1>
                 <Flex className={styles.TeamMember + order()}>
-                    <Flex className='column'>
+                    <Flex className='column px-2'>
                         {formattedDescription}
                         <br/>
                         <h2>Area of expertise:</h2>
