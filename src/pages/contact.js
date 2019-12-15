@@ -10,8 +10,6 @@ import MiniContent from '../components/template-components/MiniContent/MiniConte
 const ContactPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
-
-	console.log(data);
 	return (
 		<Layout>
 			<SEO title="contact" />
