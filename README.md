@@ -22,7 +22,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 0.  **Prerequisites.**
 
-Blueprint uses [Contentful](https://www.contentful.com/) for hosting content, so in order to get started you need to create a `.env` file which will contain your `CONTENTFUL_ACCESS_TOKEN` and your `CONTENTFUL_SPACE_ID`.
+    Blueprint uses [Contentful](https://www.contentful.com/) for hosting content, so in order to get started you need to create a `.env`     file which will contain your `CONTENTFUL_ACCESS_TOKEN` and your `CONTENTFUL_SPACE_ID`.
 
 
 1.  **Start developing.**
