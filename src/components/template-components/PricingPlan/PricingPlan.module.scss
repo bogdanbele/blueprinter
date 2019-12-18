@@ -1,7 +1,11 @@
 @import '../../../theme/theme';
 
 .PricingPlan {
+
     width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color:  #{darken($color-primary,20%)};
     @include breakpoint(md) {
         width: initial;
     }

@@ -11,7 +11,10 @@ function getPricingPlans(data) {
 
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
         pricingPlansArray.push(<PricingPlan 
-            className='flex--3' key={item.id} title={item.title} />)
+            className='flex--3' 
+            key={item.id} 
+            title={item.title}
+            features={item.features}/>)
 	);
 
 	return pricingPlansArray;
@@ -30,7 +33,7 @@ const PricingPage = ({ data }) => {
 				isHeaderVisible={page.isHeaderVisible}
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
-            <Row>
+            <Row className='around'>
             {getPricingPlans(data)}
             </Row>
 		</Layout>
