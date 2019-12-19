@@ -6,9 +6,10 @@ export default class Item extends Component {
 	render() {
 		const {children} = this.props;
 		return (
-
-			<div className={`${styles.Item} ${this.props.className}`}>
-				{children}</div>
+			<div
+				className={`${styles.Item} ${this.props.className}`}>
+				{children}
+			</div>
 		);
 	}
 }
