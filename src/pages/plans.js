@@ -21,7 +21,7 @@ function getPricingPlans(data) {
 	return pricingPlansArray;
 }
 
-const PricingPage = ({ data }) => {
+const PlansPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 
 	console.log(page);
@@ -71,4 +71,4 @@ export const query = graphql`
 	}
 `;
 
-export default PricingPage;
+export default PlansPage;
