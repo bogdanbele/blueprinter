@@ -25,7 +25,7 @@ export default class PricingPlan extends React.Component {
 					<h2 className="my-4 text-center">{this.props.title}</h2>
 				</Item>
 				{getPlanFeature(this.props.features)}
-				<h2 className="text-center">300$</h2>
+				<h2 className="mt-4 text-center">300$</h2>
 			</Flex>
 		);
 	}
@@ -34,9 +34,9 @@ export default class PricingPlan extends React.Component {
 class PlanFeature extends React.Component {
 	render() {
 		return (
-			<Item className='row'>
-				<p className="p-2">{this.props.featureName}</p>
-				<FaInfoCircle/>
+			<Item className={`px-1 my-1 mx-2 row ${styles.PlanFeature}`}>
+				<p>{this.props.featureName}</p>
+				<FaInfoCircle className='test'/>
 			</Item>
 		);
 	}
