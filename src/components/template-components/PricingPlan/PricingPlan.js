@@ -16,6 +16,10 @@ function getPlanFeature(data){
 	return featuresArray
 }
 
+function numberWithPeriod(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 export default class PricingPlan extends React.Component {
 	render() {
 		console.log(this.props.features);
@@ -25,7 +29,7 @@ export default class PricingPlan extends React.Component {
 					<h2 className="my-4 text-center">{this.props.title}</h2>
 				</Item>
 				{getPlanFeature(this.props.features)}
-				<h2 className="mt-4 text-center">{this.props.price} dkk</h2>
+				<h2 className="mt-4 text-center">{numberWithPeriod(this.props.price)} DKK</h2>
 			</Flex>
 		);
 	}
