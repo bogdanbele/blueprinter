@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Flex from '../../base-components/Flex';
 import Item from '../../base-components/Item';
 import styles from './PricingPlan.module.scss';
+import {FaInfoCircle} from 'react-icons/fa'
 
 function getPlanFeature(data){
 	const featuresArray = [];
@@ -33,8 +34,9 @@ export default class PricingPlan extends React.Component {
 class PlanFeature extends React.Component {
 	render() {
 		return (
-			<Item>
+			<Item className='row'>
 				<p className="p-2">{this.props.featureName}</p>
+				<FaInfoCircle/>
 			</Item>
 		);
 	}
