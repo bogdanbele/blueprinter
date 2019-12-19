@@ -18,7 +18,6 @@ export default class ThemeCheckbox extends React.Component {
                             }
                             onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                             checked={theme === 'dark'}
-                            color='secondary'
                             checkedIcon={checked}
                             icon={unChecked}
                         />
