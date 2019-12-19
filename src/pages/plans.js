@@ -15,7 +15,8 @@ function getPricingPlans(data) {
             className='flex--3'
             key={item.id}
             title={item.title}
-            features={item.features}/>)
+            features={item.features}
+			price={item.price}/>)
 	);
 
 	return pricingPlansArray;
@@ -54,6 +55,7 @@ export const query = graphql`
 					contentSections {
 						... on ContentfulPricingPlan {
 							id
+							price
 							title
 							features {
 								id
