@@ -4,6 +4,17 @@ import Flex from '../../base-components/Flex';
 import Item from '../../base-components/Item';
 import styles from './PricingPlan.module.scss';
 
+function getPlanFeature(data){
+	const featuresArray = [];
+	console.log(data)
+	data.forEach(item =>
+		featuresArray.push(<PlanFeature
+			key={item.id}
+		featureName={item.title} />)
+		)
+	return featuresArray
+}
+
 export default class PricingPlan extends React.Component {
 	render() {
 		console.log(this.props.features);
@@ -12,7 +23,8 @@ export default class PricingPlan extends React.Component {
 				<Item>
 					<h2 className="my-4 text-center">{this.props.title}</h2>
 				</Item>
-				<PlanFeature></PlanFeature>
+				{getPlanFeature(this.props.features)}
+				<h2 className="text-center">300$</h2>
 			</Flex>
 		);
 	}
@@ -22,9 +34,7 @@ class PlanFeature extends React.Component {
 	render() {
 		return (
 			<Item>
-				<p className="p-2">Test</p>
-
-				<h2 className="text-center">300$</h2>
+				<p className="p-2">{this.props.featureName}</p>
 			</Item>
 		);
 	}

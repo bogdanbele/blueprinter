@@ -10,9 +10,10 @@ function getPricingPlans(data) {
 	const pricingPlansArray = [];
 
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
-        pricingPlansArray.push(<PricingPlan 
-            className='flex--3' 
-            key={item.id} 
+        pricingPlansArray.push(
+        	<PricingPlan
+            className='flex--3'
+            key={item.id}
             title={item.title}
             features={item.features}/>)
 	);
@@ -55,6 +56,7 @@ export const query = graphql`
 							id
 							title
 							features {
+								id
 								title
 								excerpt {
 									excerpt
