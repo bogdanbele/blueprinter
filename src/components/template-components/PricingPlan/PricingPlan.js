@@ -9,7 +9,6 @@ import { navigate } from '@reach/router';
 
 function getPlanFeature(data) {
 	const featuresArray = [];
-	console.log(data);
 	data.forEach(item => featuresArray.push(<PlanFeature key={item.id} featureName={item.title} />));
 	return featuresArray;
 }
@@ -31,7 +30,6 @@ export default class PricingPlan extends React.Component {
 	};
 
 	render() {
-		console.log(this.props.features);
 		return (
 			<Flex className={`column ${styles.PricingPlan} ${this.props.className}`}>
 				<Item>
