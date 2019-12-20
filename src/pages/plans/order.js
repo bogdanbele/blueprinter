@@ -11,14 +11,15 @@ import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const OrderPage = ({ data }) => {
-    let orderArray
-    let isInOrderFlow
-    if (typeof window !== 'undefined') {
-        orderArray = window.history.state !== null ? window.history.state.order : [];
-        isInOrderFlow =  window.history.state !== null ? true : false
-    }
-    const allPlans = data.allContentfulPlanFeature.edges; 
-    
+	let orderArray;
+	let isInOrderFlow;
+	if (typeof window !== 'undefined') {
+		orderArray = window.history.state !== null ? window.history.state.order : [];
+		isInOrderFlow = window.history.state !== null ? true : false;
+	}
+	const allPlans = data.allContentfulPlanFeature.edges;
+	const isInOrderFlow = window.history.state !== null ? true : false;
+
 	let missingPlans = null;
 
 	const [chosenPlans, setChosenPlans] = useState([]);
@@ -40,38 +41,36 @@ const OrderPage = ({ data }) => {
 		},
 	};
 
-
 	function returnList() {
 		return (
-            <>
-            <h2>Select some extra features</h2>
-			<Select
-				labelId="demo-mutiple-checkbox-label"
-				id="demo-mutiple-checkbox"
-				style={{ color: 'charcoal', backgroundColor: 'aliceblue' }}
-				multiple
-				variant={'outlined'}
-				value={chosenPlans}
-				onChange={handleChange}
-				input={<Input className="px-4" />}
-				renderValue={selected => selected.join(', ')}
-				MenuProps={MenuProps}
-			>
-				{console.log(missingPlans)}
-				{missingPlans.map(name => {
-					console.log(name);
-					return (
-						<MenuItem key={name.title} value={name.title}>
-							<Checkbox checked={chosenPlans.indexOf(name.title) > -1} />
-							<ListItemText primary={name.title} />
-						</MenuItem>
-					);
-				})}
-			</Select>
-            </>
+			<>
+				<h2>Select some extra features</h2>
+				<Select
+					labelId="demo-mutiple-checkbox-label"
+					id="demo-mutiple-checkbox"
+					style={{ color: 'charcoal', backgroundColor: 'aliceblue' }}
+					multiple
+					variant={'outlined'}
+					value={chosenPlans}
+					onChange={handleChange}
+					input={<Input className="px-4" />}
+					renderValue={selected => selected.join(', ')}
+					MenuProps={MenuProps}
+				>
+					{console.log(missingPlans)}
+					{missingPlans.map(name => {
+						console.log(name);
+						return (
+							<MenuItem key={name.title} value={name.title}>
+								<Checkbox checked={chosenPlans.indexOf(name.title) > -1} />
+								<ListItemText primary={name.title} />
+							</MenuItem>
+						);
+					})}
+				</Select>
+			</>
 		);
-    }
-    
+	}
 
 	useEffect(() => {
 		if (window.history.state) {
@@ -81,18 +80,19 @@ const OrderPage = ({ data }) => {
 		}
 	});
 
-	let selectedPlansFilter = orderArray.map(plan => {
-		return plan.id;
-	});
-
-	missingPlans = allPlans
-		.filter(plan => !selectedPlansFilter.includes(plan.node.id))
-		.map(plan => {
-			return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
-        });
-        
-        
-        console.log(isInOrderFlow)
+	try {
+		let selectedPlansFilter = orderArray.map(plan => {
+			return plan.id;
+		});
+		missingPlans = allPlans
+			.filter(plan => !selectedPlansFilter.includes(plan.node.id))
+			.map(plan => {
+				return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
+			});
+	} catch (oError) {
+		console.log(oError);
+	}
+	console.log(isInOrderFlow);
 	return (
 		<Layout>
 			<SEO title="Order" />
@@ -103,12 +103,7 @@ const OrderPage = ({ data }) => {
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
 			<Row className="around column">
-				{isInOrderFlow
-					?  
-						
-							returnList()
-					
-					: <p>Please follow to purchase flow</p>}
+				{isInOrderFlow ? returnList() : <p>Please follow to purchase flow</p>}
 			</Row>
 		</Layout>
 	);
