@@ -11,9 +11,13 @@ import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const OrderPage = ({ data }) => {
-	const orderArray = window.history.state !== null ? window.history.state.order : [];
-    const allPlans = data.allContentfulPlanFeature.edges;
-	const isInOrderFlow =  window.history.state !== null ? true : false
+    let orderArray
+    let isInOrderFlow
+    if (typeof window !== 'undefined') {
+        orderArray = window.history.state !== null ? window.history.state.order : [];
+        isInOrderFlow =  window.history.state !== null ? true : false
+    }
+    const allPlans = data.allContentfulPlanFeature.edges; 
     
 	let missingPlans = null;
 
