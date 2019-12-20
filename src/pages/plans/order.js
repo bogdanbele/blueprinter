@@ -4,30 +4,29 @@ import Layout from '../../components/layout-components/layouts/layout';
 import SEO from '../../components/base-components/seo';
 import PageHeader from '../../components/template-components/PageHeader';
 import Row from '../../components/base-components/Row';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const OrderPage = ({ data }) => {
-	const page = data.allContentfulPage.edges[0].node;
+	const orderArray = window.history.state !== null ? window.history.state.order : [];
+	const allPlans = data.allContentfulPlanFeature.edges;
+	const [missingPlans, setMissingPlans] = useState([]);
 
-	const [selectedPlans, setSelectedPlans] = useState([]);
-	const [allPlans, setAllPlans] = useState([]);
+	const page = data.allContentfulPage.edges[0].node;
 
 	useEffect(() => {
 		if (window.history.state) {
-			setSelectedPlans(window.history.state.order);
-			setAllPlans(data.allContentfulPlanFeature.edges);
-
-			let selectedPlansFilter = selectedPlans.map(plan => {
+			let selectedPlansFilter = orderArray.map(plan => {
 				return plan.id;
 			});
+
 			let filteredPlan = allPlans
 				.filter(plan => !selectedPlansFilter.includes(plan.node.id))
 				.map(plan => {
 					return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
 				});
-			console.log(filteredPlan);
-
-			let result = selectedPlans.filter(x => allPlans.includes(x));
-			console.log(result);
+			missingPlans.length === 0 ? setMissingPlans(filteredPlan) : null;
+			console.log(missingPlans);
 		} else {
 			console.log('wrong way buddy');
 		}
@@ -43,7 +42,7 @@ const OrderPage = ({ data }) => {
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
 			<Row className="around">
-				<h3>Hello</h3>
+				<h1>test</h1>
 			</Row>
 		</Layout>
 	);
