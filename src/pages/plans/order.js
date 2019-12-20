@@ -11,14 +11,14 @@ import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const OrderPage = ({ data }) => {
-	let orderArray;
-	let isInOrderFlow;
+	let orderArray = [];
+	let isInOrderFlow = [];
 	if (typeof window !== 'undefined') {
 		orderArray = window.history.state !== null ? window.history.state.order : [];
 		isInOrderFlow = window.history.state !== null ? true : false;
-	}
+    }
+
 	const allPlans = data.allContentfulPlanFeature.edges;
-	const isInOrderFlow = window.history.state !== null ? true : false;
 
 	let missingPlans = null;
 
@@ -80,18 +80,16 @@ const OrderPage = ({ data }) => {
 		}
 	});
 
-	try {
-		let selectedPlansFilter = orderArray.map(plan => {
-			return plan.id;
+	let selectedPlansFilter = orderArray.map(plan => {
+		return plan.id;
+	});
+
+	missingPlans = allPlans
+		.filter(plan => !selectedPlansFilter.includes(plan.node.id))
+		.map(plan => {
+			return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
 		});
-		missingPlans = allPlans
-			.filter(plan => !selectedPlansFilter.includes(plan.node.id))
-			.map(plan => {
-				return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
-			});
-	} catch (oError) {
-		console.log(oError);
-	}
+
 	console.log(isInOrderFlow);
 	return (
 		<Layout>
