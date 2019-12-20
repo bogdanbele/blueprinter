@@ -12,7 +12,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 const OrderPage = ({ data }) => {
 	const orderArray = window.history.state !== null ? window.history.state.order : [];
-	const allPlans = data.allContentfulPlanFeature.edges;
+    const allPlans = data.allContentfulPlanFeature.edges;
+	const isInOrderFlow =  window.history.state !== null ? true : false
+    
 	let missingPlans = null;
 
 	const [chosenPlans, setChosenPlans] = useState([]);
@@ -29,23 +31,25 @@ const OrderPage = ({ data }) => {
 		PaperProps: {
 			style: {
 				maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-                width: 250,
+				width: 250,
 			},
 		},
 	};
 
+
 	function returnList() {
 		return (
+            <>
+            <h2>Select some extra features</h2>
 			<Select
 				labelId="demo-mutiple-checkbox-label"
 				id="demo-mutiple-checkbox"
-				style={{ color: 'charcoal', backgroundColor : 'aliceblue' }}
-                multiple
-                labelWidth
-                variant={'outlined'}
+				style={{ color: 'charcoal', backgroundColor: 'aliceblue' }}
+				multiple
+				variant={'outlined'}
 				value={chosenPlans}
 				onChange={handleChange}
-				input={<Input className='px-4'/>}
+				input={<Input className="px-4" />}
 				renderValue={selected => selected.join(', ')}
 				MenuProps={MenuProps}
 			>
@@ -60,8 +64,10 @@ const OrderPage = ({ data }) => {
 					);
 				})}
 			</Select>
+            </>
 		);
-	}
+    }
+    
 
 	useEffect(() => {
 		if (window.history.state) {
@@ -79,8 +85,10 @@ const OrderPage = ({ data }) => {
 		.filter(plan => !selectedPlansFilter.includes(plan.node.id))
 		.map(plan => {
 			return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
-		});
-
+        });
+        
+        
+        console.log(isInOrderFlow)
 	return (
 		<Layout>
 			<SEO title="Order" />
@@ -90,10 +98,13 @@ const OrderPage = ({ data }) => {
 				isHeaderVisible={page.isHeaderVisible}
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
-			{console.log(missingPlans)}
 			<Row className="around column">
-				<h2>Select some extra features</h2>
-				{returnList()}
+				{isInOrderFlow
+					?  
+						
+							returnList()
+					
+					: <p>Please follow to purchase flow</p>}
 			</Row>
 		</Layout>
 	);
