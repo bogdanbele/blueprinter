@@ -123,4 +123,10 @@
   @include alternating-row(odd, true)
 }
 
-;
+:global .MuiSelect-root {
+  border-color: red;
+
+  & :hover:not(:disabled):not(:focus):before {
+    border-bottom:  2px solid red,
+  }
+}
