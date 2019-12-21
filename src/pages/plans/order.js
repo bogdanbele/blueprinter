@@ -108,7 +108,7 @@ const OrderPage = ({data}) => {
                     variant={'outlined'}
                     value={values['extraPlans'] ? values['extraPlans'] : []}
                     onChange={handleChange}
-                    input={<Input className="px-4" name='Extra'/>}
+                    input={<Input className="px-4" value={values['extraPlans'] ? () => values['extraPlans'].join(',') : () => ''}  name='Extra'/>}
                     renderValue={values['extraPlans'] ? () => values['extraPlans'].join(',') : () => ''}
                     MenuProps={MenuProps}
                 >
