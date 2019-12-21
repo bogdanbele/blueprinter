@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {graphql, Link, StaticQuery} from 'gatsby';
+import {graphql} from 'gatsby';
 import Layout from '../../components/layout-components/layouts/layout';
 import SEO from '../../components/base-components/seo';
 import PageHeader from '../../components/template-components/PageHeader';
@@ -13,8 +13,7 @@ import {navigate} from "gatsby-link";
 import Button from "../../components/base-components/Button";
 import {withStyles} from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import styles from "../../components/layout-components/ContactForm/ContactForm.module.scss";
-import {InputLabel} from "@material-ui/core";
+import Flex from "../../components/base-components/Flex";
 
 function encode(data) {
     return Object.keys(data)
@@ -22,9 +21,14 @@ function encode(data) {
         .join('&');
 }
 
-
 const OrderPage = ({data}) => {
-    const [values, setValue] = useState({});
+    let defaultValues = {
+        extra: [],
+        email: '',
+        message: '',
+    };
+
+    const [values, setValue] = useState(defaultValues);
 
     function handleSubmit(e) {
         let objectToSend = {
@@ -63,7 +67,6 @@ const OrderPage = ({data}) => {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-
         setValue({...values, [name]: value})
     };
 
@@ -87,19 +90,22 @@ const OrderPage = ({data}) => {
     function returnList() {
         return (
             <>
-                <h2>Select some extra features</h2>
-                <InputLabel id="label">Choose Some Extra PlansAge</InputLabel>
+                <h2 className='mt-2'>Choose Some Extra Plans</h2>
                 <Select
+                    className='mb-5'
                     name={"extra[]"}
                     labelId="label"
-                    id="demo-mutiple-checkbox"
                     style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
                     multiple
                     variant={'outlined'}
                     value={values['extra'] ? values['extra'] : []}
                     onChange={handleChange}
-                    input={<Input className="px-4" value={values['extra'] ? () => values['extra'].join('\n') : () => ''}  name='extra'/>}
-                    renderValue={values['extra'] ? () => values['extra'].join(',') : () => ''}
+                    input={
+                        <Input
+                            className="px-4"
+                            value={() => values['extra'].join('\n')}
+                            name='extra'/>}
+                    renderValue={() => values['extra'].join(',')}
                     MenuProps={MenuProps}
                 >
                     {console.log(missingPlans)}
@@ -109,7 +115,7 @@ const OrderPage = ({data}) => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
                                 <Checkbox
-                                    checked={values['extra'] ? values['extra'].indexOf(name.title) > -1 : false}/>
+                                    checked={values['extra'].indexOf(name.title) > -1}/>
                                 <ListItemText primary={name.title}/>
                             </MenuItem>
                         );
@@ -137,7 +143,6 @@ const OrderPage = ({data}) => {
             return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt};
         });
 
-    console.log(isInOrderFlow);
     return (
         <Layout>
             <SEO title="Order"/>
@@ -148,31 +153,55 @@ const OrderPage = ({data}) => {
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
 
-                <Row className="around column">
+            <Row className="column align-items-center">
+                <Flex className='w-75'>
                     <form
                         onSubmit={handleSubmit}
-                        className='flex-column d-flex'
+                        className='flex-column d-flex w-100'
                         name='Website Quote'
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                     >
-                    {isInOrderFlow ? returnList() : <p>Please follow to purchase flow</p>}
-                    <ThemeInputStyle
-                        required={true}
-                        variant="outlined"
-                        name="email"
-                        label="Email"
-                        onChange={handleInputChange}
-                        margin="normal"
-                        value={values['email'] || ''}
-                    />
+                        <ThemeInputStyle
+                            required={true}
+                            variant="outlined"
+                            name="company"
+                            label="Company Name"
+                            onChange={handleInputChange}
+                            margin="normal"
+                            value={values['email'] || ''}
+                        />
+                        <ThemeInputStyle
+                            required={true}
+                            variant="outlined"
+                            name="email"
+                            label="Email"
+                            onChange={handleInputChange}
+                            margin="normal"
+                            value={values['email'] || ''}
+                        />
+
+                        <ThemeInputStyle
+                            required={true}
+                            variant="outlined"
+                            rows={5}
+                            rowsMax={10}
+                            multiline={true}
+                            name="message"
+                            label="Message"
+                            onChange={handleInputChange}
+                            margin="normal"
+                            value={values['message'] || ''}
+                        />
+                        {isInOrderFlow ? returnList() : <h2>Please follow to purchase flow</h2>}
                         <Button
                             type="submit"
-                            className="button Button--wide"
+                            className="button"
                         >Send
                         </Button>
                     </form>
-                </Row>
+                </Flex>
+            </Row>
         </Layout>
     );
 };
