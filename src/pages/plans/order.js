@@ -96,7 +96,7 @@ const OrderPage = ({data}) => {
                     value={values['extraPlans'] ? values['extraPlans'] : []}
                     onChange={handleChange}
                     input={<Input className="px-4"/>}
-                    renderValue={selected => selected.join(', ')}
+                    renderValue={values['extraPlans'] ? () => values['extraPlans'].join(',') : () => ''}
                     MenuProps={MenuProps}
                 >
                     {console.log(missingPlans)}
@@ -148,6 +148,7 @@ const OrderPage = ({data}) => {
             </Row>
             <Row>
                 <form
+                    name='Website Quote'
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                 >
