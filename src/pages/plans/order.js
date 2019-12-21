@@ -14,6 +14,7 @@ import Button from "../../components/base-components/Button";
 import {withStyles} from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import styles from "../../components/layout-components/ContactForm/ContactForm.module.scss";
+import {InputLabel} from "@material-ui/core";
 
 function encode(data) {
     return Object.keys(data)
@@ -28,7 +29,7 @@ const OrderPage = ({data}) => {
     function handleSubmit() {
 
         let objectToSend = {
-            extra: values['extraPlans'].join('\n'),
+            extraPlans: values['extraPlans'].join('\n'),
             email: values['email']
         };
 
@@ -98,8 +99,9 @@ const OrderPage = ({data}) => {
         return (
             <>
                 <h2>Select some extra features</h2>
+                <InputLabel id="label">Choose Some Extra PlansAge</InputLabel>
                 <Select
-                    labelId="demo-mutiple-checkbox-label"
+                    labelId="label"
                     id="demo-mutiple-checkbox"
                     style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
                     multiple
@@ -155,15 +157,15 @@ const OrderPage = ({data}) => {
                 isHeaderVisible={page.isHeaderVisible}
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
-            <Row className="around column">
-                {isInOrderFlow ? returnList() : <p>Please follow to purchase flow</p>}
-            </Row>
-            <Row>
-                <form
-                    name='Website Quote'
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                >
+
+                <Row className="around column">
+                    <form
+                        className='flex-column d-flex'
+                        name='Website Quote'
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                    >
+                    {isInOrderFlow ? returnList() : <p>Please follow to purchase flow</p>}
                     <ThemeInputStyle
                         required={true}
                         variant="outlined"
@@ -173,15 +175,9 @@ const OrderPage = ({data}) => {
                         margin="normal"
                         value={values['email'] || ''}
                     />
-                    <Button
-                        type="submit"
-                        className="button Button--wide"
-                    >
-                        Send
-                    </Button>
-                </form>
+                    </form>
+                </Row>
 
-            </Row>
             <Button onClick={consoleLog}>Click</Button>
             <Button onClick={handleSubmit}>Click</Button>
 
