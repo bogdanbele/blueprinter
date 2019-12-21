@@ -26,12 +26,16 @@ const OrderPage = ({data}) => {
     const [values, setValue] = useState({});
 
     function handleSubmit() {
-        setValue({...values,  ['extraFeatures'] : values['extraPlans'] ? values['extraPlans'].join(' ') : '' });
+
+        let objectToSend = {
+            extraPlans: values['extraPlans'].join('\n'),
+            email: values['email']
+        };
 
         fetch('/', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: encode({'form-name': 'Website Quote', ...values}),
+            body: encode({'form-name': 'Website Quote', ...objectToSend}),
         })
             .then(() => navigate('/'))
             .catch(error => alert(error));
@@ -64,6 +68,7 @@ const OrderPage = ({data}) => {
 
     const handleChange = event => {
         setValue({...values, ['extraPlans']: event.target.value});
+
         console.log(event.target.value)
     };
 
@@ -107,7 +112,8 @@ const OrderPage = ({data}) => {
                     {missingPlans.map(name => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
-                                <Checkbox checked={values['extraPlans'.indexOf(name.title) > -1]}/>
+                                <Checkbox
+                                    checked={values['extraPlans'] ? values['extraPlans'].indexOf(name.title) > -1 : false}/>
                                 <ListItemText primary={name.title}/>
                             </MenuItem>
                         );
