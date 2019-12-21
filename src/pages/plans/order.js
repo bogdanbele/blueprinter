@@ -29,7 +29,7 @@ const OrderPage = ({data}) => {
         fetch('/', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: encode({'form-name': 'WebsiteQuote', ...values}),
+            body: encode({'form-name': 'Website Quote', ...values}),
         })
             .then(() => navigate('/'))
             .catch(error => alert(error));
@@ -47,8 +47,6 @@ const OrderPage = ({data}) => {
 
     let missingPlans = null;
 
-    const [chosenPlans, setChosenPlans] = useState([]);
-
     const page = data.allContentfulPage.edges[0].node;
 
     const handleInputChange = event => {
@@ -63,7 +61,6 @@ const OrderPage = ({data}) => {
     };
 
     const handleChange = event => {
-        setChosenPlans(event.target.value);
         setValue({...values, ['extraPlans']: event.target.value});
         console.log(event.target.value)
     };
@@ -96,17 +93,19 @@ const OrderPage = ({data}) => {
                     style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
                     multiple
                     variant={'outlined'}
-                    value={chosenPlans}
+                    value={values['extraPlans'] ? values['extraPlans'] : []}
                     onChange={handleChange}
                     input={<Input className="px-4"/>}
                     renderValue={selected => selected.join(', ')}
                     MenuProps={MenuProps}
                 >
                     {console.log(missingPlans)}
+                    {console.log(values)}
+
                     {missingPlans.map(name => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
-                                <Checkbox checked={chosenPlans.indexOf(name.title) > -1}/>
+                                <Checkbox checked={values['extraPlans'.indexOf(name.title) > -1]}/>
                                 <ListItemText primary={name.title}/>
                             </MenuItem>
                         );
@@ -159,7 +158,7 @@ const OrderPage = ({data}) => {
                         label="Email"
                         onChange={handleInputChange}
                         margin="normal"
-                        value={values.email || ''}
+                        value={values['email'] || ''}
                     />
                 </form>
             </Row>
