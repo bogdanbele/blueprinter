@@ -97,6 +97,7 @@ const OrderPage = ({data}) => {
                 <h2>Select some extra features</h2>
                 <InputLabel id="label">Choose Some Extra PlansAge</InputLabel>
                 <Select
+                    name={"extra[]"}
                     labelId="label"
                     id="demo-mutiple-checkbox"
                     style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
@@ -104,7 +105,7 @@ const OrderPage = ({data}) => {
                     variant={'outlined'}
                     value={values['extra'] ? values['extra'] : []}
                     onChange={handleChange}
-                    input={<Input className="px-4" value={values['extra'] ? () => values['extra'].join('\n') : () => ''}  name='Extra'/>}
+                    input={<Input className="px-4" value={values['extra'] ? () => values['extra'].join('\n') : () => ''}  name='extra'/>}
                     renderValue={values['extra'] ? () => values['extra'].join(',') : () => ''}
                     MenuProps={MenuProps}
                 >
