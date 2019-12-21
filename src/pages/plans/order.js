@@ -26,6 +26,8 @@ const OrderPage = ({data}) => {
     const [values, setValue] = useState({});
 
     function handleSubmit() {
+        setValue({...values,  ['extraFeatures'] : values['extraPlans'] ? values['extraPlans'].join(' ') : '' });
+
         fetch('/', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -161,7 +163,14 @@ const OrderPage = ({data}) => {
                         margin="normal"
                         value={values['email'] || ''}
                     />
+                    <Button
+                        type="submit"
+                        className="button Button--wide"
+                    >
+                        Send
+                    </Button>
                 </form>
+
             </Row>
             <Button onClick={consoleLog}>Click</Button>
             <Button onClick={handleSubmit}>Click</Button>
