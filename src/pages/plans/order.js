@@ -29,7 +29,7 @@ const OrderPage = ({data}) => {
     function handleSubmit(e) {
 
         let objectToSend = {
-            extra: values['extraPlans'].join('\n'),
+            extra: values['extra'].join(','),
             email: values['email']
         };
 
@@ -64,18 +64,13 @@ const OrderPage = ({data}) => {
     const handleInputChange = event => {
         const target = event.target;
         const value = target.value;
-        console.log(target)
-        console.log(value)
-
         const name = target.name;
 
         setValue({...values, [name]: value})
     };
 
     const handleChange = event => {
-        setValue({...values, ['extraPlans']: event.target.value});
-
-        console.log(event.target.value)
+        setValue({...values, ['extra']: event.target.value});
     };
 
     const ITEM_HEIGHT = 48;
@@ -107,10 +102,10 @@ const OrderPage = ({data}) => {
                     style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
                     multiple
                     variant={'outlined'}
-                    value={values['extraPlans'] ? values['extraPlans'] : []}
+                    value={values['extra'] ? values['extra'] : []}
                     onChange={handleChange}
-                    input={<Input className="px-4" value={values['extraPlans'] ? () => values['extraPlans'].join('\n') : () => ''}  name='Extra'/>}
-                    renderValue={values['extraPlans'] ? () => values['extraPlans'].join(',') : () => ''}
+                    input={<Input className="px-4" value={values['extra'] ? () => values['extra'].join('\n') : () => ''}  name='Extra'/>}
+                    renderValue={values['extra'] ? () => values['extra'].join(',') : () => ''}
                     MenuProps={MenuProps}
                 >
                     {console.log(missingPlans)}
@@ -120,7 +115,7 @@ const OrderPage = ({data}) => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
                                 <Checkbox
-                                    checked={values['extraPlans'] ? values['extraPlans'].indexOf(name.title) > -1 : false}/>
+                                    checked={values['extra'] ? values['extra'].indexOf(name.title) > -1 : false}/>
                                 <ListItemText primary={name.title}/>
                             </MenuItem>
                         );
