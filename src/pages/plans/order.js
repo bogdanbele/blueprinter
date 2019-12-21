@@ -173,10 +173,6 @@ const OrderPage = ({data}) => {
                         </Button>
                     </form>
                 </Row>
-
-            <Button onClick={consoleLog}>Click</Button>
-            <Button onClick={handleSubmit}>Click</Button>
-
         </Layout>
     );
 };
