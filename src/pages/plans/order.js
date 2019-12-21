@@ -29,7 +29,7 @@ const OrderPage = ({data}) => {
     function handleSubmit() {
 
         let objectToSend = {
-            extraPlans: values['extraPlans'].join('\n'),
+            extra: values['extraPlans'].join('\n'),
             email: values['email']
         };
 
