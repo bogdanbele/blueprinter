@@ -27,15 +27,13 @@ const OrderPage = ({data}) => {
     const [values, setValue] = useState({});
 
     function handleSubmit(e) {
-
         let objectToSend = {
-            extra: values['extra'].join(','),
+            extra: values['extra'].join('\n'),
             email: values['email']
         };
 
-        console.log(objectToSend)
+        console.log(objectToSend);
         const obj = encode({'form-name': 'Website Quote', ...objectToSend});
-        console.log(obj)
 
         fetch('/', {
             method: 'POST',
@@ -83,11 +81,6 @@ const OrderPage = ({data}) => {
             },
         },
     };
-
-    function consoleLog() {
-        console.log(values)
-        console.log(encode(values))
-    }
 
     //TODO Add Fields for email, phone number option, and description ( comments ) optional.
 
