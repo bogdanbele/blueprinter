@@ -26,7 +26,7 @@ function encode(data) {
 const OrderPage = ({data}) => {
     const [values, setValue] = useState({});
 
-    function handleSubmit() {
+    function handleSubmit(e) {
 
         let objectToSend = {
             extra: values['extraPlans'].join('\n'),
@@ -44,6 +44,7 @@ const OrderPage = ({data}) => {
         })
             .then(() => navigate('/'))
             .catch(error => alert(error));
+        e.preventDefault()
     };
 
 
@@ -160,6 +161,7 @@ const OrderPage = ({data}) => {
 
                 <Row className="around column">
                     <form
+                        onSubmit={handleSubmit}
                         className='flex-column d-flex'
                         name='Website Quote'
                         data-netlify="true"
@@ -175,6 +177,11 @@ const OrderPage = ({data}) => {
                         margin="normal"
                         value={values['email'] || ''}
                     />
+                        <Button
+                            type="submit"
+                            className="button Button--wide"
+                        >Send
+                        </Button>
                     </form>
                 </Row>
 
