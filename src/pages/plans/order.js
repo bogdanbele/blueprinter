@@ -28,14 +28,18 @@ const OrderPage = ({data}) => {
     function handleSubmit() {
 
         let objectToSend = {
-            extraPlans: values['extraPlans'].join('\n'),
+            extra: values['extraPlans'].join('\n'),
             email: values['email']
         };
+
+        console.log(objectToSend)
+        const obj = encode({'form-name': 'Website Quote', ...objectToSend});
+        console.log(obj)
 
         fetch('/', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: encode({'form-name': 'Website Quote', ...objectToSend}),
+            body: obj,
         })
             .then(() => navigate('/'))
             .catch(error => alert(error));
