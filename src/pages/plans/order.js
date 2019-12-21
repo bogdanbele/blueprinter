@@ -26,6 +26,7 @@ const OrderPage = ({data}) => {
         extra: [],
         email: '',
         message: '',
+        company: ''
     };
 
     const [values, setValue] = useState(defaultValues);
@@ -33,7 +34,9 @@ const OrderPage = ({data}) => {
     function handleSubmit(e) {
         let objectToSend = {
             extra: values['extra'].join('\n'),
-            email: values['email']
+            email: values['email'],
+            message: values['message'],
+            company: values['company'],
         };
 
         console.log(objectToSend);
