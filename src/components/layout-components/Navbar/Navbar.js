@@ -33,6 +33,11 @@ export default class Navbar extends Component {
 			},
 			{
 				id: 5,
+				path: '/plans',
+				linkName: 'Plans',
+			},
+			{
+				id: 6,
 				path: '/contact',
 				linkName: 'Contact',
 			},

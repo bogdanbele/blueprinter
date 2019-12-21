@@ -1,29 +1,33 @@
-import React from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
+import React  from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import PageHeader from '../components/template-components/PageHeader';
 import PricingPlan from '../components/template-components/PricingPlan/PricingPlan';
 import Row from '../components/base-components/Row';
 
+
 function getPricingPlans(data) {
 	const pricingPlansArray = [];
 
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
-        pricingPlansArray.push(<PricingPlan 
-            className='flex--3' 
-            key={item.id} 
-            title={item.title}
-            features={item.features}/>)
+		pricingPlansArray.push(
+			<PricingPlan
+				className="flex--3"
+				key={item.id}
+				title={item.title}
+				features={item.features}
+				price={item.price}
+			/>
+		)
 	);
 
 	return pricingPlansArray;
 }
 
-const PricingPage = ({ data }) => {
+const PlansPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 
-	console.log(page);
 	return (
 		<Layout>
 			<SEO title="Pricing plans" />
@@ -33,9 +37,7 @@ const PricingPage = ({ data }) => {
 				isHeaderVisible={page.isHeaderVisible}
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
-            <Row className='around'>
-            {getPricingPlans(data)}
-            </Row>
+			<Row className="around">{getPricingPlans(data)}</Row>
 		</Layout>
 	);
 };
@@ -53,8 +55,10 @@ export const query = graphql`
 					contentSections {
 						... on ContentfulPricingPlan {
 							id
+							price
 							title
 							features {
+								id
 								title
 								excerpt {
 									excerpt
@@ -69,4 +73,4 @@ export const query = graphql`
 	}
 `;
 
-export default PricingPage;
+export default PlansPage;

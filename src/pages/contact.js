@@ -3,9 +3,9 @@ import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import { graphql } from 'gatsby';
 import ContactForm from '../components/layout-components/ContactForm';
-
 import PageHeader from '../components/template-components/PageHeader';
 import MiniContent from '../components/template-components/MiniContent/MiniContent';
+
 const ContactPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;

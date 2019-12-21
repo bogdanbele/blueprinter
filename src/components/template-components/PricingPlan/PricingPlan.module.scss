@@ -2,11 +2,32 @@
 
 .PricingPlan {
 
-    width: 100%;
+    align-items: center;
+
+    width: 80%;
+    height: max-content;
     border-style: solid;
     border-width: 2px;
     border-color:  #{darken($color-primary,20%)};
     @include breakpoint(md) {
         width: initial;
+    }
+    @include breakpoint(xs) {
+        width: 60%;
+    }
+        
+
+}
+
+.PlanFeature {
+
+    p {
+    font-size: 1rem;
+        margin: 0;
+    }
+
+    svg {
+        width: 20px;
+        margin: 0;
     }
 }
