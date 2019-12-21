@@ -9,8 +9,32 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
 import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
+import {navigate} from "gatsby-link";
+import Button from "../../components/base-components/Button";
+import {withStyles} from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+
+function encode(data) {
+	return Object.keys(data)
+		.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+		.join('&');
+}
+
 
 const OrderPage = ({ data }) => {
+	const [values, setValue] = useState({});
+
+	function handleSubmit(){
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({ 'form-name': 'WebsiteQuote', ...values }),
+		})
+			.then(() => navigate('/'))
+			.catch(error => alert(error));
+	};
+
+
 	let orderArray = [];
 	let isInOrderFlow = [];
 	if (typeof window !== 'undefined') {
@@ -26,8 +50,21 @@ const OrderPage = ({ data }) => {
 
 	const page = data.allContentfulPage.edges[0].node;
 
+	const handleInputChange = event => {
+		const target = event.target;
+		const value = target.value;
+		console.log(target)
+		console.log(value)
+
+		const name = target.name;
+
+		setValue({...values, [name]:value})
+	};
+
 	const handleChange = event => {
 		setChosenPlans(event.target.value);
+		setValue({...values, ['extraPlans']:event.target.value});
+		console.log(event.target.value)
 	};
 
 	const ITEM_HEIGHT = 48;
@@ -40,6 +77,13 @@ const OrderPage = ({ data }) => {
 			},
 		},
 	};
+
+	function consoleLog() {
+		console.log(values)
+		console.log(encode(values))
+	}
+
+	//TODO Add Fields for email, phone number option, and description ( comments ) optional.
 
 	function returnList() {
 		return (
@@ -59,7 +103,6 @@ const OrderPage = ({ data }) => {
 				>
 					{console.log(missingPlans)}
 					{missingPlans.map(name => {
-						console.log(name);
 						return (
 							<MenuItem key={name.title} value={name.title}>
 								<Checkbox checked={chosenPlans.indexOf(name.title) > -1} />
@@ -103,6 +146,20 @@ const OrderPage = ({ data }) => {
 			<Row className="around column">
 				{isInOrderFlow ? returnList() : <p>Please follow to purchase flow</p>}
 			</Row>
+			<Row>
+				<ThemeInputStyle
+					required={true}
+					variant="outlined"
+					name="email"
+					label="Email"
+					onChange={handleInputChange}
+					margin="normal"
+					value={values.email || ''}
+				/>
+			</Row>
+			<Button onClick={consoleLog}>Click</Button>
+			<Button onClick={handleSubmit}>Click</Button>
+
 		</Layout>
 	);
 };
@@ -134,5 +191,49 @@ export const query = graphql`
 		}
 	}
 `;
+
+
+
+const ThemeInputStyle = withStyles({
+	root: {
+		// Underline on Focus
+		'& .MuiInput-underline:after': {
+			borderColor: 'var(--color)',
+		},
+
+		'& .MuiOutlinedInput-notchedOutline': {
+			color: 'var(--color)',
+			borderColor: 'gray',
+		},
+
+		'& .MuiOutlinedInput-notchedOutline:hover': {
+			color: 'var(--color)',
+			borderColor: 'var(--color)',
+		},
+
+		'& .MuiOutlinedInput-root:hover': {
+			color: 'var(--color)',
+			borderColor: 'var(--color)',
+		},
+
+		'& .MuiInputBase-input': {
+			color: 'var(--color)',
+		},
+		// Default Underline
+		'& .MuiInput-underline:before': {
+			borderColor: 'gray',
+		},
+
+		// Default Underline
+		'& .MuiFormHelperText-root': {
+			color: 'red',
+		},
+
+		// Text Color
+		'& .MuiFormLabel-root': {
+			color: 'var(--color)',
+		},
+	},
+})(TextField);
 
 export default OrderPage;
