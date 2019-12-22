@@ -13,12 +13,7 @@ import {navigate} from "gatsby-link";
 import Button from "../../components/base-components/Button";
 import Flex from "../../components/base-components/Flex";
 import ThemeInput from "../../components/base-components/ThemeInput/ThemeInput";
-
-function encode(data) {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&');
-}
+import {encode} from "../../utils/helpers/data-utils";
 
 const OrderPage = ({data}) => {
 
@@ -86,6 +81,21 @@ const OrderPage = ({data}) => {
      */
     const handleFeatureChange = event => {
         setValue({...values, ['extra']: event.target.value});
+    };
+
+    /**
+     * Return true if all inputs are valid
+     * @returns {boolean}
+     */
+    const isFormValid = () => {
+        for (let key in isValueValid) {
+            if (isValueValid.hasOwnProperty(key)) {
+                if (isValueValid[key] === false) {
+                    return false;
+                }
+            }
+        }
+        return true;
     };
 
     /**
@@ -258,6 +268,7 @@ const OrderPage = ({data}) => {
                                 <Button
                                     type="submit"
                                     className="button"
+                                    disabled={!isFormValid()}
                                 >Send
                                 </Button>
                             </form>
