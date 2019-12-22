@@ -20,6 +20,7 @@ const ContactPage = ({ data }) => {
 			>
 				<ContactForm />
 				<MiniContent
+					key={pageSections[0].id}
 					header={pageSections[0].header}
 					description={pageSections[0].description}
 					flexClassName={'centered flex--2'}
@@ -44,6 +45,7 @@ export const query = graphql`
 						__typename
 						... on Node {
 							... on ContentfulMiniContent {
+								id
 								description
 								title
 								header

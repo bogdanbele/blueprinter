@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/base-components/ThemeInput/ThemeInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/ThemeInput/ThemeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ThemeInput/ThemeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/ContactForm/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/MiniContent/MiniContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/MiniContent/MiniContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plans/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans/order.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +137,7 @@
       <workItem from="1576481791095" duration="1295000" />
       <workItem from="1576784435517" duration="2853000" />
       <workItem from="1576965886210" duration="8177000" />
-      <workItem from="1577004668085" duration="3885000" />
+      <workItem from="1577004668085" duration="13977000" />
     </task>
     <servers />
   </component>

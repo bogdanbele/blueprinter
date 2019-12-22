@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import { navigate } from 'gatsby-link';
 import Button from '../../base-components/Button';
+import ThemeInput from "../../base-components/ThemeInput/ThemeInput";
 
 function encode(data) {
 	return Object.keys(data)
@@ -97,7 +98,7 @@ export default class ContactForm extends React.Component {
 						Don’t fill this out: <input name="bot-field" onChange={this.handleInputChange} />
 					</label>
 				</p>
-				<ThemeInputStyle
+				<ThemeInput
 					required={true}
 					variant="outlined"
 					name="firstName"
@@ -112,7 +113,7 @@ export default class ContactForm extends React.Component {
 					margin="normal"
 					value={this.state.values.firstName || ''}
 				/>
-				<ThemeInputStyle
+				<ThemeInput
 					required={true}
 					variant="outlined"
 					error={this.handleValidation('lastName')}
@@ -127,7 +128,7 @@ export default class ContactForm extends React.Component {
 					margin="normal"
 					value={this.state.values.lastName || ''}
 				/>
-				<ThemeInputStyle
+				<ThemeInput
 					required={true}
 					variant="outlined"
 					error={this.handleValidation('email')}
@@ -139,7 +140,7 @@ export default class ContactForm extends React.Component {
 					value={this.state.values.email || ''}
 				/>
 				<div className="form-group">
-					<ThemeInputStyle
+					<ThemeInput
 						required={true}
 						variant="outlined"
 						aria-label="minimum height"

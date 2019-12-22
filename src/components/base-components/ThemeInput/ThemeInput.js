@@ -5,49 +5,13 @@ import TextField from "@material-ui/core/TextField";
 
 export default class ThemeInput extends React.PureComponent {
 
-    state = {
-        isValid: false,
-        validation: '',
-        value: ''
-    };
-
-    handleInputChange = event => {
-        const target = event.target;
-        const targetValue = target.value;
-
-        this.setState({
-            value: targetValue
-        });
-
-        this.setState({
-            isValid: RegExp(this.state.validation).test(targetValue)
-        });
-    };
-
-
-    handleValidation = name => {
-        return !(
-            this.state.value === '' ||
-            RegExp(this.state.validation).test(this.state.value)
-        );
-    };
-
     render() {
         return (
             <ThemeInputStyle
-                required={true}
+                {...this.props}
                 variant="outlined"
-                error={this.handleValidation}
-                name={this.props.name}
-                label={this.props.labelName}
-                helperText={
-                    this.handleValidation
-                        ? this.props.validationHelperText
-                        : ''
-                }
-                onChange={this.handleInputChange}
                 margin="normal"
-                value={this.state.value || ''}
+                value={this.props.value || ''}
             />)
     }
 }
@@ -55,8 +19,9 @@ export default class ThemeInput extends React.PureComponent {
 ThemeInput.propTypes = {
     name: PropTypes.string.isRequired,
     labelName: PropTypes.string,
+    validation: PropTypes.string,
     validationHelperText: PropTypes.string
-}
+};
 
 const ThemeInputStyle = withStyles({
     root: {
