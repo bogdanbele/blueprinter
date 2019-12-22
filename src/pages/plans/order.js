@@ -109,7 +109,7 @@ const OrderPage = ({data}) => {
             email: values['email'],
             message: values['message'],
             company: values['company'],
-            planFeature : selectedPlansObject,
+            planFeature : selectedPlansAsString,
             planTitle: window.history.state.title
         };
         const obj = encode({'form-name': 'Website Quote', ...objectToSend});
@@ -171,6 +171,10 @@ const OrderPage = ({data}) => {
         .map(plan => {
             return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt, id: plan.node.id};
         });
+
+    let selectedPlansAsString = (preselectedPlansArray.map(plan => {
+        return plan.title;
+    })).join('\n');
     //endregion
 
     //region Rendering
