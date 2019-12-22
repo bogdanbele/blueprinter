@@ -263,7 +263,7 @@ const OrderPage = ({data}) => {
                                 <input
                                     hidden
                                     type='text'
-                                    name='planFeatures'
+                                    name='planFeature'
                                 />
                                 <ThemeInput
                                     required={true}
