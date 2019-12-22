@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ContactForm.module.scss';
-import TextField from '@material-ui/core/TextField';
-import { withStyles } from '@material-ui/core/styles';
 import { navigate } from 'gatsby-link';
 import Button from '../../base-components/Button';
-
-function encode(data) {
-	return Object.keys(data)
-		.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-		.join('&');
-}
+import ThemeInput from "../../base-components/ThemeInput/ThemeInput";
+import {encode} from "../../../utils/helpers/data-utils";
 
 export default class ContactForm extends React.Component {
 	state = {
@@ -68,7 +62,7 @@ export default class ContactForm extends React.Component {
 		);
 	};
 
-	handleFormValidation = () => {
+	isFormValid = () => {
 		for (let key in this.state.isValid) {
 			if (this.state.isValid.hasOwnProperty(key)) {
 				if (this.state.isValid[key] === false) {
@@ -97,7 +91,7 @@ export default class ContactForm extends React.Component {
 						Don’t fill this out: <input name="bot-field" onChange={this.handleInputChange} />
 					</label>
 				</p>
-				<ThemeInputStyle
+				<ThemeInput
 					required={true}
 					variant="outlined"
 					name="firstName"
@@ -112,7 +106,7 @@ export default class ContactForm extends React.Component {
 					margin="normal"
 					value={this.state.values.firstName || ''}
 				/>
-				<ThemeInputStyle
+				<ThemeInput
 					required={true}
 					variant="outlined"
 					error={this.handleValidation('lastName')}
@@ -127,7 +121,7 @@ export default class ContactForm extends React.Component {
 					margin="normal"
 					value={this.state.values.lastName || ''}
 				/>
-				<ThemeInputStyle
+				<ThemeInput
 					required={true}
 					variant="outlined"
 					error={this.handleValidation('email')}
@@ -139,7 +133,7 @@ export default class ContactForm extends React.Component {
 					value={this.state.values.email || ''}
 				/>
 				<div className="form-group">
-					<ThemeInputStyle
+					<ThemeInput
 						required={true}
 						variant="outlined"
 						aria-label="minimum height"
@@ -159,7 +153,7 @@ export default class ContactForm extends React.Component {
 				</div>
 				<div className="form-group">
 					<Button
-						disabled={!this.handleFormValidation()}
+						disabled={!this.isFormValid()}
 						type="submit"
 						className="button Button--wide"
 					>
@@ -174,45 +168,3 @@ export default class ContactForm extends React.Component {
 ContactForm.propTypes = {
 	className: PropTypes.string,
 };
-
-const ThemeInputStyle = withStyles({
-	root: {
-		// Underline on Focus
-		'& .MuiInput-underline:after': {
-			borderColor: 'var(--color)',
-		},
-
-		'& .MuiOutlinedInput-notchedOutline': {
-			color: 'var(--color)',
-			borderColor: 'gray',
-		},
-
-		'& .MuiOutlinedInput-notchedOutline:hover': {
-			color: 'var(--color)',
-			borderColor: 'var(--color)',
-		},
-
-		'& .MuiOutlinedInput-root:hover': {
-			color: 'var(--color)',
-			borderColor: 'var(--color)',
-		},
-
-		'& .MuiInputBase-input': {
-			color: 'var(--color)',
-		},
-		// Default Underline
-		'& .MuiInput-underline:before': {
-			borderColor: 'gray',
-		},
-
-		// Default Underline
-		'& .MuiFormHelperText-root': {
-			color: 'red',
-		},
-
-		// Text Color
-		'& .MuiFormLabel-root': {
-			color: 'var(--color)',
-		},
-	},
-})(TextField);

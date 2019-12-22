@@ -25,6 +25,7 @@ export default class PricingPlan extends React.Component {
 		navigate('/plans/order', {
 			state: {
 				order: this.props.features,
+				title: this.props.title
 			},
 		}).then();
 	};
@@ -43,7 +44,7 @@ export default class PricingPlan extends React.Component {
 	}
 }
 
-class PlanFeature extends React.Component {
+export class PlanFeature extends React.Component {
 	render() {
 		return (
 			<Item className={`px-1 my-1 mx-2 row ${styles.PlanFeature}`}>

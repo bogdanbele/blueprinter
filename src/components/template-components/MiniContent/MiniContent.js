@@ -12,7 +12,7 @@ function listToParagraph(data) {
 
 export default class MiniContent extends React.PureComponent {
 	render() {
-		let list = () => (this.props.list ? <p>{listToParagraph(this.props.list)}</p> : null);
+		let list = () => (this.props.list ? <>listToParagraph(this.props.list)}</> : null);
 
 		return (
 			<Flex className={`column ${this.props.flexClassName}`}>

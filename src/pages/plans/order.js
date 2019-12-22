@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {graphql, Link, StaticQuery} from 'gatsby';
+import React, {useState} from 'react';
+import {graphql} from 'gatsby';
 import Layout from '../../components/layout-components/layouts/layout';
 import SEO from '../../components/base-components/seo';
 import PageHeader from '../../components/template-components/PageHeader';
@@ -11,60 +11,133 @@ import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
 import {navigate} from "gatsby-link";
 import Button from "../../components/base-components/Button";
-import {withStyles} from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import styles from "../../components/layout-components/ContactForm/ContactForm.module.scss";
-
-function encode(data) {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&');
-}
-
+import Flex from "../../components/base-components/Flex";
+import ThemeInput from "../../components/base-components/ThemeInput/ThemeInput";
+import {encode} from "../../utils/helpers/data-utils";
+import {PlanFeature} from "../../components/template-components/PricingPlan/PricingPlan";
 
 const OrderPage = ({data}) => {
-    const [values, setValue] = useState({});
 
-    function handleSubmit() {
-        fetch('/', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: encode({'form-name': 'Website Quote', ...values}),
-        })
-            .then(() => navigate('/'))
-            .catch(error => alert(error));
+    //region Default Input Objects
+    let defaultValues = {
+        extra: [],
+        email: '',
+        message: '',
+        company: '',
+        phone: ''
     };
 
+    const validation = {
+        company: '^[A-Za-zÀ-ÖØ-öø-ÿa-zšđčćž\\s]{0,20}$',
+        phone: '^$|^[0-9\\s+]{8,14}$',
+        email: '^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$',
+        message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,!]{0,300}$',
+    };
 
-    let orderArray = [];
-    let isInOrderFlow = [];
-    if (typeof window !== 'undefined') {
-        orderArray = window.history.state !== null ? window.history.state.order : [];
-        isInOrderFlow = window.history.state !== null ? true : false;
+    function isInitiallyValid(field) {
+        return RegExp(validation[field]).test(defaultValues[field]);
     }
 
-    const allPlans = data.allContentfulPlanFeature.edges;
+    let isValueInitiallyValid = {
+        firstName: isInitiallyValid('firstName'),
+        lastName: isInitiallyValid('lastName'),
+        email: isInitiallyValid('email'),
+        message: isInitiallyValid('message'),
+    };
+    //endregion
 
-    let missingPlans = null;
+    //region State
+    const [values, setValue] = useState(defaultValues);
+    const [isValueValid, setIsValueValid] = useState(isValueInitiallyValid);
+    //endregion
 
-    const page = data.allContentfulPage.edges[0].node;
+    //region Handlers and Validators
+    /**
+     *  Returns true if the input is passes it's corresponding regex test
+     * @param name
+     * @returns {boolean}
+     */
+    const isValid = name => {
+        return (
+            RegExp(validation[name]).test(values[name])
+        );
+    };
 
+    /**
+     *
+     * @param event
+     */
     const handleInputChange = event => {
         const target = event.target;
         const value = target.value;
-        console.log(target)
-        console.log(value)
-
         const name = target.name;
-
-        setValue({...values, [name]: value})
+        setValue({...values, [name]: value});
+        setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
+        console.log(isValueValid)
     };
 
-    const handleChange = event => {
-        setValue({...values, ['extraPlans']: event.target.value});
-        console.log(event.target.value)
+    /**
+     * Sets the [extra features] input's value to it's corresponding state
+     * @param event
+     */
+    const handleFeatureChange = event => {
+        setValue({...values, ['extra']: event.target.value});
     };
 
+    /**
+     * Return true if all inputs are valid
+     * @returns {boolean}
+     */
+    const isFormValid = () => {
+        for (let key in isValueValid) {
+            if (isValueValid.hasOwnProperty(key)) {
+                if (isValueValid[key] === false) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    };
+
+    /**
+     * Form submission to Netlify
+     * @param e
+     */
+    function handleSubmit(e) {
+        let objectToSend = {
+            extra: values['extra'].join('\n'),
+            email: values['email'],
+            message: values['message'],
+            company: values['company'],
+            planFeature : selectedPlansAsString,
+            planTitle: window.history.state.title
+        };
+        const obj = encode({'form-name': 'Website Quote', ...objectToSend});
+
+        fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: obj,
+        })
+            .then(() => navigate('/'))
+            .catch(error => alert(error));
+        e.preventDefault()
+    }
+
+    //endregion
+
+    //region Order Initialization and Content Locking
+    let preselectedPlansArray = [];
+    let isInOrderFlow = [];
+    let preselectedPlansTitle = '';
+    if (typeof window !== 'undefined') {
+        preselectedPlansArray = window.history.state !== null ? window.history.state.order : [];
+        isInOrderFlow = window.history.state !== null;
+        preselectedPlansTitle = window.history.state !== null ? window.history.state.title : '';
+    }
+    //endregion
+
+    //region DropDown Styling
     const ITEM_HEIGHT = 48;
     const ITEM_PADDING_TOP = 8;
     const MenuProps = {
@@ -75,37 +148,82 @@ const OrderPage = ({data}) => {
             },
         },
     };
+    //endregion
 
-    function consoleLog() {
-        console.log(values)
-        console.log(encode(values))
+    //region Plans Setup
+    const allPlans = data.allContentfulPlanFeature.edges;
+    let missingPlansObject = null;
+    let selectedPlansObject = null;
+    const page = data.allContentfulPage.edges[0].node;
+
+    let selectedPlansFilter = preselectedPlansArray.map(plan => {
+        return plan.id;
+    });
+
+    missingPlansObject = allPlans
+        .filter(plan => !selectedPlansFilter.includes(plan.node.id))
+        .map(plan => {
+            return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt};
+        });
+
+    selectedPlansObject = allPlans
+        .filter(plan => selectedPlansFilter.includes(plan.node.id))
+        .map(plan => {
+            return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt, id: plan.node.id};
+        });
+
+    let selectedPlansAsString = (preselectedPlansArray.map(plan => {
+        return plan.title;
+    })).join('\n');
+    //endregion
+
+    //region Rendering
+
+    function returnPreselectedPlans() {
+        return (
+            <>
+                <h2 className='font-weight-normal'>The <span className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
+                {selectedPlansObject.map(name => {
+                        return (
+                            <div className='w-75' key={name.id} >
+                            <PlanFeature featureName={name.title}/>
+                            </div>
+                        )
+                    }
+                )}
+            </>
+        )
     }
-
-    //TODO Add Fields for email, phone number option, and description ( comments ) optional.
 
     function returnList() {
         return (
             <>
-                <h2>Select some extra features</h2>
+                <h2 className='mt-2'>Choose Some Extra Plans</h2>
                 <Select
-                    labelId="demo-mutiple-checkbox-label"
-                    id="demo-mutiple-checkbox"
+                    className='mb-5'
+                    name={"extra[]"}
+                    labelId="label"
                     style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
                     multiple
                     variant={'outlined'}
-                    value={values['extraPlans'] ? values['extraPlans'] : []}
-                    onChange={handleChange}
-                    input={<Input className="px-4"/>}
-                    renderValue={selected => selected.join(', ')}
+                    value={values['extra'] ? values['extra'] : []}
+                    onChange={handleFeatureChange}
+                    input={
+                        <Input
+                            className="px-4"
+                            value={() => values['extra'].join('\n')}
+                            name='extra'/>}
+                    renderValue={() => values['extra'].join(',')}
                     MenuProps={MenuProps}
                 >
-                    {console.log(missingPlans)}
+                    {console.log(missingPlansObject)}
                     {console.log(values)}
 
-                    {missingPlans.map(name => {
+                    {missingPlansObject.map(name => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
-                                <Checkbox checked={values['extraPlans'.indexOf(name.title) > -1]}/>
+                                <Checkbox
+                                    checked={values['extra'].indexOf(name.title) > -1}/>
                                 <ListItemText primary={name.title}/>
                             </MenuItem>
                         );
@@ -115,25 +233,6 @@ const OrderPage = ({data}) => {
         );
     }
 
-    useEffect(() => {
-        if (window.history.state) {
-            console.log(missingPlans);
-        } else {
-            console.log('wrong way buddy');
-        }
-    });
-
-    let selectedPlansFilter = orderArray.map(plan => {
-        return plan.id;
-    });
-
-    missingPlans = allPlans
-        .filter(plan => !selectedPlansFilter.includes(plan.node.id))
-        .map(plan => {
-            return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt};
-        });
-
-    console.log(isInOrderFlow);
     return (
         <Layout>
             <SEO title="Order"/>
@@ -143,31 +242,90 @@ const OrderPage = ({data}) => {
                 isHeaderVisible={page.isHeaderVisible}
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
-            <Row className="around column">
-                {isInOrderFlow ? returnList() : <p>Please follow to purchase flow</p>}
-            </Row>
-            <Row>
-                <form
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                >
-                    <ThemeInputStyle
-                        required={true}
-                        variant="outlined"
-                        name="email"
-                        label="Email"
-                        onChange={handleInputChange}
-                        margin="normal"
-                        value={values['email'] || ''}
-                    />
-                </form>
-            </Row>
-            <Button onClick={consoleLog}>Click</Button>
-            <Button onClick={handleSubmit}>Click</Button>
+            <Row className="column align-items-center">
+                {   isInOrderFlow ? returnPreselectedPlans() : null }
+                <Flex className='w-75'>
 
+                    { // If the user didn't specify a plan on the previous page, disable access to the form
+                        isInOrderFlow ?
+                            <form
+                                onSubmit={handleSubmit}
+                                className='flex-column d-flex w-100'
+                                name='Website Quote'
+                                data-netlify="true"
+                                data-netlify-honeypot="bot-field"
+                            >
+                                <input
+                                    hidden
+                                    type='text'
+                                    name='planTitle'
+                                    />
+                                <input
+                                    hidden
+                                    type='text'
+                                    name='planFeature'
+                                />
+                                <ThemeInput
+                                    required={true}
+                                    variant="outlined"
+                                    name="company"
+                                    label="Company Name"
+                                    error={!isValid('company')}
+                                    helperText={!isValid('company') ? 'Please write up to 20 characters' : ''}
+                                    onChange={handleInputChange}
+                                    margin="normal"
+                                    value={values['company']}
+                                />
+                                <ThemeInput
+                                    required={true}
+                                    variant="outlined"
+                                    error={!isValid('email')}
+                                    name="email"
+                                    label="Email"
+                                    helperText={!isValid('email') ? 'You must input a valid email' : ''}
+                                    onChange={handleInputChange}
+                                    validation={validation.email}
+                                    value={values['email']}
+                                />
+
+                                <ThemeInput
+                                    name="message"
+                                    label="Message"
+                                    error={!isValid('message')}
+                                    variant="outlined"
+                                    rows={5}
+                                    rowsMax={10}
+                                    multiline={true}
+                                    onChange={handleInputChange}
+                                    helperText={!isValid('message') ? 'Please write up to 300 characters' : ''}
+                                    validation={validation.message}
+                                    value={values['message']}
+                                />
+                                <ThemeInput
+                                    name='phone'
+                                    label='Phone'
+                                    error={!isValid('phone')}
+                                    helperText={!isValid('phone') ? 'Please input a valid phone number or leave empty' : ''}
+                                    validation={validation.company}
+                                    onChange={handleInputChange}
+                                    value={values['phone']}/>
+                                {returnList()}
+                                <Button
+                                    type="submit"
+                                    className="button"
+                                    disabled={!isFormValid()}
+                                >Send
+                                </Button>
+                            </form>
+                            : <h2>Please follow to purchase flow</h2>}
+                </Flex>
+            </Row>
         </Layout>
     );
+    //endregion
 };
+
+//region Query
 
 export const query = graphql`
     {
@@ -196,48 +354,6 @@ export const query = graphql`
         }
     }
 `;
-
-
-const ThemeInputStyle = withStyles({
-    root: {
-        // Underline on Focus
-        '& .MuiInput-underline:after': {
-            borderColor: 'var(--color)',
-        },
-
-        '& .MuiOutlinedInput-notchedOutline': {
-            color: 'var(--color)',
-            borderColor: 'gray',
-        },
-
-        '& .MuiOutlinedInput-notchedOutline:hover': {
-            color: 'var(--color)',
-            borderColor: 'var(--color)',
-        },
-
-        '& .MuiOutlinedInput-root:hover': {
-            color: 'var(--color)',
-            borderColor: 'var(--color)',
-        },
-
-        '& .MuiInputBase-input': {
-            color: 'var(--color)',
-        },
-        // Default Underline
-        '& .MuiInput-underline:before': {
-            borderColor: 'gray',
-        },
-
-        // Default Underline
-        '& .MuiFormHelperText-root': {
-            color: 'red',
-        },
-
-        // Text Color
-        '& .MuiFormLabel-root': {
-            color: 'var(--color)',
-        },
-    },
-})(TextField);
+//endregion
 
 export default OrderPage;
