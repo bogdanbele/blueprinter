@@ -129,9 +129,11 @@ const OrderPage = ({data}) => {
     //region Order Initialization and Content Locking
     let preselectedPlansArray = [];
     let isInOrderFlow = [];
+    let preselectedPlansTitle = '';
     if (typeof window !== 'undefined') {
         preselectedPlansArray = window.history.state !== null ? window.history.state.order : [];
         isInOrderFlow = window.history.state !== null;
+        preselectedPlansTitle = window.history.state !== null ? window.history.state.title : '';
     }
     //endregion
 
@@ -176,7 +178,7 @@ const OrderPage = ({data}) => {
     function returnPreselectedPlans() {
         return (
             <>
-                <h2 className='font-weight-normal'>The <span className='font-weight-bold'> {window.history.state.title}</span> plan </h2>
+                <h2 className='font-weight-normal'>The <span className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
                 {selectedPlansObject.map(name => {
                         return (
                             <div className='w-75' key={name.id} >
