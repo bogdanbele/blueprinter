@@ -14,6 +14,7 @@ import Button from "../../components/base-components/Button";
 import Flex from "../../components/base-components/Flex";
 import ThemeInput from "../../components/base-components/ThemeInput/ThemeInput";
 import {encode} from "../../utils/helpers/data-utils";
+import {PlanFeature} from "../../components/template-components/PricingPlan/PricingPlan";
 
 const OrderPage = ({data}) => {
 
@@ -108,6 +109,8 @@ const OrderPage = ({data}) => {
             email: values['email'],
             message: values['message'],
             company: values['company'],
+            planFeature : selectedPlansObject,
+            planTitle: window.history.state.title
         };
         const obj = encode({'form-name': 'Website Quote', ...objectToSend});
 
@@ -124,10 +127,10 @@ const OrderPage = ({data}) => {
     //endregion
 
     //region Order Initialization and Content Locking
-    let orderArray = [];
+    let preselectedPlansArray = [];
     let isInOrderFlow = [];
     if (typeof window !== 'undefined') {
-        orderArray = window.history.state !== null ? window.history.state.order : [];
+        preselectedPlansArray = window.history.state !== null ? window.history.state.order : [];
         isInOrderFlow = window.history.state !== null;
     }
     //endregion
@@ -147,21 +150,45 @@ const OrderPage = ({data}) => {
 
     //region Plans Setup
     const allPlans = data.allContentfulPlanFeature.edges;
-    let missingPlans = null;
+    let missingPlansObject = null;
+    let selectedPlansObject = null;
     const page = data.allContentfulPage.edges[0].node;
 
-    let selectedPlansFilter = orderArray.map(plan => {
+    let selectedPlansFilter = preselectedPlansArray.map(plan => {
         return plan.id;
     });
 
-    missingPlans = allPlans
+    missingPlansObject = allPlans
         .filter(plan => !selectedPlansFilter.includes(plan.node.id))
         .map(plan => {
             return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt};
         });
+
+    selectedPlansObject = allPlans
+        .filter(plan => selectedPlansFilter.includes(plan.node.id))
+        .map(plan => {
+            return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt, id: plan.node.id};
+        });
     //endregion
 
     //region Rendering
+
+    function returnPreselectedPlans() {
+        return (
+            <>
+                <h2 className='font-weight-normal'>The <span className='font-weight-bold'> {window.history.state.title}</span> plan </h2>
+                {selectedPlansObject.map(name => {
+                        return (
+                            <div className='w-75' key={name.id} >
+                            <PlanFeature featureName={name.title}/>
+                            </div>
+                        )
+                    }
+                )}
+            </>
+        )
+    }
+
     function returnList() {
         return (
             <>
@@ -183,10 +210,10 @@ const OrderPage = ({data}) => {
                     renderValue={() => values['extra'].join(',')}
                     MenuProps={MenuProps}
                 >
-                    {console.log(missingPlans)}
+                    {console.log(missingPlansObject)}
                     {console.log(values)}
 
-                    {missingPlans.map(name => {
+                    {missingPlansObject.map(name => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
                                 <Checkbox
@@ -210,16 +237,28 @@ const OrderPage = ({data}) => {
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
             <Row className="column align-items-center">
+                {   isInOrderFlow ? returnPreselectedPlans() : null }
                 <Flex className='w-75'>
 
                     { // If the user didn't specify a plan on the previous page, disable access to the form
-                        isInOrderFlow ? <form
+                        isInOrderFlow ?
+                            <form
                                 onSubmit={handleSubmit}
                                 className='flex-column d-flex w-100'
                                 name='Website Quote'
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
                             >
+                                <input
+                                    hidden
+                                    type='text'
+                                    name='planTitle'
+                                    />
+                                <input
+                                    hidden
+                                    type='text'
+                                    name='planFeatures'
+                                />
                                 <ThemeInput
                                     required={true}
                                     variant="outlined"

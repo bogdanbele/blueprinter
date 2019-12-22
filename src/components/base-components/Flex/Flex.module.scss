@@ -12,9 +12,7 @@
 		&:global.flex--100 {
 			width: 100%;
 		}
-		&:global.flex--1 {
-			width: 80%;
-		}
+
 		&:global.flex--2 {
 			width: 40%;
 		}
@@ -91,4 +89,8 @@
 		}
 
 	}
+}
+
+:global .flex--1 {
+	width: 80%;
 }

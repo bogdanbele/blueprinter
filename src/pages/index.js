@@ -98,6 +98,7 @@ export const query = graphql`
 						__typename
 						... on Node {
 							... on ContentfulContentSection {
+								id
 								header
 								excerpt {
 									excerpt
