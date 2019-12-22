@@ -172,7 +172,7 @@ const OrderPage = ({data}) => {
                             label="Company Name"
                             onChange={handleInputChange}
                             margin="normal"
-                            value={values['email'] || ''}
+                            value={values['company'] || ''}
                         />
                         <ThemeInputStyle
                             required={true}
