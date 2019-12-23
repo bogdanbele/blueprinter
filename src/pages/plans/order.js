@@ -84,8 +84,8 @@ const OrderPage = ({data}) => {
 
     const returnValidDiscountCode = () => {
         return discountCodesObject.filter(elem => {
-            return elem === values['discount'];
-        });
+            return elem.toLowerCase() === values['discount'];
+        })
     };
 
     /**

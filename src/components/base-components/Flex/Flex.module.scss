@@ -76,7 +76,10 @@
 	width: 80%;
 }
 :global .flex--2 {
-	width: 40%;
+	width: 80%;
+	@include breakpoint(md){
+		width: 40%;
+	}
 }
 
 :global .flex--3 {
