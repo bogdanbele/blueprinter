@@ -74,6 +74,7 @@ const OrderPage = ({data}) => {
         const name = target.name;
         setValue({...values, [name]: value});
         setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
+        console.log(values)
     };
 
     const isDiscountCodeValid = () => {
@@ -121,6 +122,7 @@ const OrderPage = ({data}) => {
             email: values['email'],
             message: values['message'],
             company: values['company'],
+            phone: values['phone'],
             planFeature: selectedPlansAsString,
             planTitle: window.history.state.title,
             discountCode: isDiscountCodeValid() ? returnValidDiscountCode()[0] : ''
