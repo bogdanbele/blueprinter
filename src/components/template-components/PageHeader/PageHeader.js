@@ -30,5 +30,5 @@ PageHeader.propTypes = {
 
 PageHeader.defaultProps = {
     rowClassName: ''
-}
+};
 

@@ -7,25 +7,6 @@
 		font-size: 1.1rem;
 		line-height: 1.4rem;
 	}
-
-	@include breakpoint(md) {
-		&:global.flex--100 {
-			width: 100%;
-		}
-
-		&:global.flex--2 {
-			width: 40%;
-		}
-		&:global.flex--3 {
-			width: 30%;
-		}
-		&:global.flex--4 {
-			width: 22%;
-		}
-		&:global.flex--solo {
-			width: 60%;
-		}
-	}
 	border-radius: 1rem;
 	display: flex;
 	margin-bottom: 1rem;
@@ -93,4 +74,11 @@
 
 :global .flex--1 {
 	width: 80%;
+}
+:global .flex--2 {
+	width: 40%;
+}
+
+:global .flex--3 {
+	width: 30%;
 }

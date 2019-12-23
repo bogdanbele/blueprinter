@@ -7,7 +7,6 @@ import Img from "gatsby-image";
 
 export default class ProcessSection extends React.PureComponent {
     render() {
-
         let bigHeader = () =>
             (this.props.bigHeader !== null) ? (
                 <Flex className='column flex--text-center'>
@@ -41,6 +40,9 @@ export default class ProcessSection extends React.PureComponent {
 ProcessSection.propTypes = {
     header: PropTypes.string,
     bigHeader: PropTypes.string,
+    imgSrc: PropTypes.object,
+    imgAlt: PropTypes.string,
+    content: PropTypes.string,
     subHeader: PropTypes.string,
 };
 

@@ -13,7 +13,7 @@ export default class TeamMember extends React.Component {
         let order = () =>
             (this.props.index % 2 !== 0) ? ' flex--row--column__reversed' : ' flex--row--column';
 
-        const formattedDescription = wrapWithParagraph(this.props.description)
+        const formattedDescription = wrapWithParagraph(this.props.description);
 
         return (
             <Flex className='flex-grow-1 column'>
@@ -41,6 +41,7 @@ TeamMember.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     imgalt: PropTypes.string,
+    imgsrc: PropTypes.object,
     skills: PropTypes.array
 };
 

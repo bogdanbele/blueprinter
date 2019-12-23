@@ -24,7 +24,7 @@ let staticQuery = <StaticQuery
 	}
 />;
 
-function getSocialLinks(data) {
+const getSocialLinks = (data) =>{
 	const linksArray = [];
 	// noinspection JSUnresolvedVariable
 	data.allSocialMediaLinksJson.edges.forEach(item =>
@@ -33,10 +33,9 @@ function getSocialLinks(data) {
 		)
 	);
 	return linksArray;
-}
+};
 
 export default class Footer extends React.PureComponent {
-
 	render() {
 		return (
 			<footer>

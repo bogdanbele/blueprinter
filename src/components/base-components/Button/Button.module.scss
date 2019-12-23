@@ -1,10 +1,9 @@
 @import '../../../theme/theme';
 
 .Button {
-	border: 2px solid transparent;
 	border-radius: 4px;
 	background-color: transparent;
-	border-color: $color-primary;
+	border: 2px solid $color-primary;
 	color: $color-primary;
 	transition: 0.3s;
 	cursor: pointer;
