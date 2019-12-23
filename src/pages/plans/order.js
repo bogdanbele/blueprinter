@@ -15,6 +15,7 @@ import Flex from "../../components/base-components/Flex";
 import ThemeInput from "../../components/base-components/ThemeInput/ThemeInput";
 import {encode} from "../../utils/helpers/data-utils";
 import {PlanFeature} from "../../components/template-components/PricingPlan/PricingPlan";
+import Item from "../../components/base-components/Item";
 
 const OrderPage = ({data}) => {
 
@@ -79,13 +80,13 @@ const OrderPage = ({data}) => {
 
     const isDiscountCodeValid = () => {
         return discountCodesObject.map(elem => {
-           return elem.toLowerCase() === values['discountCode'].toLowerCase() ;
+            return elem.toLowerCase() === values['discountCode'].toLowerCase();
         });
     };
 
     const returnValidDiscountCode = () => {
         return discountCodesObject.filter(elem => {
-            return elem.toLowerCase()  === values['discountCode'].toLowerCase() ;
+            return elem.toLowerCase() === values['discountCode'].toLowerCase();
         })
     };
 
@@ -177,7 +178,7 @@ const OrderPage = ({data}) => {
         return plan.id;
     });
 
-    const discountCodesObject =  allDiscountCodes.map(discountCode => {
+    const discountCodesObject = allDiscountCodes.map(discountCode => {
         return discountCode.node.discountCode
     });
 
@@ -220,34 +221,46 @@ const OrderPage = ({data}) => {
     const returnList = () => {
         return (
             <>
-                <h2 className='mt-2'>Choose Some Extra Plans</h2>
-                <Select
+                <h2 className='mt-2'>Choose extra features (optional)</h2>
+                <Item
                     className='mb-5'
-                    name={"extra[]"}
-                    labelId="label"
-                    style={{color: 'charcoal', backgroundColor: 'aliceblue'}}
-                    multiple
-                    variant={'outlined'}
-                    value={values['extra'] ? values['extra'] : []}
-                    onChange={handleFeatureChange}
-                    input={
-                        <Input
-                            className="px-4"
-                            value={() => values['extra'].join('\n')}
-                            name='extra'/>}
-                    renderValue={() => values['extra'].join(',')}
-                    MenuProps={MenuProps}
-                >
-                    {missingPlansObject.map(name => {
-                        return (
-                            <MenuItem key={name.title} value={name.title}>
-                                <Checkbox
-                                    checked={values['extra'].indexOf(name.title) > -1}/>
-                                <ListItemText primary={name.title}/>
-                            </MenuItem>
-                        );
-                    })}
-                </Select>
+                    style={{
+                        backgroundColor: 'var(--color)',
+                        padding: '1px'
+                    }}>
+                    <Select
+                        className='p-0'
+                        name={"extra[]"}
+                        labelId="label"
+                        style={{
+                            color: 'var(--color)',
+                            backgroundColor: 'var(--bg-highlight)',
+                            borderColor: 'var(--color)',
+                            borderWidth: '2px'
+                        }}
+                        multiple
+                        variant={'outlined'}
+                        value={values['extra'] ? values['extra'] : []}
+                        onChange={handleFeatureChange}
+                        input={
+                            <Input
+                                className="px-4"
+                                value={() => values['extra'].join('\n')}
+                                name='extra'/>}
+                        renderValue={() => (values['extra'] !== []) ? values['extra'].join(',') : 'optional'}
+                        MenuProps={MenuProps}
+                    >
+                        {missingPlansObject.map(name => {
+                            return (
+                                <MenuItem key={name.title} value={name.title}>
+                                    <Checkbox
+                                        checked={values['extra'].indexOf(name.title) > -1}/>
+                                    <ListItemText primary={name.title}/>
+                                </MenuItem>
+                            );
+                        })}
+                    </Select>
+                </Item>
             </>
         );
     }
@@ -329,16 +342,17 @@ const OrderPage = ({data}) => {
                                     onChange={handleInputChange}
                                     value={values['phone']}/>
                                 {returnList()}
-
+                                <h2 className='mt-5 mb-0'>Do you have a discount code?</h2>
                                 <ThemeInput
+                                    autoComplete="new-password"
                                     name='discountCode'
-                                    label='Discout Code'
+                                    label='Discount Code'
                                     onChange={handleInputChange}
                                     value={values['discountCode']}/>
 
                                 <Button
                                     type="submit"
-                                    className="button"
+                                    className="button mt-5"
                                     disabled={!isFormValid()}
                                 >Send
                                 </Button>
@@ -355,40 +369,40 @@ const OrderPage = ({data}) => {
 
 export const query = graphql`
     {
-          allContentfulPage(filter: {title: {eq: "Order"}}) {
-    edges {
-      node {
-        title
-        headerText
-        header
-        isHeaderTextVisible
-        isHeaderVisible
-      }
-    }
-  }
-  allContentfulPlanFeature {
-    edges {
-      node {
-        id
-        title
-        excerpt {
-          excerpt
-          id
+        allContentfulPage(filter: {title: {eq: "Order"}}) {
+            edges {
+                node {
+                    title
+                    headerText
+                    header
+                    isHeaderTextVisible
+                    isHeaderVisible
+                }
+            }
         }
-      }
+        allContentfulPlanFeature {
+            edges {
+                node {
+                    id
+                    title
+                    excerpt {
+                        excerpt
+                        id
+                    }
+                }
+            }
+        }
+        allContentfulDiscountCodes {
+            edges {
+                node {
+                    id
+                    title
+                    percentageOff
+                    discountCode
+                }
+            }
+        }
     }
-  }
-  allContentfulDiscountCodes {
-    edges {
-      node {
-        id
-        title
-        percentageOff
-        discountCode
-      }
-    }
-  }
-}
 
 `;
 //endregion

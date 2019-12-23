@@ -4,9 +4,10 @@ import styles from './Item.module.scss';
 
 export default class Item extends Component {
 	render() {
-		const {children} = this.props;
+		const {children, ...props} = this.props;
 		return (
 			<div
+				{...props}
 				className={`${styles.Item} ${this.props.className}`}>
 				{children}
 			</div>
