@@ -4,10 +4,9 @@ import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import Row from '../components/base-components/Row';
 import TeamMember from '../components/template-components/TeamMember/TeamMember';
-import Flex from '../components/base-components/Flex';
 import PageHeader from '../components/template-components/PageHeader';
 
-function getTeamMember(data) {
+const getTeamMember = (data) => {
 	const linksArray = [];
 	// noinspection JSUnresolvedVariable
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
@@ -25,7 +24,7 @@ function getTeamMember(data) {
 		)
 	);
 	return linksArray;
-}
+};
 
 const MeetTheTeamPage = ({ data }) => {
     const page = data.allContentfulPage.edges[0].node;

@@ -34,9 +34,9 @@ const OrderPage = ({data}) => {
         message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,!]{0,300}$',
     };
 
-    function isInitiallyValid(field) {
+    const isInitiallyValid = (field) => {
         return RegExp(validation[field]).test(defaultValues[field]);
-    }
+    };
 
     let isValueInitiallyValid = {
         firstName: isInitiallyValid('firstName'),
@@ -103,13 +103,13 @@ const OrderPage = ({data}) => {
      * Form submission to Netlify
      * @param e
      */
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         let objectToSend = {
             extra: values['extra'].join('\n'),
             email: values['email'],
             message: values['message'],
             company: values['company'],
-            planFeature : selectedPlansAsString,
+            planFeature: selectedPlansAsString,
             planTitle: window.history.state.title
         };
         const obj = encode({'form-name': 'Website Quote', ...objectToSend});
@@ -179,23 +179,24 @@ const OrderPage = ({data}) => {
 
     //region Rendering
 
-    function returnPreselectedPlans() {
+    const returnPreselectedPlans = () => {
         return (
             <>
-                <h2 className='font-weight-normal'>The <span className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
+                <h2 className='font-weight-normal'>The <span
+                    className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
                 {selectedPlansObject.map(name => {
                         return (
-                            <div className='w-75' key={name.id} >
-                            <PlanFeature featureName={name.title}/>
+                            <div className='w-75' key={name.id}>
+                                <PlanFeature featureName={name.title}/>
                             </div>
                         )
                     }
                 )}
             </>
         )
-    }
+    };
 
-    function returnList() {
+    const returnList = () => {
         return (
             <>
                 <h2 className='mt-2'>Choose Some Extra Plans</h2>
@@ -242,7 +243,7 @@ const OrderPage = ({data}) => {
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
             <Row className="column align-items-center">
-                {   isInOrderFlow ? returnPreselectedPlans() : null }
+                {isInOrderFlow ? returnPreselectedPlans() : null}
                 <Flex className='w-75'>
 
                     { // If the user didn't specify a plan on the previous page, disable access to the form
@@ -258,7 +259,7 @@ const OrderPage = ({data}) => {
                                     hidden
                                     type='text'
                                     name='planTitle'
-                                    />
+                                />
                                 <input
                                     hidden
                                     type='text'
