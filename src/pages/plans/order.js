@@ -24,7 +24,8 @@ const OrderPage = ({data}) => {
         email: '',
         message: '',
         company: '',
-        phone: ''
+        phone: '',
+        discount: ''
     };
 
     const validation = {
@@ -73,7 +74,18 @@ const OrderPage = ({data}) => {
         const name = target.name;
         setValue({...values, [name]: value});
         setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
-        console.log(isValueValid)
+    };
+
+    const isDiscountCodeValid = () => {
+        return discountCodesObject.map(elem => {
+           return elem === values['discount'];
+        });
+    };
+
+    const returnValidDiscountCode = () => {
+        return discountCodesObject.filter(elem => {
+            return elem === values['discount'];
+        });
     };
 
     /**
@@ -110,7 +122,8 @@ const OrderPage = ({data}) => {
             message: values['message'],
             company: values['company'],
             planFeature: selectedPlansAsString,
-            planTitle: window.history.state.title
+            planTitle: window.history.state.title,
+            discountCode: isDiscountCodeValid() ? returnValidDiscountCode()[0] : ''
         };
         const obj = encode({'form-name': 'Website Quote', ...objectToSend});
 
@@ -152,12 +165,18 @@ const OrderPage = ({data}) => {
 
     //region Plans Setup
     const allPlans = data.allContentfulPlanFeature.edges;
+    const allDiscountCodes = data.allContentfulDiscountCodes.edges;
+
     let missingPlansObject = null;
     let selectedPlansObject = null;
     const page = data.allContentfulPage.edges[0].node;
 
     let selectedPlansFilter = preselectedPlansArray.map(plan => {
         return plan.id;
+    });
+
+    const discountCodesObject =  allDiscountCodes.map(discount => {
+        return discount.node.discountCode
     });
 
     missingPlansObject = allPlans
@@ -263,6 +282,11 @@ const OrderPage = ({data}) => {
                                     type='text'
                                     name='planFeature'
                                 />
+                                <input
+                                    hidden
+                                    type='text'
+                                    name='discountCode'
+                                />
                                 <ThemeInput
                                     required={true}
                                     variant="outlined"
@@ -308,6 +332,13 @@ const OrderPage = ({data}) => {
                                     onChange={handleInputChange}
                                     value={values['phone']}/>
                                 {returnList()}
+
+                                <ThemeInput
+                                    name='discount'
+                                    label='Discout Code'
+                                    onChange={handleInputChange}
+                                    value={values['discount']}/>
+
                                 <Button
                                     type="submit"
                                     className="button"
@@ -327,30 +358,41 @@ const OrderPage = ({data}) => {
 
 export const query = graphql`
     {
-        allContentfulPage(filter: { title: { eq: "Order" } }) {
-            edges {
-                node {
-                    title
-                    headerText
-                    header
-                    isHeaderTextVisible
-                    isHeaderVisible
-                }
-            }
-        }
-        allContentfulPlanFeature {
-            edges {
-                node {
-                    id
-                    title
-                    excerpt {
-                        excerpt
-                        id
-                    }
-                }
-            }
-        }
+          allContentfulPage(filter: {title: {eq: "Order"}}) {
+    edges {
+      node {
+        title
+        headerText
+        header
+        isHeaderTextVisible
+        isHeaderVisible
+      }
     }
+  }
+  allContentfulPlanFeature {
+    edges {
+      node {
+        id
+        title
+        excerpt {
+          excerpt
+          id
+        }
+      }
+    }
+  }
+  allContentfulDiscountCodes {
+    edges {
+      node {
+        id
+        title
+        percentageOff
+        discountCode
+      }
+    }
+  }
+}
+
 `;
 //endregion
 
