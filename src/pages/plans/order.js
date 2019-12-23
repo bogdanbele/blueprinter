@@ -24,7 +24,8 @@ const OrderPage = ({data}) => {
         email: '',
         message: '',
         company: '',
-        phone: ''
+        phone: '',
+        discountCode: ''
     };
 
     const validation = {
@@ -34,9 +35,9 @@ const OrderPage = ({data}) => {
         message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,!]{0,300}$',
     };
 
-    function isInitiallyValid(field) {
+    const isInitiallyValid = (field) => {
         return RegExp(validation[field]).test(defaultValues[field]);
-    }
+    };
 
     let isValueInitiallyValid = {
         firstName: isInitiallyValid('firstName'),
@@ -73,7 +74,19 @@ const OrderPage = ({data}) => {
         const name = target.name;
         setValue({...values, [name]: value});
         setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
-        console.log(isValueValid)
+        console.log(values)
+    };
+
+    const isDiscountCodeValid = () => {
+        return discountCodesObject.map(elem => {
+           return elem.toLowerCase() === values['discountCode'].toLowerCase() ;
+        });
+    };
+
+    const returnValidDiscountCode = () => {
+        return discountCodesObject.filter(elem => {
+            return elem.toLowerCase()  === values['discountCode'].toLowerCase() ;
+        })
     };
 
     /**
@@ -103,14 +116,16 @@ const OrderPage = ({data}) => {
      * Form submission to Netlify
      * @param e
      */
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         let objectToSend = {
             extra: values['extra'].join('\n'),
             email: values['email'],
             message: values['message'],
             company: values['company'],
-            planFeature : selectedPlansAsString,
-            planTitle: window.history.state.title
+            phone: values['phone'],
+            planFeature: selectedPlansAsString,
+            planTitle: window.history.state.title,
+            discountCode: isDiscountCodeValid() ? returnValidDiscountCode()[0] : ''
         };
         const obj = encode({'form-name': 'Website Quote', ...objectToSend});
 
@@ -152,12 +167,18 @@ const OrderPage = ({data}) => {
 
     //region Plans Setup
     const allPlans = data.allContentfulPlanFeature.edges;
+    const allDiscountCodes = data.allContentfulDiscountCodes.edges;
+
     let missingPlansObject = null;
     let selectedPlansObject = null;
     const page = data.allContentfulPage.edges[0].node;
 
     let selectedPlansFilter = preselectedPlansArray.map(plan => {
         return plan.id;
+    });
+
+    const discountCodesObject =  allDiscountCodes.map(discountCode => {
+        return discountCode.node.discountCode
     });
 
     missingPlansObject = allPlans
@@ -179,23 +200,24 @@ const OrderPage = ({data}) => {
 
     //region Rendering
 
-    function returnPreselectedPlans() {
+    const returnPreselectedPlans = () => {
         return (
             <>
-                <h2 className='font-weight-normal'>The <span className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
+                <h2 className='font-weight-normal'>The <span
+                    className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
                 {selectedPlansObject.map(name => {
                         return (
-                            <div className='w-75' key={name.id} >
-                            <PlanFeature featureName={name.title}/>
+                            <div className='w-75' key={name.id}>
+                                <PlanFeature featureName={name.title}/>
                             </div>
                         )
                     }
                 )}
             </>
         )
-    }
+    };
 
-    function returnList() {
+    const returnList = () => {
         return (
             <>
                 <h2 className='mt-2'>Choose Some Extra Plans</h2>
@@ -216,9 +238,6 @@ const OrderPage = ({data}) => {
                     renderValue={() => values['extra'].join(',')}
                     MenuProps={MenuProps}
                 >
-                    {console.log(missingPlansObject)}
-                    {console.log(values)}
-
                     {missingPlansObject.map(name => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
@@ -243,7 +262,7 @@ const OrderPage = ({data}) => {
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
             <Row className="column align-items-center">
-                {   isInOrderFlow ? returnPreselectedPlans() : null }
+                {isInOrderFlow ? returnPreselectedPlans() : null}
                 <Flex className='w-75'>
 
                     { // If the user didn't specify a plan on the previous page, disable access to the form
@@ -259,7 +278,7 @@ const OrderPage = ({data}) => {
                                     hidden
                                     type='text'
                                     name='planTitle'
-                                    />
+                                />
                                 <input
                                     hidden
                                     type='text'
@@ -310,6 +329,13 @@ const OrderPage = ({data}) => {
                                     onChange={handleInputChange}
                                     value={values['phone']}/>
                                 {returnList()}
+
+                                <ThemeInput
+                                    name='discountCode'
+                                    label='Discout Code'
+                                    onChange={handleInputChange}
+                                    value={values['discountCode']}/>
+
                                 <Button
                                     type="submit"
                                     className="button"
@@ -329,30 +355,41 @@ const OrderPage = ({data}) => {
 
 export const query = graphql`
     {
-        allContentfulPage(filter: { title: { eq: "Order" } }) {
-            edges {
-                node {
-                    title
-                    headerText
-                    header
-                    isHeaderTextVisible
-                    isHeaderVisible
-                }
-            }
-        }
-        allContentfulPlanFeature {
-            edges {
-                node {
-                    id
-                    title
-                    excerpt {
-                        excerpt
-                        id
-                    }
-                }
-            }
-        }
+          allContentfulPage(filter: {title: {eq: "Order"}}) {
+    edges {
+      node {
+        title
+        headerText
+        header
+        isHeaderTextVisible
+        isHeaderVisible
+      }
     }
+  }
+  allContentfulPlanFeature {
+    edges {
+      node {
+        id
+        title
+        excerpt {
+          excerpt
+          id
+        }
+      }
+    }
+  }
+  allContentfulDiscountCodes {
+    edges {
+      node {
+        id
+        title
+        percentageOff
+        discountCode
+      }
+    }
+  }
+}
+
 `;
 //endregion
 

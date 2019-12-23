@@ -14,5 +14,8 @@
       </option>
     </inspection_tool>
     <inspection_tool class="JSUnresolvedVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="RequiredAttributes" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myAdditionalRequiredHtmlAttributes" value="button,component" />
+    </inspection_tool>
   </profile>
 </component>

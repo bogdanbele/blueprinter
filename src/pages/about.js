@@ -40,9 +40,9 @@ const AboutPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
 
-	const sectionOneformatedExcerpt = wrapWithParagraph(pageSections[0].content.content);
-	const sectionTwoformatedExcerpt = wrapWithParagraph(pageSections[1].content.content);
-	const sectionThreeformatedExcerpt = wrapWithParagraph(pageSections[2].content.content);
+	const sectionOneformatedExcerpt = pageSections[0].content.content ? wrapWithParagraph(pageSections[0].content.content) : '';
+	const sectionTwoformatedExcerpt = pageSections[1].content.content ? wrapWithParagraph(pageSections[1].content.content) : '';
+	const sectionThreeformatedExcerpt = pageSections[2].content.content ? wrapWithParagraph(pageSections[2].content.content) : '';
 
 	return (
 		<Layout className="alternating-row">

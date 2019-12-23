@@ -9,13 +9,13 @@
     border-style: solid;
     border-width: 2px;
     border-color:  #{darken($color-primary,20%)};
+
+    @include breakpoint(xs){
+       width: 70%;
+    }
     @include breakpoint(md) {
-        width: initial;
+        width: 31%;
     }
-    @include breakpoint(xs) {
-        width: 60%;
-    }
-        
 
 }
 

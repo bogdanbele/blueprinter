@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './ThemeCheckbox.module.scss';
+import PropTypes from 'prop-types';
 import {ThemeToggler} from 'gatsby-plugin-dark-mode'
 import {Checkbox} from "@material-ui/core";
 import {FaLightbulb, FaRegLightbulb} from "react-icons/fa";
@@ -27,3 +28,7 @@ export default class ThemeCheckbox extends React.Component {
         )
     }
 }
+
+ThemeCheckbox.propTypes = {
+    className: PropTypes.string
+};

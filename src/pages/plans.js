@@ -1,45 +1,43 @@
-import React  from 'react';
-import { graphql } from 'gatsby';
+import React from 'react';
+import {graphql} from 'gatsby';
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import PageHeader from '../components/template-components/PageHeader';
 import PricingPlan from '../components/template-components/PricingPlan/PricingPlan';
 import Row from '../components/base-components/Row';
 
+const getPricingPlans = (data) => {
+    const pricingPlansArray = [];
 
-function getPricingPlans(data) {
-	const pricingPlansArray = [];
+    data.allContentfulPage.edges[0].node.contentSections.forEach((item) =>
+        pricingPlansArray.push(
+            <PricingPlan
+                key={item.id}
+                title={item.title}
+                features={item.features}
+                price={item.price}
+            />
+        )
+    );
 
-	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
-		pricingPlansArray.push(
-			<PricingPlan
-				className="flex--3"
-				key={item.id}
-				title={item.title}
-				features={item.features}
-				price={item.price}
-			/>
-		)
-	);
-
-	return pricingPlansArray;
+    return pricingPlansArray;
 }
 
-const PlansPage = ({ data }) => {
-	const page = data.allContentfulPage.edges[0].node;
+const PlansPage = ({data}) => {
+    const page = data.allContentfulPage.edges[0].node;
 
-	return (
-		<Layout>
-			<SEO title="Pricing plans" />
-			<PageHeader
-				header={page.header}
-				headerText={page.headerText}
-				isHeaderVisible={page.isHeaderVisible}
-				isHeaderTextVisible={page.isHeaderTextVisible}
-			/>
-			<Row className="around">{getPricingPlans(data)}</Row>
-		</Layout>
-	);
+    return (
+        <Layout>
+            <SEO title="Pricing plans"/>
+            <PageHeader
+                header={page.header}
+                headerText={page.headerText}
+                isHeaderVisible={page.isHeaderVisible}
+                isHeaderTextVisible={page.isHeaderTextVisible}
+            />
+            <Row className="around">{getPricingPlans(data)}</Row>
+        </Layout>
+    );
 };
 
 export const query = graphql`
