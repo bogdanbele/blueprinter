@@ -25,7 +25,7 @@ const OrderPage = ({data}) => {
         message: '',
         company: '',
         phone: '',
-        discount: ''
+        discountCode: ''
     };
 
     const validation = {
@@ -78,13 +78,13 @@ const OrderPage = ({data}) => {
 
     const isDiscountCodeValid = () => {
         return discountCodesObject.map(elem => {
-           return elem === values['discount'];
+           return elem.toLowerCase() === values['discountCode'].toLowerCase() ;
         });
     };
 
     const returnValidDiscountCode = () => {
         return discountCodesObject.filter(elem => {
-            return elem.toLowerCase() === values['discount'];
+            return elem.toLowerCase()  === values['discountCode'].toLowerCase() ;
         })
     };
 
@@ -175,8 +175,8 @@ const OrderPage = ({data}) => {
         return plan.id;
     });
 
-    const discountCodesObject =  allDiscountCodes.map(discount => {
-        return discount.node.discountCode
+    const discountCodesObject =  allDiscountCodes.map(discountCode => {
+        return discountCode.node.discountCode
     });
 
     missingPlansObject = allPlans
@@ -282,11 +282,6 @@ const OrderPage = ({data}) => {
                                     type='text'
                                     name='planFeature'
                                 />
-                                <input
-                                    hidden
-                                    type='text'
-                                    name='discountCode'
-                                />
                                 <ThemeInput
                                     required={true}
                                     variant="outlined"
@@ -334,10 +329,10 @@ const OrderPage = ({data}) => {
                                 {returnList()}
 
                                 <ThemeInput
-                                    name='discount'
+                                    name='discountCode'
                                     label='Discout Code'
                                     onChange={handleInputChange}
-                                    value={values['discount']}/>
+                                    value={values['discountCode']}/>
 
                                 <Button
                                     type="submit"
