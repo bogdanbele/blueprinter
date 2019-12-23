@@ -217,8 +217,6 @@ const OrderPage = ({data}) => {
                     renderValue={() => values['extra'].join(',')}
                     MenuProps={MenuProps}
                 >
-                    {console.log(missingPlansObject)}
-                    {console.log(values)}
                     {missingPlansObject.map(name => {
                         return (
                             <MenuItem key={name.title} value={name.title}>
