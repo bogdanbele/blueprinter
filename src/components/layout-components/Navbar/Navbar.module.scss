@@ -26,6 +26,9 @@
 }
 
 .ThemeCheck{
+    span {
+        color: $color-primary;
+    }
     @include breakpoint(md) {
         order: 3;
         display: flex;
@@ -40,5 +43,12 @@
     &:hover {
         text-decoration: none;
         color: $theme-yellow;
+    }
+}
+
+.SvgIconLogo {
+    width: 100%;
+    path {
+        fill: $color-primary;
     }
 }
