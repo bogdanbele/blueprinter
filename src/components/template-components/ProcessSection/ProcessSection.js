@@ -9,14 +9,14 @@ export default class ProcessSection extends React.PureComponent {
     render() {
         let bigHeader = () =>
             (this.props.bigHeader !== null) ? (
-                <Flex className='column flex--text-center'>
+                <Flex className='flex-column text-center'>
                     <h1>{this.props.bigHeader}</h1>
                 </Flex>
             ) : null;
 
         let sectionIcon = () =>
             (typeof this.props.imgSrc  !== 'undefined') ? (
-                <Flex className='flex--100 centered'>
+                <Flex className='flex--100 justify-content-center'>
                     <Img fixed={this.props.imgSrc} alt={this.props.imgAlt}/>
                 </Flex>
             ) : null;
@@ -24,10 +24,10 @@ export default class ProcessSection extends React.PureComponent {
         const formattedContent = wrapWithParagraph(this.props.content);
 
         return (
-            <Row className='column'>
+            <Row className='flex-column px-5'>
                 {bigHeader()}
                 {sectionIcon()}
-                <Flex className='column'>
+                <Flex className='flex-column'>
                     <h2>{this.props.header}</h2>
                     <h3>{this.props.subHeader}</h3>
                     {formattedContent}

@@ -24,7 +24,7 @@ export default class ContactForm extends React.Component {
 			firstName: '^[A-Za-zÀ-ÖØ-öø-ÿa-zšđčćž\\s]{2,20}$',
 			lastName: '^[A-Za-zÀ-ÖØ-öø-ÿa-zšđčćž\\s]{2,20}$',
 			email: '^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$',
-			message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,!]{20,300}$',
+			message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,\'-;:%&()!_]{0,300}$',
 		},
 	};
 

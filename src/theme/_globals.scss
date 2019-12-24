@@ -3,16 +3,6 @@
 :global .primary {
   color: $color-primary;
 }
-
-:global .row {
-  flex-direction: row;
-  margin: 0;
-}
-
-:global .column {
-  flex-direction: column;
-}
-
 // Spacing
 
 :global .padding-3-x {
@@ -21,37 +11,11 @@
 }
 
 // Arrangement
-
-:global .text-center {
-  text-align: center;
-}
-
-:global .between {
-  justify-content: space-between;
-}
-
-:global .around {
-  justify-content: space-around;
-}
-
 :global .clean {
   border-bottom: none;
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 0;
-}
-
-:global .centered {
-  justify-content: center;
-}
-
-:global .full {
-  @include breakpoint(md) {
-    width: 100vw;
-  }
-
-  align-items: center;
-  width: 80vw;
 }
 
 // Alternating rows
@@ -76,6 +40,7 @@
   }
 }
 
+//region Alternating Row
 @mixin alternating-row-setup() {
   background-color: var(--bg-highlight);
 }
@@ -93,14 +58,11 @@
       @include alternating-row-setup();
     }
   }
-}
-
-;
-
+};
 
 :global .alternating-row {
   > {
-    background-color: red;
+
   }
   @include alternating-row(even)
 }
@@ -111,7 +73,9 @@
   @include alternating-row(odd)
 }
 
-;
+:global .active-class{
+  color: $font-color-light;
+}
 
 :global .alternating-row-md {
   @include alternating-row(even, true)
@@ -122,11 +86,4 @@
 :global .alternating-row-odd-md {
   @include alternating-row(odd, true)
 }
-
-:global .MuiSelect-root {
-  border-color: red;
-
-  & :hover:not(:disabled):not(:focus):before {
-    border-bottom:  2px solid red,
-  }
-}
+//endregion

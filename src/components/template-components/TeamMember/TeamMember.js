@@ -16,10 +16,10 @@ export default class TeamMember extends React.Component {
         const formattedDescription = wrapWithParagraph(this.props.description);
 
         return (
-            <Flex className='flex-grow-1 column'>
+            <Flex className='flex-grow-1 flex-column'>
                 <h1>{this.props.name}</h1>
                 <Flex className={styles.TeamMember + order()}>
-                    <Flex className='column px-2'>
+                    <Flex className='flex-column px-2'>
                         {formattedDescription}
                         <br/>
                         <h2>Area of expertise:</h2>

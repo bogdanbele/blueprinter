@@ -49,7 +49,7 @@ const AboutPage = ({ data }) => {
 			<SEO title="About" />
 
 			<PageHeader
-				rowClassName={'text-center centered Row--0-pb Row--full-width'}
+				rowClassName={'text-center justify-content-center Row--0-pb Row--full-width'}
 				header={page.header}
 				headerText={page.headerText}
 				isHeaderVisible={page.isHeaderVisible}
@@ -59,7 +59,7 @@ const AboutPage = ({ data }) => {
 			</PageHeader>
 
 			<Row
-				className="centered Row--header"
+				className="justify-content-center Row--header"
 				ref={section => {
 					customerRef.current = section;
 				}}
@@ -73,7 +73,7 @@ const AboutPage = ({ data }) => {
 			</Row>
 
 			<Row
-				className="centered"
+				className="justify-content-center"
 				ref={section => {
 					howRef.current = section;
 				}}
@@ -87,7 +87,7 @@ const AboutPage = ({ data }) => {
 			</Row>
 
 			<Row
-				className="centered"
+				className="justify-content-center"
 				ref={section => {
 					whyRef.current = section;
 				}}

@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
 
-			<Row className="around px-5">
+			<Row className="justify-content-around">
 				<ExcerptCard
 					header={pageSections[0].header}
 					icon={handshakeSVG}
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
 					buttonOnClick={scrollToSecondRef}
 				/>
 			</Row>
-			<Row className="px-5">
+			<Row>
 				<ExcerptCard
 					header={pageSections[2].header}
 					icon={thoughtSVG}

@@ -15,7 +15,7 @@ export default class MiniContent extends React.PureComponent {
         let list = () => (this.props.list ? <>{listToParagraph(this.props.list)}</> : null);
 
         return (
-            <Flex className={`column ${this.props.flexClassName}`}>
+            <Flex className={`flex-column ${this.props.flexClassName}`}>
                 <h3>{this.props.header}</h3>
                 <p>{this.props.description}</p>
                 {list()}
