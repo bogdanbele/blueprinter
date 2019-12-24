@@ -139,7 +139,7 @@ const OrderPage = ({data}) => {
                 state : {
                     data: "Quote Submitted",
                 }
-            }).then())
+            }))
             .catch(error => alert(error));
         e.preventDefault()
     };
