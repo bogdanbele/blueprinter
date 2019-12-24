@@ -40,16 +40,16 @@ const AboutPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
 
-	const sectionOneformatedExcerpt = pageSections[0].content.content ? wrapWithParagraph(pageSections[0].content.content) : '';
-	const sectionTwoformatedExcerpt = pageSections[1].content.content ? wrapWithParagraph(pageSections[1].content.content) : '';
-	const sectionThreeformatedExcerpt = pageSections[2].content.content ? wrapWithParagraph(pageSections[2].content.content) : '';
+	const sectionOneParagraphExcerpt = pageSections[0].content.content ? wrapWithParagraph(pageSections[0].content.content) : '';
+	const sectionTwoParagraphExcerpt = pageSections[1].content.content ? wrapWithParagraph(pageSections[1].content.content) : '';
+	const sectionThreeParagraphExcerpt = pageSections[2].content.content ? wrapWithParagraph(pageSections[2].content.content) : '';
 
 	return (
 		<Layout className="alternating-row">
 			<SEO title="About" />
 
 			<PageHeader
-				rowClassName={'text-center centered Row--0-pb Row--full-width'}
+				rowClassName={'text-center justify-content-center Row--0-pb Row--full-width'}
 				header={page.header}
 				headerText={page.headerText}
 				isHeaderVisible={page.isHeaderVisible}
@@ -59,7 +59,7 @@ const AboutPage = ({ data }) => {
 			</PageHeader>
 
 			<Row
-				className="centered Row--header"
+				className="justify-content-center Row--header"
 				ref={section => {
 					customerRef.current = section;
 				}}
@@ -67,13 +67,13 @@ const AboutPage = ({ data }) => {
 				<Flex className="flex--1">
 					<Item>
 						<h1>{pageSections[0].header}</h1>
-						{sectionOneformatedExcerpt}
+						{sectionOneParagraphExcerpt}
 					</Item>
 				</Flex>
 			</Row>
 
 			<Row
-				className="centered"
+				className="justify-content-center"
 				ref={section => {
 					howRef.current = section;
 				}}
@@ -81,13 +81,13 @@ const AboutPage = ({ data }) => {
 				<Flex className="flex--1">
 					<Item>
 						<h1>{pageSections[1].header}</h1>
-						{sectionTwoformatedExcerpt}
+						{sectionTwoParagraphExcerpt}
 					</Item>
 				</Flex>
 			</Row>
 
 			<Row
-				className="centered"
+				className="justify-content-center"
 				ref={section => {
 					whyRef.current = section;
 				}}
@@ -95,7 +95,7 @@ const AboutPage = ({ data }) => {
 				<Flex className="flex--1">
 					<Item>
 						<h1>{pageSections[2].header}</h1>
-						{sectionThreeformatedExcerpt}
+						{sectionThreeParagraphExcerpt}
 					</Item>
 				</Flex>
 			</Row>

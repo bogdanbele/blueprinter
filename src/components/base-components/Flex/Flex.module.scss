@@ -22,37 +22,11 @@
 		}
 	}
 
-	&:global.flex--centered {
-		align-items: center;
-		justify-content: center;
-	}
-
 	h1 {
 		color: $color-primary;
 		margin-bottom: 1.5rem;
 	}
 
-	&:global.flex--self-centered{
-		align-self: center;
-	}
-
-	&:global.flex--fit {
-		height: fit-content;
-
-		p {
-			height: 5rem;
-		}
-	}
-
-	&:global.flex--text-center {
-		text-align: center;
-	}
-
-	&:global.flex--h1-center {
-		> h1  {
-		text-align: center;
-		}
-	}
 
 	&:global.flex--row--column {
 		flex-direction: column;

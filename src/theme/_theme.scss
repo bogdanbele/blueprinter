@@ -1,21 +1,6 @@
 $font-family-primary: Quicksand, sans-serif;
 $font-family-secondary: Roboto, sans-serif;
 
-@import "colors";
-
-/*
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
-*/
-
-@import "dimens";
-
-@import "scss_defaults/box_shadow";
-@import "scss_defaults/screen_sizes";
-
-@import "globals";
-
 $web-page-width: 960px;
 
 $dark-blue-bg: #0a1527;
@@ -26,6 +11,17 @@ $theme-light: $light-bg;
 
 $font-color-dark: $dark-blue-bg;
 $font-color-light: white;
+
+
+@import "colors";
+
+@import "dimens";
+
+@import "scss_defaults/box_shadow";
+@import "scss_defaults/screen_sizes";
+
+@import "globals";
+
 
 body {
     font-family: $font-family-secondary;

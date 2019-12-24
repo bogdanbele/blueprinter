@@ -3,9 +3,8 @@
 .PricingPlan {
 
     align-items: center;
-
     width: 80%;
-    height: max-content;
+    height: 100%;
     border-style: solid;
     border-width: 2px;
     border-color:  #{darken($color-primary,20%)};

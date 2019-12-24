@@ -29,7 +29,7 @@ export default class PricingPlan extends React.Component {
 
     render() {
         return (
-            <Flex className={`column ${styles.PricingPlan} ${this.props.className}`}>
+            <Flex className={`flex-column ${styles.PricingPlan} ${this.props.className}`}>
                 <Item>
                     <h2 className="my-4 text-center">{this.props.title}</h2>
                 </Item>
@@ -51,7 +51,7 @@ PricingPlan.propTypes = {
 export class PlanFeature extends React.Component {
     render() {
         return (
-            <Item className={`px-1 my-1 mx-2 row ${styles.PlanFeature}`}>
+            <Item className={`px-1 my-1 mx-2 flex-row ${styles.PlanFeature}`}>
                 <p>{this.props.featureName}</p>
                 <FaInfoCircle className="test"/>
             </Item>

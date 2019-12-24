@@ -23,7 +23,7 @@ const ContactPage = ({ data }) => {
 					key={pageSections[0].id}
 					header={pageSections[0].header}
 					description={pageSections[0].description}
-					flexClassName={'centered flex--2'}
+					flexClassName={'justify-content-center flex--2'}
 					list={pageSections[0].list}
 				/>
 			</PageHeader>

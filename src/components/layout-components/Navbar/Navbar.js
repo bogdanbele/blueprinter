@@ -65,7 +65,7 @@ export default class Navbar extends Component {
 						{this.state.links.map(link => {
 							return (
 								<li key={link.id} className="nav-item mb-0 py-2">
-									<Link to={link.path} className={`${style.NavLink} mx-md-3 mx-4 mx-xl-4 primary av-link text-capitalize`}>
+									<Link to={link.path} activeClassName={'active-class'} className={`${style.NavLink} mx-md-3 mx-4 mx-xl-4 primary av-link text-capitalize`}>
 										{link.linkName}
 									</Link>
 								</li>

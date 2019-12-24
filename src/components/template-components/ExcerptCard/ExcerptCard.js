@@ -13,7 +13,7 @@ export default class ExcerptCard extends React.PureComponent {
     render() {
         let displayIcon = () =>
             (typeof this.props.icon !== 'undefined') ? (
-                <Flex className="centered">
+                <Flex className="justify-content-center">
                     <Icon>
                         <img
                             alt={getImageAltText(this.props.icon)}

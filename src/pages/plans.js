@@ -19,9 +19,8 @@ const getPricingPlans = (data) => {
             />
         )
     );
-
     return pricingPlansArray;
-}
+};
 
 const PlansPage = ({data}) => {
     const page = data.allContentfulPage.edges[0].node;
@@ -35,7 +34,7 @@ const PlansPage = ({data}) => {
                 isHeaderVisible={page.isHeaderVisible}
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
-            <Row className="around">{getPricingPlans(data)}</Row>
+            <Row className="justify-content-between">{getPricingPlans(data)}</Row>
         </Layout>
     );
 };
