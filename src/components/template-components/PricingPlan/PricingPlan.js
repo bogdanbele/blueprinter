@@ -9,7 +9,8 @@ import {navigate} from '@reach/router';
 
 const getPlanFeature = data => {
     const featuresArray = [];
-    data.forEach(item => featuresArray.push(<PlanFeature key={item.id} featureName={item.title}/>));
+    data.forEach(item => featuresArray.push(<PlanFeature key={item.id} featureName={item.title}
+                                                         featureDescription={item.excerpt.excerpt}/>));
     return featuresArray;
 };
 
@@ -28,12 +29,14 @@ export default class PricingPlan extends React.Component {
     };
 
     render() {
+        console.log(this.props)
         return (
-            <Flex className={`flex-column ${styles.PricingPlan} ${this.props.className}`}>
+
+            <Flex className={`flex-column py-4 ${styles.PricingPlan} ${this.props.className}`}>
                 <Item>
                     <h2 className="my-4 text-center">{this.props.title}</h2>
                 </Item>
-                <div className="w-100">{getPlanFeature(this.props.features)}</div>
+                <div className="w-100 mt-5">{getPlanFeature(this.props.features)}</div>
                 <h2 className="mt-4 text-center">{numberWithPeriod(this.props.price)} DKK</h2>
                 <Button className="px-5" onClick={this.navigateToOrder}>Click</Button>
             </Flex>
@@ -51,14 +54,19 @@ PricingPlan.propTypes = {
 export class PlanFeature extends React.Component {
     render() {
         return (
-            <Item className={`px-1 my-1 mx-2 flex-row ${styles.PlanFeature}`}>
-                <p>{this.props.featureName}</p>
-                <FaInfoCircle className="test"/>
+            <Item className={`px-1 my-1 mx-2 flex-column ${styles.PlanFeature}`}>
+                <div className='flex-row d-flex justify-content-between'>
+                    <p className='font-weight-bold'>{this.props.featureName}</p>
+                    <FaInfoCircle className="test"/></div>
+                <div className='d-flex'>
+                    <p className={`mb-4 ${styles.Hover}`}>{this.props.featureDescription}</p>
+                </div>
             </Item>
         );
     }
 }
 
 PlanFeature.propTypes = {
-    featureName: PropTypes.string.isRequired
+    featureName: PropTypes.string.isRequired,
+    featureDescription: PropTypes.string.isRequired
 };

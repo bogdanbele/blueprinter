@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './Navbar.module.scss';
-import logoText from '../../../config/logo/logo-text.svg';
+import logoText  from '../../../config/logo/logo-text.svg';
 import logoIcon from '../../../config/logo/logo-icon.svg';
 import { Link } from 'gatsby';
 import ThemeCheckbox from '../../base-components/ThemeCheckbox/';
@@ -54,7 +54,7 @@ export default class Navbar extends Component {
 			<nav className="navbar px-0 px-md-3 my-2 navbar-expand-md navbar-light">
 				<ThemeCheckbox className={style.ThemeCheck} />
 				<div onClick={() => navigate('/')} className={`${style.LogoHolder} navbar-brand`}>
-					<img alt="ncweb-logo" src={logoIcon} />
+					<img alt="ncweb-logoIcon" src={logoIcon} />
 					<img alt="ncweb-logoText" src={logoText} />
 				</div>
 				<button className="navbar-toggler bg-light mr-md-0 mr-2" type="button" onClick={this.navbarHandler}>
