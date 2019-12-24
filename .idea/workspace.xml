@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/success.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Item/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Item/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/ContactForm/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/ContactForm/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/Layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/Layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/plans/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/TextWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/TextWrapper.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +153,8 @@
       <workItem from="1577004668085" duration="15476000" />
       <workItem from="1577051315571" duration="2416000" />
       <workItem from="1577053776332" duration="1700000" />
+      <workItem from="1577175909732" duration="2125000" />
+      <workItem from="1577185035727" duration="3707000" />
     </task>
     <servers />
   </component>

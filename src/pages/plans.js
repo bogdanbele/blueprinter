@@ -19,9 +19,8 @@ const getPricingPlans = (data) => {
             />
         )
     );
-
     return pricingPlansArray;
-}
+};
 
 const PlansPage = ({data}) => {
     const page = data.allContentfulPage.edges[0].node;

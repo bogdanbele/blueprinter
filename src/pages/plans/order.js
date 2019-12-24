@@ -33,7 +33,7 @@ const OrderPage = ({data}) => {
         company: '^[A-Za-zÀ-ÖØ-öø-ÿa-zšđčćž\\s]{0,20}$',
         phone: '^$|^[0-9\\s+]{8,14}$',
         email: '^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$',
-        message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,!]{0,300}$',
+        message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,\'-;:%&()!_]{0,300}$',
     };
 
     const isInitiallyValid = (field) => {
@@ -135,10 +135,14 @@ const OrderPage = ({data}) => {
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             body: obj,
         })
-            .then(() => navigate('/'))
+            .then(() => navigate('/success/', {
+                state : {
+                    data: "Quote Submitted",
+                }
+            }).then())
             .catch(error => alert(error));
         e.preventDefault()
-    }
+    };
 
     //endregion
 
@@ -298,7 +302,6 @@ const OrderPage = ({data}) => {
                                     name='planFeature'
                                 />
                                 <ThemeInput
-                                    required={true}
                                     variant="outlined"
                                     name="company"
                                     label="Company Name"

@@ -40,9 +40,9 @@ const AboutPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
 
-	const sectionOneformatedExcerpt = pageSections[0].content.content ? wrapWithParagraph(pageSections[0].content.content) : '';
-	const sectionTwoformatedExcerpt = pageSections[1].content.content ? wrapWithParagraph(pageSections[1].content.content) : '';
-	const sectionThreeformatedExcerpt = pageSections[2].content.content ? wrapWithParagraph(pageSections[2].content.content) : '';
+	const sectionOneParagraphExcerpt = pageSections[0].content.content ? wrapWithParagraph(pageSections[0].content.content) : '';
+	const sectionTwoParagraphExcerpt = pageSections[1].content.content ? wrapWithParagraph(pageSections[1].content.content) : '';
+	const sectionThreeParagraphExcerpt = pageSections[2].content.content ? wrapWithParagraph(pageSections[2].content.content) : '';
 
 	return (
 		<Layout className="alternating-row">
@@ -67,7 +67,7 @@ const AboutPage = ({ data }) => {
 				<Flex className="flex--1">
 					<Item>
 						<h1>{pageSections[0].header}</h1>
-						{sectionOneformatedExcerpt}
+						{sectionOneParagraphExcerpt}
 					</Item>
 				</Flex>
 			</Row>
@@ -81,7 +81,7 @@ const AboutPage = ({ data }) => {
 				<Flex className="flex--1">
 					<Item>
 						<h1>{pageSections[1].header}</h1>
-						{sectionTwoformatedExcerpt}
+						{sectionTwoParagraphExcerpt}
 					</Item>
 				</Flex>
 			</Row>
@@ -95,7 +95,7 @@ const AboutPage = ({ data }) => {
 				<Flex className="flex--1">
 					<Item>
 						<h1>{pageSections[2].header}</h1>
-						{sectionThreeformatedExcerpt}
+						{sectionThreeParagraphExcerpt}
 					</Item>
 				</Flex>
 			</Row>
