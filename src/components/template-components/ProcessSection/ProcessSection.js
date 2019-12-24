@@ -29,7 +29,7 @@ export default class ProcessSection extends React.PureComponent {
                 {sectionIcon()}
                 <Flex className='flex-column'>
                     <h2>{this.props.header}</h2>
-                    <h3>{this.props.subHeader}</h3>
+                    {this.props.subHeader ? <h3>{this.props.subHeader}</h3> : null}
                     {formattedContent}
                 </Flex>
             </Row>
