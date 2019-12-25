@@ -6,7 +6,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem $grid_2x $grid_2x;
   width: 100%;
 
   @include breakpoint(md) {

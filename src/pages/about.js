@@ -58,6 +58,7 @@ const AboutPage = ({ data }) => {
 			</PageHeader>
 
 			<Row
+				holderClass='w-100-vw'
 				className="justify-content-center Row--header"
 				ref={section => {
 					customerRef.current = section;
@@ -72,6 +73,7 @@ const AboutPage = ({ data }) => {
 			</Row>
 
 			<Row
+				holderClass='w-100-vw'
 				className="justify-content-center"
 				ref={section => {
 					howRef.current = section;
@@ -86,6 +88,7 @@ const AboutPage = ({ data }) => {
 			</Row>
 
 			<Row
+				holderClass='w-100-vw'
 				className="justify-content-center"
 				ref={section => {
 					whyRef.current = section;
