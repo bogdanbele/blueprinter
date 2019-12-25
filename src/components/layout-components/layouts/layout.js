@@ -4,6 +4,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
+require('typeface-quicksand');
+require('typeface-roboto');
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,9 +13,6 @@ import './layout.scss';
 import styles from './Layout.module.scss';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
-
-require('typeface-quicksand');
-require('typeface-roboto');
 
 const Layout = (props) => {
     return (

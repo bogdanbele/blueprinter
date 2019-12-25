@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout-components/FooterMenu/FooterMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/FooterMenu/FooterMenu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/logo/logo-text.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/logo/logo-text.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
