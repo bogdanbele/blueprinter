@@ -19,7 +19,9 @@ const Layout = (props) => {
         <>
             <Navbar/>
             <div className={styles.Content}>
-                <main className={`${props.className}`}>{props.children}</main>
+                <main className={`${props.className}`}>{props.children}
+                    <link rel="preconnect" href={"https://www.google-analytics.com"}/>
+                    <link rel="preconnect" href={"https://stats.g.doubleclick.net"}/> </main>
                 <Footer/>
             </div>
         </>)
