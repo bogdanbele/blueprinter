@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/meet-the-team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/meet-the-team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_globals.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +149,7 @@
       <workItem from="1577175909732" duration="2125000" />
       <workItem from="1577185035727" duration="13547000" />
       <workItem from="1577226903219" duration="12976000" />
+      <workItem from="1577268990334" duration="103000" />
     </task>
     <servers />
   </component>

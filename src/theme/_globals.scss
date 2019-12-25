@@ -16,13 +16,17 @@
 
 @mixin even() {
   > :nth-child(even) {
-    @content
+    @include breakpoint(md) {
+      @content
+    }
   }
 }
 
 @mixin odd() {
   > :nth-child(odd) {
-    @content
+    @include breakpoint(md) {
+      @content
+    }
   }
 }
 
