@@ -212,7 +212,7 @@ const OrderPage = ({data}) => {
                     className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
                 {selectedPlansObject.map(name => {
                         return (
-                            <div className='w-75' key={name.id}>
+                            <div className='w-75-100' key={name.id}>
                                 <PlanFeature featureName={name.title} featureDescription={name.excerpt}/>
                             </div>
                         )
@@ -280,7 +280,7 @@ const OrderPage = ({data}) => {
             />
             <Row className="column align-items-center">
                 {isInOrderFlow ? returnPreselectedPlans() : null}
-                <Flex className='w-75'>
+                <Flex className='w-75-100'>
 
                     { // If the user didn't specify a plan on the previous page, disable access to the form
                         isInOrderFlow ?

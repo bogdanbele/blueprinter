@@ -11,7 +11,7 @@ const getTeamMember = (data) => {
 	// noinspection JSUnresolvedVariable
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
 		linksArray.push(
-			<Row key={item.id} className='px-5'>
+			<Row key={item.id}>
 				<TeamMember
 					index={index}
 					imgsrc={item.image.fixed}

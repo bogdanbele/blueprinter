@@ -16,7 +16,7 @@ export default class TeamMember extends React.Component {
         const formattedDescription = wrapWithParagraph(this.props.description);
 
         return (
-            <Flex className='flex-grow-1 flex-column'>
+            <Flex className='w-100 flex-column'>
                 <h1>{this.props.name}</h1>
                 <Flex className={styles.TeamMember + order()}>
                     <Flex className='flex-column px-2'>

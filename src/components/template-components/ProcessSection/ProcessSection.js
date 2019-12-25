@@ -24,7 +24,7 @@ export default class ProcessSection extends React.PureComponent {
         const formattedContent = wrapWithParagraph(this.props.content);
 
         return (
-            <Row className='flex-column px-5'>
+            <Row className='flex-column'>
                 {bigHeader()}
                 {sectionIcon()}
                 <Flex className='flex-column'>

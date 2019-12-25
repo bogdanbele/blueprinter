@@ -75,4 +75,11 @@
   @include alternating-row(odd, true)
 }
 
+:global .w-75-100 {
+  width: 100%;
+  @include breakpoint(md){
+    width: 75%;
+  }
+}
+
 //endregion

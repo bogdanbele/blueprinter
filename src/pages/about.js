@@ -55,7 +55,6 @@ const AboutPage = ({ data }) => {
 				isHeaderVisible={page.isHeaderVisible}
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			>
-				<FluidImage className="Image--transparent" imgsrc="us-small-2.jpg" />
 			</PageHeader>
 
 			<Row
