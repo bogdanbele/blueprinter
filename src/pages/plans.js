@@ -34,7 +34,7 @@ const PlansPage = ({data}) => {
                 isHeaderVisible={page.isHeaderVisible}
                 isHeaderTextVisible={page.isHeaderTextVisible}
             />
-            <Row className="justify-content-between">{getPricingPlans(data)}</Row>
+            <Row className="justify-content-xs-center justify-content-md-between justify-content-lg-around justify-content-xl-center justify w-100 px-2 px-md-5">{getPricingPlans(data)}</Row>
         </Layout>
     );
 };

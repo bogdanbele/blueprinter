@@ -2,15 +2,17 @@ $font-family-primary: Quicksand, sans-serif;
 $font-family-secondary: Roboto, sans-serif;
 
 $web-page-width: 960px;
+$dark-green-blue: #05386B;
+$deep-blue-bg: #0c0032;
 
 $dark-blue-bg: #0a1527;
-$light-bg: #DDD;
+$light-bg: #EEE2DC;
 
 $theme-dark: $dark-blue-bg;
 $theme-light: $light-bg;
 
-$font-color-dark: $dark-blue-bg;
-$font-color-light: white;
+$font-color-dark: $deep-blue-bg;
+$font-color-light: $light-bg;
 
 
 @import "colors";
@@ -22,9 +24,9 @@ $font-color-light: white;
 
 @import "globals";
 
-
 body {
     font-family: $font-family-secondary;
+    --primary: #{$color-primary};
     background-color: var(--bg);
 }
 
@@ -32,14 +34,16 @@ body.dark {
     --bg: #{$theme-dark};
     --color: #{$font-color-light};
     --bg-highlight: #{lighten($theme-dark,2%)};
+    --bg-highlight-strong: #{darken($theme-dark,10%)};
     --theme-images-opacity: 0.3;
     color: var(--color);
 }
 
 body.light {
-    --bg: #{$theme-light};
+    --bg: #{darken($theme-light,3%)};
     --color: #{$font-color-dark};
-    --bg-highlight: #{lighten($theme-light,2%)};
+    --bg-highlight: #{darken($theme-light,1%)};
+    --bg-highlight-strong: #{darken($theme-light,5%)};
     --theme-images-opacity: 0.6;
     color: var(--color);
 }

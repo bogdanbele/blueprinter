@@ -7,38 +7,19 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem $grid_2x $grid_2x;
-  width: $web-page-width;
+  width: 100%;
 
   @include breakpoint(md) {
     padding-bottom: 3rem;
     padding-top: 3rem;
-  }
-
-  :global &--full-width {
-    padding-left: 0;
-    padding-right: 0;
-    width: 100vw;
-  }
-
-  :global &--header {
-    @include breakpoint(md) {
-      padding-bottom: 5rem;
-      padding-top: 1rem;
-    }
-  }
-
-  :global &--0-pb {
-    padding-bottom: 0;
-
-    @include breakpoint(md) {
-      padding-bottom: 0;
-    }
+    width: $web-page-width;
   }
 }
 
-.RowHolder {background-color: transparent;
+.RowHolder {
+  background-color: transparent;
   justify-content: center;
   align-self: center;
   display: flex;
-  width: 100vw;
+  width: 100%;
 }

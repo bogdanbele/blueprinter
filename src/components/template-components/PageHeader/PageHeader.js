@@ -7,7 +7,7 @@ export default class PageHeader extends React.PureComponent {
 	render() {
 		let header = () => (this.props.isHeaderVisible ? <h1>{this.props.header}</h1> : null);
 		let headerText = () =>
-			this.props.isHeaderTextVisible ? <h3 className='px-5'>{this.props.headerText}</h3> : null;
+			this.props.isHeaderTextVisible ? <h3>{this.props.headerText}</h3> : null;
 		return (
 			<Row className={`Row--header ${this.props.rowClassName}`}>
 				<Flex className="flex-column text-center">

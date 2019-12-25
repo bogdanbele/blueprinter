@@ -49,13 +49,12 @@ const AboutPage = ({ data }) => {
 			<SEO title="About" />
 
 			<PageHeader
-				rowClassName={'text-center justify-content-center Row--0-pb Row--full-width'}
+				rowClassName={'text-center justify-content-center pb-0 px-0 w-100'}
 				header={page.header}
 				headerText={page.headerText}
 				isHeaderVisible={page.isHeaderVisible}
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			>
-				<FluidImage className="Image--transparent" imgsrc="us-small-2.jpg" />
 			</PageHeader>
 
 			<Row
