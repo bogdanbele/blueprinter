@@ -4,7 +4,7 @@
     width: 100%;
     align-items: center;
     height: 100%;
-    background-color: darken($color-primary, 70);
+    background-color: var(--bg-highlight-strong);
 
     @include breakpoint(xs){
        width: 90%;

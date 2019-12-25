@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/plans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/plans/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans/order.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_theme.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,7 +149,7 @@
       <workItem from="1577053776332" duration="1700000" />
       <workItem from="1577175909732" duration="2125000" />
       <workItem from="1577185035727" duration="13547000" />
-      <workItem from="1577226903219" duration="8382000" />
+      <workItem from="1577226903219" duration="9055000" />
     </task>
     <servers />
   </component>
