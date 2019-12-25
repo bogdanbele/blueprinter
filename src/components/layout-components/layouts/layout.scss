@@ -1,3 +1,12 @@
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 512px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1280px
+);
+
 @import "./bootstrap.min.css";
 @import "../../../theme/theme";
 

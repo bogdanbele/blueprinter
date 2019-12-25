@@ -12,7 +12,7 @@ $theme-dark: $dark-blue-bg;
 $theme-light: $light-bg;
 
 $font-color-dark: $deep-blue-bg;
-$font-color-light: white;
+$font-color-light: $light-bg;
 
 
 @import "colors";
@@ -23,7 +23,6 @@ $font-color-light: white;
 @import "scss_defaults/screen_sizes";
 
 @import "globals";
-
 
 body {
     font-family: $font-family-secondary;

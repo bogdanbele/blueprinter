@@ -213,7 +213,7 @@ const OrderPage = ({data}) => {
                 {selectedPlansObject.map(name => {
                         return (
                             <div className='w-75' key={name.id}>
-                                <PlanFeature featureName={name.title}/>
+                                <PlanFeature featureName={name.title} featureDescription={name.excerpt}/>
                             </div>
                         )
                     }
