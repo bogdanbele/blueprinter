@@ -5,7 +5,7 @@ $web-page-width: 960px;
 $dark-green-blue: #05386B;
 $deep-blue-bg: #0c0032;
 
-$dark-blue-bg: #0a1527;
+$dark-blue-bg: #2D1D85;
 $light-bg: #EEE2DC;
 
 $theme-dark: $dark-blue-bg;
@@ -31,18 +31,18 @@ body {
 }
 
 body.dark {
-    --bg: #{$theme-dark};
+    --bg: #{darken($theme-dark,25%)};
     --color: #{$font-color-light};
-    --bg-highlight: #{lighten($theme-dark,2%)};
-    --bg-highlight-strong: #{darken($theme-dark,10%)};
+    --bg-highlight: #{darken($theme-dark,26%)};
+    --bg-highlight-strong: #{darken($theme-dark,24%)};
     --theme-images-opacity: 0.3;
     color: var(--color);
 }
 
 body.light {
-    --bg: #{darken($theme-light,3%)};
+    --bg: #{darken($theme-light,5%)};
     --color: #{$font-color-dark};
-    --bg-highlight: #{darken($theme-light,1%)};
+    --bg-highlight: #{darken($theme-light,6%)};
     --bg-highlight-strong: #{darken($theme-light,5%)};
     --theme-images-opacity: 0.6;
     color: var(--color);
