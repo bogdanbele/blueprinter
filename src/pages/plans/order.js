@@ -158,12 +158,9 @@ const OrderPage = ({data}) => {
     //endregion
 
     //region DropDown Styling
-    const ITEM_HEIGHT = 48;
-    const ITEM_PADDING_TOP = 8;
     const MenuProps = {
         PaperProps: {
             style: {
-                maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
                 width: 250,
             },
         },
@@ -243,6 +240,7 @@ const OrderPage = ({data}) => {
                             borderWidth: '2px'
                         }}
                         multiple
+                        displayEmpty
                         variant={'outlined'}
                         value={values['extra'] ? values['extra'] : []}
                         onChange={handleFeatureChange}

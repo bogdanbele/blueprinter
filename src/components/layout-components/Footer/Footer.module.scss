@@ -23,11 +23,11 @@ footer {
     margin: 0 auto;
 
     >a {
-        color: $color-primary;
+        color: var(--primary);
     }
 
     >a:visited {
-        color: $color-primary;
+        color: var(--primary);
     }
 }
 
@@ -60,7 +60,7 @@ footer {
                 font-weight: bold;
                 font-family: $font-family-secondary;
                 display: flex;
-                color: $color-primary;
+                color: var(--primary);
             }
         }
     }
