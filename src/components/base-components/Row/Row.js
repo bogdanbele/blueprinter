@@ -4,8 +4,8 @@ import styles from './Row.module.scss';
 
 class Row extends Component {
 	render() {
-		const {className, children} = this.props;
-		return <div className={styles.RowHolder}>
+		const {className, children, holderClass} = this.props;
+		return <div className={`${styles.RowHolder}${holderClass ? ` ${holderClass}` : ''}`}>
 			<div className={`${styles.Row}${className ? ` ${className}` : ''}`}>
 				{children}
 			</div>
@@ -16,6 +16,7 @@ class Row extends Component {
 Row.propTypes = {
 	children: PropTypes.node.isRequired,
 	className: PropTypes.string,
+	holderClass: PropTypes.string
 };
 
 export default Row;

@@ -77,8 +77,15 @@
 
 :global .w-75-100 {
   width: 100%;
-  @include breakpoint(md){
+  @include breakpoint(md) {
     width: 75%;
+  }
+}
+
+:global .w-100-vw {
+  width: 100%;
+  @include breakpoint(md) {
+    width: 100vw;
   }
 }
 
