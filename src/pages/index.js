@@ -54,7 +54,9 @@ const IndexPage = ({ data }) => {
 				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
 
-			<Row className="justify-content-around">
+			<Row
+				holderClass='w-100-vw'
+				className="justify-content-around">
 				<ExcerptCard
 					header={pageSections[0].header}
 					icon={handshakeSVG}
