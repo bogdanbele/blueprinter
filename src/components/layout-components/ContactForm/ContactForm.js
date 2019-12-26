@@ -60,6 +60,12 @@ export default class ContactForm extends React.Component {
 		this.setState({
 			values: { ...this.state.values, [name]: value },
 		});
+
+		if(value === ''){
+			this.setState({
+				wasBlurred: { ...this.state.wasBlurred, [name]: false } ,
+			});
+		}
 	};
 
 	handleValidation = name => {

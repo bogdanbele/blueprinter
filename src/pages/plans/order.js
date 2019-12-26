@@ -84,6 +84,9 @@ const OrderPage = ({data}) => {
         const value = target.value;
         const name = target.name;
         setValue({...values, [name]: value});
+        if (value === '') {
+            setWasInputBlurred({...wasInputBlurred, [name]: false});
+        }
         console.log(values)
     };
 
@@ -153,7 +156,7 @@ const OrderPage = ({data}) => {
             body: obj,
         })
             .then(() => navigate('/success/', {
-                state : {
+                state: {
                     actionText: 'with a quote',
                 }
             }))
@@ -240,7 +243,8 @@ const OrderPage = ({data}) => {
         return (
             <>
                 <h2 className='mt-2 mb-0'>Choose extra features (optional)</h2>
-                <p>Please note that the price may vary depending on the extra features you choose. Once you submit the form, we will send you a quote by email with the exact price for your project.</p>
+                <p>Please note that the price may vary depending on the extra features you choose. Once you submit the
+                    form, we will send you a quote by email with the exact price for your project.</p>
                 <Item
                     className='mb-5'
                     style={{
