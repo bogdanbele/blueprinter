@@ -46,11 +46,19 @@ const OrderPage = ({data}) => {
         email: isInitiallyValid('email'),
         message: isInitiallyValid('message'),
     };
+
+    let wasInputBlurredObject = {
+        firstName: false,
+        lastName: false,
+        email: false,
+        message: false,
+    };
     //endregion
 
     //region State
     const [values, setValue] = useState(defaultValues);
     const [isValueValid, setIsValueValid] = useState(isValueInitiallyValid);
+    const [wasInputBlurred, setWasInputBlurred] = useState(wasInputBlurredObject);
     //endregion
 
     //region Handlers and Validators
@@ -60,7 +68,9 @@ const OrderPage = ({data}) => {
      * @returns {boolean}
      */
     const isValid = name => {
-        return (
+        return !(
+            values[name] === '' ||
+            !wasInputBlurred[name] ||
             RegExp(validation[name]).test(values[name])
         );
     };
@@ -74,8 +84,15 @@ const OrderPage = ({data}) => {
         const value = target.value;
         const name = target.name;
         setValue({...values, [name]: value});
-        setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
         console.log(values)
+    };
+
+    const handleBlur = event => {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
+        setWasInputBlurred({...wasInputBlurred, [name]: true});
     };
 
     const isDiscountCodeValid = () => {
@@ -301,51 +318,56 @@ const OrderPage = ({data}) => {
                                     name='planFeature'
                                 />
                                 <ThemeInput
+                                    onBlur={handleBlur}
                                     variant="outlined"
                                     name="company"
                                     label="Company Name"
-                                    error={!isValid('company')}
-                                    helperText={!isValid('company') ? 'Please write up to 20 characters' : ''}
+                                    error={isValid('company')}
+                                    helperText={isValid('company') ? 'Please write up to 20 characters' : ''}
                                     onChange={handleInputChange}
                                     margin="normal"
                                     value={values['company']}
                                 />
                                 <ThemeInput
+                                    onBlur={handleBlur}
                                     required={true}
                                     variant="outlined"
-                                    error={!isValid('email')}
+                                    error={isValid('email')}
                                     name="email"
                                     label="Email"
-                                    helperText={!isValid('email') ? 'You must input a valid email' : ''}
+                                    helperText={isValid('email') ? 'You must input a valid email' : ''}
                                     onChange={handleInputChange}
                                     validation={validation.email}
                                     value={values['email']}
                                 />
 
                                 <ThemeInput
+                                    onBlur={handleBlur}
                                     name="message"
                                     label="Message"
-                                    error={!isValid('message')}
+                                    error={isValid('message')}
                                     variant="outlined"
                                     rows={5}
                                     rowsMax={10}
                                     multiline={true}
                                     onChange={handleInputChange}
-                                    helperText={!isValid('message') ? 'Please write up to 300 characters' : ''}
+                                    helperText={isValid('message') ? 'Please write up to 300 characters' : ''}
                                     validation={validation.message}
                                     value={values['message']}
                                 />
                                 <ThemeInput
+                                    onBlur={handleBlur}
                                     name='phone'
                                     label='Phone'
-                                    error={!isValid('phone')}
-                                    helperText={!isValid('phone') ? 'Please input a valid phone number or leave empty' : ''}
+                                    error={isValid('phone')}
+                                    helperText={isValid('phone') ? 'Please input a valid phone number or leave empty' : ''}
                                     validation={validation.company}
                                     onChange={handleInputChange}
                                     value={values['phone']}/>
                                 {returnList()}
                                 <h2 className='mt-5 mb-0'>Do you have a discount code?</h2>
                                 <ThemeInput
+                                    onBlur={handleBlur}
                                     autoComplete="new-password"
                                     name='discountCode'
                                     label='Discount Code'
