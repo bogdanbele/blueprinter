@@ -222,7 +222,8 @@ const OrderPage = ({data}) => {
     const returnList = () => {
         return (
             <>
-                <h2 className='mt-2'>Choose extra features (optional)</h2>
+                <h2 className='mt-2 mb-0'>Choose extra features (optional)</h2>
+                <p>Please note that the price may vary depending on the extra features you choose. Once you submit the form, we will send you a quote by email with the exact price for your project.</p>
                 <Item
                     className='mb-5'
                     style={{
@@ -355,7 +356,7 @@ const OrderPage = ({data}) => {
                                     type="submit"
                                     className="button mt-5"
                                     disabled={!isFormValid()}
-                                >Send
+                                >Submit
                                 </Button>
                             </form>
                             : <h2>Please follow to purchase flow</h2>}
