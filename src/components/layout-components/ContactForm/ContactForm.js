@@ -35,7 +35,11 @@ export default class ContactForm extends React.Component {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({ 'form-name': form.getAttribute('name'), ...this.state.values }),
 		})
-			.then(() => navigate('/success/'))
+			.then(() => navigate('/success/', {
+				state : {
+					actionText: "",
+				}
+			}))
 			.catch(error => alert(error));
 
 		e.preventDefault();

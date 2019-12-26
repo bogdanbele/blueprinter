@@ -137,7 +137,7 @@ const OrderPage = ({data}) => {
         })
             .then(() => navigate('/success/', {
                 state : {
-                    data: "Quote Submitted",
+                    actionText: 'with a quote',
                 }
             }))
             .catch(error => alert(error));
