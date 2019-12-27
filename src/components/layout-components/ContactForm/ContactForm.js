@@ -26,6 +26,12 @@ export default class ContactForm extends React.Component {
 			email: '^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,63}$',
 			message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,\'-;:%&()!_]{0,300}$',
 		},
+		wasBlurred: {
+			firstName: false,
+			lastName: false,
+			email: false,
+			message: false,
+		},
 	};
 
 	handleSubmit = e => {
@@ -35,11 +41,16 @@ export default class ContactForm extends React.Component {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({ 'form-name': form.getAttribute('name'), ...this.state.values }),
 		})
-			.then(() => navigate('/success/'))
+			.then(() => navigate('/success/', {
+				state : {
+					actionText: "",
+				}
+			}))
 			.catch(error => alert(error));
 
 		e.preventDefault();
 	};
+
 
 	handleInputChange = event => {
 		const target = event.target;
@@ -50,17 +61,33 @@ export default class ContactForm extends React.Component {
 			values: { ...this.state.values, [name]: value },
 		});
 
-		this.setState({
-			isValid: { ...this.state.isValid, [name]: RegExp(this.state.validation[name]).test(value) },
-		});
+		if(value === ''){
+			this.setState({
+				wasBlurred: { ...this.state.wasBlurred, [name]: false } ,
+			});
+		}
 	};
 
 	handleValidation = name => {
 		return !(
-			this.state.values[name] === '' ||
+			!this.state.wasBlurred[name] || this.state.values[name] === '' ||
 			RegExp(this.state.validation[name]).test(this.state.values[name])
 		);
 	};
+
+	handleBlur= event => {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+
+		this.setState({
+			isValid: { ...this.state.isValid, [name]: RegExp(this.state.validation[name]).test(value) },
+			wasBlurred: { ...this.state.wasBlurred, [name]: true } ,
+		});
+
+		console.log(this.state.wasBlured)
+	};
+
 
 	isFormValid = () => {
 		for (let key in this.state.isValid) {
@@ -92,6 +119,7 @@ export default class ContactForm extends React.Component {
 					</label>
 				</p>
 				<ThemeInput
+					onBlur={this.handleBlur}
 					required={true}
 					variant="outlined"
 					name="firstName"
@@ -107,6 +135,7 @@ export default class ContactForm extends React.Component {
 					value={this.state.values.firstName || ''}
 				/>
 				<ThemeInput
+					onBlur={this.handleBlur}
 					required={true}
 					variant="outlined"
 					error={this.handleValidation('lastName')}
@@ -122,6 +151,7 @@ export default class ContactForm extends React.Component {
 					value={this.state.values.lastName || ''}
 				/>
 				<ThemeInput
+					onBlur={this.handleBlur}
 					required={true}
 					variant="outlined"
 					error={this.handleValidation('email')}

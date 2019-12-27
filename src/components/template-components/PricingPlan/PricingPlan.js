@@ -32,12 +32,12 @@ export default class PricingPlan extends React.Component {
         console.log(this.props)
         return (
 
-            <Flex className={`flex-column py-4 px-2 ${styles.PricingPlan} ${this.props.className}`}>
+            <Flex className={`flex-column pt-4 px-2 ${styles.PricingPlan} ${this.props.className}`}>
                 <Item>
-                    <h2 className="my-4 text-center">{this.props.title}</h2>
+                    <h1 className="my-4 text-center">{this.props.title}</h1>
                 </Item>
                 <div className="w-100 mt-5">{getPlanFeature(this.props.features)}</div>
-                <h2 className="mt-4 text-center">{numberWithPeriod(this.props.price)} DKK</h2>
+                <h3 className="mt-4 text-center">from {numberWithPeriod(this.props.price)} DKK</h3>
                 <Button className="px-5" onClick={this.navigateToOrder}>Click</Button>
             </Flex>
         );

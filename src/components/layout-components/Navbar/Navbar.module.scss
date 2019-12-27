@@ -27,7 +27,7 @@
 
 .ThemeCheck{
     span {
-        color: $color-primary;
+        color: var(--primary);
     }
     @include breakpoint(md) {
         order: 3;
@@ -49,6 +49,6 @@
 .SvgIconLogo {
     width: 100%;
     path {
-        fill: $color-primary;
+        fill: var(--primary);
     }
 }

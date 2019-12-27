@@ -2,7 +2,7 @@
 
 .socialLinkIcon {
 	> path {
-		color: $color-primary;
+		color: var(--primary);
 	}
 	height: 30px;
 	transition: all 1s ease-in-out;

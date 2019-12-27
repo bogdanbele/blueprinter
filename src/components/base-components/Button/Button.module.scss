@@ -3,8 +3,8 @@
 .Button {
 	border-radius: 4px;
 	background-color: transparent;
-	border: 2px solid $color-primary;
-	color: $color-primary;
+	border: 2px solid var(--primary);
+	color: var(--primary);
 	transition: 0.3s;
 	cursor: pointer;
 	font-family: $font-family-primary;
