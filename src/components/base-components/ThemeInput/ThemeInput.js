@@ -3,17 +3,14 @@ import {withStyles} from "@material-ui/core";
 import PropTypes from 'prop-types';
 import TextField from "@material-ui/core/TextField";
 
-export default class ThemeInput extends React.PureComponent {
-
-    render() {
-        return (
-            <ThemeInputStyle
-                {...this.props}
-                variant="outlined"
-                margin="normal"
-                value={this.props.value || ''}
-            />)
-    }
+export default function ThemeInput(props) {
+    return (
+        <ThemeInputStyle
+            {...props}
+            variant="outlined"
+            margin="normal"
+            value={props.value || ''}
+        />)
 }
 
 ThemeInput.propTypes = {

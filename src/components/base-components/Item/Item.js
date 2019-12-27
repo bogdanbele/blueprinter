@@ -1,18 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Item.module.scss';
 
-export default class Item extends Component {
-	render() {
-		const {children, ...props} = this.props;
-		return (
-			<div
-				{...props}
-				className={`${styles.Item} ${this.props.className}`}>
-				{children}
-			</div>
-		);
-	}
+export default function Item(props) {
+	const {children} = props;
+	return (
+		<div
+			{...props}
+			className={`${styles.Item} ${props.className}`}>
+			{children}
+		</div>
+	);
 }
 
 Item.propTypes = {

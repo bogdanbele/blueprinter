@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Flex.module.scss';
 
-export default class Flex extends Component {
-	render() {
-		const {className, children} = this.props;
-		return <div className={`${styles.Flex} ${className ? ` ${className}` : ''}`}>{children}</div>;
-	}
+export default function Flex(props) {
+	const {className, children} = props;
+	return <div className={`${styles.Flex} ${className ? ` ${className}` : ''}`}>{children}</div>;
 }
 
 Flex.propTypes = {

@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-	graphql, StaticQuery,
-} from 'gatsby';
+import {graphql, StaticQuery,} from 'gatsby';
 import styles from './Footer.module.scss';
 import SocialLinkIcon from '../../base-components/SocialLinkIcon';
 import FooterMenu from "../FooterMenu/FooterMenu";
@@ -35,17 +33,15 @@ const getSocialLinks = (data) =>{
 	return linksArray;
 };
 
-export default class Footer extends React.PureComponent {
-	render() {
-		return (
-			<footer>
-				{staticQuery}
-				<p>
-					© ncweb {new Date().getFullYear()}
-					{' '}
-				</p>
-				<FooterMenu/>
-			</footer>
-		);
-	}
+export default function Footer() {
+	return (
+		<footer>
+			{staticQuery}
+			<p>
+				© ncweb {new Date().getFullYear()}
+				{' '}
+			</p>
+			<FooterMenu/>
+		</footer>
+	);
 }

@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/template-components/PlanFeature/PlanFeature.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/plans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/plans/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Icon/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Icon/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/FluidImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/FluidImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Image/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Item/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Item/Item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/ThemeCheckbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/ThemeCheckbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/ThemeInput/ThemeInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ThemeInput/ThemeInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/Footer/Footer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -270,12 +274,6 @@
           <line>7</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/template-components/PlanFeature/PlanFeature.js</url>
-          <line>13</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

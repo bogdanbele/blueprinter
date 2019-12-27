@@ -1,18 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Icon.module.scss';
 
 //   <Icon><FaTwitter></Icon>
 
-export default class Icon extends Component {
-	render() {
-		const {className, children} = this.props;
-		return (
-			<div className={`${styles.Icon}${className ? ` ${className}` : ''}`}>
-				{children}
-			</div>
-		);
-	}
+export default function Icon(props) {
+	const {className, children} = props;
+	return (
+		<div className={`${styles.Icon}${className ? ` ${className}` : ''}`}>
+			{children}
+		</div>
+	);
 }
 
 Icon.propTypes = {
