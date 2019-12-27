@@ -48,10 +48,7 @@ const IndexPage = ({ data }) => {
 		<Layout className="alternating-row">
 			<SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 			<PageHeader
-				header={page.header}
-				headerText={page.headerText}
-				isHeaderVisible={page.isHeaderVisible}
-				isHeaderTextVisible={page.isHeaderTextVisible}
+				data={page}
 			/>
 
 			<Row

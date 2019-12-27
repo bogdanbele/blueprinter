@@ -13,12 +13,8 @@ const getTeamMember = (data) => {
 		linksArray.push(
 			<Row key={item.id} holderClass='w-100-vw'>
 				<TeamMember
+					data={item}
 					index={index}
-					imgsrc={item.image.fixed}
-					imgalt={item.image.description}
-					name={item.name}
-					description={item.description.description}
-					skills={item.skills}
 				/>
 			</Row>
 		)
@@ -33,10 +29,7 @@ const MeetTheTeamPage = ({ data }) => {
 		<Layout className="alternating-row">
 			<SEO title="Meet the team" />
             <PageHeader
-				header={page.header}
-				headerText={page.headerText}
-				isHeaderVisible={page.isHeaderVisible}
-				isHeaderTextVisible={page.isHeaderTextVisible}
+	            data={page}
 			/>
 			{getTeamMember(data)}
 		</Layout>

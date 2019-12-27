@@ -1,5 +1,5 @@
 import React from 'react';
-import {StaticQuery, graphql} from 'gatsby';
+import {graphql, StaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
 import styles from './Image.module.scss';
 
@@ -14,11 +14,10 @@ import styles from './Image.module.scss';
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-export default class Image extends React.Component {
-	render() {
-		return (
-			<StaticQuery
-				query={graphql`
+export default function Image(props) {
+	return (
+		<StaticQuery
+			query={graphql`
           query {
             allImageSharp {
               edges {
@@ -31,15 +30,15 @@ export default class Image extends React.Component {
             }
           }
         `}
-				render={data => {
-					// noinspection JSUnresolvedVariable
-					return (
-						<Img className={`${styles.Image} ${this.props.className}`} fixed={data.allImageSharp.edges.find(element => {
-							return element.node.fixed.src.split('/').pop() === this.props.imgsrc;
-						}).node.fixed} />
-					);
-				}}
-			/>
-		);
-	}
+			render={data => {
+				// noinspection JSUnresolvedVariable
+				return (
+					<Img className={`${styles.Image} ${props.className}`}
+					     fixed={data.allImageSharp.edges.find(element => {
+						     return element.node.fixed.src.split('/').pop() === props.imgsrc;
+					     }).node.fixed}/>
+				);
+			}}
+		/>
+	);
 }

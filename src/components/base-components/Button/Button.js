@@ -2,20 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
-export default class Button extends React.PureComponent {
-	render() {
-		const {children, disabled, onClick, className, type, ...props} = this.props;
-		return (
-			<button
-				{...props}
-				className={`${styles.Button}${className ? ` ${className}` : ''}`}
-				disabled={disabled}
-				onClick={onClick}
-				type={type}>
-				{children}
-			</button>
-		);
-	}
+export default function Button(props) {
+	const {children, disabled, onClick, className, type} = props;
+	return (
+		<button
+			{...props}
+			className={`${styles.Button}${className ? ` ${className}` : ''}`}
+			disabled={disabled}
+			onClick={onClick}
+			type={type}>
+			{children}
+		</button>
+	);
 }
 
 Button.propTypes = {

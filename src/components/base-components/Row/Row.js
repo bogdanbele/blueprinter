@@ -1,16 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Row.module.scss';
 
-class Row extends Component {
-	render() {
-		const {className, children, holderClass} = this.props;
-		return <div className={`${styles.RowHolder}${holderClass ? ` ${holderClass}` : ''}`}>
-			<div className={`${styles.Row}${className ? ` ${className}` : ''}`}>
-				{children}
-			</div>
-		</div>;
-	}
+function Row(props) {
+	const {className, children, holderClass} = props;
+	return <div className={`${styles.RowHolder}${holderClass ? ` ${holderClass}` : ''}`}>
+		<div className={`${styles.Row}${className ? ` ${className}` : ''}`}>
+			{children}
+		</div>
+	</div>;
 }
 
 Row.propTypes = {

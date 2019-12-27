@@ -10,18 +10,16 @@ const listToParagraph = (data) => {
     return linksArray;
 };
 
-export default class MiniContent extends React.PureComponent {
-    render() {
-        let list = () => (this.props.list ? <>{listToParagraph(this.props.list)}</> : null);
+export default function MiniContent(props) {
+    let list = () => (props.list ? <>{listToParagraph(props.list)}</> : null);
 
-        return (
-            <Flex className={`flex-column ${this.props.flexClassName}`}>
-                <h3>{this.props.header}</h3>
-                <p>{this.props.description}</p>
-                {list()}
-            </Flex>
-        );
-    }
+    return (
+        <Flex className={`flex-column ${props.flexClassName}`}>
+            <h3>{props.header}</h3>
+            <p>{props.description}</p>
+            {list()}
+        </Flex>
+    );
 }
 
 MiniContent.propTypes = {
