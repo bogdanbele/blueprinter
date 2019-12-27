@@ -38,6 +38,9 @@ export default class TeamMember extends React.Component {
 }
 
 TeamMember.propTypes = {
+    data: PropTypes.shape({
+
+    }),
     name: PropTypes.string,
     description: PropTypes.string,
     imgalt: PropTypes.string,

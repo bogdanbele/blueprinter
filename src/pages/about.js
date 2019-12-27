@@ -10,6 +10,7 @@ import constants from '../config/constants';
 import FluidImage from '../components/base-components/Image/FluidImage';
 import wrapWithParagraph from '../utils/helpers/TextWrapper';
 import PageHeader from '../components/template-components/PageHeader';
+import {interpretContent} from "../utils/helpers/content-interpreter";
 
 const AboutPage = ({ data }) => {
 	const customerRef = useRef();
@@ -44,6 +45,7 @@ const AboutPage = ({ data }) => {
 	const sectionTwoParagraphExcerpt = pageSections[1].content.content ? wrapWithParagraph(pageSections[1].content.content) : '';
 	const sectionThreeParagraphExcerpt = pageSections[2].content.content ? wrapWithParagraph(pageSections[2].content.content) : '';
 
+	interpretContent(pageSections);
 	return (
 		<Layout className="alternating-row">
 			<SEO title="About" />
