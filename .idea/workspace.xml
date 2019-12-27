@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/template-components/PlanFeature/PlanFeature.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/get-started.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-started.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/meet-the-team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/meet-the-team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/plans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/plans/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans/order.js" afterDir="false" />
     </list>
@@ -56,19 +53,22 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\utils\helpers" />
-      <recent name="$PROJECT_DIR$/src/utils" />
-      <recent name="$PROJECT_DIR$/src/theme" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/svgs" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
       <recent name="$PROJECT_DIR$/static/fonts" />
       <recent name="$PROJECT_DIR$/src/theme/fonts" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components\PlanFeature\PlanFeature.js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\utils\helpers" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src/theme" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -262,7 +262,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/plans/order.js</url>
-          <line>354</line>
+          <line>382</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -270,6 +270,12 @@
           <line>7</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/template-components/PlanFeature/PlanFeature.js</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

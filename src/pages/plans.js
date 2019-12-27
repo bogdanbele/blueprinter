@@ -23,9 +23,7 @@ const PlansPage = ({data}) => {
 	return (
 		<Layout>
 			<SEO title="Pricing plans"/>
-			<PageHeader
-				data={page}
-			/>
+			<PageHeader data={page}/>
 			<Row
 				holderClass="w-100-vw"
 				className="justify-content-xs-center justify-content-md-between justify-content-lg-around justify-content-xl-center justify w-100 px-2 px-md-5"

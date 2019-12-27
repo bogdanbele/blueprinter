@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {graphql} from 'gatsby';
+import React, { useState } from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../../components/layout-components/layouts/layout';
 import SEO from '../../components/base-components/seo';
 import PageHeader from '../../components/template-components/PageHeader';
@@ -9,426 +9,422 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input';
 import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItemText';
-import {navigate} from "gatsby-link";
-import Button from "../../components/base-components/Button";
-import Flex from "../../components/base-components/Flex";
-import ThemeInput from "../../components/base-components/ThemeInput/ThemeInput";
-import {encode} from "../../utils/helpers/data-utils";
-import {PlanFeature} from "../../components/template-components/PricingPlan/PricingPlan";
-import Item from "../../components/base-components/Item";
+import { navigate } from 'gatsby-link';
+import Button from '../../components/base-components/Button';
+import Flex from '../../components/base-components/Flex';
+import ThemeInput from '../../components/base-components/ThemeInput/ThemeInput';
+import { encode } from '../../utils/helpers/data-utils';
+import Item from '../../components/base-components/Item';
+import { PlanFeature } from '../../components/template-components/PlanFeature/PlanFeature';
 
-const OrderPage = ({data}) => {
+const OrderPage = ({ data }) => {
+	//region Default Input Objects
+	let defaultValues = {
+		extra: [],
+		email: '',
+		message: '',
+		company: '',
+		phone: '',
+		discountCode: '',
+	};
 
-    //region Default Input Objects
-    let defaultValues = {
-        extra: [],
-        email: '',
-        message: '',
-        company: '',
-        phone: '',
-        discountCode: ''
-    };
+	const validation = {
+		company: '^[A-Za-zÀ-ÖØ-öø-ÿa-zšđčćž\\s]{0,20}$',
+		phone: '^$|^[0-9\\s+]{8,14}$',
+		email: '^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$',
+		message: "^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,'-;:%&()!_]{0,300}$",
+	};
 
-    const validation = {
-        company: '^[A-Za-zÀ-ÖØ-öø-ÿa-zšđčćž\\s]{0,20}$',
-        phone: '^$|^[0-9\\s+]{8,14}$',
-        email: '^[A-Za-zÀ-ÖØ-öø-ÿ0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,63}$',
-        message: '^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\\s.,\'-;:%&()!_]{0,300}$',
-    };
+	const isInitiallyValid = field => {
+		return RegExp(validation[field]).test(defaultValues[field]);
+	};
 
-    const isInitiallyValid = (field) => {
-        return RegExp(validation[field]).test(defaultValues[field]);
-    };
+	let isValueInitiallyValid = {
+		firstName: isInitiallyValid('firstName'),
+		lastName: isInitiallyValid('lastName'),
+		email: isInitiallyValid('email'),
+		message: isInitiallyValid('message'),
+	};
 
-    let isValueInitiallyValid = {
-        firstName: isInitiallyValid('firstName'),
-        lastName: isInitiallyValid('lastName'),
-        email: isInitiallyValid('email'),
-        message: isInitiallyValid('message'),
-    };
+	let wasInputBlurredObject = {
+		firstName: false,
+		lastName: false,
+		email: false,
+		message: false,
+	};
+	//endregion
 
-    let wasInputBlurredObject = {
-        firstName: false,
-        lastName: false,
-        email: false,
-        message: false,
-    };
-    //endregion
+	//region State
+	const [values, setValue] = useState(defaultValues);
+	const [isValueValid, setIsValueValid] = useState(isValueInitiallyValid);
+	const [wasInputBlurred, setWasInputBlurred] = useState(wasInputBlurredObject);
+	//endregion
 
-    //region State
-    const [values, setValue] = useState(defaultValues);
-    const [isValueValid, setIsValueValid] = useState(isValueInitiallyValid);
-    const [wasInputBlurred, setWasInputBlurred] = useState(wasInputBlurredObject);
-    //endregion
+	//region Handlers and Validators
+	/**
+	 *  Returns true if the input is passes it's corresponding regex test
+	 * @param name
+	 * @returns {boolean}
+	 */
+	const isValid = name => {
+		return !(
+			values[name] === '' ||
+			!wasInputBlurred[name] ||
+			RegExp(validation[name]).test(values[name])
+		);
+	};
 
-    //region Handlers and Validators
-    /**
-     *  Returns true if the input is passes it's corresponding regex test
-     * @param name
-     * @returns {boolean}
-     */
-    const isValid = name => {
-        return !(
-            values[name] === '' ||
-            !wasInputBlurred[name] ||
-            RegExp(validation[name]).test(values[name])
-        );
-    };
+	/**
+	 *
+	 * @param event
+	 */
+	const handleInputChange = event => {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+		setValue({ ...values, [name]: value });
+		if (value === '') {
+			setWasInputBlurred({ ...wasInputBlurred, [name]: false });
+		}
+		console.log(values);
+	};
 
-    /**
-     *
-     * @param event
-     */
-    const handleInputChange = event => {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-        setValue({...values, [name]: value});
-        if (value === '') {
-            setWasInputBlurred({...wasInputBlurred, [name]: false});
-        }
-        console.log(values)
-    };
+	const handleBlur = event => {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+		setIsValueValid({ ...isValueValid, [name]: RegExp(validation[name]).test(value) });
+		setWasInputBlurred({ ...wasInputBlurred, [name]: true });
+	};
 
-    const handleBlur = event => {
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-        setIsValueValid({...isValueValid, [name]: RegExp(validation[name]).test(value)});
-        setWasInputBlurred({...wasInputBlurred, [name]: true});
-    };
+	const isDiscountCodeValid = () => {
+		return discountCodesObject.map(elem => {
+			return elem.toLowerCase() === values['discountCode'].toLowerCase();
+		});
+	};
 
-    const isDiscountCodeValid = () => {
-        return discountCodesObject.map(elem => {
-            return elem.toLowerCase() === values['discountCode'].toLowerCase();
-        });
-    };
+	const returnValidDiscountCode = () => {
+		return discountCodesObject.filter(elem => {
+			return elem.toLowerCase() === values['discountCode'].toLowerCase();
+		});
+	};
 
-    const returnValidDiscountCode = () => {
-        return discountCodesObject.filter(elem => {
-            return elem.toLowerCase() === values['discountCode'].toLowerCase();
-        })
-    };
+	/**
+	 * Sets the [extra features] input's value to it's corresponding state
+	 * @param event
+	 */
+	const handleFeatureChange = event => {
+		setValue({ ...values, ['extra']: event.target.value });
+	};
 
-    /**
-     * Sets the [extra features] input's value to it's corresponding state
-     * @param event
-     */
-    const handleFeatureChange = event => {
-        setValue({...values, ['extra']: event.target.value});
-    };
+	/**
+	 * Return true if all inputs are valid
+	 * @returns {boolean}
+	 */
+	const isFormValid = () => {
+		for (let key in isValueValid) {
+			if (isValueValid.hasOwnProperty(key)) {
+				if (isValueValid[key] === false) {
+					return false;
+				}
+			}
+		}
+		return true;
+	};
 
-    /**
-     * Return true if all inputs are valid
-     * @returns {boolean}
-     */
-    const isFormValid = () => {
-        for (let key in isValueValid) {
-            if (isValueValid.hasOwnProperty(key)) {
-                if (isValueValid[key] === false) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    };
+	/**
+	 * Form submission to Netlify
+	 * @param e
+	 */
+	const handleSubmit = e => {
+		let objectToSend = {
+			extra: values['extra'].join('\n'),
+			email: values['email'],
+			message: values['message'],
+			company: values['company'],
+			phone: values['phone'],
+			planFeature: selectedPlansAsString,
+			planTitle: window.history.state.title,
+			discountCode: isDiscountCodeValid() ? returnValidDiscountCode()[0] : '',
+		};
+		const obj = encode({ 'form-name': 'Website Quote', ...objectToSend });
 
-    /**
-     * Form submission to Netlify
-     * @param e
-     */
-    const handleSubmit = (e) => {
-        let objectToSend = {
-            extra: values['extra'].join('\n'),
-            email: values['email'],
-            message: values['message'],
-            company: values['company'],
-            phone: values['phone'],
-            planFeature: selectedPlansAsString,
-            planTitle: window.history.state.title,
-            discountCode: isDiscountCodeValid() ? returnValidDiscountCode()[0] : ''
-        };
-        const obj = encode({'form-name': 'Website Quote', ...objectToSend});
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: obj,
+		})
+			.then(() =>
+				navigate('/success/', {
+					state: {
+						actionText: 'with a quote',
+					},
+				})
+			)
+			.catch(error => alert(error));
+		e.preventDefault();
+	};
 
-        fetch('/', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: obj,
-        })
-            .then(() => navigate('/success/', {
-                state: {
-                    actionText: 'with a quote',
-                }
-            }))
-            .catch(error => alert(error));
-        e.preventDefault()
-    };
+	//endregion
 
-    //endregion
+	//region Order Initialization and Content Locking
+	let preselectedPlansArray = [];
+	let isInOrderFlow = [];
+	let preselectedPlansTitle = '';
+	if (typeof window !== 'undefined') {
+		preselectedPlansArray = window.history.state !== null ? window.history.state.order : [];
+		isInOrderFlow = window.history.state !== null;
+		preselectedPlansTitle = window.history.state !== null ? window.history.state.title : '';
+	}
+	//endregion
 
-    //region Order Initialization and Content Locking
-    let preselectedPlansArray = [];
-    let isInOrderFlow = [];
-    let preselectedPlansTitle = '';
-    if (typeof window !== 'undefined') {
-        preselectedPlansArray = window.history.state !== null ? window.history.state.order : [];
-        isInOrderFlow = window.history.state !== null;
-        preselectedPlansTitle = window.history.state !== null ? window.history.state.title : '';
-    }
-    //endregion
+	//region DropDown Styling
+	const MenuProps = {
+		PaperProps: {
+			style: {
+				width: 250,
+			},
+		},
+	};
+	//endregion
 
-    //region DropDown Styling
-    const MenuProps = {
-        PaperProps: {
-            style: {
-                width: 250,
-            },
-        },
-    };
-    //endregion
+	//region Plans Setup
+	const allPlans = data.allContentfulPlanFeature.edges;
+	const allDiscountCodes = data.allContentfulDiscountCodes.edges;
 
-    //region Plans Setup
-    const allPlans = data.allContentfulPlanFeature.edges;
-    const allDiscountCodes = data.allContentfulDiscountCodes.edges;
+	let missingPlansObject = null;
+	let selectedPlansObject = null;
+	const page = data.allContentfulPage.edges[0].node;
 
-    let missingPlansObject = null;
-    let selectedPlansObject = null;
-    const page = data.allContentfulPage.edges[0].node;
+	let selectedPlansFilter = preselectedPlansArray.map(plan => {
+		return plan.id;
+	});
 
-    let selectedPlansFilter = preselectedPlansArray.map(plan => {
-        return plan.id;
-    });
+	const discountCodesObject = allDiscountCodes.map(discountCode => {
+		return discountCode.node.discountCode;
+	});
 
-    const discountCodesObject = allDiscountCodes.map(discountCode => {
-        return discountCode.node.discountCode
-    });
+	missingPlansObject = allPlans
+		.filter(plan => !selectedPlansFilter.includes(plan.node.id))
+		.map(plan => {
+			return { title: plan.node.title, excerpt: plan.node.excerpt.excerpt };
+		});
 
-    missingPlansObject = allPlans
-        .filter(plan => !selectedPlansFilter.includes(plan.node.id))
-        .map(plan => {
-            return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt};
-        });
+	selectedPlansObject = allPlans
+		.filter(plan => selectedPlansFilter.includes(plan.node.id))
+		.map(plan => {
+			return {
+				title: plan.node.title,
+				excerpt: { excerpt: plan.node.excerpt.excerpt },
+				id: plan.node.id,
+			};
+		});
 
-    selectedPlansObject = allPlans
-        .filter(plan => selectedPlansFilter.includes(plan.node.id))
-        .map(plan => {
-            return {title: plan.node.title, excerpt: plan.node.excerpt.excerpt, id: plan.node.id};
-        });
+	let selectedPlansAsString = preselectedPlansArray
+		.map(plan => {
+			return plan.title;
+		})
+		.join('\n');
+	//endregion
 
-    let selectedPlansAsString = (preselectedPlansArray.map(plan => {
-        return plan.title;
-    })).join('\n');
-    //endregion
+	//region Rendering
 
-    //region Rendering
+	const returnPreselectedPlans = () => {
+		return (
+			<>
+				<h2 className="font-weight-normal">
+					The <span className="font-weight-bold"> {preselectedPlansTitle}</span> plan{' '}
+				</h2>
+				{selectedPlansObject.map(name => {
+					return (
+						<div className="w-75-100" key={name.id}>
+							<PlanFeature data={name} />
+						</div>
+					);
+				})}
+			</>
+		);
+	};
 
-    const returnPreselectedPlans = () => {
-        return (
-            <>
-                <h2 className='font-weight-normal'>The <span
-                    className='font-weight-bold'> {preselectedPlansTitle}</span> plan </h2>
-                {selectedPlansObject.map(name => {
-                        return (
-                            <div className='w-75-100' key={name.id}>
-                                <PlanFeature featureName={name.title} featureDescription={name.excerpt}/>
-                            </div>
-                        )
-                    }
-                )}
-            </>
-        )
-    };
+	const returnList = () => {
+		return (
+			<>
+				<h2 className="mt-2 mb-0">Choose extra features (optional)</h2>
+				<p>
+					Please note that the price may vary depending on the extra features you choose. Once you
+					submit the form, we will send you a quote by email with the exact price for your project.
+				</p>
+				<Item
+					className="mb-5"
+					style={{
+						backgroundColor: 'var(--color)',
+						padding: '1px',
+					}}
+				>
+					<Select
+						className="p-0"
+						name={'extra[]'}
+						labelId="label"
+						style={{
+							color: 'var(--color)',
+							backgroundColor: 'var(--bg-highlight)',
+							borderColor: 'var(--color)',
+							borderWidth: '2px',
+						}}
+						multiple
+						displayEmpty
+						variant={'outlined'}
+						value={values['extra'] ? values['extra'] : []}
+						onChange={handleFeatureChange}
+						input={<Input className="px-4" value={() => values['extra'].join('\n')} name="extra" />}
+						renderValue={() => (values['extra'] !== [] ? values['extra'].join(',') : 'optional')}
+						MenuProps={MenuProps}
+					>
+						{missingPlansObject.map(name => {
+							return (
+								<MenuItem key={name.title} value={name.title}>
+									<Checkbox checked={values['extra'].indexOf(name.title) > -1} />
+									<ListItemText primary={name.title} />
+								</MenuItem>
+							);
+						})}
+					</Select>
+				</Item>
+			</>
+		);
+	};
 
-    const returnList = () => {
-        return (
-            <>
-                <h2 className='mt-2 mb-0'>Choose extra features (optional)</h2>
-                <p>Please note that the price may vary depending on the extra features you choose. Once you submit the
-                    form, we will send you a quote by email with the exact price for your project.</p>
-                <Item
-                    className='mb-5'
-                    style={{
-                        backgroundColor: 'var(--color)',
-                        padding: '1px'
-                    }}>
-                    <Select
-                        className='p-0'
-                        name={"extra[]"}
-                        labelId="label"
-                        style={{
-                            color: 'var(--color)',
-                            backgroundColor: 'var(--bg-highlight)',
-                            borderColor: 'var(--color)',
-                            borderWidth: '2px'
-                        }}
-                        multiple
-                        displayEmpty
-                        variant={'outlined'}
-                        value={values['extra'] ? values['extra'] : []}
-                        onChange={handleFeatureChange}
-                        input={
-                            <Input
-                                className="px-4"
-                                value={() => values['extra'].join('\n')}
-                                name='extra'/>}
-                        renderValue={() => (values['extra'] !== []) ? values['extra'].join(',') : 'optional'}
-                        MenuProps={MenuProps}
-                    >
-                        {missingPlansObject.map(name => {
-                            return (
-                                <MenuItem key={name.title} value={name.title}>
-                                    <Checkbox
-                                        checked={values['extra'].indexOf(name.title) > -1}/>
-                                    <ListItemText primary={name.title}/>
-                                </MenuItem>
-                            );
-                        })}
-                    </Select>
-                </Item>
-            </>
-        );
-    }
+	return (
+		<Layout>
+			<SEO title="Order" />
+			<PageHeader data={page} />
+			<Row className="column align-items-center">
+				{isInOrderFlow ? returnPreselectedPlans() : null}
+				<Flex className="w-75-100">
+					{// If the user didn't specify a plan on the previous page, disable access to the form
+					isInOrderFlow ? (
+						<form
+							onSubmit={handleSubmit}
+							className="flex-column d-flex w-100"
+							name="Website Quote"
+							data-netlify="true"
+							data-netlify-honeypot="bot-field"
+						>
+							<input hidden type="text" name="planTitle" />
+							<input hidden type="text" name="planFeature" />
+							<ThemeInput
+								onBlur={handleBlur}
+								variant="outlined"
+								name="company"
+								label="Company Name"
+								error={isValid('company')}
+								helperText={isValid('company') ? 'Please write up to 20 characters' : ''}
+								onChange={handleInputChange}
+								margin="normal"
+								value={values['company']}
+							/>
+							<ThemeInput
+								onBlur={handleBlur}
+								required={true}
+								variant="outlined"
+								error={isValid('email')}
+								name="email"
+								label="Email"
+								helperText={isValid('email') ? 'You must input a valid email' : ''}
+								onChange={handleInputChange}
+								validation={validation.email}
+								value={values['email']}
+							/>
 
-    return (
-        <Layout>
-            <SEO title="Order"/>
-            <PageHeader
-                data={page}
-            />
-            <Row className="column align-items-center">
-                {isInOrderFlow ? returnPreselectedPlans() : null}
-                <Flex className='w-75-100'>
+							<ThemeInput
+								onBlur={handleBlur}
+								name="message"
+								label="Message"
+								error={isValid('message')}
+								variant="outlined"
+								rows={5}
+								rowsMax={10}
+								multiline={true}
+								onChange={handleInputChange}
+								helperText={isValid('message') ? 'Please write up to 300 characters' : ''}
+								validation={validation.message}
+								value={values['message']}
+							/>
+							<ThemeInput
+								onBlur={handleBlur}
+								name="phone"
+								label="Phone"
+								error={isValid('phone')}
+								helperText={
+									isValid('phone') ? 'Please input a valid phone number or leave empty' : ''
+								}
+								validation={validation.company}
+								onChange={handleInputChange}
+								value={values['phone']}
+							/>
+							{returnList()}
+							<h2 className="mt-5 mb-0">Do you have a discount code?</h2>
+							<ThemeInput
+								onBlur={handleBlur}
+								autoComplete="new-password"
+								name="discountCode"
+								label="Discount Code"
+								onChange={handleInputChange}
+								value={values['discountCode']}
+							/>
 
-                    { // If the user didn't specify a plan on the previous page, disable access to the form
-                        isInOrderFlow ?
-                            <form
-                                onSubmit={handleSubmit}
-                                className='flex-column d-flex w-100'
-                                name='Website Quote'
-                                data-netlify="true"
-                                data-netlify-honeypot="bot-field"
-                            >
-                                <input
-                                    hidden
-                                    type='text'
-                                    name='planTitle'
-                                />
-                                <input
-                                    hidden
-                                    type='text'
-                                    name='planFeature'
-                                />
-                                <ThemeInput
-                                    onBlur={handleBlur}
-                                    variant="outlined"
-                                    name="company"
-                                    label="Company Name"
-                                    error={isValid('company')}
-                                    helperText={isValid('company') ? 'Please write up to 20 characters' : ''}
-                                    onChange={handleInputChange}
-                                    margin="normal"
-                                    value={values['company']}
-                                />
-                                <ThemeInput
-                                    onBlur={handleBlur}
-                                    required={true}
-                                    variant="outlined"
-                                    error={isValid('email')}
-                                    name="email"
-                                    label="Email"
-                                    helperText={isValid('email') ? 'You must input a valid email' : ''}
-                                    onChange={handleInputChange}
-                                    validation={validation.email}
-                                    value={values['email']}
-                                />
-
-                                <ThemeInput
-                                    onBlur={handleBlur}
-                                    name="message"
-                                    label="Message"
-                                    error={isValid('message')}
-                                    variant="outlined"
-                                    rows={5}
-                                    rowsMax={10}
-                                    multiline={true}
-                                    onChange={handleInputChange}
-                                    helperText={isValid('message') ? 'Please write up to 300 characters' : ''}
-                                    validation={validation.message}
-                                    value={values['message']}
-                                />
-                                <ThemeInput
-                                    onBlur={handleBlur}
-                                    name='phone'
-                                    label='Phone'
-                                    error={isValid('phone')}
-                                    helperText={isValid('phone') ? 'Please input a valid phone number or leave empty' : ''}
-                                    validation={validation.company}
-                                    onChange={handleInputChange}
-                                    value={values['phone']}/>
-                                {returnList()}
-                                <h2 className='mt-5 mb-0'>Do you have a discount code?</h2>
-                                <ThemeInput
-                                    onBlur={handleBlur}
-                                    autoComplete="new-password"
-                                    name='discountCode'
-                                    label='Discount Code'
-                                    onChange={handleInputChange}
-                                    value={values['discountCode']}/>
-
-                                <Button
-                                    type="submit"
-                                    className="button mt-5"
-                                    disabled={!isFormValid()}
-                                >Submit
-                                </Button>
-                            </form>
-                            : <h2>Please follow to purchase flow</h2>}
-                </Flex>
-            </Row>
-        </Layout>
-    );
-    //endregion
+							<Button type="submit" className="button mt-5" disabled={!isFormValid()}>
+								Submit
+							</Button>
+						</form>
+					) : (
+						<h2>Please follow to purchase flow</h2>
+					)}
+				</Flex>
+			</Row>
+		</Layout>
+	);
+	//endregion
 };
 
 //region Query
 
 export const query = graphql`
-    {
-        allContentfulPage(filter: {title: {eq: "Order"}}) {
-            edges {
-                node {
-                    title
-                    headerText
-                    header
-                    isHeaderTextVisible
-                    isHeaderVisible
-                }
-            }
-        }
-        allContentfulPlanFeature {
-            edges {
-                node {
-                    id
-                    title
-                    excerpt {
-                        excerpt
-                        id
-                    }
-                }
-            }
-        }
-        allContentfulDiscountCodes {
-            edges {
-                node {
-                    id
-                    title
-                    percentageOff
-                    discountCode
-                }
-            }
-        }
-    }
-
+	{
+		allContentfulPage(filter: { title: { eq: "Order" } }) {
+			edges {
+				node {
+					title
+					headerText
+					header
+					isHeaderTextVisible
+					isHeaderVisible
+				}
+			}
+		}
+		allContentfulPlanFeature {
+			edges {
+				node {
+					id
+					title
+					excerpt {
+						excerpt
+						id
+					}
+				}
+			}
+		}
+		allContentfulDiscountCodes {
+			edges {
+				node {
+					id
+					title
+					percentageOff
+					discountCode
+				}
+			}
+		}
+	}
 `;
 //endregion
 

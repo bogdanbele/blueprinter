@@ -9,36 +9,34 @@ function getImageAltText(string) {
     return string + ' icon';
 }
 
-export default class ExcerptCard extends React.PureComponent {
-    render() {
-        let displayIcon = () =>
-            (typeof this.props.icon !== 'undefined') ? (
-                <Flex className="justify-content-center">
-                    <Icon>
-                        <img
-                            alt={getImageAltText(this.props.icon)}
-                            src={this.props.icon}
-                        />
-                    </Icon>
-                </Flex>
+export default function ExcerptCard(props) {
+    let displayIcon = () =>
+        (typeof props.icon !== 'undefined') ? (
+            <Flex className="justify-content-center">
+                <Icon>
+                    <img
+                        alt={getImageAltText(props.icon)}
+                        src={props.icon}
+                    />
+                </Icon>
+            </Flex>
+        ) : null;
+
+    let button = () =>
+        (props.isButtonEnabled === true) ?
+            (<Button onClick={props.buttonOnClick}>{props.buttonText}</Button>
             ) : null;
 
-        let button = () =>
-            (this.props.isButtonEnabled === true) ?
-                (<Button onClick={this.props.buttonOnClick}>{this.props.buttonText}</Button>
-                ) : null;
-
-        return (
-            <Flex className={this.props.flexClasses}>
-                <Item>
-                    {displayIcon()}
-                    <h2>{this.props.header}</h2>
-                    {this.props.excerpt}
-                    {button()}
-                </Item>
-            </Flex>
-        );
-    }
+    return (
+        <Flex className={props.flexClasses}>
+            <Item>
+                {displayIcon()}
+                <h2>{props.header}</h2>
+                {props.excerpt}
+                {button()}
+            </Item>
+        </Flex>
+    );
 }
 
 ExcerptCard.propTypes = {
