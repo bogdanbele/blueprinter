@@ -26,3 +26,12 @@ PlanFeature.propTypes = {
 	})
 };
 
+PlanFeature.defaultProps = {
+	data : {
+		title : '',
+		excerpt: {
+			excerpt : ''
+		}
+	}
+}
+

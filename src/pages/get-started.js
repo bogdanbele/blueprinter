@@ -10,13 +10,8 @@ const getProcessSections = (data) => {
     data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
         sectionsArray.push(
             <ProcessSection
+	            data={item}
                 key={item.id}
-                content={item.content.content}
-                bigHeader={item.bigHeader}
-                header={item.header}
-                imgSrc={item.image.fixed}
-                imgAlt={item.image.description}
-                subHeader={item.subHeader}
             />
         )
     );

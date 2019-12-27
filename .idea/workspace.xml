@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/MiniContent/MiniContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/MiniContent/MiniContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/PlanFeature/PlanFeature.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PlanFeature/PlanFeature.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/get-started.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-started.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

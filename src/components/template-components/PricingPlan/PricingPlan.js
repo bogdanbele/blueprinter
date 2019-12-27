@@ -21,20 +21,21 @@ export default class PricingPlan extends React.Component {
 	navigateToOrder = () => {
 		navigate('/plans/order', {
 			state: {
-				order: this.props.features,
-				title: this.props.title,
+				order: this.props.data.features,
+				title: this.props.data.title,
 			},
 		}).then();
 	};
 
 	render() {
+		const data = this.props.data;
 		return (
 			<Flex className={`flex-column pt-4 px-2 ${styles.PricingPlan} ${this.props.className}`}>
 				<Item>
-					<h1 className="my-4 text-center">{this.props.title}</h1>
+					<h1 className="my-4 text-center">{data.title}</h1>
 				</Item>
-				<div className="w-100 mt-5">{getPlanFeature(this.props.features)}</div>
-				<h3 className="mt-4 text-center">from {numberWithPeriod(this.props.price)} DKK</h3>
+				<div className="w-100 mt-5">{getPlanFeature(data.features)}</div>
+				<h3 className="mt-4 text-center">from {numberWithPeriod(data.price)} DKK</h3>
 				<Button className="px-5" onClick={this.navigateToOrder}>
 					Click
 				</Button>
@@ -45,11 +46,18 @@ export default class PricingPlan extends React.Component {
 
 PricingPlan.propTypes = {
 	className: PropTypes.string,
-	title: PropTypes.string.isRequired,
-	feature: PropTypes.array,
-	price: PropTypes.number,
+	data: PropTypes.shape({
+		title: PropTypes.string,
+		feature: PropTypes.array,
+		price: PropTypes.number,
+	})
 };
 
 PricingPlan.defaultProps = {
 	className: '',
+	data : {
+		title : '',
+		feature : '',
+		price
+	}
 };
