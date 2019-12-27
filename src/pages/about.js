@@ -11,6 +11,7 @@ import FluidImage from '../components/base-components/Image/FluidImage';
 import wrapWithParagraph from '../utils/helpers/TextWrapper';
 import PageHeader from '../components/template-components/PageHeader';
 import {interpretContent} from "../utils/helpers/content-interpreter";
+import ContentSection from "../components/template-components/ContentSection/ContentSection";
 
 const AboutPage = ({ data }) => {
 	const customerRef = useRef();
@@ -59,50 +60,26 @@ const AboutPage = ({ data }) => {
 			>
 			</PageHeader>
 
-			<Row
-				holderClass='w-100-vw'
-				className="justify-content-center Row--header"
+			<ContentSection
+				data={pageSections[0]}
 				ref={section => {
 					customerRef.current = section;
 				}}
-			>
-				<Flex className="flex--1">
-					<Item>
-						<h1>{pageSections[0].header}</h1>
-						{sectionOneParagraphExcerpt}
-					</Item>
-				</Flex>
-			</Row>
+			/>
 
-			<Row
-				holderClass='w-100-vw'
-				className="justify-content-center"
+			<ContentSection
+				data={pageSections[1]}
 				ref={section => {
 					howRef.current = section;
 				}}
-			>
-				<Flex className="flex--1">
-					<Item>
-						<h1>{pageSections[1].header}</h1>
-						{sectionTwoParagraphExcerpt}
-					</Item>
-				</Flex>
-			</Row>
+			/>
 
-			<Row
-				holderClass='w-100-vw'
-				className="justify-content-center"
+			<ContentSection
+				data={pageSections[2]}
 				ref={section => {
 					whyRef.current = section;
 				}}
-			>
-				<Flex className="flex--1">
-					<Item>
-						<h1>{pageSections[2].header}</h1>
-						{sectionThreeParagraphExcerpt}
-					</Item>
-				</Flex>
-			</Row>
+			/>
 		</Layout>
 	);
 };
