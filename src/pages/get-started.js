@@ -30,10 +30,7 @@ const GetStartedPage = ({data}) => {
         <Layout className="alternating-row">
             <SEO title="Get Started"/>
             <PageHeader
-                header={page.header}
-                headerText={page.headerText}
-                isHeaderVisible={page.isHeaderVisible}
-                isHeaderTextVisible={page.isHeaderTextVisible}
+	            data={page}
             />
             {getProcessSections(data)}
         </Layout>

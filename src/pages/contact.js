@@ -13,10 +13,7 @@ const ContactPage = ({ data }) => {
 		<Layout>		
 			<SEO title="contact" />
 			<PageHeader
-				header={page.header}
-				headerText={page.headerText}
-				isHeaderVisible={page.isHeaderVisible}
-				isHeaderTextVisible={page.isHeaderTextVisible}
+				data={page}
 			>
 				<ContactForm />
 				<MiniContent

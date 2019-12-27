@@ -293,10 +293,7 @@ const OrderPage = ({data}) => {
         <Layout>
             <SEO title="Order"/>
             <PageHeader
-                header={page.header}
-                headerText={page.headerText}
-                isHeaderVisible={page.isHeaderVisible}
-                isHeaderTextVisible={page.isHeaderTextVisible}
+                data={page}
             />
             <Row className="column align-items-center">
                 {isInOrderFlow ? returnPreselectedPlans() : null}

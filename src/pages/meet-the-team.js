@@ -29,10 +29,7 @@ const MeetTheTeamPage = ({ data }) => {
 		<Layout className="alternating-row">
 			<SEO title="Meet the team" />
             <PageHeader
-				header={page.header}
-				headerText={page.headerText}
-				isHeaderVisible={page.isHeaderVisible}
-				isHeaderTextVisible={page.isHeaderTextVisible}
+	            data={page}
 			/>
 			{getTeamMember(data)}
 		</Layout>

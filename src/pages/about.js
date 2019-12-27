@@ -13,6 +13,7 @@ const AboutPage = ({data}) => {
 	const howRef = useRef();
 	const whyRef = useRef();
 
+
 	useEffect(() => {
 		if (window.history.state) {
 			switch (window.history.state.scrollTo) {
@@ -43,11 +44,8 @@ const AboutPage = ({data}) => {
 			<SEO title="About"/>
 
 			<PageHeader
+				data={page}
 				rowClassName={'text-center justify-content-center pb-0 px-0 w-100'}
-				header={page.header}
-				headerText={page.headerText}
-				isHeaderVisible={page.isHeaderVisible}
-				isHeaderTextVisible={page.isHeaderTextVisible}
 			/>
 
 			<ContentSection

@@ -8,12 +8,13 @@ import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
 export default class TeamMember extends React.Component {
 	render() {
 	    const data = this.props.data;
-		const skills = data.skills;
+
 		const name = data.name;
         const formattedDescription = wrapWithParagraph(data.description.description);
+        const skills = data.skills;
+
         const imageSrc = data.image.fixed;
         const imageAlt = data.image.description;
-
 
         // Alternate between image on the left and image on the right
 		let order = () =>
