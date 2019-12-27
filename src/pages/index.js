@@ -13,6 +13,7 @@ import wrapWithParagraph from '../utils/helpers/TextWrapper';
 import PageHeader from '../components/template-components/PageHeader';
 
 const IndexPage = ({ data }) => {
+	//region Scroll Refs
 	const scrollToFirstRef = () => {
 		navigate('/about/', {
 			state: {
@@ -36,6 +37,7 @@ const IndexPage = ({ data }) => {
 			},
 		}).then();
 	};
+	//endregion
 
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
@@ -55,14 +57,14 @@ const IndexPage = ({ data }) => {
 				holderClass='w-100-vw'
 				className="justify-content-around">
 				<ExcerptCard
-					header={pageSections[0].header}
+					data={pageSections[0]}
 					icon={handshakeSVG}
 					flexClasses="flex--2"
-					excerpt={sectionOneFormatedExcerpt}
 					buttonOnClick={scrollToFirstRef}
 				/>
 
 				<ExcerptCard
+					data={pageSections[1]}
 					header={pageSections[1].header}
 					icon={handSVG}
 					flexClasses="flex--2"
@@ -72,6 +74,7 @@ const IndexPage = ({ data }) => {
 			</Row>
 			<Row>
 				<ExcerptCard
+					data={pageSections[2]}
 					header={pageSections[2].header}
 					icon={thoughtSVG}
 					flexClasses="flex--1"

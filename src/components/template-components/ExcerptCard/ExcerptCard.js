@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import Icon from '../../base-components/Icon';
 import Item from '../../base-components/Item';
 import Button from '../../base-components/Button';
-
-function getImageAltText(string) {
-    return string + ' icon';
-}
+import wrapWithParagraph from "../../../utils/helpers/TextWrapper";
 
 export default function ExcerptCard(props) {
+    const data = props.data;
+    const wrappedParagraph = wrapWithParagraph(data.excerpt.excerpt);
+
     let displayIcon = () =>
         (typeof props.icon !== 'undefined') ? (
             <Flex className="justify-content-center">
@@ -31,16 +31,25 @@ export default function ExcerptCard(props) {
         <Flex className={props.flexClasses}>
             <Item>
                 {displayIcon()}
-                <h2>{props.header}</h2>
-                {props.excerpt}
+                <h2>{data.header}</h2>
+                {wrappedParagraph}
                 {button()}
             </Item>
         </Flex>
     );
 }
 
+function getImageAltText(string) {
+    return string + ' icon';
+}
+
 ExcerptCard.propTypes = {
-    header: PropTypes.string,
+    data: PropTypes.shape({
+        excerpt: PropTypes.shape({
+            excerpt: PropTypes.string
+        }),
+        header: PropTypes.string
+    }),
     icon: PropTypes.string,
     flexClasses: PropTypes.string,
     isButtonEnabled: PropTypes.bool,
