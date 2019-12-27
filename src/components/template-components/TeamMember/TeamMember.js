@@ -5,6 +5,12 @@ import styles from './TeamMember.module.scss';
 import Img from 'gatsby-image';
 import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
 
+/**
+ *
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export default function TeamMember(props) {
 	const data = props.data;
 

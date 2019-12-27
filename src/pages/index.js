@@ -9,10 +9,10 @@ import ExcerptCard from '../components/template-components/ExcerptCard/';
 import handshakeSVG from '../utils/svgs/029-handshake.svg';
 import handSVG from '../utils/svgs/025-hand.svg';
 import thoughtSVG from '../utils/svgs/005-thought.svg';
-import wrapWithParagraph from '../utils/helpers/TextWrapper';
 import PageHeader from '../components/template-components/PageHeader';
 
 const IndexPage = ({ data }) => {
+	//region Scroll Refs
 	const scrollToFirstRef = () => {
 		navigate('/about/', {
 			state: {
@@ -36,13 +36,10 @@ const IndexPage = ({ data }) => {
 			},
 		}).then();
 	};
+	//endregion
 
 	const page = data.allContentfulPage.edges[0].node;
 	const pageSections = page.contentSections;
-
-	const sectionOneFormatedExcerpt = wrapWithParagraph(pageSections[0].excerpt.excerpt);
-	const sectionTwoFormatedExcerpt = wrapWithParagraph(pageSections[1].excerpt.excerpt);
-	const sectionThreeFormatedExcerpt = wrapWithParagraph(pageSections[2].excerpt.excerpt);
 
 	return (
 		<Layout className="alternating-row">
@@ -50,32 +47,27 @@ const IndexPage = ({ data }) => {
 			<PageHeader
 				data={page}
 			/>
-
 			<Row
 				holderClass='w-100-vw'
 				className="justify-content-around">
 				<ExcerptCard
-					header={pageSections[0].header}
+					data={pageSections[0]}
 					icon={handshakeSVG}
 					flexClasses="flex--2"
-					excerpt={sectionOneFormatedExcerpt}
 					buttonOnClick={scrollToFirstRef}
 				/>
-
 				<ExcerptCard
-					header={pageSections[1].header}
+					data={pageSections[1]}
 					icon={handSVG}
 					flexClasses="flex--2"
-					excerpt={sectionTwoFormatedExcerpt}
 					buttonOnClick={scrollToSecondRef}
 				/>
 			</Row>
 			<Row>
 				<ExcerptCard
-					header={pageSections[2].header}
+					data={pageSections[2]}
 					icon={thoughtSVG}
 					flexClasses="flex--1"
-					excerpt={sectionThreeFormatedExcerpt}
 					buttonOnClick={scrollToThirdRef}
 				/>
 			</Row>
