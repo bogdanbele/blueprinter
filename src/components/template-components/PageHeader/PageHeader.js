@@ -7,6 +7,9 @@ import Row from '../../base-components/Row';
 /**
  * PageHeader component, accepts an [data] prop object that can contain
  *  [header, isHeaderVisible, headerText, isHeaderTextVisible] keys
+ * @param props
+ * @returns {*}
+ * @constructor
  */
 export default function PageHeader(props) {
 	const data = props.data;

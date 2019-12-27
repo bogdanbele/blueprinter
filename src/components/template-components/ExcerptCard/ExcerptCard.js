@@ -59,5 +59,11 @@ ExcerptCard.propTypes = {
 
 ExcerptCard.defaultProps = {
     buttonText: 'Read More',
-    isButtonEnabled: true
+    isButtonEnabled: true,
+    data : {
+        excerpt : {
+            excerpt : ''
+        },
+        header : ''
+    }
 };

@@ -17,11 +17,8 @@ const ContactPage = ({ data }) => {
 			>
 				<ContactForm />
 				<MiniContent
-					key={pageSections[0].id}
-					header={pageSections[0].header}
-					description={pageSections[0].description}
+					data={pageSections[0]}
 					flexClassName={'justify-content-center flex--2'}
-					list={pageSections[0].list}
 				/>
 			</PageHeader>
 		</Layout>

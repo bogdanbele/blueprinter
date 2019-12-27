@@ -2,33 +2,45 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Flex from '../../base-components/Flex';
 
-const listToParagraph = (data) => {
-    let linksArray = [];
-    data.forEach(element => {
-        linksArray.push(<p key={data.indexOf(element)} className='mb-0'>{element}</p>)
-    });
-    return linksArray;
+const listToParagraph = data => {
+	let linksArray = [];
+	data.forEach(element => {
+		linksArray.push(
+			<p key={data.indexOf(element)} className="mb-0">
+				{element}
+			</p>
+		);
+	});
+	return linksArray;
 };
 
 export default function MiniContent(props) {
-    let list = () => (props.list ? <>{listToParagraph(props.list)}</> : null);
+	const data = props.data;
+	let list = () => (data.list ? <>{listToParagraph(data.list)}</> : null);
 
-    return (
-        <Flex className={`flex-column ${props.flexClassName}`}>
-            <h3>{props.header}</h3>
-            <p>{props.description}</p>
-            {list()}
-        </Flex>
-    );
+	return (
+		<Flex className={`flex-column ${props.flexClassName}`}>
+			<h3>{data.header}</h3>
+			<p>{data.description}</p>
+			{list()}
+		</Flex>
+	);
 }
 
 MiniContent.propTypes = {
-    header: PropTypes.string,
-    description: PropTypes.string,
-    flexClassName: PropTypes.string,
-    list: PropTypes.array,
+	data: PropTypes.shape({
+		description: PropTypes.string,
+		header: PropTypes.string,
+		list: PropTypes.array,
+	}),
+	flexClassName: PropTypes.string,
 };
 
 MiniContent.defaultProps = {
-    flexClassName: '',
+	flexClassName: '',
+	data: {
+		description: '',
+		header: '',
+		list: [],
+	},
 };
