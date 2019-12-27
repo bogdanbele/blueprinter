@@ -58,6 +58,6 @@ PricingPlan.defaultProps = {
 	data : {
 		title : '',
 		feature : '',
-		price
+		price : 10000
 	}
 };
