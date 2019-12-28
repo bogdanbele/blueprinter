@@ -6,6 +6,12 @@ import Item from '../../base-components/Item';
 import Button from '../../base-components/Button';
 import wrapWithParagraph from "../../../utils/helpers/TextWrapper";
 
+/**
+ *
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export default function ExcerptCard(props) {
     const data = props.data;
     const wrappedParagraph = wrapWithParagraph(data.excerpt.excerpt);

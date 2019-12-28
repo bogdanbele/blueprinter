@@ -8,7 +8,7 @@ import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
 /**
  *  Component for ContentfulContentSection.
  *  Data Prop accepts an object which contains the {header} and
- *  {content.content} keys, as returned by the back-end.
+ *  {content.content} keys
  */
 export default class ContentSection extends React.Component {
 	render() {

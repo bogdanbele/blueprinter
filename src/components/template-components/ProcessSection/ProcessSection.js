@@ -5,6 +5,12 @@ import React from 'react';
 import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
 import Img from 'gatsby-image';
 
+/**
+ * Component for ContentfulProcessSection
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export default function ProcessSection(props) {
 	const data = props.data;
 	const pageHeader = data.bigHeader;

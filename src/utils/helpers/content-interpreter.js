@@ -11,8 +11,6 @@ export function interpretContent(data) {
     console.log(contentNameArray);
 
     contentNameArray.map((contentName, index) => {
-        console.log(contentName)
-        console.log(index)
         returnContent(contentName,index)
     });
 

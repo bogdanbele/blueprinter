@@ -4,9 +4,12 @@ import Flex from '../../base-components/Flex';
 import styles from './TeamMember.module.scss';
 import Img from 'gatsby-image';
 import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
+import MiniContent from "../MiniContent/MiniContent";
 
 /**
- *
+ * Component for ContentfulTeamMember
+ * Data prop accepts an objects which contains name[String], description[Object] { description[String]}
+ * image[Object]{fixed[Object],description[String]}
  * @param props
  * @returns {*}
  * @constructor

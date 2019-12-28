@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Flex from '../../base-components/Flex';
 
+/**
+ *
+ * @param data
+ * @returns {[]}
+ */
 const listToParagraph = data => {
 	let linksArray = [];
 	data.forEach(element => {
@@ -14,6 +19,13 @@ const listToParagraph = data => {
 	return linksArray;
 };
 
+/**
+ * Component for ContentfulMiniContent ( description is limited to 255 characters )
+ * Data prop accepts an object which contains description[Strings], header[String], and list[Array]
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export default function MiniContent(props) {
 	const data = props.data;
 	let list = () => (data.list ? <>{listToParagraph(data.list)}</> : null);
