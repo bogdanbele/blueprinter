@@ -71,7 +71,7 @@ const AboutPage = ({data}) => {
 			>
 				<Flex className='flex-row justify-content-around my-0'>
 					<Button
-						className={'Button--no-border d-flex ' + activeClass((pageNumber === 0))}
+						className={'Button--no-border d-flex mt-0 ' + activeClass((pageNumber === 0))}
 						onClick={() =>
 							setPageNumber(0)
 						}
@@ -79,7 +79,7 @@ const AboutPage = ({data}) => {
 						Our Values
 					</Button>
 					<Button
-						className={'Button--no-border d-flex ' + activeClass((pageNumber === 1))}
+						className={'Button--no-border d-flex mt-0 ' + activeClass((pageNumber === 1))}
 						onClick={() =>
 							setPageNumber(1)
 						}
@@ -89,7 +89,7 @@ const AboutPage = ({data}) => {
 				</Flex>
 			</PageHeader>
 
-			{(pageNumber === 0)? renderAboutSubPage(pageSections) : <Row>{getTeamMember(teamMembers)}</Row>}
+			{(pageNumber === 0)? renderAboutSubPage(pageSections) :<Row>{getTeamMember(teamMembers)}</Row>}
 
 		</Layout>
 	);

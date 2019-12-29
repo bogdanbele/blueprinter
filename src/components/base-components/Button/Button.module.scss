@@ -57,7 +57,7 @@
 	:global &__active {
 		border-radius: 0;
 		border-bottom-width: 2px;
-		border-color: #{lighten($color-primary, 40%)};
-		color: #{lighten($color-primary, 40%)}
+		border-color: var(--color);
+		color: var(--color);
 	}
 }
