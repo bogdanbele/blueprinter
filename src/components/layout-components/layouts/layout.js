@@ -4,7 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-require('typeface-quicksand');
+require('typeface-nunito');
 require('typeface-roboto');
 
 import React from 'react';
