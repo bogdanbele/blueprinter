@@ -39,10 +39,11 @@
 
 .NavLink {
     text-decoration: none;
+    font-weight: bold;
 
     &:hover {
         text-decoration: none;
-        color: $theme-yellow;
+        color: var(--color)
     }
 }
 

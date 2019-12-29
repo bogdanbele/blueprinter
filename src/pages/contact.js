@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import ContactForm from '../components/layout-components/ContactForm';
 import PageHeader from '../components/template-components/PageHeader';
 import MiniContent from '../components/template-components/MiniContent/MiniContent';
+import Row from "../components/base-components/Row";
 
 const ContactPage = ({ data }) => {
 	const page = data.allContentfulPage.edges[0].node;
@@ -15,12 +16,14 @@ const ContactPage = ({ data }) => {
 			<PageHeader
 				data={page}
 			>
+			</PageHeader>
+			<Row>
 				<ContactForm />
 				<MiniContent
 					data={pageSections[0]}
 					flexClassName={'justify-content-center flex--2'}
 				/>
-			</PageHeader>
+			</Row>
 		</Layout>
 	);
 };

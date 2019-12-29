@@ -9,8 +9,8 @@
   width: 100%;
 
   @include breakpoint(md) {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-bottom: 6rem;
+    padding-top: 4rem;
     width: $web-page-width;
   }
 }

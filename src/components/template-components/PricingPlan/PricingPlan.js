@@ -30,7 +30,7 @@ export default class PricingPlan extends React.Component {
 	render() {
 		const data = this.props.data;
 		return (
-			<Flex className={`flex-column pt-4 px-2 ${styles.PricingPlan} ${this.props.className}`}>
+			<Flex className={`flex-column pt-4 px-2 pb-3 ${styles.PricingPlan} ${this.props.className}`}>
 				<Item>
 					<h1 className="my-4 text-center">{data.title}</h1>
 				</Item>

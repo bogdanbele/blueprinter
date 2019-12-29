@@ -28,11 +28,14 @@ export default function TeamMember(props) {
 	let order = () =>
 		props.index % 2 !== 0 ? ' flex--row--column__reversed' : ' flex--row--column';
 
+	let alternatingMargin = () =>
+		props.index % 2 !== 0 ? ' ml-md-3': ' mr-md-3';
+
 	return (
 		<Flex className="w-100 flex-column">
 			<h1>{name}</h1>
 			<Flex className={styles.TeamMember + order()}>
-				<Flex className="flex-column px-2">
+				<Flex className={"flex-column px-2"  + alternatingMargin()} >
 					{formattedDescription}
 					<br/>
 					<h2>Area of expertise:</h2>
