@@ -9,7 +9,7 @@ import PageHeader from '../components/template-components/PageHeader';
 const getTeamMember = (data) => {
 	const linksArray = [];
 	// noinspection JSUnresolvedVariable
-	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
+	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>{
 		linksArray.push(
 			<Row key={item.id} holderClass='w-100-vw'>
 				<TeamMember
@@ -17,7 +17,7 @@ const getTeamMember = (data) => {
 					index={index}
 				/>
 			</Row>
-		)
+		)}
 	);
 	return linksArray;
 };

@@ -1,6 +1,7 @@
 @import '../../../theme/theme';
 
 .Button {
+	font-weight: 400;
 	border-radius: 4px;
 	background-color: transparent;
 	border: 2px solid var(--primary);
@@ -8,12 +9,11 @@
 	transition: 0.3s;
 	cursor: pointer;
 	font-family: $font-family-primary;
-	font-weight: bold;
 	letter-spacing: 1.5px;
 	margin-bottom: $grid_2x;
 	margin-top: $grid_2x;
-	max-width: 150px;
-	padding: 0.6rem;
+	max-width: 250px;
+	padding: 0.4rem $grid_3x;
 	text-decoration: none;
 	text-transform: capitalize;
 	user-select: none;
@@ -23,13 +23,41 @@
 		color: gray;
 	}
 
+	&:focus{
+		outline: 0 !important;
+	}
+
 	&:hover {
-		font-weight: bold;
 		color:  var(--color);
 		border-color: var(--color);
 	}
 
+
 	:global &--wide {
 		max-width: 100%;
+		outline: 0 !important;
+	}
+
+
+	:global &--no-border {
+		border-width: 0;
+		border-bottom-width: 2px;
+		border-color: transparent;
+		padding: 0;
+
+		&:focus {
+			border-radius: 0;
+		}
+		&:hover {
+			border-radius: 0;
+			border-color: var(--color);
+		}
+	}
+
+	:global &__active {
+		border-radius: 0;
+		border-bottom-width: 2px;
+		border-color: #{lighten($color-primary, 40%)};
+		color: #{lighten($color-primary, 40%)}
 	}
 }

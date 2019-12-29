@@ -27,11 +27,6 @@ export default class Navbar extends Component {
 				linkName: 'Get Started',
 			},
 			{
-				id: 4,
-				path: '/meet-the-team',
-				linkName: 'Team',
-			},
-			{
 				id: 5,
 				path: '/plans',
 				linkName: 'Plans',

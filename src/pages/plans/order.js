@@ -262,7 +262,7 @@ const OrderPage = ({ data }) => {
 					}}
 				>
 					<Select
-						className="p-0"
+						className="p-0 d-flex"
 						name={'extra[]'}
 						labelId="label"
 						style={{
