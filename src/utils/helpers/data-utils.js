@@ -1,3 +1,8 @@
+/**
+ *
+ * @param data
+ * @returns {string}
+ */
 export function encode(data) {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))

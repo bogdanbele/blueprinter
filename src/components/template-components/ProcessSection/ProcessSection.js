@@ -5,6 +5,12 @@ import React from 'react';
 import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
 import Img from 'gatsby-image';
 
+/**
+ * Component for ContentfulProcessSection
+ * @param props
+ * @returns {*}
+ * @constructor
+ */
 export default function ProcessSection(props) {
 	const data = props.data;
 	const pageHeader = data.bigHeader;
@@ -23,9 +29,7 @@ export default function ProcessSection(props) {
 
 	let sectionIcon = () =>
 		typeof imageSrc !== 'undefined' ? (
-			<Flex className="flex--100 justify-content-center">
-				<Img fixed={imageSrc} alt={imageAlt}/>
-			</Flex>
+			<Img fixed={imageSrc} alt={imageAlt}/>
 		) : null;
 
 	const formattedContent = wrapWithParagraph(content);
@@ -33,11 +37,13 @@ export default function ProcessSection(props) {
 	return (
 		<Row className="flex-column" holderClass="w-100-vw">
 			{bigHeader()}
-			{sectionIcon()}
-			<Flex className="flex-column">
-				<h2>{sectionHeader}</h2>
-				{subHeader ? <h3>{subHeader}</h3> : null}
-				{formattedContent}
+			<Flex className="flex-md-row flex-column justify-content-around align-items-center">
+				{sectionIcon()}
+				<div className='col-12 col-md-10'>
+					<h2>{sectionHeader}</h2>
+					{subHeader ? <h3>{subHeader}</h3> : null}
+					{formattedContent}
+				</div>
 			</Flex>
 		</Row>
 	);
@@ -59,14 +65,14 @@ ProcessSection.propTypes = {
 };
 
 PropTypes.defaultProps = {
-  data : {
-      content : {
-          content : ''
-      },
-      header : '',
-      subHeader : '',
-      image: {
-          description : 'content section image'
-      }
-  }
+	data: {
+		content: {
+			content: ''
+		},
+		header: '',
+		subHeader: '',
+		image: {
+			description: 'content section image'
+		}
+	}
 };

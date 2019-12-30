@@ -9,8 +9,8 @@ class Credits extends Component {
         return (
             <Layout>
                 <SEO title="credits"/>
-                <Row className='justify-content-center Row--header'>
-                    <Flex className='column flex--1 text-center'>
+                <Row className='justify-content-center flex-column'>
+                    <Flex className='column flex--1 text-center flex-column'>
                         <h1>Thanks people</h1>
                         <h3>Thanks to everyone who contributed to our project.<br/>
                             Bellow is a list full of people who helped ncweb come to life</h3>

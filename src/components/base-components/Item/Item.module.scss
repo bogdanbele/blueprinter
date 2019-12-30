@@ -1,7 +1,6 @@
 @import '../../../theme/theme';
 
 .Item {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 
@@ -11,6 +10,5 @@
     height: 30px;
     margin-bottom: 15px;
     width: 30px;
-
   }
 }

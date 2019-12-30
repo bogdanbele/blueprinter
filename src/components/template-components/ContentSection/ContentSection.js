@@ -8,7 +8,7 @@ import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
 /**
  *  Component for ContentfulContentSection.
  *  Data Prop accepts an object which contains the {header} and
- *  {content.content} keys, as returned by the back-end.
+ *  {content.content} keys
  */
 export default class ContentSection extends React.Component {
 	render() {
@@ -18,7 +18,7 @@ export default class ContentSection extends React.Component {
 
 		return (
 			<Row {...this.props} holderClass="w-100-vw" className="justify-content-center Row--header">
-				<Flex className="flex--1">
+				<Flex className="flex--70">
 					<Item>
 						<h1>{contentHeader}</h1>
 						{wrappedParagraph}

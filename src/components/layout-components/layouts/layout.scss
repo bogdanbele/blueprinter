@@ -7,6 +7,8 @@ $grid-breakpoints: (
         xl: 1280px
 );
 
+@import "./animate.css";
+
 @import "./bootstrap.min.css";
 @import "../../../theme/theme";
 
@@ -272,10 +274,10 @@ h1 {
   padding: 0;
   margin: 0 0 1.45rem;
   color: inherit;
-  font-family: $font-family-primary;
+  font-family: $font-family-secondary;
   font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 1.1;
   @include breakpoint(md){
     font-size: 4rem;
@@ -286,7 +288,7 @@ h2 {
   padding: 0;
   margin: 0 0 1rem;
   color: inherit;
-  font-family: $font-family-primary;
+  font-family: $font-family-secondary;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 2.5rem;
@@ -298,8 +300,8 @@ h3 {
   padding: 0;
   margin: 0 0 1rem;
   color: inherit;
-  font-family: $font-family-primary;
-  font-weight: bold;
+  font-family: $font-family-secondary;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 1.2rem;
   @include breakpoint(md){

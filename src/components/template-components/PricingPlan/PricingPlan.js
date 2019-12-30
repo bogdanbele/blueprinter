@@ -30,7 +30,7 @@ export default class PricingPlan extends React.Component {
 	render() {
 		const data = this.props.data;
 		return (
-			<Flex className={`flex-column pt-4 px-2 ${styles.PricingPlan} ${this.props.className}`}>
+			<Flex className={`flex-column ${styles.PricingPlan} ${this.props.className}`}>
 				<Item>
 					<h1 className="my-4 text-center">{data.title}</h1>
 				</Item>
@@ -50,7 +50,8 @@ PricingPlan.propTypes = {
 		title: PropTypes.string,
 		feature: PropTypes.array,
 		price: PropTypes.number,
-	})
+	}),
+	index: PropTypes.number
 };
 
 PricingPlan.defaultProps = {
@@ -59,5 +60,6 @@ PricingPlan.defaultProps = {
 		title : '',
 		feature : '',
 		price : 10000
-	}
+	},
+	index: 0
 };
