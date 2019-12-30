@@ -18,7 +18,6 @@ const AboutPage = ({data}) => {
 	const howRef = useRef();
 	const whyRef = useRef();
 
-
 	useEffect(() => {
 		if (window.history.state) {
 			switch (window.history.state.scrollTo) {
@@ -37,6 +36,7 @@ const AboutPage = ({data}) => {
 				default:
 					break;
 			}
+			window.history.replaceState({scrollTo : null}, "scroll to", "test")
 		}
 	});
 
