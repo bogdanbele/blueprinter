@@ -6,7 +6,6 @@ import styles from './PricingPlan.module.scss';
 import Button from '../../base-components/Button';
 import {navigate} from '@reach/router';
 import {PlanFeature} from '../PlanFeature/PlanFeature';
-import ScrollAnimation from "react-animate-on-scroll";
 
 const getPlanFeature = data => {
 	const featuresArray = [];
@@ -30,15 +29,7 @@ export default class PricingPlan extends React.Component {
 
 	render() {
 		const data = this.props.data;
-		const animationDelay = this.props.index + 1;
 		return (
-			<ScrollAnimation
-				className={`d-flex pt-4 pb-3 ${styles.PricingPlanHolder}`}
-				animateIn="fadeInUp"
-				animateOnce={true}
-				delay={500*animationDelay}
-				offset={100}
-			>
 			<Flex className={`flex-column ${styles.PricingPlan} ${this.props.className}`}>
 				<Item>
 					<h1 className="my-4 text-center">{data.title}</h1>
@@ -49,7 +40,6 @@ export default class PricingPlan extends React.Component {
 					Click
 				</Button>
 			</Flex>
-			</ScrollAnimation>
 		);
 	}
 }
