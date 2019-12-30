@@ -1,6 +1,6 @@
 @import '../../../theme/theme';
 
-.PricingPlan {
+.PricingPlanHolder {
     width: 100%;
     align-items: center;
     height: 100%;
@@ -26,6 +26,14 @@
     }
 
 }
+
+.PricingPlan {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    background-color: var(--bg-highlight-strong);
+}
+
 
 .PlanFeature {
 

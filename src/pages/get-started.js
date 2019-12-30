@@ -12,7 +12,7 @@ const getProcessSections = (data) => {
         sectionsArray.push(
         	<ScrollAnimation
 		        className={'d-flex w-100'}
-		        animateIn="fade-enter-active"
+		        animateIn="fadeInDown"
 		        offset={250}
 		        key={item.id}
 	        >

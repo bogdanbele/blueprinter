@@ -47,14 +47,7 @@ const AboutPage = ({data}) => {
 		teamMembers.forEach((item, index) => {
 			linksArray.push(
 				<Row className={'alternating-row'} key={item.id} holderClass="w-100-vw">
-					<ScrollAnimation
-						className={'d-flex w-100'}
-						animateIn="fade-enter-active"
-						offset={250}
-						key={item.id}
-					>
 					<TeamMember data={item} index={index}/>
-					</ScrollAnimation>
 				</Row>
 			);
 		});

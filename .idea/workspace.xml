@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/animate.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout-components/layouts/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ExcerptCard/ExcerptCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PricingPlan/PricingPlan.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/TeamMember/TeamMember.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/get-started.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/get-started.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/plans.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/plans.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_theme.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +43,7 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/layout-components/layouts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,22 +59,22 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\layout-components\layouts" />
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/svgs" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
+      <recent name="$PROJECT_DIR$/static/fonts" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components\PlanFeature\PlanFeature.js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\utils\helpers" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/theme" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components\PlanFeature\PlanFeature.js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src/svgs" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
-      <recent name="$PROJECT_DIR$/static/fonts" />
-      <recent name="$PROJECT_DIR$/src/theme/fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -156,7 +167,7 @@
       <workItem from="1577315286946" duration="72000" />
       <workItem from="1577369373343" duration="3252000" />
       <workItem from="1577529022766" duration="32199000" />
-      <workItem from="1577711653135" duration="5689000" />
+      <workItem from="1577711653135" duration="9652000" />
     </task>
     <servers />
   </component>

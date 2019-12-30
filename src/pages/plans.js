@@ -9,10 +9,11 @@ import Row from '../components/base-components/Row';
 const getPricingPlans = data => {
 	const pricingPlansArray = [];
 
-	data.allContentfulPage.edges[0].node.contentSections.forEach(item =>
+	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index )=>
 		pricingPlansArray.push(
 			<PricingPlan
 				data={item}
+				index={index}
 				key={item.id}/>
 		)
 	);
