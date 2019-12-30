@@ -12,6 +12,7 @@ import TeamMember from '../components/template-components/TeamMember/TeamMember'
 import Button from '../components/base-components/Button';
 import Flex from '../components/base-components/Flex';
 import constants from "../config/constants";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const AboutPage = ({data}) => {
 	const customerRef = useRef();
@@ -36,7 +37,7 @@ const AboutPage = ({data}) => {
 				default:
 					break;
 			}
-			window.history.replaceState({scrollTo : null}, "scroll to", "test")
+			window.history.replaceState({scrollTo : null}, "About Us", "")
 		}
 	});
 
@@ -46,7 +47,14 @@ const AboutPage = ({data}) => {
 		teamMembers.forEach((item, index) => {
 			linksArray.push(
 				<Row className={'alternating-row'} key={item.id} holderClass="w-100-vw">
+					<ScrollAnimation
+						className={'d-flex w-100'}
+						animateIn="fade-enter-active"
+						offset={250}
+						key={item.id}
+					>
 					<TeamMember data={item} index={index}/>
+					</ScrollAnimation>
 				</Row>
 			);
 		});
