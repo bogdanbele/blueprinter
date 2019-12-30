@@ -37,6 +37,7 @@ export default function TeamMember(props) {
 
 	return (
 		<ScrollAnimation
+			animateOnce={true}
 			className={'d-flex w-100'}
 			animateIn={alternativeFade()}
 			offset={250}

@@ -13,6 +13,8 @@ const getProcessSections = (data) => {
         	<ScrollAnimation
 		        className={'d-flex w-100'}
 		        animateIn="fadeInDown"
+		        animateOnce={true}
+		        animateOut="pulse"
 		        offset={250}
 		        key={item.id}
 	        >

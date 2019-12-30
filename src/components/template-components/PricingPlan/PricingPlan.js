@@ -35,6 +35,7 @@ export default class PricingPlan extends React.Component {
 			<ScrollAnimation
 				className={`d-flex pt-4 pb-3 ${styles.PricingPlanHolder}`}
 				animateIn="fadeInUp"
+				animateOnce={true}
 				delay={500*animationDelay}
 				offset={100}
 			>
