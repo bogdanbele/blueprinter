@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
 	const pageSections = page.contentSections;
 
 	return (
-		<Layout className="alternating-row">
+		<Layout>
 			<SEO title="Home" keywords={['gatsby', 'application', 'react']} />
 			<PageHeader
 				data={page}

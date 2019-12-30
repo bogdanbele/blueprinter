@@ -4,15 +4,22 @@ import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
 import ProcessSection from '../components/template-components/ProcessSection/ProcessSection';
 import PageHeader from '../components/template-components/PageHeader';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const getProcessSections = (data) => {
     const sectionsArray = [];
     data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
         sectionsArray.push(
-            <ProcessSection
+        	<ScrollAnimation
+		        className={'d-flex w-100'}
+		        animateIn="fade-enter-active"
+		        offset={250}
+		        key={item.id}
+	        >
+	        <ProcessSection
 	            data={item}
-                key={item.id}
             />
+	        </ScrollAnimation>
         )
     );
     return sectionsArray;
@@ -22,7 +29,7 @@ const GetStartedPage = ({data}) => {
     const page = data.allContentfulPage.edges[0].node;
 
     return (
-        <Layout className="alternating-row">
+        <Layout>
             <SEO title="Get Started"/>
             <PageHeader
 	            data={page}

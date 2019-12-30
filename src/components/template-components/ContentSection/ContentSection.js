@@ -18,7 +18,7 @@ export default class ContentSection extends React.Component {
 
 		return (
 			<Row {...this.props} holderClass="w-100-vw" className="justify-content-center Row--header">
-				<Flex className="flex--1">
+				<Flex className="flex--70">
 					<Item>
 						<h1>{contentHeader}</h1>
 						{wrappedParagraph}

@@ -1,26 +1,23 @@
-import React, {useEffect, useRef, useState} from 'react';
-import scrollToComponent from 'react-scroll-to-component';
+import React, {useState} from 'react';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import {graphql} from 'gatsby';
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
-import constants from '../config/constants';
 import PageHeader from '../components/template-components/PageHeader';
 import {interpretContent} from '../utils/helpers/content-interpreter';
 import ContentSection from '../components/template-components/ContentSection/ContentSection';
 import Row from '../components/base-components/Row';
 import TeamMember from '../components/template-components/TeamMember/TeamMember';
 import Button from '../components/base-components/Button';
-import Item from '../components/base-components/Item';
-import Flex from "../components/base-components/Flex";
+import Flex from '../components/base-components/Flex';
 
 const AboutPage = ({data}) => {
-
 	const getTeamMember = teamMembers => {
 		const linksArray = [];
 		// noinspection JSUnresolvedVariable
 		teamMembers.forEach((item, index) => {
 			linksArray.push(
-				<Row key={item.id} holderClass="w-100-vw">
+				<Row className={'alternating-row'} key={item.id} holderClass="w-100-vw">
 					<TeamMember data={item} index={index}/>
 				</Row>
 			);
@@ -39,62 +36,55 @@ const AboutPage = ({data}) => {
 
 	interpretContent(pageSections);
 
-	const activeClass = bool =>
-		(bool) ? 'Button__active' : ''
-	;
+	const contentBasedOnState = () => {
+		if (pageNumber === 0) {
+			return renderAboutSubPage(pageSections)
+		} else if (pageNumber === 1) {
+			return getTeamMember(teamMembers)
+		}
+	};
 
+	const activeClass = bool => (bool ? 'Button__active' : '');
 	const renderAboutSubPage = data => {
 		return (
-			<Row>
-				<ContentSection
-					data={data[0]}
-				/>
+			<>
+				<ContentSection data={data[0]}/>
 
-				<ContentSection
-					data={data[1]}
-				/>
+				<ContentSection data={data[1]}/>
 
-				<ContentSection
-					data={data[2]}
-				/>
-			</Row>
-		)
+				<ContentSection data={data[2]}/>
+			</>
+		);
 	};
 
 	return (
-		<Layout className="alternating-row">
+		<Layout>
 			<SEO title="About"/>
-
-			<PageHeader
-				data={page}
-				rowClassName={'text-center justify-content-center pb-0 px-0 w-100 flex-column pt-0 '}
-			>
-				<Flex className='flex-row justify-content-around my-0'>
+			<PageHeader data={page} rowClassName={'pb-0'}/>
+			<PageHeader rowClassName={'text-center justify-content-center p-0 w-100 flex-column'}>
+				<Flex className="flex-row justify-content-around my-0">
 					<Button
-						className={'Button--no-border d-flex mt-0 ' + activeClass((pageNumber === 0))}
-						onClick={() =>
-							setPageNumber(0)
-						}
+						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
+						onClick={() => setPageNumber(0)}
 					>
 						Our Values
 					</Button>
 					<Button
-						className={'Button--no-border d-flex mt-0 ' + activeClass((pageNumber === 1))}
-						onClick={() =>
-							setPageNumber(1)
-						}
+						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
+						onClick={() => setPageNumber(1)}
 					>
 						Meet the team
 					</Button>
 				</Flex>
 			</PageHeader>
-
-			{(pageNumber === 0)? renderAboutSubPage(pageSections) :<Row>{getTeamMember(teamMembers)}</Row>}
-
+			<TransitionGroup>
+				<CSSTransition key={pageNumber} timeout={750} classNames="fade">
+					<Row>{contentBasedOnState()}</Row>
+				</CSSTransition>
+			</TransitionGroup>
 		</Layout>
 	);
 };
-
 
 export const query = graphql`
     {
