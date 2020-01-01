@@ -10,11 +10,10 @@ import handshakeSVG from '../utils/svgs/029-handshake.svg';
 import handSVG from '../utils/svgs/025-hand.svg';
 import thoughtSVG from '../utils/svgs/005-thought.svg';
 import PageHeader from '../components/template-components/PageHeader';
-
 const IndexPage = ({ data }) => {
 	//region Scroll Refs
 	const scrollToFirstRef = () => {
-		navigate('/about/', {
+		navigate('/about', {
 			state: {
 				scrollTo: constants.ABOUT_CUSTOMER_FIRST_SECTION,
 			},
@@ -22,7 +21,7 @@ const IndexPage = ({ data }) => {
 	};
 
 	const scrollToSecondRef = () => {
-		navigate('/about/', {
+		navigate('/about', {
 			state: {
 				scrollTo: constants.ABOUT_HOW_WE_WORK_SECTION,
 			},
@@ -30,7 +29,7 @@ const IndexPage = ({ data }) => {
 	};
 
 	const scrollToThirdRef = () => {
-		navigate('/about/', {
+		navigate('/about', {
 			state: {
 				scrollTo: constants.ABOUT_WHY_SECTION,
 			},

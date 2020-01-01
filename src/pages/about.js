@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import scrollToComponent from 'react-scroll-to-component';
 import {graphql} from 'gatsby';
 import Layout from '../components/layout-components/layouts/layout';
@@ -12,8 +11,6 @@ import TeamMember from '../components/template-components/TeamMember/TeamMember'
 import Button from '../components/base-components/Button';
 import Flex from '../components/base-components/Flex';
 import constants from "../config/constants";
-import ScrollAnimation from "react-animate-on-scroll";
-import {forEach} from "react-bootstrap/cjs/ElementChildren";
 
 const AboutPage = ({data}) => {
 	const customerRef = useRef();
@@ -44,7 +41,7 @@ const AboutPage = ({data}) => {
 				default:
 					break;
 			}
-			window.history.replaceState({scrollTo : null}, "About Us", "")
+			window.history.replaceState({scrollTo: null}, "About Us", "")
 		}
 	});
 
@@ -106,24 +103,25 @@ const AboutPage = ({data}) => {
 	return (
 		<Layout>
 			<SEO title="About"/>
-			<PageHeader data={page} rowClassName={'pb-0'}/>
-				<PageHeader rowClassName={'text-center justify-content-center p-0 w-100 flex-column'}>
-					<Flex className="flex-row justify-content-around my-0">
+			<PageHeader data={page}>
+				<Row className={'text-center justify-content-center p-0 w-100 flex-column'}>
+					<Flex className="flex-row justify-content-around p-0 my-0">
 						<Button
 							className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
 							onClick={() => setPageNumber(0)}
 						>
-							Our Values
+							<h3 className='pb-0 mb-1'>Our Values</h3>
 						</Button>
 						<Button
 							className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
 							onClick={() => setPageNumber(1)}
 						>
-							Meet the team
+							<h3 className='pb-0 mb-1'>Meet the team</h3>
 						</Button>
 					</Flex>
-				</PageHeader>
-					<Row>{contentBasedOnState()}</Row>
+				</Row>
+			</PageHeader>
+			<Row className={'p-0'}>{contentBasedOnState()}</Row>
 		</Layout>
 	);
 };
