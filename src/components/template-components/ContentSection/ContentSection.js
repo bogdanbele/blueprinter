@@ -25,7 +25,7 @@ export default class ContentSection extends React.Component {
 				offset={300}
 				key={data.id}
 			>
-			<Row {...this.props} holderClass="w-100-vw" className="justify-content-center Row--header">
+			<Row {...this.props} holderClass="w-100-vw" className="pb-0 justify-content-center Row--header">
 				<Flex className="flex--70">
 					<Item>
 						<h1>{contentHeader}</h1>
