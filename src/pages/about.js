@@ -13,11 +13,18 @@ import Button from '../components/base-components/Button';
 import Flex from '../components/base-components/Flex';
 import constants from "../config/constants";
 import ScrollAnimation from "react-animate-on-scroll";
+import {forEach} from "react-bootstrap/cjs/ElementChildren";
 
 const AboutPage = ({data}) => {
 	const customerRef = useRef();
 	const howRef = useRef();
 	const whyRef = useRef();
+
+	const [pageNumber, setPageNumber] = useState(0);
+
+	const page = data.allContentfulPage.edges[0].node;
+	const pageSections = page.contentSections;
+
 
 	useEffect(() => {
 		if (window.history.state) {
@@ -54,27 +61,23 @@ const AboutPage = ({data}) => {
 		return linksArray;
 	};
 
-	const [pageNumber, setPageNumber] = useState(0);
-
-	const page = data.allContentfulPage.edges[0].node;
-	const pageSections = page.contentSections;
-
 	// elem.__typename
 
 	const teamMembers = pageSections.filter(elem => elem.__typename === 'ContentfulTeamMember');
+	const aboutSections = pageSections.filter(elem => elem.__typename === 'ContentfulContentSection');
 
 	interpretContent(pageSections);
 
 	const contentBasedOnState = () => {
 		if (pageNumber === 0) {
-			return renderAboutSubPage(pageSections)
+			return renderContentSection(aboutSections)
 		} else if (pageNumber === 1) {
 			return getTeamMember(teamMembers)
 		}
 	};
 
 	const activeClass = bool => (bool ? 'Button__active' : '');
-	const renderAboutSubPage = data => {
+	const renderContentSection = data => {
 		return (
 			<>
 				<ContentSection
@@ -84,14 +87,14 @@ const AboutPage = ({data}) => {
 					}}/>
 
 				<ContentSection
-					data={pageSections[1]}
+					data={data[1]}
 					ref={section => {
 						howRef.current = section;
 					}}
 				/>
 
 				<ContentSection
-					data={pageSections[2]}
+					data={data[2]}
 					ref={section => {
 						whyRef.current = section;
 					}}
@@ -104,27 +107,23 @@ const AboutPage = ({data}) => {
 		<Layout>
 			<SEO title="About"/>
 			<PageHeader data={page} rowClassName={'pb-0'}/>
-			<PageHeader rowClassName={'text-center justify-content-center p-0 w-100 flex-column'}>
-				<Flex className="flex-row justify-content-around my-0">
-					<Button
-						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
-						onClick={() => setPageNumber(0)}
-					>
-						Our Values
-					</Button>
-					<Button
-						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
-						onClick={() => setPageNumber(1)}
-					>
-						Meet the team
-					</Button>
-				</Flex>
-			</PageHeader>
-			<TransitionGroup>
-				<CSSTransition key={pageNumber} timeout={750} classNames="fade">
+				<PageHeader rowClassName={'text-center justify-content-center p-0 w-100 flex-column'}>
+					<Flex className="flex-row justify-content-around my-0">
+						<Button
+							className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
+							onClick={() => setPageNumber(0)}
+						>
+							Our Values
+						</Button>
+						<Button
+							className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
+							onClick={() => setPageNumber(1)}
+						>
+							Meet the team
+						</Button>
+					</Flex>
+				</PageHeader>
 					<Row>{contentBasedOnState()}</Row>
-				</CSSTransition>
-			</TransitionGroup>
 		</Layout>
 	);
 };

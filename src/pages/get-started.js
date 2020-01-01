@@ -14,7 +14,7 @@ const getProcessSections = data => {
 				className={'d-flex w-100'}
 				animateIn={!index ? 'pulse' : 'fadeInUp'}
 				animateOnce={true}
-				offset={250}
+				offset={150}
 				key={item.id}
 			>
 				<ProcessSection data={item} />

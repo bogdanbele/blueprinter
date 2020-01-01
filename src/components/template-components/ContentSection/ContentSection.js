@@ -4,6 +4,7 @@ import Flex from '../../base-components/Flex';
 import Item from '../../base-components/Item';
 import Row from '../../base-components/Row';
 import wrapWithParagraph from '../../../utils/helpers/TextWrapper';
+import ScrollAnimation from "react-animate-on-scroll";
 
 /**
  *  Component for ContentfulContentSection.
@@ -17,6 +18,13 @@ export default class ContentSection extends React.Component {
 		const contentHeader = data.header ? data.header : '';
 
 		return (
+			<ScrollAnimation
+				animateOnce={true}
+				className={'d-flex w-100'}
+				animateIn={'fadeIn'}
+				offset={300}
+				key={data.id}
+			>
 			<Row {...this.props} holderClass="w-100-vw" className="justify-content-center Row--header">
 				<Flex className="flex--70">
 					<Item>
@@ -25,6 +33,7 @@ export default class ContentSection extends React.Component {
 					</Item>
 				</Flex>
 			</Row>
+			</ScrollAnimation>
 		);
 	}
 }

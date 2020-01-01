@@ -47,14 +47,14 @@ export default function TeamMember(props) {
 				<h1>{name}</h1>
 				<Flex className={styles.TeamMember + order()}>
 					<Flex className={"flex-column px-2" + alternatingMargin()}>
-						{formattedDescription}
-						<br/>
 						<h2>Area of expertise:</h2>
 						<ul>
 							{skills.map((item, key) => (
 								<li key={key}>{item}</li>
 							))}
 						</ul>
+						<br/>
+						{formattedDescription}
 					</Flex>
 					<Flex className="flex--2 mx-auto">
 						<Img fixed={imageSrc} alt={imageAlt}/>
