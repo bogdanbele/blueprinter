@@ -15,7 +15,6 @@ import constants from "../config/constants";
 const AboutPage = ({data}) => {
 	const customerRef = useRef();
 	const howRef = useRef();
-	const whyRef = useRef();
 
 	const [pageNumber, setPageNumber] = useState(0);
 
@@ -32,10 +31,6 @@ const AboutPage = ({data}) => {
 				}
 				case constants.ABOUT_HOW_WE_WORK_SECTION: {
 					scrollToComponent(howRef.current, {offset: 0, duration: 1000, align: 'top'});
-					break;
-				}
-				case constants.ABOUT_WHY_SECTION: {
-					scrollToComponent(whyRef.current, {offset: 0, duration: 1000, align: 'top'});
 					break;
 				}
 				default:
@@ -89,13 +84,6 @@ const AboutPage = ({data}) => {
 						howRef.current = section;
 					}}
 				/>
-
-				<ContentSection
-					data={data[2]}
-					ref={section => {
-						whyRef.current = section;
-					}}
-				/>
 			</>
 		);
 	};
@@ -103,24 +91,30 @@ const AboutPage = ({data}) => {
 	return (
 		<Layout>
 			<SEO title="About"/>
-			<PageHeader data={page}>
-				<Row className={'text-center justify-content-center p-0 w-100 flex-column'}>
-					<Flex className="flex-row justify-content-around p-0 my-0">
-						<Button
-							className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
-							onClick={() => setPageNumber(0)}
-						>
-							<h3 className='pb-0 mb-1'>Our Values</h3>
-						</Button>
-						<Button
-							className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
-							onClick={() => setPageNumber(1)}
-						>
-							<h3 className='pb-0 mb-1'>Meet the team</h3>
-						</Button>
-					</Flex>
-				</Row>
-			</PageHeader>
+			<PageHeader data={page}/>
+			<ContentSection
+				animateIn={'none'}
+				isInitiallyVisible={true}
+				className={"p-0 w-100 min-h-initial"}
+				isHeaderVisible={false}
+				data={aboutSections[2]}
+			/>
+			<Row className={'text-center justify-content-center p-0 w-100 flex-column'}>
+				<Flex className="flex-row justify-content-around p-0 my-0">
+					<Button
+						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
+						onClick={() => setPageNumber(0)}
+					>
+						Our Approach
+					</Button>
+					<Button
+						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
+						onClick={() => setPageNumber(1)}
+					>
+						Meet the team
+					</Button>
+				</Flex>
+			</Row>
 			<Row className={'p-0'}>{contentBasedOnState()}</Row>
 		</Layout>
 	);

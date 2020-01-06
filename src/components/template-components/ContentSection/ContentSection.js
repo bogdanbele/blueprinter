@@ -19,16 +19,17 @@ export default class ContentSection extends React.Component {
 
 		return (
 			<ScrollAnimation
+				initiallyVisible={this.props.isInitiallyVisible}
 				animateOnce={true}
 				className={'d-flex w-100'}
-				animateIn={'fadeIn'}
+				animateIn={this.props.animateIn}
 				offset={300}
 				key={data.id}
 			>
-			<Row {...this.props} holderClass="w-100-vw" className="pb-0 justify-content-center Row--header">
+			<Row {...this.props} holderClass="w-100-vw" className={"pb-0 justify-content-center Row--header " + this.props.className} >
 				<Flex className="flex--70">
 					<Item>
-						<h1>{contentHeader}</h1>
+						{(this.props.isHeaderVisible) ? <h1>{contentHeader}</h1> : null }
 						{wrappedParagraph}
 					</Item>
 				</Flex>
@@ -45,4 +46,13 @@ ContentSection.propTypes = {
 		}),
 		header: PropTypes.string,
 	}),
+	isHeaderVisible: PropTypes.bool,
+	animateIn: PropTypes.string,
+	isInitiallyVisible: PropTypes.bool
+};
+
+ContentSection.defaultProps = {
+	isHeaderVisible: true,
+	animateIn: 'fadeInUp',
+	isInitiallyVisible: true
 };

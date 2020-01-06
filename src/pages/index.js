@@ -28,13 +28,6 @@ const IndexPage = ({ data }) => {
 		}).then();
 	};
 
-	const scrollToThirdRef = () => {
-		navigate('/about', {
-			state: {
-				scrollTo: constants.ABOUT_WHY_SECTION,
-			},
-		}).then();
-	};
 	//endregion
 
 	const page = data.allContentfulPage.edges[0].node;
@@ -67,7 +60,7 @@ const IndexPage = ({ data }) => {
 					data={pageSections[2]}
 					icon={thoughtSVG}
 					flexClasses="flex--1"
-					buttonOnClick={scrollToThirdRef}
+					isButtonEnabled={false}
 				/>
 			</Row>
 		</Layout>
