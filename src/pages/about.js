@@ -74,12 +74,14 @@ const AboutPage = ({data}) => {
 			<>
 				<ContentSection
 					data={data[0]}
+					animateIn={'fadeInUp'}
 					ref={section => {
 						customerRef.current = section;
 					}}/>
 
 				<ContentSection
 					data={data[1]}
+					animateIn={'fadeInUp'}
 					ref={section => {
 						howRef.current = section;
 					}}

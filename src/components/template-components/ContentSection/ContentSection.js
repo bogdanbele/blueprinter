@@ -53,6 +53,6 @@ ContentSection.propTypes = {
 
 ContentSection.defaultProps = {
 	isHeaderVisible: true,
-	animateIn: 'fadeInUp',
+	animateIn: 'none',
 	isInitiallyVisible: true
 };
