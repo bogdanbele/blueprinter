@@ -41,7 +41,7 @@ const IndexPage = ({data}) => {
 			<ScrollAnimation
 				animateOnce={true}
 				className={'d-flex w-100'}
-				animateIn={'fadeIn'}
+				animateIn={'fadeIn+'}
 				offset={300}
 				key={data.id}
 			>

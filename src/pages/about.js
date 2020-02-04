@@ -6,10 +6,6 @@ import SEO from '../components/base-components/seo';
 import PageHeader from '../components/template-components/PageHeader';
 import {interpretContent} from '../utils/helpers/content-interpreter';
 import ContentSection from '../components/template-components/ContentSection/ContentSection';
-import Row from '../components/base-components/Row';
-import TeamMember from '../components/template-components/TeamMember/TeamMember';
-import Button from '../components/base-components/Button';
-import Flex from '../components/base-components/Flex';
 import constants from "../config/constants";
 
 const AboutPage = ({data}) => {

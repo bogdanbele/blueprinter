@@ -2,20 +2,22 @@
  * Accepts [contentSection] as a parameter
  * @param data
  */
+import ContentSection from "../../components/template-components/ContentSection/ContentSection";
+
 export function interpretContent(data) {
 
     let contentNameArray = [];
     data.map(elem =>
-        contentNameArray.push(elem.__typename)
-    );
+        contentNameArray.push(elem)
+    )
     console.log(contentNameArray);
 
-    contentNameArray.map((contentName, index) => {
-        returnContent(contentName,index)
+    contentNameArray.map((content, index) => {
+        returnContent(content,index)
     });
 
-    function returnContent(contentName, index) {
-        switch (contentName) {
+    function returnContent(content, index) {
+        switch (content.__typename) {
             case 'ContentfulContentSection':
                 console.log('content de care trebe')
                 break;
