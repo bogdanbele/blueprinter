@@ -7,10 +7,12 @@
 .Content {
   margin: 0 auto;
   max-width: $web-page-width;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
+  padding: 0 5% 1.45rem;
   display: flex;
   flex-direction: column;
+  @include breakpoint(md){
+    padding: 0 30px 1.45rem;
+  }
 }
 
 main {

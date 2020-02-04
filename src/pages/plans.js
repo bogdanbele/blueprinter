@@ -14,6 +14,7 @@ const getPricingPlans = data => {
 	data.allContentfulPage.edges[0].node.contentSections.forEach((item, index) =>
 		pricingPlansArray.push(
 			<ScrollAnimation
+				key={item.id}
 				className={`d-flex pt-4 pb-3 ${styles.PricingPlanHolder}`}
 				animateIn="fadeInUp"
 				animateOnce={true}
@@ -23,7 +24,7 @@ const getPricingPlans = data => {
 				<PricingPlan
 					data={item}
 					index={index}
-					key={item.id}/>
+					/>
 			</ScrollAnimation>
 		)
 	);

@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout-components/layouts/layout';
 import SEO from '../components/base-components/seo';
-import { navigate } from '@reach/router';
-import { graphql } from 'gatsby';
+import {navigate} from '@reach/router';
+import {graphql} from 'gatsby';
 import Row from '../components/base-components/Row';
 import constants from '../config/constants';
 import ExcerptCard from '../components/template-components/ExcerptCard/';
@@ -10,11 +10,12 @@ import handshakeSVG from '../utils/svgs/029-handshake.svg';
 import handSVG from '../utils/svgs/025-hand.svg';
 import thoughtSVG from '../utils/svgs/005-thought.svg';
 import PageHeader from '../components/template-components/PageHeader';
+import ScrollAnimation from "react-animate-on-scroll";
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({data}) => {
 	//region Scroll Refs
 	const scrollToFirstRef = () => {
-		navigate('/about/', {
+		navigate('/about', {
 			state: {
 				scrollTo: constants.ABOUT_CUSTOMER_FIRST_SECTION,
 			},
@@ -22,20 +23,13 @@ const IndexPage = ({ data }) => {
 	};
 
 	const scrollToSecondRef = () => {
-		navigate('/about/', {
+		navigate('/about', {
 			state: {
 				scrollTo: constants.ABOUT_HOW_WE_WORK_SECTION,
 			},
 		}).then();
 	};
 
-	const scrollToThirdRef = () => {
-		navigate('/about/', {
-			state: {
-				scrollTo: constants.ABOUT_WHY_SECTION,
-			},
-		}).then();
-	};
 	//endregion
 
 	const page = data.allContentfulPage.edges[0].node;
@@ -43,10 +37,19 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO title="Home" keywords={['gatsby', 'application', 'react']} />
-			<PageHeader
-				data={page}
-			/>
+			<SEO title="Home" keywords={['gatsby', 'application', 'react']}/>
+			<ScrollAnimation
+				animateOnce={true}
+				className={'d-flex w-100'}
+				animateIn={'fadeIn+'}
+				offset={300}
+				key={data.id}
+			>
+				<PageHeader
+					rowClassName='Row--splash'
+					data={page}
+				/>
+			</ScrollAnimation>
 			<Row
 				holderClass='w-100-vw'
 				className="justify-content-around">
@@ -68,7 +71,7 @@ const IndexPage = ({ data }) => {
 					data={pageSections[2]}
 					icon={thoughtSVG}
 					flexClasses="flex--1"
-					buttonOnClick={scrollToThirdRef}
+					isButtonEnabled={false}
 				/>
 			</Row>
 		</Layout>
@@ -76,31 +79,31 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-	{
-		allContentfulPage(filter: { title: { eq: "Frontpage" } }) {
-			edges {
-				node {
-					headerText
-					header
-					createdAt
-					isHeaderTextVisible
-					isHeaderVisible
-					contentSections {
-						__typename
-						... on Node {
-							... on ContentfulContentSection {
-								id
-								header
-								excerpt {
-									excerpt
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+    {
+        allContentfulPage(filter: { title: { eq: "Frontpage" } }) {
+            edges {
+                node {
+                    headerText
+                    header
+                    createdAt
+                    isHeaderTextVisible
+                    isHeaderVisible
+                    contentSections {
+                        __typename
+                        ... on Node {
+                            ... on ContentfulContentSection {
+                                id
+                                header
+                                excerpt {
+                                    excerpt
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 `;
 
 export default IndexPage;

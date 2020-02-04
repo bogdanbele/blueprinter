@@ -9,8 +9,8 @@
   width: 100%;
 
   @include breakpoint(md) {
-    padding-bottom: 6rem;
-    padding-top: 4rem;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
     width: $web-page-width;
   }
 }
@@ -21,4 +21,18 @@
   align-self: center;
   display: flex;
   width: 100%;
+}
+
+:global .Row--header {
+  @include breakpoint(md) {
+    min-height: 450px;
+    align-items: center;
+  }
+}
+
+:global .Row--splash {
+  @include breakpoint(md) {
+    min-height: 90vh;
+    align-items: center;
+  }
 }
