@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/ContentSection/ContentSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ContentSection/ContentSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +162,10 @@
       <workItem from="1577529022766" duration="32199000" />
       <workItem from="1577711653135" duration="18702000" />
       <workItem from="1577796466522" duration="12581000" />
-      <workItem from="1578326790421" duration="6992000" />
+      <workItem from="1578326790421" duration="7779000" />
+      <workItem from="1578734324387" duration="692000" />
+      <workItem from="1580758770657" duration="1367000" />
+      <workItem from="1580835205158" duration="1820000" />
     </task>
     <servers />
   </component>
@@ -257,7 +263,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/index.js</url>
-          <line>49</line>
+          <line>60</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

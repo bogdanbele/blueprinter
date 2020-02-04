@@ -40,35 +40,10 @@ const AboutPage = ({data}) => {
 		}
 	});
 
-	const getTeamMember = teamMembers => {
-		const linksArray = [];
-		// noinspection JSUnresolvedVariable
-		teamMembers.forEach((item, index) => {
-			linksArray.push(
-				<Row className={'alternating-row'} key={item.id} holderClass="w-100-vw">
-					<TeamMember data={item} index={index}/>
-				</Row>
-			);
-		});
-		return linksArray;
-	};
-
 	// elem.__typename
-
-	const teamMembers = pageSections.filter(elem => elem.__typename === 'ContentfulTeamMember');
 	const aboutSections = pageSections.filter(elem => elem.__typename === 'ContentfulContentSection');
 
 	interpretContent(pageSections);
-
-	const contentBasedOnState = () => {
-		if (pageNumber === 0) {
-			return renderContentSection(aboutSections)
-		} else if (pageNumber === 1) {
-			return getTeamMember(teamMembers)
-		}
-	};
-
-	const activeClass = bool => (bool ? 'Button__active' : '');
 	const renderContentSection = data => {
 		return (
 			<>
@@ -101,23 +76,7 @@ const AboutPage = ({data}) => {
 				isHeaderVisible={false}
 				data={aboutSections[2]}
 			/>
-			<Row className={'text-center justify-content-center p-0 w-100 flex-column'}>
-				<Flex className="flex-row justify-content-around p-0 my-0">
-					<Button
-						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 0)}
-						onClick={() => setPageNumber(0)}
-					>
-						Our Approach
-					</Button>
-					<Button
-						className={'Button--no-border d-flex mt-0 ' + activeClass(pageNumber === 1)}
-						onClick={() => setPageNumber(1)}
-					>
-						Meet the team
-					</Button>
-				</Flex>
-			</Row>
-			<Row className={'p-0'}>{contentBasedOnState()}</Row>
+			{renderContentSection(aboutSections)}
 		</Layout>
 	);
 };

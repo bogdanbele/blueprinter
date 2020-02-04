@@ -29,3 +29,10 @@
     align-items: center;
   }
 }
+
+:global .Row--splash {
+  @include breakpoint(md) {
+    min-height: 90vh;
+    align-items: center;
+  }
+}
