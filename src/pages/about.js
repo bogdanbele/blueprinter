@@ -46,6 +46,7 @@ const AboutPage = ({data}) => {
 				<ContentSection
 					data={data[0]}
 					animateIn={'fadeInUp'}
+					isInitiallyVisible={false}
 					ref={section => {
 						customerRef.current = section;
 					}}/>
@@ -53,6 +54,7 @@ const AboutPage = ({data}) => {
 				<ContentSection
 					data={data[1]}
 					animateIn={'fadeInUp'}
+					isInitiallyVisible={false}
 					ref={section => {
 						howRef.current = section;
 					}}
@@ -65,13 +67,6 @@ const AboutPage = ({data}) => {
 		<Layout>
 			<SEO title="About"/>
 			<PageHeader data={page}/>
-			<ContentSection
-				animateIn={'none'}
-				isInitiallyVisible={true}
-				className={"p-0 w-100 min-h-initial"}
-				isHeaderVisible={false}
-				data={aboutSections[2]}
-			/>
 			{renderContentSection(aboutSections)}
 		</Layout>
 	);

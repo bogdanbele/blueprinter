@@ -8,7 +8,6 @@ import constants from '../config/constants';
 import ExcerptCard from '../components/template-components/ExcerptCard/';
 import handshakeSVG from '../utils/svgs/029-handshake.svg';
 import handSVG from '../utils/svgs/025-hand.svg';
-import thoughtSVG from '../utils/svgs/005-thought.svg';
 import PageHeader from '../components/template-components/PageHeader';
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -63,14 +62,6 @@ const IndexPage = ({data}) => {
 					icon={handSVG}
 					flexClasses="flex--2"
 					buttonOnClick={scrollToSecondRef}
-				/>
-			</Row>
-			<Row>
-				<ExcerptCard
-					data={pageSections[2]}
-					icon={thoughtSVG}
-					flexClasses="flex--1"
-					isButtonEnabled={false}
 				/>
 			</Row>
 		</Layout>
