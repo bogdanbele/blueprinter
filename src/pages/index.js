@@ -53,13 +53,11 @@ const IndexPage = ({data}) => {
 				className="justify-content-around">
 				<ExcerptCard
 					data={pageSections[0]}
-					icon={handshakeSVG}
 					flexClasses="flex--2"
 					buttonOnClick={scrollToFirstRef}
 				/>
 				<ExcerptCard
 					data={pageSections[1]}
-					icon={handSVG}
 					flexClasses="flex--2"
 					buttonOnClick={scrollToSecondRef}
 				/>
