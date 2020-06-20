@@ -20,8 +20,6 @@ export default function ProcessSection(props) {
 	const imageAlt = data.image.description;
 	const content = data.content.content;
 
-	console.log(content)
-
 	let bigHeader = () =>
 		pageHeader !== null ? (
 			<Flex className="flex-column text-center">
