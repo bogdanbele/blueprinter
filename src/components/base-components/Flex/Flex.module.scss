@@ -24,7 +24,12 @@
 
 	h1 {
 		color: var(--primary);
-		margin-bottom: 1.5rem;
+		margin-bottom: 0;
+		font: Bold 48px/60px $font-family-primary;
+	}
+
+	h2 {
+		font: Bold 48px/60px $font-family-primary;
 	}
 
 

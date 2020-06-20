@@ -8,10 +8,13 @@ $themeblue: #273c75;
 $themegray :#2f3640;
 $themepurple: #6F1E51;
 
+$theme-teal: #BEE3DB;
+
+
 $bright-green: #5CDB95;
 $dark-periwinkle: #f39c12;
 
 // Primary
-$color-primary: darken($neon-pink-red,0%);
+$color-primary: darken($theme-purple,0%);
 $color-secondary-green: #46B041;
 

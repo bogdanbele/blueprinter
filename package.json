@@ -25,7 +25,7 @@
     "gatsby-transformer-remark": "^2.6.41",
     "gatsby-transformer-sharp": "^2.3.9",
     "mixin-deep": "^2.0.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-animate-on-scroll": "^2.1.5",
@@ -39,7 +39,8 @@
     "styled-components": "^4.4.1",
     "typeface-nunito": "0.0.72",
     "typeface-quicksand": "0.0.71",
-    "typeface-roboto": "0.0.75"
+    "typeface-roboto": "0.0.75",
+    "typeface-source-sans-pro": "^1.1.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",

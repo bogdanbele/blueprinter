@@ -44,7 +44,9 @@ const IndexPage = ({data}) => {
 				offset={300}
 			>
 				<PageHeader
+					sameFontHeight={true}
 					rowClassName='Row--splash'
+					headerHolderClass='text-left'
 					data={page}
 				/>
 			</ScrollAnimation>
