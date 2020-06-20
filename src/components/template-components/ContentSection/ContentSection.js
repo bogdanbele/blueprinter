@@ -14,6 +14,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 export default class ContentSection extends React.Component {
 	render() {
 		const data = this.props.data;
+		console.log(data)
 		const wrappedParagraph = data.content.content ? wrapWithParagraph(data.content.content) : '';
 		const contentHeader = data.header ? data.header : '';
 

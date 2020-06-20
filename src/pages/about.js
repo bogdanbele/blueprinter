@@ -39,7 +39,6 @@ const AboutPage = ({data}) => {
 	// elem.__typename
 	const aboutSections = pageSections.filter(elem => elem.__typename === 'ContentfulContentSection');
 
-	interpretContent(pageSections);
 	const renderContentSection = data => {
 		return (
 			<>
@@ -65,13 +64,6 @@ const AboutPage = ({data}) => {
 		<Layout>
 			<SEO title="About"/>
 			<PageHeader data={page}/>
-			<ContentSection
-				animateIn={'none'}
-				isInitiallyVisible={true}
-				className={"p-0 w-100 min-h-initial"}
-				isHeaderVisible={false}
-				data={aboutSections[2]}
-			/>
 			{renderContentSection(aboutSections)}
 		</Layout>
 	);
