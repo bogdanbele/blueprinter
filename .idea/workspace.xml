@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/audit-test/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/gatsby-browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/gatsby-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/gatsby-node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/gatsby-ssr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/components/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/components/image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/components/layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/components/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/components/seo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/images/gatsby-astronaut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/images/gatsby-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/pages/404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-test/src/pages/page-2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Flex/Flex.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/Row/Row.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/ThemeCheckbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base-components/ThemeCheckbox/ThemeCheckbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/PageHeader/PageHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/_theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/TextWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/TextWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/TrackingHelper.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +173,7 @@
       <workItem from="1588922646582" duration="3900000" />
       <workItem from="1589025302938" duration="827000" />
       <workItem from="1589118002845" duration="752000" />
-      <workItem from="1592645486375" duration="10336000" />
+      <workItem from="1592645486375" duration="11286000" />
     </task>
     <servers />
   </component>

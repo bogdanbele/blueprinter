@@ -19,9 +19,7 @@ const AboutPage = ({data}) => {
 
 
 	useEffect(() => {
-		if(window.history.state === null){
-			return
-		}
+		if(window.history.state){
 			switch (window.history.state.scrollTo) {
 				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
 					scrollToComponent(customerRef.current, {offset: 0, duration: 1000, align: 'top'});
@@ -35,6 +33,7 @@ const AboutPage = ({data}) => {
 					break;
 			}
 			window.history.replaceState({scrollTo: null}, "About Us", "")
+		}
 	}, [window.history.state]);
 
 	// elem.__typename
