@@ -33,8 +33,8 @@ const AboutPage = ({data}) => {
 					break;
 			}
 			window.history.replaceState({scrollTo: null}, "About Us", "")
-		}
-	}, [window.history.state]);
+}
+	}, []);
 
 	// elem.__typename
 	const aboutSections = pageSections.filter(elem => elem.__typename === 'ContentfulContentSection');
@@ -45,8 +45,7 @@ const AboutPage = ({data}) => {
 			<>
 				<ContentSection
 					data={data[0]}
-					animateIn={'fadeInUp'}
-					isInitiallyVisible={false}
+					isInitiallyVisible={true}
 					ref={section => {
 						customerRef.current = section;
 					}}/>
