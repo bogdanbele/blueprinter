@@ -86,7 +86,6 @@ const OrderPage = ({ data }) => {
 		if (value === '') {
 			setWasInputBlurred({ ...wasInputBlurred, [name]: false });
 		}
-		console.log(values);
 	};
 
 	const handleBlur = event => {

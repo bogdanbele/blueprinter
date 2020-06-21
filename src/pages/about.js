@@ -39,7 +39,6 @@ const AboutPage = ({data}) => {
 	// elem.__typename
 	const aboutSections = pageSections.filter(elem => elem.__typename === 'ContentfulContentSection');
 
-	interpretContent(pageSections);
 	const renderContentSection = data => {
 		return (
 			<>
