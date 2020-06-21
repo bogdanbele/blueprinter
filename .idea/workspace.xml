@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,6 +175,7 @@
       <workItem from="1589025302938" duration="827000" />
       <workItem from="1589118002845" duration="752000" />
       <workItem from="1592645486375" duration="14766000" />
+      <workItem from="1592742772233" duration="454000" />
     </task>
     <servers />
   </component>
@@ -223,50 +225,28 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="140" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576956522388">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state x="140" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.882@0.0.1368.882" timestamp="1576956522388" />
-    <state x="599" y="344" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580987030507">
-      <screen x="0" y="23" width="1792" height="1017" />
-    </state>
-    <state x="599" y="344" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1580987030507" />
-    <state x="466" y="184" key="FileChooserDialogImpl" timestamp="1576943249858">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state x="466" y="184" key="FileChooserDialogImpl/0.0.1368.882@0.0.1368.882" timestamp="1576943249858" />
-    <state width="674" height="95" key="GridCell.Tab.0.bottom" timestamp="1576942427191">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state width="674" height="95" key="GridCell.Tab.0.bottom/0.0.1368.882@0.0.1368.882" timestamp="1576942427191" />
-    <state width="674" height="95" key="GridCell.Tab.0.center" timestamp="1576942427191">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state width="674" height="95" key="GridCell.Tab.0.center/0.0.1368.882@0.0.1368.882" timestamp="1576942427191" />
-    <state width="674" height="95" key="GridCell.Tab.0.left" timestamp="1576942427190">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state width="674" height="95" key="GridCell.Tab.0.left/0.0.1368.882@0.0.1368.882" timestamp="1576942427190" />
-    <state width="674" height="95" key="GridCell.Tab.0.right" timestamp="1576942427191">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state width="674" height="95" key="GridCell.Tab.0.right/0.0.1368.882@0.0.1368.882" timestamp="1576942427191" />
-    <state x="186" y="84" key="SettingsEditor" timestamp="1576943254297">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state x="186" y="84" key="SettingsEditor/0.0.1368.882@0.0.1368.882" timestamp="1576943254297" />
-    <state x="367" y="14" width="633" height="852" key="find.popup" timestamp="1576955280830">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state x="367" y="14" width="633" height="852" key="find.popup/0.0.1368.882@0.0.1368.882" timestamp="1576955280830" />
-    <state x="344" y="204" key="run.anything.popup" timestamp="1576945475804">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state x="344" y="204" key="run.anything.popup/0.0.1368.882@0.0.1368.882" timestamp="1576945475804" />
-    <state x="348" y="187" width="672" height="678" key="search.everywhere.popup" timestamp="1576955827779">
-      <screen x="0" y="0" width="1368" height="882" />
-    </state>
-    <state x="348" y="187" width="672" height="678" key="search.everywhere.popup/0.0.1368.882@0.0.1368.882" timestamp="1576955827779" />
+    <state x="140" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="140" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.882@0.0.1368.882" />
+    <state x="599" y="344" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="599" y="344" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1017@0.23.1792.1017" />
+    <state x="466" y="184" key="FileChooserDialogImpl" />
+    <state x="466" y="184" key="FileChooserDialogImpl/0.0.1368.882@0.0.1368.882" />
+    <state width="674" height="95" key="GridCell.Tab.0.bottom" />
+    <state width="674" height="95" key="GridCell.Tab.0.bottom/0.0.1368.882@0.0.1368.882" />
+    <state width="674" height="95" key="GridCell.Tab.0.center" />
+    <state width="674" height="95" key="GridCell.Tab.0.center/0.0.1368.882@0.0.1368.882" />
+    <state width="674" height="95" key="GridCell.Tab.0.left" />
+    <state width="674" height="95" key="GridCell.Tab.0.left/0.0.1368.882@0.0.1368.882" />
+    <state width="674" height="95" key="GridCell.Tab.0.right" />
+    <state width="674" height="95" key="GridCell.Tab.0.right/0.0.1368.882@0.0.1368.882" />
+    <state x="186" y="84" key="SettingsEditor" />
+    <state x="186" y="84" key="SettingsEditor/0.0.1368.882@0.0.1368.882" />
+    <state x="367" y="14" width="633" height="852" key="find.popup" />
+    <state x="367" y="14" width="633" height="852" key="find.popup/0.0.1368.882@0.0.1368.882" />
+    <state x="344" y="204" key="run.anything.popup" />
+    <state x="344" y="204" key="run.anything.popup/0.0.1368.882@0.0.1368.882" />
+    <state x="348" y="187" width="672" height="678" key="search.everywhere.popup" />
+    <state x="348" y="187" width="672" height="678" key="search.everywhere.popup/0.0.1368.882@0.0.1368.882" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -283,7 +263,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/plans/order.js</url>
-          <line>382</line>
+          <line>381</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
