@@ -12,12 +12,14 @@ import Row from '../../base-components/Row';
  */
 export default function PageHeader(props) {
 	const data = props.data;
+	const isSameFontHeight = Boolean(props.sameFontHeight);
+	const headerType = isSameFontHeight ? <h2>{data.headerText}</h2> : <h3>{data.headerText}</h3>;
 
 	let header = () => (data.isHeaderVisible ? <h1>{data.header}</h1> : null);
-	let headerText = () => (data.isHeaderTextVisible ? <h3>{data.headerText}</h3> : null);
+	let headerText = () => (data.isHeaderTextVisible ? headerType : null);
 	let isFlexVisible = () =>
 		data.isHeaderVisible && data.isHeaderTextVisible ? (
-			<Flex className="flex-column text-center">
+			<Flex className={`flex-column ${props.headerHolderClass}`}>
 				{header()}
 				{headerText()}
 			</Flex>
@@ -34,14 +36,19 @@ PageHeader.propTypes = {
 		isHeaderTextVisible: PropTypes.bool,
 	}),
 	rowClassName: PropTypes.string,
+	headerHolderClass: PropTypes.string,
+	sameFontHeight: PropTypes.bool
+
 };
 
 PageHeader.defaultProps = {
 	rowClassName: '',
+	headerHolderClass: 'text-center',
 	data: {
 		header: '',
 		headerText: '',
 		isHeaderVisible: false,
 		isHeaderTextVisible: false,
+		sameFontHeight: false
 	},
 };

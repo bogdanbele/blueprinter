@@ -16,8 +16,8 @@ export default function ThemeCheckbox(props) {
                         inputProps={
                             {'aria-label': 'Change Theme Button'}
                         }
-                        onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                        checked={theme === 'dark'}
+                        onChange={e => toggleTheme(e.target.checked ? 'light' : 'dark')}
+                        checked={theme === 'light'}
                         checkedIcon={checked}
                         icon={unChecked}
                     />

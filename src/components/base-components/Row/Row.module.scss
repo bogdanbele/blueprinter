@@ -34,5 +34,6 @@
   @include breakpoint(md) {
     min-height: 90vh;
     align-items: center;
+    align-text: left;
   }
 }

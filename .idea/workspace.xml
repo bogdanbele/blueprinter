@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83709d5c-65c2-4722-adde-e0eec3a74fc6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +27,18 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/layout-components/layouts" />
+    <property name="last_opened_file_path" value="K:/Projects/apollo-server-jwt-auth-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,22 +54,22 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\layout-components\layouts" />
-      <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src/svgs" />
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
-      <recent name="$PROJECT_DIR$/static/fonts" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components\PlanFeature\PlanFeature.js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\utils\helpers" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/theme" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
       <recent name="C:\Users\Bogdan\Web\blueprinter\src\config\logo" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\template-components\PlanFeature\PlanFeature.js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan\Web\blueprinter" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\components\layout-components\layouts" />
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/src/svgs" />
+      <recent name="C:\Users\Bogdan\Web\blueprinter\src\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -76,16 +82,6 @@
           <option name="name" value="StatusDashboardGroupingRule" />
         </RuleState>
       </list>
-    </option>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -162,6 +158,22 @@
       <workItem from="1578734324387" duration="692000" />
       <workItem from="1580758770657" duration="1367000" />
       <workItem from="1580835205158" duration="3619000" />
+      <workItem from="1580986992186" duration="597000" />
+      <workItem from="1580996378959" duration="2108000" />
+      <workItem from="1588323038589" duration="128000" />
+      <workItem from="1588503015281" duration="138000" />
+      <workItem from="1588504343822" duration="23000" />
+      <workItem from="1588504712144" duration="4073000" />
+      <workItem from="1588578680435" duration="317000" />
+      <workItem from="1588604824136" duration="1226000" />
+      <workItem from="1588694983332" duration="599000" />
+      <workItem from="1588776949950" duration="599000" />
+      <workItem from="1588877970316" duration="282000" />
+      <workItem from="1588922296895" duration="341000" />
+      <workItem from="1588922646582" duration="3900000" />
+      <workItem from="1589025302938" duration="827000" />
+      <workItem from="1589118002845" duration="752000" />
+      <workItem from="1592645486375" duration="14766000" />
     </task>
     <servers />
   </component>
@@ -176,6 +188,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -212,6 +227,10 @@
       <screen x="0" y="0" width="1368" height="882" />
     </state>
     <state x="140" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.882@0.0.1368.882" timestamp="1576956522388" />
+    <state x="599" y="344" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580987030507">
+      <screen x="0" y="23" width="1792" height="1017" />
+    </state>
+    <state x="599" y="344" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1017@0.23.1792.1017" timestamp="1580987030507" />
     <state x="466" y="184" key="FileChooserDialogImpl" timestamp="1576943249858">
       <screen x="0" y="0" width="1368" height="882" />
     </state>
@@ -271,6 +290,16 @@
           <url>file://$PROJECT_DIR$/src/pages/contact.js</url>
           <line>19</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js</url>
+          <line>28</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/template-components/ProcessSection/ProcessSection.js</url>
+          <line>27</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

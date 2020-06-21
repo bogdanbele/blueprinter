@@ -19,7 +19,7 @@ const AboutPage = ({data}) => {
 
 
 	useEffect(() => {
-		if (window.history.state) {
+		if(window.history.state){
 			switch (window.history.state.scrollTo) {
 				case constants.ABOUT_CUSTOMER_FIRST_SECTION: {
 					scrollToComponent(customerRef.current, {offset: 0, duration: 1000, align: 'top'});
@@ -33,8 +33,8 @@ const AboutPage = ({data}) => {
 					break;
 			}
 			window.history.replaceState({scrollTo: null}, "About Us", "")
-		}
-	});
+}
+	}, []);
 
 	// elem.__typename
 	const aboutSections = pageSections.filter(elem => elem.__typename === 'ContentfulContentSection');
@@ -44,7 +44,7 @@ const AboutPage = ({data}) => {
 			<>
 				<ContentSection
 					data={data[0]}
-					animateIn={'fadeInUp'}
+					isInitiallyVisible={true}
 					ref={section => {
 						customerRef.current = section;
 					}}/>
@@ -52,6 +52,7 @@ const AboutPage = ({data}) => {
 				<ContentSection
 					data={data[1]}
 					animateIn={'fadeInUp'}
+					isInitiallyVisible={false}
 					ref={section => {
 						howRef.current = section;
 					}}
